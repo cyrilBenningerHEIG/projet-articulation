@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCmdsPromocsTable extends Migration
+class CreateCmdPromocTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateCmdsPromocsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cmds_promocs', function (Blueprint $table) {
+        Schema::create('cmd_promoc', function (Blueprint $table) {
             $table->integer('promoc_id')->unsigned();
             $table->foreign('promoc_id')->references('id')->on('promocs');
             $table->integer('cmd_id')->unsigned();
@@ -30,6 +30,6 @@ class CreateCmdsPromocsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cmds_promocs');
+        Schema::dropIfExists('cmd_promoc');
     }
 }
