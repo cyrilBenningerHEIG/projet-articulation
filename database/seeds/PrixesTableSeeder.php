@@ -51,6 +51,9 @@ class PrixesTableSeeder extends Seeder
             [
                 'prixht' => 13,
             ],
+            [
+                'prixht' => 6,
+            ],
         ]);
     }
 }

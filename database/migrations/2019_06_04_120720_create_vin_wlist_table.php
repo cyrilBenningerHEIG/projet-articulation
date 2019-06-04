@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVinsWlistsTable extends Migration
+class CreateVinWlistTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateVinsWlistsTable extends Migration
      */
     public function up()
     {
-        Schema::create('vins_wlists', function (Blueprint $table) {
+        Schema::create('vin_wlist', function (Blueprint $table) {
             $table->integer('vin_id')->unsigned();
             $table->foreign('vin_id')->references('id')->on('vins');
             $table->integer('wlist_id')->unsigned();
@@ -29,6 +29,6 @@ class CreateVinsWlistsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vins_wlists');
+        Schema::dropIfExists('vin_wlist');
     }
 }

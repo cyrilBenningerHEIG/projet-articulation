@@ -18,6 +18,8 @@ class CreateRegnsTable extends Migration
             $table->integer('pays_id')->unsigned();
             $table->foreign('pays_id')->references('id')->on('pays');
             $table->string('nom');
+            $table->double('lat');
+            $table->double('long');
             
             $table->timestamps();
         });
