@@ -115,7 +115,7 @@
           </tr>
           <tr>
             <td>Région</td>
-            <td>Bordeaux</td>
+            <td>{{vin.regn.nom}}</td>
           </tr>
         </table>
         </div>

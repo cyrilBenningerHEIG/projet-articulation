@@ -19,7 +19,7 @@ class CatalogueController extends Controller
 
     function show ($id) 
     {   
-        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types'])->get()
+        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn'])->get()
         ->where('id', $id);
 
         return view('productPage', [
