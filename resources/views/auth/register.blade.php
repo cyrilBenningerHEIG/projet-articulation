@@ -1,3 +1,110 @@
+{{-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Enregistrement </title>
+  </head>
+  <body id="login-form">
+      <form id="box" method="POST" action="{{ route('register') }}">
+          <div class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}">
+
+              <label for="nom">Nom</label>
+              
+              <input id="nom" type="text" name="nom" value="{{ old('nom') }}" required autofocus>
+              
+              @if ($errors->has('nom'))
+              
+              <span class="help-block">
+              
+              <strong>{{ $errors->first('nom') }}</strong>
+              
+              </span>
+              
+              @endif
+          </div>
+
+          <div class="form-group{{ $errors->has('prenom') ? ' has-error' : '' }}">
+
+              <label for="prenom">prenom</label>
+              
+              <input id="prenom" type="text" name="prenom" value="{{ old('prenom') }}" required autofocus>
+              
+              @if ($errors->has('prenom'))
+              
+              <span class="help-block">
+              
+              <strong>{{ $errors->first('prenom') }}</strong>
+              
+              </span>
+              
+              @endif
+          </div>
+          <div class="form-group{{ $errors->has('dateNaissance') ? ' has-error' : '' }}">
+
+              <label for="dateNaissance">dateNaissance</label>
+              
+              <input id="dateNaissance" type="date" name="dateNaissance" value="{{ old('dateNaissance') }}" required autofocus>
+              
+              @if ($errors->has('dateNaissance'))
+              
+              <span class="help-block">
+              
+              <strong>{{ $errors->first('dateNaissance') }}</strong>
+              
+              </span>
+              
+              @endif
+          </div>
+          <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
+
+              <label for="telephone">telephone</label>
+              
+              <input id="telephone" type="phone" name="telephone" value="{{ old('telephone') }}" required autofocus>
+              
+              @if ($errors->has('telephone'))
+              
+              <span class="help-block">
+              
+              <strong>{{ $errors->first('telephone') }}</strong>
+              
+              </span>
+              
+              @endif
+          </div>
+          <div class="form-group{{ $errors->has('sexe') ? ' has-error' : '' }}">
+              <div class="row">
+                    <legend >Sexe</legend>
+                    <div >
+                      <div >
+                        <input type="radio" name="sexe" id="0" value="0" checked>
+                        <label for="0">
+                          Homme
+                        </label>
+                      </div>
+                      <div>
+                        <input type="radio" name="sexe" id="1" value="1">
+                        <label for="1">
+                          Femme
+                        </label>
+                      </div>
+              @if ($errors->has('sexe'))
+              <span class="help-block">
+              <strong>{{ $errors->first('sexe') }}</strong>
+              </span>
+              @endif
+              </div>
+              </div>
+              
+            <script src="js/app.js"></script>
+
+  </body>
+</html> --}}
+
+
+
+
+
+
 @extends('layouts.app')
 @section('content')
 <div class="container">

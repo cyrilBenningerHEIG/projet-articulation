@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> Login </title>
+    <title> Connexion </title>
   </head>
   <body id="login-form">
 <form method="POST" id="box" action="{{ route('login') }}">
@@ -59,9 +59,9 @@
             <script src="js/app.js"></script>
 
   </body>
-</html>
+</html> --}}
 
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 @section('content')
 <div class="container" id="log-in-page">
     <div class="row justify-content-center">
@@ -132,4 +132,4 @@
         </div>
     </div>
 </div>
-@endsection --}}
+@endsection
