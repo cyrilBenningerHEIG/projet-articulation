@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCmdsVinsTable extends Migration
+class CreateCepagVinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateCmdsVinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cmds_vins', function (Blueprint $table) {
-            $table->integer('cmd_id')->unsigned();
-            $table->foreign('cmd_id')->references('id')->on('cmds');
+        Schema::create('cepag_vin', function (Blueprint $table) {
             $table->integer('vin_id')->unsigned();
             $table->foreign('vin_id')->references('id')->on('vins');
-            $table->integer('quantite');
-            
+            $table->integer('cepag_id')->unsigned();
+            $table->foreign('cepag_id')->references('id')->on('cepags');
+            $table->integer('pourcentage');
+
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateCmdsVinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cmds_vins');
+        Schema::dropIfExists('cepag_vin');
     }
 }
