@@ -17,7 +17,7 @@ class CatalogueController extends Controller
 {
     function index ()
     {
-        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi'])->get();
+        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types'])->get();
         return view('produits', [
             'vins'=> $vins,
             ]);
