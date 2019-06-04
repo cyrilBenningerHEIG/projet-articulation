@@ -42,7 +42,7 @@ class Type_VinTableSeeder extends Seeder
             ],
             [
                 'vin_id' => '8',
-                'type_id' => '3'
+                'type_id' => '1'
             ],
             [
                 'vin_id' => '9',
