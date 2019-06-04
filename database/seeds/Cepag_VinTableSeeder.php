@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Cepags_VinsTableSeeder extends Seeder
+class Cepag_VinTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class Cepags_VinsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cepags_vins')->insert([
+        DB::table('cepag_vin')->insert([
             [
                 'vin_id' => '1',
                 'cepag_id' => '1',
@@ -179,6 +179,11 @@ class Cepags_VinsTableSeeder extends Seeder
             ],
             [
                 'vin_id' => '13',
+                'cepag_id' => '12',
+                'pourcentage' => 100,
+            ],
+            [
+                'vin_id' => '14',
                 'cepag_id' => '12',
                 'pourcentage' => 100,
             ],

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Types_VinsTableSeeder extends Seeder
+class Type_VinTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class Types_VinsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('types_vins')->insert([
+        DB::table('type_vin')->insert([
             [
                 'vin_id' => '1',
                 'type_id' => '1'
@@ -62,6 +62,10 @@ class Types_VinsTableSeeder extends Seeder
             ],
             [
                 'vin_id' => '13',
+                'type_id' => '2'
+            ],
+            [
+                'vin_id' => '14',
                 'type_id' => '2'
             ],
         ]);

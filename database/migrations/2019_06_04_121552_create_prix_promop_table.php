@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrixesPromopsTable extends Migration
+class CreatePrixPromopTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePrixesPromopsTable extends Migration
      */
     public function up()
     {
-        Schema::create('prixes_promops', function (Blueprint $table) {
+        Schema::create('prix_promop', function (Blueprint $table) {
             $table->integer('prix_id')->unsigned();
             $table->foreign('prix_id')->references('id')->on('prixes');
             $table->integer('promop_id')->unsigned();
@@ -30,6 +30,6 @@ class CreatePrixesPromopsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prixes_promops');
+        Schema::dropIfExists('prix_promop');
     }
 }

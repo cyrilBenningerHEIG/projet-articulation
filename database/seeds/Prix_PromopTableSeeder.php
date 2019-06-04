@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Prixes_PromopsTableSeeder extends Seeder
+class Prix_PromopTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,13 +11,17 @@ class Prixes_PromopsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('prixes_promops')->insert([
+        DB::table('prix_promop')->insert([
             [
                 'prix_id' => '7',
                 'promop_id' => '1',
             ],
             [
                 'prix_id' => '13',
+                'promop_id' => '2',
+            ],
+            [
+                'prix_id' => '14',
                 'promop_id' => '2',
             ],
         ]);

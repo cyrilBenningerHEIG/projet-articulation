@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypesVinsTable extends Migration
+class CreateTypeVinTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTypesVinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('types_vins', function (Blueprint $table) {
+        Schema::create('type_vin', function (Blueprint $table) {
             $table->integer('vin_id')->unsigned();
             $table->foreign('vin_id')->references('id')->on('vins');
             $table->integer('type_id')->unsigned();
@@ -30,6 +30,6 @@ class CreateTypesVinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types_vins');
+        Schema::dropIfExists('type_vin');
     }
 }

@@ -24,9 +24,9 @@
                 @endif
                 <menu-produit></menu-produit>
                 <product-filter></product-filter>
-                <carte-produit></carte-produit>
+                <carte-produit :vins='{{ $vins }}'></carte-produit>
                 <footer-bar></footer-bar>
-
+                
             </div>
         </div>
             <script src="js/app.js"></script>

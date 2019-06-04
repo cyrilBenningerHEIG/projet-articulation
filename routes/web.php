@@ -14,13 +14,8 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/pageProduit', function () {
-    return view('productPage');
-});
-
-Route::get('/produits', function () {
-    return view('produits');
-});
+Route::get('/produits', 'CatalogueController@index');
+Route::get('/produit/{vins}', 'CatalogueController@show');
 
 Route::get('/promos', function () {
     return view('promos');

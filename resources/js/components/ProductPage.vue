@@ -1,4 +1,6 @@
 <template>
+<div class="containe">
+ <div class="container" v-for="vin in vins" :key=vin.id>
   <section>
     <div class="roadMap">
       <span>
@@ -15,18 +17,18 @@
         </div>
         <div class="col mt-5">
           <div>
-            <h3>Château Cambon la Pelouse - 2015</h3>
+            <h3>{{vin.nom}} - {{vin.millesime}}</h3>
             <span> </span>
-            <h5 class="mt-3 mb-3 price-font">CHF <b>17.40  </b><i class="price-ht-font">(<span>13</span> CHF hors TVA)</i></h5>
+            <h5 class="mt-3 mb-3 price-font">CHF <b>1,07  </b><i class="price-ht-font">(<span>{{vin.prix.prixht}}</span> CHF hors TVA)</i></h5>
        
             <span> </span>
             <span> </span>
-            <p class="font-weight-light mt-2 mb-2 article-font"> Numéro d'article : HFIWOMSH</p>
+            <p class="font-weight-light mt-2 mb-2 article-font"> Numéro d'article : {{vin.id}}</p>
           </div>
               <br>
           
           <div class="mt-4 mb-4">
-            <label>TAILL :</label> 
+            <label>TAILLE :</label> 
             <div>
               <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">37.5 cl</a>
               <a href="#" class="btn btn-outline-secondary btn-sm active" role="button" aria-disabled="true">50 cl</a>
@@ -73,29 +75,29 @@
   </div>
   <div class="col-8">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p></div>
+      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>{{vin.description}}</p></div>
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
         
         <table class="p table">
           <tr>
             <td>Teneur en alcool</td>
-            <td>13.5°</td>
+            <td>{{vin.alcool}}</td>
           </tr>
           <tr>
             <td>Cotation</td>
-            <td>WeinWisser : 18/20</td>
+            <td>{{vin.cotation}}</td>
           </tr>
           <tr>
             <td>Classement</td>
-            <td>Cru Bourgeois supérieur</td>
+            <td>{{vin.classement}}</td>
           </tr>
           <tr>
             <td>Apogée</td>
-            <td>2022 - 2038</td>
+            <td>{{vin.apogee}}</td>
           </tr>
           <tr>
             <td>Producteur</td>
-            <td>Château Cambon la Pelouse</td>
+            <td>{{vin.produ.nom}}</td>
           </tr>
           <tr>
             <td>Cépage(s)</td>
@@ -103,7 +105,9 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td>Vin rouge</td>
+            <div v-for="value in vin.types">
+            <td >{{value.type}}</td>
+            </div>
           </tr>
           <tr>
             <td>Pays</td>
@@ -120,4 +124,18 @@
   </div>
 </div>
     </section>
+      </div>
+      </div>
 </template>
+<script>
+
+export default {
+  props: ['vins'],
+
+    data(){
+        return{
+          vin:'',
+        }
+     },
+}
+</script>

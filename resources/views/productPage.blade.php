@@ -18,14 +18,12 @@
         <div id="app">
             <div class="container">
             <nav-product-bar></nav-product-bar>
-            <product-page></product-page>
+            <product-page :vins='{{ $vins }}'></product-page>
             <br>
-            <selection-card class="mt-5" ></selection-card>
-
-
+            <selection-card class="mt-5" ></selection-card> 
             <footer-bar></footer-bar>
             </div>
         </div>
-            <script src="js/app.js"></script>
+            <script src="../js/app.js"></script>
     </body>
 </html>
