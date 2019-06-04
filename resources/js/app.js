@@ -60,6 +60,9 @@ Vue.component('product-page', require('./components/ProductPage.vue').default);
 Vue.component('carte-produit', require('./components/CarteProduit.vue').default);
 Vue.component('selection-card', require('./components/CarteSelection.vue').default);
 
+//Page histoire
+Vue.component('history-page', require('./components/HistoryPage.vue').default);
+
 //CGV 
 Vue.component('cgv-texte', require('./components/CGV.vue').default);
 

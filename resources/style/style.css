@@ -154,6 +154,29 @@
         font-size: 11px;
         line-height: 11px;
     }
+     /* History page */
+
+     .paddingTB60 {
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+
+    .col-md-6{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+
+    P.blocktext {
+        vertical-align: middle;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     /* Product page */
     
     .roadMap {
