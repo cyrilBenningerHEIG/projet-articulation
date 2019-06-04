@@ -75,7 +75,7 @@
   </div>
   <div class="col-8">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>{{vin.descriptionText}}</p></div>
+      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>{{vin.description}}</p></div>
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
         
         <table class="p table">
@@ -105,7 +105,9 @@
           </tr>
           <tr>
             <td>Type</td>
-            <td>Vin rouge</td>
+            <div v-for="value in vin.types">
+            <td >{{value.type}}</td>
+            </div>
           </tr>
           <tr>
             <td>Pays</td>
