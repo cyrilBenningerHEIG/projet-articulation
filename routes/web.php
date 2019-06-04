@@ -17,8 +17,6 @@ Route::get('/', 'IndexController@index');
 Route::get('/produits', 'CatalogueController@index');
 Route::get('/produit/{vins}', 'CatalogueController@show');
 
-Route::get('/pageProduit', 'productPageController@index');
-
 Route::get('/promos', function () {
     return view('promos');
 });
@@ -38,6 +36,7 @@ Route::get('/compte', function () {
 Route::get('/panier', function () {
     return view('panier');
 });
+
 
 
 Auth::routes();
