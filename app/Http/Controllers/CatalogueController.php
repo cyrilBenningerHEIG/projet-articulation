@@ -22,4 +22,14 @@ class CatalogueController extends Controller
             'vins'=> $vins,
             ]);
     }
+
+    function show ($id) 
+    {   
+        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi'])->get()
+        ->where('id', $id);
+
+        return view('productPage', [
+            'vins'=> $vins,
+            ]);
+    }
 }

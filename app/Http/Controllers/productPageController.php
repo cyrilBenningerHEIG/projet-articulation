@@ -25,4 +25,5 @@ class productPageController extends Controller
             'vins'=> $vins,
             ]);
     }
+    
 }

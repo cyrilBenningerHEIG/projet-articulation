@@ -1,4 +1,6 @@
 <template>
+<div class="containe">
+ <div class="container" v-for="vin in vins" :key=vin.id>
   <section>
     <div class="roadMap">
       <span>
@@ -15,13 +17,13 @@
         </div>
         <div class="col mt-5">
           <div>
-            <h3>{{vins.nom}} - {{vins.millesime}}</h3>
+            <h3>{{vin.nom}} - {{vin.millesime}}</h3>
             <span> </span>
-            <h5 class="mt-3 mb-3 price-font">CHF <b>({{vins.prix.prixht}}*1,07)  </b><i class="price-ht-font">(<span>{{vins.prix.prixht}} </span> CHF hors TVA)</i></h5>
+            <h5 class="mt-3 mb-3 price-font">CHF <b>1,07  </b><i class="price-ht-font">(<span>{{vin.prix.prixht}}</span> CHF hors TVA)</i></h5>
        
             <span> </span>
             <span> </span>
-            <p class="font-weight-light mt-2 mb-2 article-font"> Numéro d'article : {{vins.id}}</p>
+            <p class="font-weight-light mt-2 mb-2 article-font"> Numéro d'article : {{vin.id}}</p>
           </div>
               <br>
           
@@ -73,29 +75,29 @@
   </div>
   <div class="col-8">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>{{vins.descriptionText}}</p></div>
+      <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>{{vin.descriptionText}}</p></div>
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
         
         <table class="p table">
           <tr>
             <td>Teneur en alcool</td>
-            <td>{{vins.alcool}}</td>
+            <td>{{vin.alcool}}</td>
           </tr>
           <tr>
             <td>Cotation</td>
-            <td>{{vins.cotation}}</td>
+            <td>{{vin.cotation}}</td>
           </tr>
           <tr>
             <td>Classement</td>
-            <td>{{vins.classement}}</td>
+            <td>{{vin.classement}}</td>
           </tr>
           <tr>
             <td>Apogée</td>
-            <td>{{vins.apogee}}</td>
+            <td>{{vin.apogee}}</td>
           </tr>
           <tr>
             <td>Producteur</td>
-            <td>{{vins.produ.nom}}</td>
+            <td>{{vin.produ.nom}}</td>
           </tr>
           <tr>
             <td>Cépage(s)</td>
@@ -120,8 +122,11 @@
   </div>
 </div>
     </section>
+      </div>
+      </div>
 </template>
 <script>
+
 export default {
   props: ['vins'],
 
