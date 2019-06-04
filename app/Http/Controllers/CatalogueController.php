@@ -3,13 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Vin;
-use App\regn;
-use App\produ;
-use App\appel;
-use App\frmt;
-use App\prix;
-use App\condi;
+use App\vin;
 
 use DB;
 
@@ -17,7 +11,7 @@ class CatalogueController extends Controller
 {
     function index ()
     {
-        $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types'])->get();
+        $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn'])->get();
         return view('produits', [
             'vins'=> $vins,
             ]);
