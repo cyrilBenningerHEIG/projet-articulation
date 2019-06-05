@@ -37,10 +37,10 @@
                 Pratique 
               </li>
               <li>
-                <a class="afooter" href="contact">Contact</a>
+                <a class="afooter" href="../contact">Contact</a>
               </li>
               <li>
-                <a class="afooter" href="cgv">CGV</a>
+                <a class="afooter" href="../cgv">CGV</a>
               </li>
             </ul>
           </div>
