@@ -93,13 +93,8 @@ return [
     */
 
     'passwords' => [
-<<<<<<< HEAD
         'users' => [
             'provider' => 'users',
-=======
-        'clnts' => [
-            'provider' => 'clnts',
->>>>>>> a4afe13e4ade29bc63bd96bbf8442be614527701
             'table' => 'password_resets',
             'expire' => 60,
         ],

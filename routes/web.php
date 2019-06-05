@@ -43,12 +43,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-=======
 Route::get('/cgv', function () {
     return view('cgv');
 });
@@ -61,4 +59,3 @@ Route::get('/histoire', function () {
     return view('histoire');
 });
 
->>>>>>> a4afe13e4ade29bc63bd96bbf8442be614527701
