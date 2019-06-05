@@ -82,7 +82,7 @@
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <button class="btn btn-danger btn-panier">Passer commande</button>
+        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>

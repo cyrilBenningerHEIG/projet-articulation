@@ -3,7 +3,7 @@
     <div class="roadMap">
       <span>
         <a href="#">PRODUITS</a>
-        <img class="arrow" src="/public/images/arrow.svg">
+        <img class="arrow" src="images/arrow.svg">
         <a href="#">VIN ROUGE</a>
       </span>
     </div>
@@ -11,7 +11,7 @@
     <div class="container p-4">
       <div class="row">
         <div class="col">
-          <img class="bottleImg" src="/public/images/bottle.png">
+          <img class="bottleImg" src="images/bottle.png">
         </div>
         <div class="col mt-5">
           <div>
@@ -26,7 +26,7 @@
               <br>
           
           <div class="mt-4 mb-4">
-            <label>TAILL :</label> 
+            <label class="label-produits">TAILLE :</label> 
             <div>
               <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">37.5 cl</a>
               <a href="#" class="btn btn-outline-secondary btn-sm active" role="button" aria-disabled="true">50 cl</a>
@@ -35,7 +35,7 @@
           </div>
 
           <div class="mt-4 mb-4">
-            <label>VARIANTES :</label> 
+            <label class="label-produits">VARIANTES :</label> 
             <div>
               <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">2012</a>
               <a href="#" class="btn btn-outline-secondary btn-sm active" role="button" aria-disabled="true">2015</a>
@@ -44,7 +44,7 @@
           </div>
 
           <div class="mt-4 mb-4">
-            <label class="mr-4 my-auto">QUANTITÉS : </label>
+            <label class="mr-4 my-auto label-produits">QUANTITÉS : </label>
                 <div class="input-group" id="btn-quantity">
                       <span class="input-group-btn">
                         <button type="button" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field="">
