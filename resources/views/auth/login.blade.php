@@ -1,14 +1,76 @@
-@extends('layouts.app')
+{{-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Connexion </title>
+  </head>
+  <body id="login-form">
+<form method="POST" id="box" action="{{ route('login') }}">
+        <label for="email">{{ __('Adresse e-mail') }}</label>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            @error('email')
 
+                <span class="invalid-feedback" role="alert">
+
+                    <strong>{{ $message }}</strong>
+
+                </span>
+
+            @enderror
+
+        <label for="password">{{ __('Mot de passe') }}</label>
+
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+            @error('password')
+
+                <span class="invalid-feedback" role="alert">
+
+                    <strong>{{ $message }}</strong>
+
+                </span>
+
+            @enderror
+
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                <label class="form-check-label" for="remember">
+
+                    {{ __("S'en souvenir") }}
+
+                </label>
+
+            <button type="submit" id="submit" class="">
+
+                {{ __('Se connecter') }}
+
+            </button>
+
+            @if (Route::has('password.request'))
+
+                <a id="forgot-pass" href="{{ route('password.request') }}">
+
+                    {{ __('Mot de passe oublié ?') }}
+
+                </a>
+
+            @endif
+
+            <script src="js/app.js"></script>
+
+  </body>
+</html> --}}
+
+@extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container" id="log-in-page">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" id="box" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">

@@ -11,15 +11,54 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', 'IndexController@index');
+
+Route::get('/produits', 'CatalogueController@index');
+Route::get('/produit/{vins}', 'CatalogueController@show');
+
+Route::get('/promos', function () {
+    return view('promos');
 });
+
+Route::get('/primeurs', function () {
+    return view('primeurs');
+});
+
+Route::get('/nouveautes', function () {
+    return view('nouveautes');
+});
+
+Route::get('/compte', function () {
+    return view('compte');
+});
+
+Route::get('/panier', function () {
+    return view('panier');
+});
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+=======
+Route::get('/cgv', function () {
+    return view('cgv');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/histoire', function () {
+    return view('histoire');
+});
+
+>>>>>>> a4afe13e4ade29bc63bd96bbf8442be614527701
