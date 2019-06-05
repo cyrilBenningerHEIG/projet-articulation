@@ -1860,8 +1860,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['vins'],
+  props: ['vins', 'prixttc', 'prixeuro'],
   data: function data() {
     return {
       vin: ''
@@ -1983,6 +1989,184 @@ __webpack_require__.r(__webpack_exports__);
       nbvins: '',
       nbregions: '',
       nbprodu: ''
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes'],
+  data: function data() {
+    return {
+      type: '',
+      pays: '',
+      regn: '',
+      appel: '',
+      produ: '',
+      frmt: ''
     };
   }
 });
@@ -33992,7 +34176,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "    body {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    .p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    a {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    label {\r\n        font-family: 'Montserrat', sans-serif;\r\n        font-size: 14px;\r\n    }\r\n    \r\n    .wrapper {\r\n        display: grid;\r\n        grid-template-columns: repeat(4, 1fr);\r\n        grid-gap: 10px;\r\n        grid-auto-rows: minmax(100px, auto);\r\n    }\r\n    \r\n    .icon:hover {\r\n        fill-opacity: 0;\r\n    }\r\n    \r\n    .logo {\r\n        width: 80%;\r\n    }\r\n    \r\n    #icon_search {\r\n        width: 50px;\r\n    }\r\n    \r\n    #icon_account {\r\n        width: 40px;\r\n        margin-left: 20px;\r\n        margin-right: 20px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    #icon_cart {\r\n        width: 35px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    .menu {\r\n        font-size: 20px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .image {\r\n        width: 80%;\r\n        margin: auto auto;\r\n    }\r\n    \r\n    .producer-logo {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin: 20px;\r\n    }\r\n    /* Histoire */\r\n    \r\n    .test {\r\n        background-color: #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    .btn-history {\r\n        margin-top: 10px;\r\n        margin-bottom: 40px;\r\n        background-color: white;\r\n        color: #a62b35;\r\n        border: none;\r\n    }\r\n    \r\n    p.box {\r\n        margin: 50px;\r\n    }\r\n    \r\n    .counter {\r\n        padding-top: 50px;\r\n        padding-right: 50px;\r\n        padding-left: 50px;\r\n    }\r\n    /* Footer */\r\n    \r\n    #img-logo {\r\n        margin-left: 25px;\r\n    }\r\n    \r\n    .text-muted {\r\n        color: black !important;\r\n    }\r\n    \r\n    .card {\r\n        border: none;\r\n    }\r\n    \r\n    .card-group {\r\n        padding-top: 50px;\r\n    }\r\n    \r\n    .btn-danger {\r\n        background-color: #953640 !important;\r\n        border-color: #953640 !important;\r\n        color: aliceblue !important;\r\n    }\r\n    \r\n    .page-footer {\r\n        background-color: #2B2B2B;\r\n        color: #CCBE9F;\r\n        font-family: 'Roboto', sans-serif;\r\n    }\r\n    \r\n    a.afooter {\r\n        color: #CCBE9F !important;\r\n    }\r\n    \r\n    .cls-1 {\r\n        fill: #CCBE9F;\r\n    }\r\n    \r\n    .image-footer {\r\n        width: 20%;\r\n    }\r\n    \r\n    .footer-size {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .footer-col {\r\n        margin-left: 5px;\r\n    }\r\n    \r\n    .adresse-size {\r\n        font-size: 11px;\r\n        line-height: 11px;\r\n    }\r\n     /* History page */\r\n\r\n     .paddingTB60 {\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    .col-md-6{\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    P.blocktext {\r\n        vertical-align: middle;\r\n        font-weight: bold;\r\n        font-style: italic;\r\n        font-size: 2rem;\r\n        text-transform: uppercase;\r\n        position: relative;\r\n        top: 50%;\r\n        -webkit-transform: translateY(-50%);\r\n                transform: translateY(-50%);\r\n    }\r\n\r\n    /* Product page */\r\n    \r\n    .roadMap {\r\n        white-space: nowrap;\r\n    }\r\n    \r\n    .arrow {\r\n        width: 2.5%;\r\n    }\r\n    \r\n    .bottleImg {\r\n        width: 90%;\r\n        height: auto;\r\n        margin: auto;\r\n    }\r\n    \r\n    .price-font {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n        color: #6c757d;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    #btn-quantity {\r\n        padding-right: 325px;\r\n    }\r\n    \r\n    .nav-pills .nav-link.active,\r\n    .nav-pills .show>.nav-link {\r\n        color: #2B2B2B;\r\n        background-color: #CCBE9F;\r\n    }\r\n    \r\n    .pills {\r\n        color: #f2ebda;\r\n        font-size: 16px;\r\n    }\r\n    \r\n    .btn-basket {\r\n        padding: 1em 5em 1em 5em;\r\n        font-family: 'Montserrat', sans-serif;\r\n        border: 5px solid #2B2B2B;\r\n        background-color: #2B2B2B;\r\n        color: white;\r\n        /* Safari */\r\n        transition-duration: 0.4s;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btn-basket:hover {\r\n        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n        background-color: #a62b35;\r\n        border: 5px solid #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    #mapid {\r\n        height: 400px;\r\n    }\r\n    /* CONTACT */\r\n    \r\n    .contact-form {\r\n        background: #2B2B2B;\r\n        margin-top: 10%;\r\n        margin-bottom: 5%;\r\n        width: 70%;\r\n    }\r\n    \r\n    .contact-form .form-control {\r\n        border-radius: 25;\r\n    }\r\n    \r\n    .contact-image {\r\n        text-align: center;\r\n    }\r\n    \r\n    .contact-image img {\r\n        border-radius: 25;\r\n        width: 11%;\r\n        margin-top: -3%;\r\n        -webkit-transform: rotate(29deg);\r\n                transform: rotate(29deg);\r\n    }\r\n    \r\n    .contact-form form {\r\n        padding: 14%;\r\n    }\r\n    \r\n    .contact-form form .row {\r\n        margin-bottom: -7%;\r\n    }\r\n    \r\n    .contact-form h3 {\r\n        margin-bottom: 8%;\r\n        margin-top: -10%;\r\n        text-align: center;\r\n        color: white;\r\n    }\r\n    \r\n    .contact-form .btnContact {\r\n        width: 50%;\r\n        border: none;\r\n        border-radius: 25px;\r\n        padding: 1.5%;\r\n        background: #dc3545;\r\n        font-weight: 600;\r\n        color: #fff;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btnContactSubmit {\r\n        width: 50%;\r\n        padding: 1.5%;\r\n        color: #fff;\r\n        border: none;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .icon_display img {\r\n        width: 50px;\r\n    }\r\n    \r\n    #tri-produit {\r\n        margin-top: 50px;\r\n    }\r\n    \r\n    .number_results {\r\n        padding-top: 15px;\r\n    }\r\n    \r\n    #weekproduct {\r\n        width: 10rem;\r\n    }\r\n    \r\n    .card-img-top {\r\n        width: 10rem;\r\n    }\r\n    \r\n    .btn-filter {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 0.5px;\r\n        border-radius: 25px;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n    }\r\n    \r\n    #cart-produit-img {\r\n        width: 68px;\r\n        height: 150px;\r\n    }\r\n    \r\n    .btn-panier-2 {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 1px;\r\n    }\r\n    \r\n    .action-btn {\r\n        margin-bottom: 25px;\r\n    }\r\n    \r\n    .card-custom {\r\n        display: inline-flex;\r\n        padding-left: 20px;\r\n        padding-right: 20px;\r\n    }\r\n    #login-form { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n    #login-form #signup-form {\r\n        margin: 0;\r\n        padding: 0;\r\n        font-family: 'Montserrat', sans-serif;\r\n        background: #a62b35;\r\n        }\r\n      #box{\r\n        width: 400px;\r\n        height : 700px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n      #box label{\r\n        color: white;\r\n        font-weight: 400;\r\n        font-size : 130%;\r\n        margin-top : 25px;\r\n      }\r\n      #box input{\r\n        border:0;\r\n        background: #a62b35;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 10px;\r\n        width: 200px;\r\n        outline: none;\r\n        color: black;\r\n        border-radius: 15px;\r\n        transition: 0.25s;\r\n        margin-bottom: 25px;\r\n      }\r\n      #box input:focus{\r\n        width: 280px;\r\n        border-color: black;\r\n        background : white;\r\n        color : black;\r\n      }\r\n      #box input::-webkit-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-moz-placeholder{\r\n          color : black;\r\n      }\r\n      #box input:-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::placeholder{\r\n          color : black;\r\n      }\r\n      #submit{\r\n        border:0;\r\n        background: none;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 40px;\r\n        outline: none;\r\n        color: white;\r\n        border-radius: 24px;\r\n        transition: 0.25s;\r\n        cursor: pointer;\r\n      }\r\n      #submit:hover{\r\n        background: black;\r\n      }\r\n      #remember {\r\n          margin-top : 35px;\r\n            font-size : 75%;\r\n            padding-top : -25px;\r\n      }\r\n      #register-link,#home-link,#forgot-pass{\r\n          display : block;\r\n          padding-top : 25px;\r\n          color : white;\r\n      }\r\n      #submit{\r\n          height : 40px;\r\n          padding-top : 5px;\r\n      }\r\n", ""]);
+exports.push([module.i, "    body {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    .p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    a {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    label {\r\n        font-family: 'Montserrat', sans-serif;\r\n        font-size: 14px;\r\n    }\r\n    \r\n    .wrapper {\r\n        display: grid;\r\n        grid-template-columns: repeat(4, 1fr);\r\n        grid-gap: 10px;\r\n        grid-auto-rows: minmax(100px, auto);\r\n    }\r\n    \r\n    .icon:hover {\r\n        fill-opacity: 0;\r\n    }\r\n    \r\n    .logo {\r\n        width: 80%;\r\n    }\r\n    \r\n    #icon_search {\r\n        width: 50px;\r\n    }\r\n    \r\n    #icon_account {\r\n        width: 40px;\r\n        margin-left: 20px;\r\n        margin-right: 20px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    #icon_cart {\r\n        width: 35px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    .menu {\r\n        font-size: 20px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .image {\r\n        width: 80%;\r\n        margin: auto auto;\r\n    }\r\n    \r\n    .producer-logo {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin: 20px;\r\n    }\r\n    /* Histoire */\r\n    \r\n    .test {\r\n        background-color: #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    .btn-history {\r\n        margin-top: 10px;\r\n        margin-bottom: 40px;\r\n        background-color: white;\r\n        color: #a62b35;\r\n        border: none;\r\n    }\r\n    \r\n    p.box {\r\n        margin: 50px;\r\n    }\r\n    \r\n    .counter {\r\n        padding-top: 50px;\r\n        padding-right: 50px;\r\n        padding-left: 50px;\r\n    }\r\n    /* Footer */\r\n    \r\n    #img-logo {\r\n        margin-left: 25px;\r\n    }\r\n    \r\n    .text-muted {\r\n        color: black !important;\r\n    }\r\n    \r\n    .card {\r\n        border: none;\r\n    }\r\n    \r\n    .card-group {\r\n        padding-top: 50px;\r\n    }\r\n    .card-body{\r\n        width : 15rem;\r\n        margin-top : -25px;\r\n    }\r\n    .card-title{\r\n        height : 3rem;\r\n    }\r\n    \r\n    .btn-danger {\r\n        background-color: #953640 !important;\r\n        border-color: #953640 !important;\r\n        color: aliceblue !important;\r\n    }\r\n    \r\n    .page-footer {\r\n        background-color: #2B2B2B;\r\n        color: #CCBE9F;\r\n        font-family: 'Roboto', sans-serif;\r\n    }\r\n    \r\n    a.afooter {\r\n        color: #CCBE9F !important;\r\n    }\r\n    \r\n    .cls-1 {\r\n        fill: #CCBE9F;\r\n    }\r\n    \r\n    .image-footer {\r\n        width: 20%;\r\n    }\r\n    \r\n    .footer-size {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .footer-col {\r\n        margin-left: 5px;\r\n    }\r\n    \r\n    .adresse-size {\r\n        font-size: 11px;\r\n        line-height: 11px;\r\n    }\r\n     /* History page */\r\n\r\n     .paddingTB60 {\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    .col-md-6{\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    P.blocktext {\r\n        vertical-align: middle;\r\n        font-weight: bold;\r\n        font-style: italic;\r\n        font-size: 2rem;\r\n        text-transform: uppercase;\r\n        position: relative;\r\n        top: 50%;\r\n        -webkit-transform: translateY(-50%);\r\n                transform: translateY(-50%);\r\n    }\r\n\r\n    /* Product page */\r\n    \r\n    .roadMap {\r\n        white-space: nowrap;\r\n    }\r\n    \r\n    .arrow {\r\n        width: 2.5%;\r\n    }\r\n    \r\n    .bottleImg {\r\n        width: 90%;\r\n        height: auto;\r\n        margin: auto;\r\n    }\r\n    \r\n    .price-font {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n        color: #6c757d;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    #btn-quantity {\r\n        padding-right: 325px;\r\n    }\r\n    \r\n    .nav-pills .nav-link.active,\r\n    .nav-pills .show>.nav-link {\r\n        color: #2B2B2B;\r\n        background-color: #CCBE9F;\r\n    }\r\n    \r\n    .pills {\r\n        color: #f2ebda;\r\n        font-size: 16px;\r\n    }\r\n    \r\n    .btn-basket {\r\n        padding: 1em 5em 1em 5em;\r\n        font-family: 'Montserrat', sans-serif;\r\n        border: 5px solid #2B2B2B;\r\n        background-color: #2B2B2B;\r\n        color: white;\r\n        /* Safari */\r\n        transition-duration: 0.4s;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btn-basket:hover {\r\n        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n        background-color: #a62b35;\r\n        border: 5px solid #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    #mapid {\r\n        height: 400px;\r\n    }\r\n    /* CONTACT */\r\n    \r\n    .contact-form {\r\n        background: #2B2B2B;\r\n        margin-top: 10%;\r\n        margin-bottom: 5%;\r\n        width: 70%;\r\n    }\r\n    \r\n    .contact-form .form-control {\r\n        border-radius: 25;\r\n    }\r\n    \r\n    .contact-image {\r\n        text-align: center;\r\n    }\r\n    \r\n    .contact-image img {\r\n        border-radius: 25;\r\n        width: 11%;\r\n        margin-top: -3%;\r\n        -webkit-transform: rotate(29deg);\r\n                transform: rotate(29deg);\r\n    }\r\n    \r\n    .contact-form form {\r\n        padding: 14%;\r\n    }\r\n    \r\n    .contact-form form .row {\r\n        margin-bottom: -7%;\r\n    }\r\n    \r\n    .contact-form h3 {\r\n        margin-bottom: 8%;\r\n        margin-top: -10%;\r\n        text-align: center;\r\n        color: white;\r\n    }\r\n    \r\n    .contact-form .btnContact {\r\n        width: 50%;\r\n        border: none;\r\n        border-radius: 25px;\r\n        padding: 1.5%;\r\n        background: #dc3545;\r\n        font-weight: 600;\r\n        color: #fff;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btnContactSubmit {\r\n        width: 50%;\r\n        padding: 1.5%;\r\n        color: #fff;\r\n        border: none;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .icon_display img {\r\n        width: 50px;\r\n    }\r\n    \r\n    #tri-produit {\r\n        margin-top: 50px;\r\n    }\r\n    \r\n    .number_results {\r\n        padding-top: 15px;\r\n    }\r\n    \r\n    #weekproduct #carteproduit{\r\n        width: 10rem;\r\n    }\r\n    \r\n    .card-img-top{\r\n        width: 10rem;\r\n    }\r\n    .card-title{\r\n        width: 15rem;\r\n        padding-top : -20px;\r\n    }\r\n    \r\n    .btn-filter {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 0.5px;\r\n        border-radius: 25px;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n    }\r\n    \r\n    #cart-produit-img {\r\n        width: 68px;\r\n        height: 150px;\r\n    }\r\n    \r\n    .btn-panier-2 {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 1px;\r\n    }\r\n    \r\n    .action-btn {\r\n        margin-bottom: 25px;\r\n    }\r\n    \r\n    .card-custom {\r\n        display: inline-flex;\r\n        padding-left: 20px;\r\n        padding-right: 20px;\r\n        margin-top : 45px;\r\n\r\n    }\r\n    #produ-carte{\r\n        height : 50px;\r\n    }\r\n    #prix-carte{\r\n        font-weight: bold;\r\n    }\r\n\r\n    #login-form { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n    #login-form #signup-form {\r\n        margin: 0;\r\n        padding: 0;\r\n        font-family: 'Montserrat', sans-serif;\r\n        background: #a62b35;\r\n        }\r\n      #box{\r\n        width: 400px;\r\n        height : 700px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n      #box label{\r\n        color: white;\r\n        font-weight: 400;\r\n        font-size : 130%;\r\n        margin-top : 25px;\r\n      }\r\n      #box input{\r\n        border:0;\r\n        background: #a62b35;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 10px;\r\n        width: 200px;\r\n        outline: none;\r\n        color: black;\r\n        border-radius: 15px;\r\n        transition: 0.25s;\r\n        margin-bottom: 25px;\r\n      }\r\n      #box input:focus{\r\n        width: 280px;\r\n        border-color: black;\r\n        background : white;\r\n        color : black;\r\n      }\r\n      #box input::-webkit-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-moz-placeholder{\r\n          color : black;\r\n      }\r\n      #box input:-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::placeholder{\r\n          color : black;\r\n      }\r\n      #submit{\r\n        border:0;\r\n        background: none;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 40px;\r\n        outline: none;\r\n        color: white;\r\n        border-radius: 24px;\r\n        transition: 0.25s;\r\n        cursor: pointer;\r\n      }\r\n      #submit:hover{\r\n        background: black;\r\n      }\r\n      #remember {\r\n          margin-top : 35px;\r\n            font-size : 75%;\r\n            padding-top : -25px;\r\n      }\r\n      #register-link,#home-link,#forgot-pass{\r\n          display : block;\r\n          padding-top : 25px;\r\n          color : white;\r\n      }\r\n\r\n      #register #box{\r\n        width: 400px;\r\n        height : 1050px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 100%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n\r\n      #register { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n\r\n    /* The container */\r\n.container {\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  margin-bottom: 12px;\r\n  cursor: pointer;\r\n  font-size: 22px;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n}\r\n\r\n/* Hide the browser's default radio button */\r\n.container input {\r\n  position: absolute;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Create a custom radio button */\r\n.checkmark {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 25px;\r\n  width: 25px;\r\n  background-color: #eee;\r\n  border-radius: 50%;\r\n}\r\n\r\n/* On mouse-over, add a grey background color */\r\n.container:hover input ~ .checkmark {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* When the radio button is checked, add a blue background */\r\n.container input:checked ~ .checkmark {\r\n  background-color: #0000007e;\r\n}\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n.checkmark:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: none;\r\n}\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n.container input:checked ~ .checkmark:after {\r\n  display: block;\r\n}\r\n\r\n/* Style the indicator (dot/circle) */\r\n.container .checkmark:after {\r\n \ttop: 9px;\r\n\tleft: 9px;\r\n\twidth: 8px;\r\n\theight: 8px;\r\n\tborder-radius: 50%;\r\n\tbackground: white;\r\n}\r\n", ""]);
 
 // exports
 
@@ -80387,24 +80571,41 @@ var render = function() {
     { staticClass: "container" },
     _vm._l(_vm.vins, function(vin) {
       return _c("div", { key: vin.id, staticClass: "card card-custom" }, [
-        _c("a", { attrs: { href: "produit/" + vin.id } }, [
-          _c("img", {
-            staticClass: "card-img-top",
-            attrs: {
-              src: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-              alt: "vin1"
-            }
-          })
+        _c("div", { staticClass: "container" }, [
+          _c("a", { attrs: { href: "produit/" + vin.id } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: { src: "/public/images/bottle.png", alt: "vin1" }
+            })
+          ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "card-body", attrs: { id: "weekproduct" } }, [
-          _c("h6", { staticClass: "card-title" }, [_vm._v(_vm._s(vin.nom))]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(_vm._s(vin.millesime))
+        _c("div", { staticClass: "container", attrs: { id: "carteproduit" } }, [
+          _c("h6", { staticClass: "card-title", attrs: { id: "nom-carte" } }, [
+            _vm._v(_vm._s(vin.nom))
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(vin.produ.nom))])
+          _c("hr"),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "h6",
+              { staticClass: "card-text", attrs: { id: "millesime-carte" } },
+              [_vm._v(_vm._s(vin.millesime))]
+            ),
+            _vm._v(" "),
+            _c(
+              "h6",
+              { staticClass: "card-text", attrs: { id: "produ-carte" } },
+              [_vm._v(_vm._s(vin.produ.nom))]
+            ),
+            _vm._v(" "),
+            _c(
+              "h6",
+              { staticClass: "card-text", attrs: { id: "prix-carte" } },
+              [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
+            )
+          ])
         ])
       ])
     }),
@@ -80723,13 +80924,13 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("a", { staticClass: "afooter", attrs: { href: "contact" } }, [
+            _c("a", { staticClass: "afooter", attrs: { href: "../contact" } }, [
               _vm._v("Contact")
             ])
           ]),
           _vm._v(" "),
           _c("li", [
-            _c("a", { staticClass: "afooter", attrs: { href: "cgv" } }, [
+            _c("a", { staticClass: "afooter", attrs: { href: "../cgv" } }, [
               _vm._v("CGV")
             ])
           ])
@@ -81642,7 +81843,7 @@ var staticRenderFns = [
                     "a",
                     {
                       staticClass: "icon",
-                      attrs: { id: "icon_account", href: "compte" }
+                      attrs: { id: "icon_account", href: "../compte" }
                     },
                     [_c("img", { attrs: { src: "/public/images/compte.svg" } })]
                   ),
@@ -81651,7 +81852,7 @@ var staticRenderFns = [
                     "a",
                     {
                       staticClass: "icon",
-                      attrs: { id: "icon_cart", href: "panier" }
+                      attrs: { id: "icon_cart", href: "../panier" }
                     },
                     [_c("img", { attrs: { src: "/public/images/panier.svg" } })]
                   )
@@ -81676,7 +81877,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "p-2 pt-4 text-muted menu",
-                attrs: { id: "products-link", href: "produits" }
+                attrs: { id: "products-link", href: "../produits" }
               },
               [_vm._v("PRODUITS")]
             ),
@@ -81687,7 +81888,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "p-2 pt-4 text-muted menu",
-                attrs: { id: "primeurs-link", href: "primeurs" }
+                attrs: { id: "primeurs-link", href: "../primeurs" }
               },
               [_vm._v("PRIMEURS")]
             ),
@@ -81698,7 +81899,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "p-2 pt-4 text-muted menu",
-                attrs: { id: "news-link", href: "nouveautes" }
+                attrs: { id: "news-link", href: "../nouveautes" }
               },
               [_vm._v("NOUVEAUTÉS")]
             ),
@@ -81709,7 +81910,7 @@ var staticRenderFns = [
               "a",
               {
                 staticClass: "p-2 pt-4 text-muted menu",
-                attrs: { id: "promo-link", href: "promos" }
+                attrs: { id: "promo-link", href: "../promos" }
               },
               [_vm._v("PROMOTIONS")]
             )
@@ -81919,7 +82120,256 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row mt-5 justify-content-center" }, [
+      _c("div", { staticClass: "filters mx-auto" }, [
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "type-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Type")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.types, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c("a", { staticClass: "dropdown-item" }, [
+                  _vm._v(_vm._s(value.type))
+                ])
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "pays-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Pays")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.pays, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.nom))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "regions-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Régions")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.regns, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.nom))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "pays-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Appellation")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.appels, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.libelle))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "millesime-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Millésime")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.millesimes, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.millesime))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "producteur-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Producteur")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.produs, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.nom))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-white dropdown-toggle btn-filter",
+              attrs: {
+                id: "format-btn",
+                type: "button",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "false",
+                "aria-expanded": "true"
+              }
+            },
+            [_vm._v("Format")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "dropdown-menu",
+              attrs: { "aria-labelledby": "btnGroupDrop1" }
+            },
+            _vm._l(_vm.frmts, function(value) {
+              return _c("div", { staticClass: "container" }, [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [_vm._v(_vm._s(value.quantite))]
+                )
+              ])
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(0)
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -81927,22 +82377,55 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-        _c("div", { staticClass: "filters mx-auto" }, [
+      _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
+        _c("div", { staticClass: "col-sm" }, [
+          _c(
+            "a",
+            {
+              staticClass: "icon_display",
+              attrs: { id: "icon_display2", href: "#" }
+            },
+            [_c("img", { attrs: { src: "/public/images/display2.svg" } })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "icon_display",
+              attrs: { id: "icon_display3", href: "#" }
+            },
+            [_c("img", { attrs: { src: "/public/images/display3.svg" } })]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "icon_display",
+              attrs: { id: "icon_display4", href: "#" }
+            },
+            [_c("img", { attrs: { src: "/public/images/display4.svg" } })]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm" }, [
+          _c("p", { staticClass: "number_results" }, [_vm._v("X résultats")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm" }, [
           _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
             _c(
               "button",
               {
                 staticClass: "btn btn-white dropdown-toggle btn-filter",
                 attrs: {
-                  id: "type-btn",
+                  id: "tri-btn",
                   type: "button",
                   "data-toggle": "dropdown",
                   "aria-haspopup": "false",
                   "aria-expanded": "true"
                 }
               },
-              [_vm._v("Type")]
+              [_vm._v("Tri")]
             ),
             _vm._v(" "),
             _c(
@@ -81952,300 +82435,27 @@ var staticRenderFns = [
                 attrs: { "aria-labelledby": "btnGroupDrop1" }
               },
               [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "pays-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Pays")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "regions-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Régions")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "pays-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Appellation")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "millesime-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Millésime")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "producteur-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Producteur")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "format-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Format")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v("Dropdown link")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
-              _c("div", { staticClass: "col-sm" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "icon_display",
-                    attrs: { id: "icon_display2", href: "#" }
-                  },
-                  [_c("img", { attrs: { src: "/public/images/display2.svg" } })]
-                ),
+                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
                 _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "icon_display",
-                    attrs: { id: "icon_display3", href: "#" }
-                  },
-                  [_c("img", { attrs: { src: "/public/images/display3.svg" } })]
-                ),
+                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
                 _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "icon_display",
-                    attrs: { id: "icon_display4", href: "#" }
-                  },
-                  [_c("img", { attrs: { src: "/public/images/display4.svg" } })]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm" }, [
-                _c("p", { staticClass: "number_results" }, [
-                  _vm._v("X résultats")
+                _c("a", { staticClass: "dropdown-item" }, [
+                  _vm._v("Prix croissant")
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "dropdown-item" }, [
+                  _vm._v("Prix décroissant")
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "dropdown-item" }, [
+                  _vm._v("Age croissant")
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "dropdown-item" }, [
+                  _vm._v("Age décroissant")
                 ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm" }, [
-                _c(
-                  "div",
-                  { staticClass: "btn-group", attrs: { role: "group" } },
-                  [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-white dropdown-toggle btn-filter",
-                        attrs: {
-                          id: "tri-btn",
-                          type: "button",
-                          "data-toggle": "dropdown",
-                          "aria-haspopup": "false",
-                          "aria-expanded": "true"
-                        }
-                      },
-                      [_vm._v("Tri")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "dropdown-menu",
-                        attrs: { "aria-labelledby": "btnGroupDrop1" }
-                      },
-                      [
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Nom A-Z")
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Nom Z-A")
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Prix croissant")
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Prix décroissant")
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Age croissant")
-                        ]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "dropdown-item" }, [
-                          _vm._v("Age décroissant")
-                        ])
-                      ]
-                    )
-                  ]
-                )
-              ])
-            ])
+              ]
+            )
           ])
         ])
       ])
@@ -98895,15 +99105,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductFilter_vue_vue_type_template_id_6c2bf56c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductFilter.vue?vue&type=template&id=6c2bf56c& */ "./resources/js/components/ProductFilter.vue?vue&type=template&id=6c2bf56c&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductFilter.vue?vue&type=script&lang=js& */ "./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ProductFilter_vue_vue_type_template_id_6c2bf56c___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ProductFilter_vue_vue_type_template_id_6c2bf56c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -98917,6 +99129,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/ProductFilter.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/ProductFilter.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ProductFilter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
