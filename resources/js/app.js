@@ -23,7 +23,7 @@ import L from 'leaflet';
 window.$ = require('jquery')
 window.JQuery = require('jquery')
 
-
+window.axios = require('axios');
 
 Vue.use(BootstrapVue);
 
@@ -69,6 +69,9 @@ Vue.component('cgv-texte', require('./components/CGV.vue').default);
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
 
+//Compte
+Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
+
 const app = new Vue({
     el: '#app',
     router: Router,
@@ -100,3 +103,5 @@ L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
 // Chargement du type de carte sur Leaflet
+
+    

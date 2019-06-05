@@ -33,6 +33,8 @@ Route::get('/compte', function () {
     return view('compte');
 });
 
+Route::post('/adresses', 'AdresseController@store');
+
 Route::get('/panier', function () {
     return view('panier');
 });
