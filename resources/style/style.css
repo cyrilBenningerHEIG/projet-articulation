@@ -114,10 +114,6 @@
         padding-top: 50px;
     }
     
-    .card-img-top {
-        height: 350px;
-    }
-    
     .btn-danger {
         background-color: #953640 !important;
         border-color: #953640 !important;
@@ -441,10 +437,4 @@
           display : block;
           padding-top : 25px;
           color : white;
-      }
-      #submit{
-          height : 40px;
-          padding-top : 5px;
-      }
 
-  
