@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <title> Enregistrement </title>
   </head>
-  <body id="login-form">
-      <form method="POST" action="{{ route('register') }}">
+  <body id="register">
+      <form method="POST" id="box" class="" action="{{ route('register') }}">
       {{ csrf_field() }}
-
-      <div id="box">
+      <div class="homepageImg">
+                <img class="logo" id="img-logo" src="images/logo.svg">
+              </div>
+      
         <div id="row">
           <div class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}">
 
@@ -79,16 +81,18 @@
           </div>
           <div class="form-group{{ $errors->has('sexe') ? ' has-error' : '' }}">
 
-                    <legend >Sexe</legend>
-                    <div >
-                      <div >
-                      <label for="homme">Homme</label>
-                        <input type="radio" name="sexe" id="0" value="0" checked>
+          <label for="sexe">Sexe</label>
+                    
+                        <label class="container">Homme
+  <input type="radio" checked="checked" id="0" name="sexe" value="0">
+  <span class="checkmark"></span>
+</label>
 
-                      </div>
-                      <div>
-                      <label for="Femme">Femme</label>
-                        <input type="radio" name="sexe" id="1" value="1">
+<label class="container">Femme
+  <input type="radio" name="sexe" id="1" value="1">
+  <span class="checkmark"></span>
+</label>
+
               @if ($errors->has('sexe'))
               <span class="help-block">
               <strong>{{ $errors->first('sexe') }}</strong>
@@ -133,10 +137,10 @@
 
 <div class="form-group">
 
-<button type="submit" class="btn btn-primary">
+<button type="submit" id="submit" >
 Register
 </button>
-</div>
+
 </form>
 
 
