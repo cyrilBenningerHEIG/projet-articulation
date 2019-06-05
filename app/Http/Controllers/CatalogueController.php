@@ -27,8 +27,13 @@ class CatalogueController extends Controller
         $vins = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])->get()
         ->where('id', $id);
 
+        $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
+        $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
+
         return view('productPage', [
             'vins'=> $vins,
+            'prixttc'=>$prixttc,
+            'prixeuro'=>$prixeuro,
             ]);
     }
 }
