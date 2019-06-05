@@ -1,13 +1,20 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title> Connexion </title>
   </head>
   <body id="login-form">
-<form method="POST" id="box" action="{{ route('login') }}">
-        <label for="email">{{ __('Adresse e-mail') }}</label>
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+<form method="POST" id="box" class="" action="{{ route('login') }}">
+        <div class="homepageImg">
+                <img class="logo" id="img-logo" src="images/logo.svg">
+              </div>
+              <label id="connect-text">
+
+                    {{ __("Connexion") }}
+
+                </label>
+            <input id="email" type="email" placeholder="Adresse email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             @error('email')
 
                 <span class="invalid-feedback" role="alert">
@@ -18,9 +25,8 @@
 
             @enderror
 
-        <label for="password">{{ __('Mot de passe') }}</label>
 
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+            <input id="password" type="password"  placeholder="Mot de passe" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
             @error('password')
 
@@ -32,9 +38,9 @@
 
             @enderror
 
-                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                <input class="form-check-input" type="checkbox" style="margin-top : 32px; margin-left : 50px" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                <label class="form-check-label" for="remember">
+                <label class="form-check-label" for="remember" >
 
                     {{ __("S'en souvenir") }}
 
@@ -56,12 +62,26 @@
 
             @endif
 
+            <a id="register-link" href="{{ route('register') }}">
+
+                    {{ __("S'inscrire") }}
+
+                </a>
+
+                <a id="home-link" href="{{ url('/') }}">
+
+                    <img class="arrow" src="images/arrow_white.svg" style="transform: rotate(180deg); width: 5%;">
+                    {{__("Retour")}}
+
+    
+                    </a>
+
             <script src="js/app.js"></script>
 
   </body>
-</html> --}}
+</html>
 
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('content')
 <div class="container" id="log-in-page">
     <div class="row justify-content-center">
@@ -132,4 +152,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
