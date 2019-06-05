@@ -11,8 +11,8 @@
         </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
                     <a class="icon" id="icon_search" href="#"><img src="/public/images/recherche.svg" /></a>
-                    <a class="icon" id="icon_account" href="compte"><img src="/public/images/compte.svg" /></a>
-                    <a class="icon" id="icon_cart" href="panier"><img src="/public/images/panier.svg" /></a>
+                    <a class="icon" id="icon_account" href="../compte"><img src="/public/images/compte.svg" /></a>
+                    <a class="icon" id="icon_cart" href="../panier"><img src="/public/images/panier.svg" /></a>
                 </div>
       </div>
     </header>
@@ -26,13 +26,13 @@
   <div class="container">
     <div class="nav-scroller py-3 mb-2">
       <nav class="nav d-flex justify-content-between">
-        <a class="p-2 pt-4 text-muted menu" id="products-link" href="produits">PRODUITS</a>
+        <a class="p-2 pt-4 text-muted menu" id="products-link" href="../produits">PRODUITS</a>
         <p class="p-2 pt-4 text-muted">|</p>
-        <a class="p-2 pt-4 text-muted menu" id="primeurs-link" href="primeurs">PRIMEURS</a>
+        <a class="p-2 pt-4 text-muted menu" id="primeurs-link" href="../primeurs">PRIMEURS</a>
         <p class="p-2 pt-4 text-muted">|</p>
-        <a class="p-2 pt-4 text-muted menu" id="news-link" href="nouveautes">NOUVEAUTÉS</a>
+        <a class="p-2 pt-4 text-muted menu" id="news-link" href="../nouveautes">NOUVEAUTÉS</a>
         <p class="p-2 pt-4 text-muted">|</p>
-        <a class="p-2 pt-4 text-muted menu" id="promo-link" href="promos">PROMOTIONS</a>
+        <a class="p-2 pt-4 text-muted menu" id="promo-link" href="../promos">PROMOTIONS</a>
       </nav>
     </div>
   </div>

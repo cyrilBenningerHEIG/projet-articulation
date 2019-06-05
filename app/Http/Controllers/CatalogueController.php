@@ -17,8 +17,21 @@ class CatalogueController extends Controller
         // ->select('vins.nom', 'regns.nom', 'pays.nom');
         $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
         ->get();
+
+        for ($i=0; $i < sizeof($vins); $i++) { 
+            $prixht = $vins[$i]['prix']['prixht'];
+            $prixttc = ($prixht)*1.07;
+            $prixttc_round = round($prixttc * 20, 0) /20;
+            $prixttc_format = number_format($prixttc_round, 2, '.', '');
+            $vins[$i]['prix']['prixht'] = $prixttc_format;
+        }
+        // foreach ($vins[1]['prix']['prixht'] as $prix){
+        //     $prix = ($prix)*1.07;
+        // }
+
         return view('produits', [
             'vins'=> $vins,
+            // 'prixttc'=> $prixttc,
             ]);
     }
 
@@ -28,12 +41,14 @@ class CatalogueController extends Controller
         ->where('id', $id);
 
         $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
+        $prixttc_round = round($prixttc * 20, 0) /20;
+        $prixttc_format = number_format($prixttc_round, 2, '.', '');
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
-
+        $prixeuro_round = number_format($prixeuro, 2, '.', '');
         return view('productPage', [
             'vins'=> $vins,
-            'prixttc'=>$prixttc,
-            'prixeuro'=>$prixeuro,
+            'prixttc'=>$prixttc_format,
+            'prixeuro'=>$prixeuro_round,
             ]);
     }
 }
