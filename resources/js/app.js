@@ -23,7 +23,7 @@ import L from 'leaflet';
 window.$ = require('jquery')
 window.JQuery = require('jquery')
 
-
+window.axios = require('axios');
 
 Vue.use(BootstrapVue);
 
@@ -60,6 +60,9 @@ Vue.component('product-page', require('./components/ProductPage.vue').default);
 Vue.component('carte-produit', require('./components/CarteProduit.vue').default);
 Vue.component('selection-card', require('./components/CarteSelection.vue').default);
 
+//Page histoire
+Vue.component('history-page', require('./components/HistoryPage.vue').default);
+
 //CGV 
 Vue.component('cgv-texte', require('./components/CGV.vue').default);
 
@@ -80,6 +83,8 @@ Vue.component('paiement-page', require('./components/PagePaiement.vue').default)
 
 Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
 Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);
+//Compte
+Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
 
 const app = new Vue({
     el: '#app',
@@ -112,6 +117,7 @@ L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
 
+
 ////////////////////////////////////// Formulaire adresse de paiement
 
 $(document).ready(function() {
@@ -131,3 +137,5 @@ $(document).ready(function() {
         });
     }, false);
 })();
+
+// Chargement du type de carte sur Leaflet

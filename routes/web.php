@@ -14,13 +14,8 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/pageProduit', function () {
-    return view('productPage');
-});
-
-Route::get('/produits', function () {
-    return view('produits');
-});
+Route::get('/produits', 'CatalogueController@index');
+Route::get('/produit/{vins}', 'CatalogueController@show');
 
 Route::get('/promos', function () {
     return view('promos');
@@ -37,6 +32,8 @@ Route::get('/nouveautes', function () {
 Route::get('/compte', function () {
     return view('compte');
 });
+
+Route::post('/adresses', 'AdresseController@store');
 
 Route::get('/panier', function () {
     return view('panier');
@@ -57,6 +54,7 @@ Route::get('/paiement-etape3', function () {
 Route::get('/paiement-etape4', function () {
     return view('paiement4');
 });
+
 
 
 

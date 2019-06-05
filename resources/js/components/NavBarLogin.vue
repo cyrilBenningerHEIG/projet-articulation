@@ -10,7 +10,7 @@
         </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
                     <a class="icon" id="icon_search" href="#"><img src="/public/images/recherche.svg" /></a>
-                    <a class="icon" id="icon_account" href="login"><img src="/public/images/compte.svg" /></a>
+                    <a class="icon" id="icon_account" href="compte"><img src="/public/images/compte.svg" /></a>
                     <a class="icon" id="icon_cart" href="#"><img src="/public/images/panier.svg" /></a>
                 </div>
       </div>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class regn extends Model
 {
-    public function payses() {
+    public function pays() {
         return $this->belongsTo('App\pays');
     }
 

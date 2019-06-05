@@ -28,13 +28,14 @@ class CreateVinsTable extends Migration
             $table->integer('condi_id')->unsigned();
             $table->foreign('condi_id')->references('id')->on('condis');
             $table->string('nom');
-            $table->string('description');
+            $table->text('description');
             $table->string('alcool');
             $table->string('apogee');
             $table->integer('millesime');
             $table->string('photoUrl')->nullable($value = true);
             $table->boolean('estBio')->default(0);
             $table->boolean('estVds')->default(0);
+            $table->boolean('estPrimeur')->default(0);
             $table->string('cotation')->nullable($value = true);
             $table->string('classement')->nullable($value = true);
             $table->integer('stock');
