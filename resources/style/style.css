@@ -113,6 +113,13 @@
     .card-group {
         padding-top: 50px;
     }
+    .card-body{
+        width : 15rem;
+        margin-top : -25px;
+    }
+    .card-title{
+        height : 3rem;
+    }
     
     .btn-danger {
         background-color: #953640 !important;
@@ -311,12 +318,16 @@
         padding-top: 15px;
     }
     
-    #weekproduct {
+    #weekproduct #carteproduit{
         width: 10rem;
     }
     
-    .card-img-top {
+    .card-img-top{
         width: 10rem;
+    }
+    .card-title{
+        width: 15rem;
+        padding-top : -20px;
     }
     
     .btn-filter {
@@ -353,6 +364,14 @@
         display: inline-flex;
         padding-left: 20px;
         padding-right: 20px;
+        margin-top : 45px;
+
+    }
+    #produ-carte{
+        height : 50px;
+    }
+    #prix-carte{
+        font-weight: bold;
     }
 
     #login-form { 

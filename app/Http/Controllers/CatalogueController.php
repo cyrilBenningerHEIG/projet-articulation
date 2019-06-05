@@ -12,20 +12,19 @@ class CatalogueController extends Controller
     function index ()
     {
 
-        //---------------------------------Products---------------------------------//
-
-        // $vins = DB::table('vins')
-        // ->join('regns', 'regns.id', '=', 'vins.regn_id')
-        // ->join('pays', 'regns.pays_id', '=', 'pays.id')
-        // ->select('vins.nom', 'regns.nom', 'pays.nom');
-        // if (condition) {
-        //     # code...
-        // } else {     
-
             // Display all products
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
             ->get();
+            
+            // ----------Prices---------//
 
+            for ($i=0; $i < sizeof($vins); $i++) { 
+                $prixht = $vins[$i]['prix']['prixht'];
+                $prixttc = ($prixht)*1.07;
+                $prixttc_round = round($prixttc * 20, 0) /20;
+                $prixttc_format = number_format($prixttc_round, 2, '.', '');
+                $vins[$i]['prix']['prixht'] = $prixttc_format;
+            }
         //---------------------------------Filters---------------------------------//
         $types = DB::table('types')->get();
         $pays = DB::table('pays')->orderBy('nom')->get();
@@ -37,8 +36,6 @@ class CatalogueController extends Controller
 
         return view('produits', [
             'vins'=> $vins,
-            // 'prixttc'=>$prixttc,
-            // 'prixeuro'=>$prixeuro,
             'types'=> $types,
             'pays'=> $pays,
             'regns'=> $regns,
@@ -46,7 +43,10 @@ class CatalogueController extends Controller
             'produs'=> $produs,
             'frmts'=> $frmts,
             'millesimes'=> $millesimes
-            ]);
+        ]);
+        // foreach ($vins[1]['prix']['prixht'] as $prix){
+        //     $prix = ($prix)*1.07;
+        // }
 
         // }
     }
@@ -57,12 +57,14 @@ class CatalogueController extends Controller
         ->where('id', $id);
 
         $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
+        $prixttc_round = round($prixttc * 20, 0) /20;
+        $prixttc_format = number_format($prixttc_round, 2, '.', '');
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
-
+        $prixeuro_round = number_format($prixeuro, 2, '.', '');
         return view('productPage', [
             'vins'=> $vins,
-            'prixttc'=>$prixttc,
-            'prixeuro'=>$prixeuro,
+            'prixttc'=>$prixttc_format,
+            'prixeuro'=>$prixeuro_round,
             ]);
     }
 }
