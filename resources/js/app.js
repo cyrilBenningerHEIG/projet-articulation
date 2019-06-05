@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-<<<<<<< HEAD
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -28,10 +28,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
-=======
+
+
 window.Vue = require('vue');
 import Vue from 'vue';
 import Router from './routes.js'
@@ -131,9 +129,4 @@ L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
 // Chargement du type de carte sur Leaflet
-<<<<<<< HEAD
->>>>>>> a4afe13e4ade29bc63bd96bbf8442be614527701
-=======
 
-    
->>>>>>> 944c4ef64a85f43ec129ad75a2a1e47455c07f39
