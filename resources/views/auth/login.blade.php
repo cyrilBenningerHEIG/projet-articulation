@@ -6,6 +6,7 @@
   </head>
   <body id="login-form">
 <form method="POST" id="box" class="" action="{{ route('login') }}">
+@csrf
 
 
         <div class="homepageImg">
