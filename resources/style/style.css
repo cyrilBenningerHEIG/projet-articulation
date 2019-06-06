@@ -381,13 +381,20 @@
         -o-background-size: cover;
         background-size: cover;
       }
-    #login-form #signup-form {
+      #register-form { 
+        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    #login-form #register-form {
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
         background: #a62b35;
         }
-      #box{
+      #box, #box_register{
         width: 400px;
         height : 700px;
         padding: 40px;
@@ -400,13 +407,14 @@
         border-radius: 25px;
         opacity: 60%;
       }
-      #box label{
+      
+      #box label, #box_register label{
         color: white;
         font-weight: 400;
         font-size : 130%;
         margin-top : 25px;
       }
-      #box input{
+      #box input, #box_register input{
         border:0;
         background: #a62b35;
         display: block;
@@ -419,15 +427,22 @@
         color: black;
         border-radius: 15px;
         transition: 0.25s;
-        margin-bottom: 25px;
+        margin-bottom: 25;
       }
-      #box input:focus{
+      #box_register label{
+        display: block;
+    }
+      #box_register input{
+          display: block;
+      }
+  
+      #box input:focus,#box_register input:focus {
         width: 280px;
         border-color: black;
         background : white;
         color : black;
       }
-      #box input::placeholder{
+      #box input::placeholder, #box_register input::placeholder{
           color : black;
       }
       #submit{

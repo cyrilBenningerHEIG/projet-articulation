@@ -104,4 +104,3 @@ L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 // Chargement du type de carte sur Leaflet
 
-    
