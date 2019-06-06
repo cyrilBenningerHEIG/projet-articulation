@@ -82,7 +82,13 @@
          <button type="submit" id="submit" >
             {{ __("S'inscrire") }}
          </button>
-      </form>
+
+      <a id="login-link" href="{{ route('login') }}">
+
+        {{ __("Se connecter") }}
+
+    </a>
+</form>
       <script src="js/app.js"></script>
    </body>
 </html>
