@@ -113,9 +113,12 @@
     .card-group {
         padding-top: 50px;
     }
-    
-    .card-img-top {
-        height: 350px;
+    .card-body{
+        width : 15rem;
+        margin-top : -25px;
+    }
+    .card-title{
+        height : 3rem;
     }
     
     .btn-danger {
@@ -326,12 +329,16 @@
         padding-top: 15px;
     }
     
-    #weekproduct {
+    #weekproduct #carteproduit{
         width: 10rem;
     }
     
-    .card-img-top {
+    .card-img-top{
         width: 10rem;
+    }
+    .card-title{
+        width: 15rem;
+        padding-top : -20px;
     }
     
     .btn-filter {
@@ -368,4 +375,194 @@
         display: inline-flex;
         padding-left: 20px;
         padding-right: 20px;
+        margin-top : 45px;
+
     }
+    #produ-carte{
+        height : 50px;
+    }
+    #prix-carte{
+        font-weight: bold;
+    }
+
+    #login-form { 
+        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    #login-form #signup-form {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: #a62b35;
+        }
+      #box{
+        width: 400px;
+        height : 700px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #a62b35;
+        text-align: center;
+        border-radius: 25px;
+        opacity: 60%;
+      }
+      #box label{
+        color: white;
+        font-weight: 400;
+        font-size : 130%;
+        margin-top : 25px;
+      }
+      #box input{
+        border:0;
+        background: #a62b35;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid black;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: black;
+        border-radius: 15px;
+        transition: 0.25s;
+        margin-bottom: 25px;
+      }
+      #box input:focus{
+        width: 280px;
+        border-color: black;
+        background : white;
+        color : black;
+      }
+      #box input::placeholder{
+          color : black;
+      }
+      #submit{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid black;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+      #submit:hover{
+        background: black;
+      }
+      #remember {
+          margin-top : 35px;
+            font-size : 75%;
+            padding-top : -25px;
+      }
+      #register-link,#home-link,#forgot-pass{
+          display : block;
+          padding-top : 25px;
+          color : white;
+      }
+
+      #register #box{
+        width: 400px;
+        height : 1050px;
+        padding: 40px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #a62b35;
+        text-align: center;
+        border-radius: 25px;
+        opacity: 60%;
+      }
+
+      #register { 
+        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #0000007e;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Style for dot color depending on wine type*/
+
+.type-circle-1{
+    fill : #a62b35;
+}
+.type-circle-2{
+    fill : #f2ebda;
+}
+.type-circle-3{
+    fill : white;
+}
