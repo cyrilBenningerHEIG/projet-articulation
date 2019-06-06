@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'clnts',
+        'passwords' => 'clnt',
     ],
 
     /*
@@ -38,12 +38,12 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'clnts',
+            'provider' => 'users',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'clnts',
+            'provider' => 'users',
             'hash' => false,
         ],
     ],
@@ -66,7 +66,11 @@ return [
     */
 
     'providers' => [
-        'clnts' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+        'clnt' => [
             'driver' => 'eloquent',
             'model' => App\clnt::class,
         ],
@@ -93,6 +97,11 @@ return [
     */
 
     'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
         'clnts' => [
             'provider' => 'clnts',
             'table' => 'password_resets',

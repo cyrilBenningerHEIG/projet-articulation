@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+         //$this->call(UsersTableSeeder::class);
+    
         // données de test
 
         $this->call(ProdusTableSeeder::class);
@@ -23,9 +25,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PrixesTableSeeder::class);
         $this->call(VinsTableSeeder::class);
         $this->call(PromopsTableSeeder::class);
-        $this->call(Prixes_PromopsTableSeeder::class);
-        $this->call(Cepags_VinsTableSeeder::class);
+        $this->call(Prix_PromopTableSeeder::class);
         $this->call(TypesTableSeeder::class);
-        $this->call(Types_VinsTableSeeder::class);
+        $this->call(Type_VinTableSeeder::class);
+        $this->call(Cepag_VinTableSeeder::class);
     }
 }

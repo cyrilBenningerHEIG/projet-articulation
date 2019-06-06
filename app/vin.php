@@ -31,7 +31,7 @@ class vin extends Model
     }
 
     public function cepags() {
-        return $this->belongsToMany('App\cepag');
+        return $this->belongsToMany('App\cepag')->withPivot('pourcentage');
     }
 
     public function types() {
@@ -47,8 +47,16 @@ class vin extends Model
     }
 
     public function cmds() {
-        return $this->belongsToMany('App\cmd');
+        return $this->belongsToMany('App\cmd')->withPivot('quantite');
     }
+
+    // public function presentPrixTTC(){
+    //     return money_format ('CHF%i', $this->prix*1,07);
+    // }
+
+    // public function presentPrixEuro(){
+    //     return money_format ('CHF%i', $this->prix*0.89*1,07);
+    // }
 
 
 

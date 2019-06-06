@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
     routes : [
         {
-            path: "/login",
+            path: "/compte",
             component: NavBarLogin
         },
 

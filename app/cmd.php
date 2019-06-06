@@ -23,9 +23,6 @@ class cmd extends Model
     }
 
     public function vins() {
-        return $this->belongsToMany('App\vin');
-    }
-
-
-    
+        return $this->belongsToMany('App\vin')->withPivot('quantite');
+    }    
 }
