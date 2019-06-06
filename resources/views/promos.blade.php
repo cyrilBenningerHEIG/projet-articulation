@@ -23,8 +23,8 @@
                 
                 @endif
                 <menu-promo></menu-promo>
-                <product-filter></product-filter>
-                <carte-produit></carte-produit>
+                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}'></product-filter>
+                <carte-produit :vins='{{ $vins }}'></carte-produit>
                 <footer-bar></footer-bar>
 
             </div>

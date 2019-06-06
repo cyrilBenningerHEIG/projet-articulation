@@ -1,8 +1,8 @@
 <template>  
 <div class="container" >
-      <div class="card card-custom" v-for="vin in vins" :key=vin.id>
+      <div class="card card-custom" v-for="vin in 5" :key=vin.id>
         <a v-bind:href="'produit/'+ vin.id"> 
-    <img src="/public/images/bottle.png" class="card-img-top" alt="vin1">
+    <img src="/images/bottle.png" class="card-img-top" alt="vin1">
     </a>
     <div class="card-body" id="weekproduct">
       <h5 class="card-title">{{vin.nom}}</h5>
@@ -18,14 +18,8 @@ export default {
     data(){
         return{
           vin:'',
-           limit: 5 // or any number you wish to limit to
         }
      },
-     computed:{
-  computedObj(){
-    return this.limit ? this.object.slice(0,this.limit) : this.object
-  }
-},
 }
 </script>
 

@@ -17,17 +17,11 @@ Route::get('/', 'IndexController@index');
 Route::get('/produits', 'CatalogueController@index');
 Route::get('/produit/{vins}', 'CatalogueController@show');
 
-Route::get('/promos', function () {
-    return view('promos');
-});
+Route::get('/promos', 'PromosController@index');
 
-Route::get('/primeurs', function () {
-    return view('primeurs');
-});
+Route::get('/primeurs', 'PrimeurController@index');
 
-Route::get('/nouveautes', function () {
-    return view('nouveautes');
-});
+Route::get('/nouveautes', 'NouveautesController@index');
 
 Route::get('/compte', function () {
     return view('compte');
@@ -38,8 +32,6 @@ Route::post('/adresses', 'AdresseController@store');
 Route::get('/panier', function () {
     return view('panier');
 });
-
-
 
 Auth::routes();
 
