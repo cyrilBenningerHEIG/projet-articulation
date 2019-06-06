@@ -176,6 +176,10 @@
                 aria-labelledby="v-pills-profile-tab"
               >
                 <table class="p table">
+                <tr>
+                    <td>Appellation</td>
+                    <td>{{vin.appel.libelle}}</td>
+                  </tr>
                   <tr>
                     <td>Teneur en alcool</td>
                     <td>{{vin.alcool}}</td>
