@@ -14,9 +14,8 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/pageProduit', 'productPageController@index');
-
 Route::get('/produits', 'CatalogueController@index');
+Route::get('/produit/{vins}', 'CatalogueController@show');
 
 Route::get('/promos', function () {
     return view('promos');
@@ -34,9 +33,29 @@ Route::get('/compte', function () {
     return view('compte');
 });
 
+Route::post('/adresses', 'AdresseController@store');
+
 Route::get('/panier', function () {
     return view('panier');
 });
+
+Route::get('/paiement-etape1', function () {
+    return view('paiement1');
+});
+
+Route::get('/paiement-etape2', function () {
+    return view('paiement2');
+});
+
+Route::get('/paiement-etape3', function () {
+    return view('paiement3');
+});
+
+Route::get('/paiement-etape4', function () {
+    return view('paiement4');
+});
+
+
 
 
 Auth::routes();

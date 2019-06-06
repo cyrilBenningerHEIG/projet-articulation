@@ -13,7 +13,9 @@
             aria-expanded="true"
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
+          <div class="container" v-for="value in types">
+            <a class="dropdown-item" >{{value.type}}</a>
+            </div>
           </div>
         </div>
         <div class="btn-group" role="group">
@@ -26,8 +28,10 @@
             aria-expanded="true"
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in pays">
+            <a class="dropdown-item" href="#" >{{value.nom}}</a>
+            </div>
+            </div>
         </div>
         <div class="btn-group" role="group">
           <button
@@ -39,8 +43,10 @@
             aria-expanded="true"
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in regns">
+            <a class="dropdown-item" href="#" >{{value.nom}}</a>
+            </div>
+            </div>
         </div>
         <div class="btn-group" role="group">
           <button
@@ -52,8 +58,10 @@
             aria-expanded="true"
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in appels">
+            <a class="dropdown-item" href="#" >{{value.libelle}}</a>
+            </div>
+            </div>
         </div>
         <div class="btn-group" role="group">
           <button
@@ -65,8 +73,10 @@
             aria-expanded="true"
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in millesimes">
+            <a class="dropdown-item" href="#" >{{value.millesime}}</a>
+            </div>
+            </div>
         </div>
         <div class="btn-group" role="group">
           <button
@@ -78,8 +88,10 @@
             aria-expanded="true"
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in produs">
+            <a class="dropdown-item" href="#" >{{value.nom}}</a>
+            </div>
+            </div>
         </div>
         <div class="btn-group" role="group">
           <button
@@ -91,20 +103,22 @@
             aria-expanded="true"
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
+          <div class="container" v-for="value in frmts">
+            <a class="dropdown-item" href="#" >{{value.quantite}}</a>
+            </div>
+            </div>
         </div>
         <div class="container">
           <div id="tri-produit" class="row">
             <div class="col-sm">
               <a class="icon_display" id="icon_display2" href="#">
-                <img src="/public/images/display2.svg">
+                <img src="images/icons/display2.svg">
               </a>
               <a class="icon_display" id="icon_display3" href="#">
-                <img src="/public/images/display3.svg">
+                <img src="images/icons/display3.svg">
               </a>
               <a class="icon_display" id="icon_display4" href="#">
-                <img src="/public/images/display4.svg">
+                <img src="images/icons/display4.svg">
               </a>
             </div>
             <div class="col-sm">
@@ -137,3 +151,20 @@
     </div>
   </div>
 </template>
+<script>
+
+export default {
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes'],
+
+    data(){
+        return{
+          type:'',
+          pays:'',
+          regn:'',
+          appel:'',
+          produ:'',
+          frmt:''
+        }
+     },
+}
+</script>

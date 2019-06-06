@@ -1,7 +1,7 @@
  <template>
   <div class="container">
     <div class="homepageImg">
-      <img class="img-fluid" :src="'./images/home.jpg'">
+      <img class="img-fluid" :src="'images/nav/home.jpg'">
     </div>
 
     <div class="nav-scroller py-3 mb-2">

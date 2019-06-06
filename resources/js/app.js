@@ -23,7 +23,7 @@ import L from 'leaflet';
 window.$ = require('jquery')
 window.JQuery = require('jquery')
 
-
+window.axios = require('axios');
 
 Vue.use(BootstrapVue);
 
@@ -60,17 +60,38 @@ Vue.component('product-page', require('./components/ProductPage.vue').default);
 Vue.component('carte-produit', require('./components/CarteProduit.vue').default);
 Vue.component('selection-card', require('./components/CarteSelection.vue').default);
 
+//Page histoire
+Vue.component('history-page', require('./components/HistoryPage.vue').default);
+
 //CGV 
 Vue.component('cgv-texte', require('./components/CGV.vue').default);
 
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
 
+//Paiement
+Vue.component('header-paiement', require('./components/HeaderPaiement.vue').default);
+Vue.component('header-retour', require('./components/Retour.vue').default);
+Vue.component('paiement-etape1', require('./components/Paiement1.vue').default);
+Vue.component('paiement-compte', require('./components/ComptePaiement.vue').default);
+
+Vue.component('paiement-etape2', require('./components/Paiement2.vue').default);
+Vue.component('paiement-livraison', require('./components/LivraisonPaiement.vue').default);
+
+Vue.component('paiement-etape3', require('./components/Paiement3.vue').default);
+Vue.component('paiement-page', require('./components/PagePaiement.vue').default);
+
+Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
+Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);
+//Compte
+Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
+
 const app = new Vue({
     el: '#app',
     router: Router,
 });
 
+//////////////////////////////////////  Chargement du type de carte sur Leaflet
 
 var map = L.map('mapid').setView([47.02, 8.33], 8.5);
 
@@ -95,5 +116,26 @@ var blackIcon = new L.Icon({
 L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
+
+
+////////////////////////////////////// Formulaire adresse de paiement
+
+$(document).ready(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
 
 // Chargement du type de carte sur Leaflet

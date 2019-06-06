@@ -13,13 +13,13 @@ class TypesTableSeeder extends Seeder
     {
         DB::table('types')->insert([
             [
-                'type' => 'vin rouge',
+                'type' => 'Vin rouge',
             ],
             [
-                'type' => 'vin blanc',
+                'type' => 'Vin blanc',
             ],
             [
-                'type' => 'vin mousseux',
+                'type' => 'Vin mousseux',
             ],
         ]);
     }
