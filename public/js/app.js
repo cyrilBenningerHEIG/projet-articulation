@@ -1866,6 +1866,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['vins', 'prixttc', 'prixeuro'],
   data: function data() {
@@ -9172,7 +9186,7 @@ var components = {
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/components/index.js ***!
   \***********************************************************/
-/*! exports provided: default, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip */
+/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19777,7 +19791,7 @@ var NAME = 'BTooltip'; // @vue/component
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/directives/index.js ***!
   \***********************************************************/
-/*! exports provided: default, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
+/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34176,7 +34190,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "    body {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    .p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    a {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    label {\r\n        font-family: 'Montserrat', sans-serif;\r\n        font-size: 14px;\r\n    }\r\n    \r\n    .wrapper {\r\n        display: grid;\r\n        grid-template-columns: repeat(4, 1fr);\r\n        grid-gap: 10px;\r\n        grid-auto-rows: minmax(100px, auto);\r\n    }\r\n    \r\n    .icon:hover {\r\n        fill-opacity: 0;\r\n    }\r\n    \r\n    .logo {\r\n        width: 80%;\r\n    }\r\n    \r\n    #icon_search {\r\n        width: 50px;\r\n    }\r\n    \r\n    #icon_account {\r\n        width: 40px;\r\n        margin-left: 20px;\r\n        margin-right: 20px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    #icon_cart {\r\n        width: 35px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    .menu {\r\n        font-size: 20px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .image {\r\n        width: 80%;\r\n        margin: auto auto;\r\n    }\r\n    \r\n    .producer-logo {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin: 20px;\r\n    }\r\n    /* Histoire */\r\n    \r\n    .test {\r\n        background-color: #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    .btn-history {\r\n        margin-top: 10px;\r\n        margin-bottom: 40px;\r\n        background-color: white;\r\n        color: #a62b35;\r\n        border: none;\r\n    }\r\n    \r\n    p.box {\r\n        margin: 50px;\r\n    }\r\n    \r\n    .counter {\r\n        padding-top: 50px;\r\n        padding-right: 50px;\r\n        padding-left: 50px;\r\n    }\r\n    /* Footer */\r\n    \r\n    #img-logo {\r\n        margin-left: 25px;\r\n    }\r\n    \r\n    .text-muted {\r\n        color: black !important;\r\n    }\r\n    \r\n    .card {\r\n        border: none;\r\n    }\r\n    \r\n    .card-group {\r\n        padding-top: 50px;\r\n    }\r\n    .card-body{\r\n        width : 15rem;\r\n        margin-top : -25px;\r\n    }\r\n    .card-title{\r\n        height : 3rem;\r\n    }\r\n    \r\n    .btn-danger {\r\n        background-color: #953640 !important;\r\n        border-color: #953640 !important;\r\n        color: aliceblue !important;\r\n    }\r\n    \r\n    .page-footer {\r\n        background-color: #2B2B2B;\r\n        color: #CCBE9F;\r\n        font-family: 'Roboto', sans-serif;\r\n    }\r\n    \r\n    a.afooter {\r\n        color: #CCBE9F !important;\r\n    }\r\n    \r\n    .cls-1 {\r\n        fill: #CCBE9F;\r\n    }\r\n    \r\n    .image-footer {\r\n        width: 20%;\r\n    }\r\n    \r\n    .footer-size {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .footer-col {\r\n        margin-left: 5px;\r\n    }\r\n    \r\n    .adresse-size {\r\n        font-size: 11px;\r\n        line-height: 11px;\r\n    }\r\n     /* History page */\r\n\r\n     .paddingTB60 {\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    .col-md-6{\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    P.blocktext {\r\n        vertical-align: middle;\r\n        font-weight: bold;\r\n        font-style: italic;\r\n        font-size: 2rem;\r\n        text-transform: uppercase;\r\n        position: relative;\r\n        top: 50%;\r\n        -webkit-transform: translateY(-50%);\r\n                transform: translateY(-50%);\r\n    }\r\n\r\n    /* Product page */\r\n    \r\n    .roadMap {\r\n        white-space: nowrap;\r\n    }\r\n    \r\n    .arrow {\r\n        width: 2.5%;\r\n    }\r\n    \r\n    .bottleImg {\r\n        width: 90%;\r\n        height: auto;\r\n        margin: auto;\r\n    }\r\n    \r\n    .price-font {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n        color: #6c757d;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    #btn-quantity {\r\n        padding-right: 325px;\r\n    }\r\n    \r\n    .nav-pills .nav-link.active,\r\n    .nav-pills .show>.nav-link {\r\n        color: #2B2B2B;\r\n        background-color: #CCBE9F;\r\n    }\r\n    \r\n    .pills {\r\n        color: #f2ebda;\r\n        font-size: 16px;\r\n    }\r\n    \r\n    .btn-basket {\r\n        padding: 1em 5em 1em 5em;\r\n        font-family: 'Montserrat', sans-serif;\r\n        border: 5px solid #2B2B2B;\r\n        background-color: #2B2B2B;\r\n        color: white;\r\n        /* Safari */\r\n        transition-duration: 0.4s;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btn-basket:hover {\r\n        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n        background-color: #a62b35;\r\n        border: 5px solid #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    #mapid {\r\n        height: 400px;\r\n    }\r\n    /* CONTACT */\r\n    \r\n    .contact-form {\r\n        background: #2B2B2B;\r\n        margin-top: 10%;\r\n        margin-bottom: 5%;\r\n        width: 70%;\r\n    }\r\n    \r\n    .contact-form .form-control {\r\n        border-radius: 25;\r\n    }\r\n    \r\n    .contact-image {\r\n        text-align: center;\r\n    }\r\n    \r\n    .contact-image img {\r\n        border-radius: 25;\r\n        width: 11%;\r\n        margin-top: -3%;\r\n        -webkit-transform: rotate(29deg);\r\n                transform: rotate(29deg);\r\n    }\r\n    \r\n    .contact-form form {\r\n        padding: 14%;\r\n    }\r\n    \r\n    .contact-form form .row {\r\n        margin-bottom: -7%;\r\n    }\r\n    \r\n    .contact-form h3 {\r\n        margin-bottom: 8%;\r\n        margin-top: -10%;\r\n        text-align: center;\r\n        color: white;\r\n    }\r\n    \r\n    .contact-form .btnContact {\r\n        width: 50%;\r\n        border: none;\r\n        border-radius: 25px;\r\n        padding: 1.5%;\r\n        background: #dc3545;\r\n        font-weight: 600;\r\n        color: #fff;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btnContactSubmit {\r\n        width: 50%;\r\n        padding: 1.5%;\r\n        color: #fff;\r\n        border: none;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .icon_display img {\r\n        width: 50px;\r\n    }\r\n    \r\n    #tri-produit {\r\n        margin-top: 50px;\r\n    }\r\n    \r\n    .number_results {\r\n        padding-top: 15px;\r\n    }\r\n    \r\n    #weekproduct #carteproduit{\r\n        width: 10rem;\r\n    }\r\n    \r\n    .card-img-top{\r\n        width: 10rem;\r\n    }\r\n    .card-title{\r\n        width: 15rem;\r\n        padding-top : -20px;\r\n    }\r\n    \r\n    .btn-filter {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 0.5px;\r\n        border-radius: 25px;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n    }\r\n    \r\n    #cart-produit-img {\r\n        width: 68px;\r\n        height: 150px;\r\n    }\r\n    \r\n    .btn-panier-2 {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 1px;\r\n    }\r\n    \r\n    .action-btn {\r\n        margin-bottom: 25px;\r\n    }\r\n    \r\n    .card-custom {\r\n        display: inline-flex;\r\n        padding-left: 20px;\r\n        padding-right: 20px;\r\n        margin-top : 45px;\r\n\r\n    }\r\n    #produ-carte{\r\n        height : 50px;\r\n    }\r\n    #prix-carte{\r\n        font-weight: bold;\r\n    }\r\n\r\n    #login-form { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n    #login-form #signup-form {\r\n        margin: 0;\r\n        padding: 0;\r\n        font-family: 'Montserrat', sans-serif;\r\n        background: #a62b35;\r\n        }\r\n      #box{\r\n        width: 400px;\r\n        height : 700px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n      #box label{\r\n        color: white;\r\n        font-weight: 400;\r\n        font-size : 130%;\r\n        margin-top : 25px;\r\n      }\r\n      #box input{\r\n        border:0;\r\n        background: #a62b35;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 10px;\r\n        width: 200px;\r\n        outline: none;\r\n        color: black;\r\n        border-radius: 15px;\r\n        transition: 0.25s;\r\n        margin-bottom: 25px;\r\n      }\r\n      #box input:focus{\r\n        width: 280px;\r\n        border-color: black;\r\n        background : white;\r\n        color : black;\r\n      }\r\n      #box input::-webkit-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-moz-placeholder{\r\n          color : black;\r\n      }\r\n      #box input:-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::placeholder{\r\n          color : black;\r\n      }\r\n      #submit{\r\n        border:0;\r\n        background: none;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 40px;\r\n        outline: none;\r\n        color: white;\r\n        border-radius: 24px;\r\n        transition: 0.25s;\r\n        cursor: pointer;\r\n      }\r\n      #submit:hover{\r\n        background: black;\r\n      }\r\n      #remember {\r\n          margin-top : 35px;\r\n            font-size : 75%;\r\n            padding-top : -25px;\r\n      }\r\n      #register-link,#home-link,#forgot-pass{\r\n          display : block;\r\n          padding-top : 25px;\r\n          color : white;\r\n      }\r\n\r\n      #register #box{\r\n        width: 400px;\r\n        height : 1050px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 100%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n\r\n      #register { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n\r\n    /* The container */\r\n.container {\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  margin-bottom: 12px;\r\n  cursor: pointer;\r\n  font-size: 22px;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n}\r\n\r\n/* Hide the browser's default radio button */\r\n.container input {\r\n  position: absolute;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Create a custom radio button */\r\n.checkmark {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 25px;\r\n  width: 25px;\r\n  background-color: #eee;\r\n  border-radius: 50%;\r\n}\r\n\r\n/* On mouse-over, add a grey background color */\r\n.container:hover input ~ .checkmark {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* When the radio button is checked, add a blue background */\r\n.container input:checked ~ .checkmark {\r\n  background-color: #0000007e;\r\n}\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n.checkmark:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: none;\r\n}\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n.container input:checked ~ .checkmark:after {\r\n  display: block;\r\n}\r\n\r\n/* Style the indicator (dot/circle) */\r\n.container .checkmark:after {\r\n \ttop: 9px;\r\n\tleft: 9px;\r\n\twidth: 8px;\r\n\theight: 8px;\r\n\tborder-radius: 50%;\r\n\tbackground: white;\r\n}\r\n", ""]);
+exports.push([module.i, "    body {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    .p {\r\n        font-family: 'Roboto', sans-serif;\r\n        padding: 0;\r\n        margin: 0;\r\n    }\r\n    \r\n    a {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    label {\r\n        font-family: 'Montserrat', sans-serif;\r\n        font-size: 14px;\r\n    }\r\n    \r\n    .wrapper {\r\n        display: grid;\r\n        grid-template-columns: repeat(4, 1fr);\r\n        grid-gap: 10px;\r\n        grid-auto-rows: minmax(100px, auto);\r\n    }\r\n    \r\n    .icon:hover {\r\n        fill-opacity: 0;\r\n    }\r\n    \r\n    .logo {\r\n        width: 80%;\r\n    }\r\n    \r\n    #icon_search {\r\n        width: 50px;\r\n    }\r\n    \r\n    #icon_account {\r\n        width: 40px;\r\n        margin-left: 20px;\r\n        margin-right: 20px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    #icon_cart {\r\n        width: 35px;\r\n        margin-bottom: 2px;\r\n    }\r\n    \r\n    .menu {\r\n        font-size: 20px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .image {\r\n        width: 80%;\r\n        margin: auto auto;\r\n    }\r\n    \r\n    .producer-logo {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin: 20px;\r\n    }\r\n    /* Histoire */\r\n    \r\n    .test {\r\n        background-color: #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    .btn-history {\r\n        margin-top: 10px;\r\n        margin-bottom: 40px;\r\n        background-color: white;\r\n        color: #a62b35;\r\n        border: none;\r\n    }\r\n    \r\n    p.box {\r\n        margin: 50px;\r\n    }\r\n    \r\n    .counter {\r\n        padding-top: 50px;\r\n        padding-right: 50px;\r\n        padding-left: 50px;\r\n    }\r\n    /* Footer */\r\n    \r\n    #img-logo {\r\n        margin-left: 25px;\r\n    }\r\n    \r\n    .text-muted {\r\n        color: black !important;\r\n    }\r\n    \r\n    .card {\r\n        border: none;\r\n    }\r\n    \r\n    .card-group {\r\n        padding-top: 50px;\r\n    }\r\n    .card-body{\r\n        width : 15rem;\r\n        margin-top : -25px;\r\n    }\r\n    .card-title{\r\n        height : 3rem;\r\n    }\r\n    \r\n    .btn-danger {\r\n        background-color: #953640 !important;\r\n        border-color: #953640 !important;\r\n        color: aliceblue !important;\r\n    }\r\n    \r\n    .page-footer {\r\n        background-color: #2B2B2B;\r\n        color: #CCBE9F;\r\n        font-family: 'Roboto', sans-serif;\r\n    }\r\n    \r\n    a.afooter {\r\n        color: #CCBE9F !important;\r\n    }\r\n    \r\n    .cls-1 {\r\n        fill: #CCBE9F;\r\n    }\r\n    \r\n    .image-footer {\r\n        width: 20%;\r\n    }\r\n    \r\n    .footer-size {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .footer-col {\r\n        margin-left: 5px;\r\n    }\r\n    \r\n    .adresse-size {\r\n        font-size: 11px;\r\n        line-height: 11px;\r\n    }\r\n     /* History page */\r\n\r\n     .paddingTB60 {\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    .col-md-6{\r\n        padding-top:60px;\r\n        padding-bottom:60px;\r\n    }\r\n\r\n    P.blocktext {\r\n        vertical-align: middle;\r\n        font-weight: bold;\r\n        font-style: italic;\r\n        font-size: 2rem;\r\n        text-transform: uppercase;\r\n        position: relative;\r\n        top: 50%;\r\n        -webkit-transform: translateY(-50%);\r\n                transform: translateY(-50%);\r\n    }\r\n\r\n    .image-aboutus-banner {\r\n        background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url(\"/public/images/histoire.png\");\r\n        background-repeat: no-repeat;\r\n        background-size: cover;\r\n        background-position: center center;\r\n        color: #fff;\r\n        padding-top: 110px;\r\n        padding-bottom:110px;\r\n     }\r\n     \r\n\r\n    /* Product page */\r\n    \r\n    .roadMap {\r\n        white-space: nowrap;\r\n    }\r\n    \r\n    .arrow {\r\n        width: 2.5%;\r\n    }\r\n    \r\n    .bottleImg {\r\n        width: 90%;\r\n        height: auto;\r\n        margin: auto;\r\n    }\r\n    \r\n    .price-font {\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n        color: #6c757d;\r\n        font-family: 'Montserrat', sans-serif;\r\n    }\r\n    \r\n    #btn-quantity {\r\n        padding-right: 325px;\r\n    }\r\n    \r\n    .nav-pills .nav-link.active,\r\n    .nav-pills .show>.nav-link {\r\n        color: #2B2B2B;\r\n        background-color: #CCBE9F;\r\n    }\r\n    \r\n    .pills {\r\n        color: #f2ebda;\r\n        font-size: 16px;\r\n    }\r\n    \r\n    .btn-basket {\r\n        padding: 1em 5em 1em 5em;\r\n        font-family: 'Montserrat', sans-serif;\r\n        border: 5px solid #2B2B2B;\r\n        background-color: #2B2B2B;\r\n        color: white;\r\n        /* Safari */\r\n        transition-duration: 0.4s;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btn-basket:hover {\r\n        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n        background-color: #a62b35;\r\n        border: 5px solid #a62b35;\r\n        color: white;\r\n    }\r\n    \r\n    #mapid {\r\n        height: 400px;\r\n    }\r\n    /* CONTACT */\r\n    \r\n    .contact-form {\r\n        background: #2B2B2B;\r\n        margin-top: 10%;\r\n        margin-bottom: 5%;\r\n        width: 70%;\r\n    }\r\n    \r\n    .contact-form .form-control {\r\n        border-radius: 25;\r\n    }\r\n    \r\n    .contact-image {\r\n        text-align: center;\r\n    }\r\n    \r\n    .contact-image img {\r\n        border-radius: 25;\r\n        width: 11%;\r\n        margin-top: -3%;\r\n        -webkit-transform: rotate(29deg);\r\n                transform: rotate(29deg);\r\n    }\r\n    \r\n    .contact-form form {\r\n        padding: 14%;\r\n    }\r\n    \r\n    .contact-form form .row {\r\n        margin-bottom: -7%;\r\n    }\r\n    \r\n    .contact-form h3 {\r\n        margin-bottom: 8%;\r\n        margin-top: -10%;\r\n        text-align: center;\r\n        color: white;\r\n    }\r\n    \r\n    .contact-form .btnContact {\r\n        width: 50%;\r\n        border: none;\r\n        border-radius: 25px;\r\n        padding: 1.5%;\r\n        background: #dc3545;\r\n        font-weight: 600;\r\n        color: #fff;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .btnContactSubmit {\r\n        width: 50%;\r\n        padding: 1.5%;\r\n        color: #fff;\r\n        border: none;\r\n        cursor: pointer;\r\n    }\r\n    \r\n    .icon_display img {\r\n        width: 50px;\r\n    }\r\n    \r\n    #tri-produit {\r\n        margin-top: 50px;\r\n    }\r\n    \r\n    .number_results {\r\n        padding-top: 15px;\r\n    }\r\n    \r\n    #weekproduct #carteproduit{\r\n        width: 10rem;\r\n    }\r\n    \r\n    .card-img-top{\r\n        width: 10rem;\r\n    }\r\n    .card-title{\r\n        width: 15rem;\r\n        padding-top : -20px;\r\n    }\r\n    \r\n    .btn-filter {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 0.5px;\r\n        border-radius: 25px;\r\n    }\r\n    \r\n    .price-ht-font {\r\n        font-size: 10px;\r\n    }\r\n    \r\n    .article-font {\r\n        font-size: 12px;\r\n    }\r\n    \r\n    #cart-produit-img {\r\n        width: 68px;\r\n        height: 150px;\r\n    }\r\n    \r\n    .btn-panier-2 {\r\n        border-color: grey;\r\n        border-style: solid;\r\n        border-width: 1px;\r\n    }\r\n    \r\n    .action-btn {\r\n        margin-bottom: 25px;\r\n    }\r\n    \r\n    .card-custom {\r\n        display: inline-flex;\r\n        padding-left: 20px;\r\n        padding-right: 20px;\r\n        margin-top : 45px;\r\n\r\n    }\r\n    #produ-carte{\r\n        height : 50px;\r\n    }\r\n    #prix-carte{\r\n        font-weight: bold;\r\n    }\r\n\r\n    #login-form { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n    #login-form #signup-form {\r\n        margin: 0;\r\n        padding: 0;\r\n        font-family: 'Montserrat', sans-serif;\r\n        background: #a62b35;\r\n        }\r\n      #box{\r\n        width: 400px;\r\n        height : 700px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 50%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n      #box label{\r\n        color: white;\r\n        font-weight: 400;\r\n        font-size : 130%;\r\n        margin-top : 25px;\r\n      }\r\n      #box input{\r\n        border:0;\r\n        background: #a62b35;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 10px;\r\n        width: 200px;\r\n        outline: none;\r\n        color: black;\r\n        border-radius: 15px;\r\n        transition: 0.25s;\r\n        margin-bottom: 25px;\r\n      }\r\n      #box input:focus{\r\n        width: 280px;\r\n        border-color: black;\r\n        background : white;\r\n        color : black;\r\n      }\r\n      #box input::-webkit-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-moz-placeholder{\r\n          color : black;\r\n      }\r\n      #box input:-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::-ms-input-placeholder{\r\n          color : black;\r\n      }\r\n      #box input::placeholder{\r\n          color : black;\r\n      }\r\n      #submit{\r\n        border:0;\r\n        background: none;\r\n        display: block;\r\n        margin: 20px auto;\r\n        text-align: center;\r\n        border: 2px solid black;\r\n        padding: 14px 40px;\r\n        outline: none;\r\n        color: white;\r\n        border-radius: 24px;\r\n        transition: 0.25s;\r\n        cursor: pointer;\r\n      }\r\n      #submit:hover{\r\n        background: black;\r\n      }\r\n      #remember {\r\n          margin-top : 35px;\r\n            font-size : 75%;\r\n            padding-top : -25px;\r\n      }\r\n      #register-link,#home-link,#forgot-pass{\r\n          display : block;\r\n          padding-top : 25px;\r\n          color : white;\r\n      }\r\n\r\n      #register #box{\r\n        width: 400px;\r\n        height : 1050px;\r\n        padding: 40px;\r\n        position: absolute;\r\n        top: 100%;\r\n        left: 50%;\r\n        -webkit-transform: translate(-50%,-50%);\r\n                transform: translate(-50%,-50%);\r\n        background: #a62b35;\r\n        text-align: center;\r\n        border-radius: 25px;\r\n        opacity: 60%;\r\n      }\r\n\r\n      #register { \r\n        background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n        background-size: cover;\r\n      }\r\n\r\n    /* The container */\r\n.container {\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  margin-bottom: 12px;\r\n  cursor: pointer;\r\n  font-size: 22px;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n}\r\n\r\n/* Hide the browser's default radio button */\r\n.container input {\r\n  position: absolute;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Create a custom radio button */\r\n.checkmark {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 25px;\r\n  width: 25px;\r\n  background-color: #eee;\r\n  border-radius: 50%;\r\n}\r\n\r\n/* On mouse-over, add a grey background color */\r\n.container:hover input ~ .checkmark {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* When the radio button is checked, add a blue background */\r\n.container input:checked ~ .checkmark {\r\n  background-color: #0000007e;\r\n}\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n.checkmark:after {\r\n  content: \"\";\r\n  position: absolute;\r\n  display: none;\r\n}\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n.container input:checked ~ .checkmark:after {\r\n  display: block;\r\n}\r\n\r\n/* Style the indicator (dot/circle) */\r\n.container .checkmark:after {\r\n \ttop: 9px;\r\n\tleft: 9px;\r\n\twidth: 8px;\r\n\theight: 8px;\r\n\tborder-radius: 50%;\r\n\tbackground: white;\r\n}\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1{\r\n    fill : #a62b35;\r\n}\r\n.type-circle-2{\r\n    fill : #f2ebda;\r\n}\r\n.type-circle-3{\r\n    fill : white;\r\n}", ""]);
 
 // exports
 
@@ -80580,33 +80594,70 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container", attrs: { id: "carteproduit" } }, [
-          _c("h6", { staticClass: "card-title", attrs: { id: "nom-carte" } }, [
-            _vm._v(_vm._s(vin.nom))
-          ]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c(
-              "h6",
-              { staticClass: "card-text", attrs: { id: "millesime-carte" } },
-              [_vm._v(_vm._s(vin.millesime))]
-            ),
+        _c(
+          "div",
+          { staticClass: "container", attrs: { id: "carteproduit" } },
+          [
+            _vm._l(vin.types, function(value) {
+              return _c("div", [
+                _c(
+                  "h6",
+                  { staticClass: "card-title", attrs: { id: "nom-carte" } },
+                  [
+                    _c("svg", { attrs: { height: "20", width: "20" } }, [
+                      _c("circle", {
+                        class: "type-circle-" + value.id,
+                        attrs: {
+                          cx: "10",
+                          cy: "10",
+                          r: "5",
+                          stroke: "black",
+                          "stroke-width": "0.3"
+                        }
+                      })
+                    ]),
+                    _vm._v("\r\n\r\n       " + _vm._s(vin.nom))
+                  ]
+                )
+              ])
+            }),
             _vm._v(" "),
-            _c(
-              "h6",
-              { staticClass: "card-text", attrs: { id: "produ-carte" } },
-              [_vm._v(_vm._s(vin.produ.nom))]
-            ),
+            _c("hr"),
             _vm._v(" "),
-            _c(
-              "h6",
-              { staticClass: "card-text", attrs: { id: "prix-carte" } },
-              [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
-            )
-          ])
-        ])
+            _c("div", { staticClass: "card-body" }, [
+              vin.millesime > 1
+                ? _c("div", { staticClass: "check-full" }, [
+                    _c(
+                      "h6",
+                      {
+                        staticClass: "card-text",
+                        attrs: { id: "millesime-carte" }
+                      },
+                      [_vm._v(_vm._s(vin.millesime))]
+                    )
+                  ])
+                : _c("div", { staticClass: "check-full" }, [
+                    _c("h6", {
+                      staticClass: "card-text",
+                      attrs: { id: "millesime-carte" }
+                    })
+                  ]),
+              _vm._v(" "),
+              _c(
+                "h6",
+                { staticClass: "card-text", attrs: { id: "produ-carte" } },
+                [_vm._v(_vm._s(vin.produ.nom))]
+              ),
+              _vm._v(" "),
+              _c(
+                "h6",
+                { staticClass: "card-text", attrs: { id: "prix-carte" } },
+                [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
+              )
+            ])
+          ],
+          2
+        )
       ])
     }),
     0
@@ -81055,12 +81106,14 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "aboutus-secktion paddingTB60" }, [
+  return _c("div", { staticClass: "aboutus-secktion" }, [
     _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
-        _vm._m(1),
+        _vm._m(2),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
           _c("img", {
@@ -81074,7 +81127,9 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(3),
+    _vm._v(" "),
+    _vm._m(4)
   ])
 }
 var staticRenderFns = [
@@ -81082,22 +81137,49 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c(
+      "div",
+      {
+        staticClass: "image-aboutus-banner",
+        staticStyle: { "margin-top": "70px" }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12 text-center" }, [
+              _c("h1", { staticClass: "lg-text font-weight-bold" }, [
+                _vm._v("Qui sommes nous ?")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "image-aboutus-para" }, [
+                _vm._v(
+                  "Nous sélectionnons inlassablement pour vous les meilleurs producteurs"
+                )
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container paddingTB60" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6" }, [
-          _c("h1", { staticClass: "strong" }, [_vm._v("Qui sommes nous ?")]),
+          _c("h1", { staticClass: "strong" }, [_vm._v("Notre identité")]),
           _vm._v(" "),
           _c("p", { staticClass: "lead" }, [
-            _vm._v("Apprenez à nous connaitre"),
-            _c("br"),
-            _vm._v("Faites-nous confiance")
+            _vm._v("Apprenez à nous connaitre")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
-          _c("p", [
+          _c("p", { staticClass: "text-justify" }, [
             _vm._v(
-              "Depuis 1973, l’entreprise familiale travaille dans l’exigence renouvelée du détail qui fait l’art d’un grand vin. Soucieuse de qualité et leader en termes de prix, la maison de vins Gazzar met à votre disposition un savoir-faire acquis sur plusieurs générations. Parmi l’étendue considérable de l’offre, notre tâche est de sélectionner pour vous des vins de légende, mais également de rechercher des vins hors des sentiers battus."
+              "Depuis 1973, l’entreprise familiale travaille dans l’exigence renouvelée du détail qui fait l’art\n                    d’un grand vin. Soucieuse de qualité et leader en termes de prix, la maison de vins Gazzar met à\n                    votre disposition un savoir-faire acquis sur plusieurs générations. Parmi l’étendue considérable\n                    de l’offre, notre tâche est de sélectionner pour vous des vins de légende, mais également de\n                    rechercher des vins hors des sentiers battus."
             )
           ])
         ])
@@ -81111,7 +81193,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-6 text-center" }, [
       _c("p", { staticClass: "blocktext" }, [
         _vm._v(
-          '"Depuis 1973, Elie Gazzar S.A. est le spécialiste de la vente de vins de haute qualité au meilleur prix "'
+          '"Depuis 1973, Elie Gazzar S.A. est le spécialiste de la vente de vins de haute\n                    qualité au meilleur prix "'
         )
       ])
     ])
@@ -81120,25 +81202,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
+    return _c("div", { staticClass: "container paddingTB60" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6" }, [
           _c("h1", { staticClass: "strong" }, [_vm._v("Nos valeurs")]),
           _vm._v(" "),
-          _c("p", { staticClass: "lead" }, [
-            _vm._v("Apprenez à nous connaitre"),
-            _c("br"),
-            _vm._v("Faites-nous confiance")
-          ])
+          _c("p", { staticClass: "lead" }, [_vm._v("Faites-nous confiance")])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
-          _c("p", [
+          _c("p", { staticClass: "text-justify" }, [
             _vm._v(
-              "Nous favorisons ainsi des producteurs artisanaux, respectueux de la nature et des écosystèmes et partageons avec eux cette passion des grands vins. Nous prenons le soin de déguster tous les vins que nous vous proposons, garantissant ainsi l’excellence et un conseil personnel."
+              "Nous favorisons ainsi des producteurs artisanaux, respectueux de la nature et des écosystèmes et\n                    partageons avec eux cette passion des grands vins. Nous prenons le soin de déguster tous les\n                    vins que nous vous proposons, garantissant ainsi l’excellence et un conseil personnel."
             )
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container text-center paddingTB60" }, [
+      _c("a", { attrs: { href: "../" } }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary btn-history btn-outline-danger" },
+          [_vm._v("RETOURNER À L'ACCUEIL")]
+        )
       ])
     ])
   }
