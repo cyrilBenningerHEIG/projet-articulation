@@ -13,8 +13,8 @@
           </tr>
         </thead>
         <tbody>
-          <!-- <tr v-for="produit in produits"> -->
-          <tr>
+           
+          <tr v-model="vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
                 <img
@@ -28,12 +28,12 @@
             <td>
               <div class="card-body" id="weekproduct">
                 <div class="produit-descr">
-                  <p class="card-title">nom</p>
-                  <p class="card-title">domaine</p>
-                  <p class="card-text">millesime</p>
-                  <p class="card-text">region</p>
-                  <p class="card-text">pays</p>
-                  <p class="card-text">prix</p>
+                  <p class="card-title">{{vinCarts.nom}}</p>
+                  <p class="card-title">{{vinCarts.produ.nom}}</p>
+                  <p class="card-text">{{vinCarts.millesime}}</p>
+                  <p class="card-text">{{vinCarts.regn.nom}}</p>
+                  <p class="card-text">{{vinCarts.regn.pays.nom}}</p>
+                  <p class="card-text">{{vinCarts.prix.prixht}}</p>
                   <button type="button" href="#" class="btn btn-white btn-rounded btn-sm">Supprimer</button>
                 </div>
               </div>
@@ -55,7 +55,7 @@
           <tr>
           <td></td>
           <td></td>
-          <td>Sout total</td>
+          <td>Sous total</td>
           <td>X</td>
           </tr>
           <tr>
@@ -82,10 +82,37 @@
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <button class="btn btn-danger btn-panier">Passer commande</button>
+        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
       </div>
   </div>
 </template>
+
+<script>
+export default {
+
+  data() {
+    return {
+      vinCarts: [],
+      
+    };
+  },
+  
+  mounted() {
+    console.log('App mounted!');
+    if (localStorage.getItem('vinCarts')) this.vinCarts = JSON.parse(localStorage.getItem('vinCarts'));
+  },
+ 
+}
+ /* methods:{
+
+    addCart:function(){
+      
+      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+     
+    },
+
+  }, */
+</script>

@@ -1,11 +1,12 @@
 <template>
+  <section>      
   <div class="containe">
     <div class="container" v-for="vin in vins" :key="vin.id">
-      <section>
+      
         <div class="roadMap">
           <span>
             <a href="#">PRODUITS</a>
-            <img class="arrow" src="/public/images/arrow.svg">
+            <img class="arrow" src="/images/icons/arrow.svg">
             <a href="#">VIN ROUGE</a>
           </span>
         </div>
@@ -13,11 +14,11 @@
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/public/images/bottle.png">
+              <img class="bottleImg" src="/images/illustrations/bottle.png">
             </div>
-            <div class="col mt-5">
+          <div class="col mt-4 mb-4">
               <div>
-                <h3>{{vin.nom}} - {{vin.millesime}}</h3>
+                <h3> {{vin.nom}} - {{vin.millesime}}</h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
@@ -31,8 +32,6 @@
                 <span></span>
                 <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
               </div>
-              <br>
-
               <div class="mt-4 mb-4">
                 <label>TAILLE :</label>
                 <div>
@@ -115,13 +114,14 @@
                   </span>
                 </div>
               </div>
-              <button type="button" class="btn btn-outline-danger btn-xl btn-basket">
+              <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
                 <span>Ajouter au panier</span>
               </button>
             </div>
           </div>
         </div>
+        <br>
         <div class="row">
           <div class="col-4">
             <div
@@ -176,21 +176,40 @@
                 aria-labelledby="v-pills-profile-tab"
               >
                 <table class="p table">
+                <tr>
+                    <td>Appellation</td>
+                    <td>{{vin.appel.libelle}}</td>
+                  </tr>
                   <tr>
                     <td>Teneur en alcool</td>
                     <td>{{vin.alcool}}</td>
                   </tr>
                   <tr>
                     <td>Cotation</td>
+                    <div v-if="vin.cotation">
                     <td>{{vin.cotation}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Classement</td>
+                    <div v-if="vin.classement">
                     <td>{{vin.classement}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Apogée</td>
+                    <div v-if="vin.apogee">
                     <td>{{vin.apogee}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Producteur</td>
@@ -229,21 +248,50 @@
             </div>
           </div>
         </div>
+        </div>
+        </div>
       </section>
-    </div>
-  </div>
 </template>
 <script>
 
 export default {
   
-  props: ["vins","prixttc", "prixeuro"],
+  props: ["vins","prixttc", "prixeuro", "vinid"],
   
   data() {
     return {
       vin: '',
+      vinCarts: [],
+      
     };
+  },
+methods: {
+    addCart() {
+      this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
+    },
+  },
+  mounted() {
+    console.log('App mounted!');
+    if (localStorage.getItem('vinCarts')) this.vinCart = JSON.parse(localStorage.getItem('vinCarts'));
+  },
+  watch: {
+    vinCarts: {
+      handler() {
+        console.log('Vins changed!');
+        localStorage.setItem('vinCarts', JSON.stringify(this.vins[this.vinid-1]));
+      },
+      deep: true,
+    },
   }
+}
+ /* methods:{
 
-};
+    addCart:function(){
+      
+      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+     
+    },
+
+  }, */
 </script>
+

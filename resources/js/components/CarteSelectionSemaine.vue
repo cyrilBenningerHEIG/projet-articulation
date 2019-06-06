@@ -1,14 +1,27 @@
 <template>  
-<div class="container">
-      <div class="card card-custom" v-for="vin in limit" :key=vin.id>
+<div class="container" >
+      <div class="card card-custom" v-for="vin in vins.slice(0,3)" :key=vin.id>
+               <div class="container">
+
         <a v-bind:href="'produit/'+ vin.id"> 
-    <img src="/public/images/bottle.png" class="card-img-top" alt="vin1">
+    <img src="images/illustrations/bottle.png" class="card-img-top" alt="vin1">
     </a>
-    <div class="card-body" id="weekproduct">
-      <h5 class="card-title">{{vin.nom}}</h5>
-      <p class="card-text">{{vin.millesime}}</p>
     </div>
-  </div>
+    <div class="container" id="carteproduit">
+   
+      <div v-for="value in vin.types">
+         <h6 class="card-title" id="nom-carte">
+      <svg height="20" width="20">
+       <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
+       </svg>
+
+       {{vin.nom}}</h6>
+              </div>
+    <div class="card-body">
+      <h6  class="card-text" id="millesime-carte">{{vin.millesime}}</h6>
+    </div>
+    </div>
+    </div>
   </div>
 </template>
 <script>
@@ -18,14 +31,8 @@ export default {
     data(){
         return{
           vin:'',
-           limit: 5 // or any number you wish to limit to
         }
      },
-     computed:{
-  computedObj(){
-    return this.limit ? this.object.slice(0,this.limit) : this.object
-  }
-},
 }
 </script>
 

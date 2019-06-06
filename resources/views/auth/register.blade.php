@@ -1,152 +1,94 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> Enregistrement </title>
-  </head>
-  <body id="register">
-      <form method="POST" id="box" class="" action="{{ route('register') }}">
-      {{ csrf_field() }}
-      <div class="homepageImg">
-                <img class="logo" id="img-logo" src="images/logo.svg">
-              </div>
-      
-        <div id="row">
-          <div class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}">
+   <head>
+      <meta charset="utf-8">
+      <title> Enregistrement </title>
+   </head>
+   <body id="register-form">
+      <form method="POST" id="box_register" class="" action="{{ route('register') }}">
+         {{ csrf_field() }}
+         <div class="homepageImg">
+            <img class="logo" id="img-logo" src="images/logo.svg">
+         </div>
+         <label id="connect-text">
 
+            {{ __("Inscription") }}
 
+        </label>
+            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required autofucs>
+            @error('nom')
+            <span class="invalid-feedback" role="alert">
 
-              <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" required autofocus>
+                <strong>{{ $message }}</strong>
 
-              @if ($errors->has('nom'))
+            </span>
+            @enderror
+            <input id="prenom" type="text" name="prenom" placeholder="Prénom" value="{{ old('prenom') }}" class="form-group{{ $errors->has('prenom') ? ' has-error' : '' }}" required >
+            @error('prenom')
+            <span class="invalid-feedback" role="alert">
 
-              <span class="help-block">
+                <strong>{{ $message }}</strong>
 
-              <strong>{{ $errors->first('nom') }}</strong>
+            </span>
+            @enderror
 
-              </span>
+         <input id="telephone" type="phone" name="telephone" placeholder="Téléphone" value="{{ old('telephone') }}" class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}" required>
+            @error('telephone')
+            <span class="invalid-feedback" role="alert">
 
-              @endif
-          </div>
+                <strong>{{ $message }}</strong>
 
+            </span>
+            @enderror
+            
+            {{-- <label class="container">Homme
+                <input type="radio" checked="checked" id="0" name="sexe" value="0">
+                <span class="checkmark"></span>
+    
+                <label class="container">Femme
+    
+                <input type="radio" name="sexe" id="1" value="1">
+    
+                <span class="checkmark"></span>
+     --}}
+                
+                <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" required>
+            @error('email')
+            <span class="invalid-feedback" role="alert">
 
-          <div class="form-group{{ $errors->has('prenom') ? ' has-error' : '' }}">
+                <strong>{{ $message }}</strong>
 
+            </span>
+            @enderror
 
-              <input id="prenom" type="text" name="prenom" placeholder="Prénom" value="{{ old('prenom') }}" required autofocus>
+            <input id="password" type="password" name="password" placeholder="Mot de passe" value="{{ old('password') }}" class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" required>
+            @error('password')
+            <span class="invalid-feedback" role="alert">
 
-              @if ($errors->has('prenom'))
+                <strong>{{ $message }}</strong>
 
-              <span class="help-block">
+            </span>
+            @enderror
+            <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirmer mot de passe" value="{{ old('password_confirmation') }}" class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}" required>
+            @error('password')
+            <span class="invalid-feedback" role="alert">
 
-              <strong>{{ $errors->first('prenom') }}</strong>
+                <strong>{{ $message }}</strong>
 
-              </span>
+            </span>
+            @enderror
 
-              @endif
+        
+         <button type="submit" id="submit" >
+            {{ __("S'inscrire") }}
+         </button>
 
-          </div>
-</div>
-          <div class="form-group{{ $errors->has('dateNaissance') ? ' has-error' : '' }}">
+      <a id="login-link" href="{{ route('login') }}">
 
-              <label for="dateNaissance">dateNaissance</label>
+        {{ __("Se connecter") }}
 
-              <input id="dateNaissance" type="date" name="dateNaissance"  value="{{ old('dateNaissance') }}" required autofocus>
-
-              @if ($errors->has('dateNaissance'))
-
-              <span class="help-block">
-
-              <strong>{{ $errors->first('dateNaissance') }}</strong>
-
-              </span>
-
-              @endif
-          </div>
-          <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
-
-
-
-              <input id="telephone" type="phone" name="telephone" placeholder="telephone" value="{{ old('telephone') }}" required autofocus>
-
-              @if ($errors->has('telephone'))
-
-              <span class="help-block">
-
-              <strong>{{ $errors->first('telephone') }}</strong>
-
-              </span>
-
-              @endif
-          </div>
-          <div class="form-group{{ $errors->has('sexe') ? ' has-error' : '' }}">
-
-          <label for="sexe">Sexe</label>
-                    
-                        <label class="container">Homme
-  <input type="radio" checked="checked" id="0" name="sexe" value="0">
-  <span class="checkmark"></span>
-</label>
-
-<label class="container">Femme
-  <input type="radio" name="sexe" id="1" value="1">
-  <span class="checkmark"></span>
-</label>
-
-              @if ($errors->has('sexe'))
-              <span class="help-block">
-              <strong>{{ $errors->first('sexe') }}</strong>
-              </span>
-              @endif
-              </div>
-
-
-
-
-
-              <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-
-<input id="email" type="email"  name="email" placeholder="email"value="{{ old('email') }}" required>
-
-@if ($errors->has('email'))
-<span class="help-block">
-
-<strong>{{ $errors->first('email') }}</strong>
-</span>
-@endif
-</div>
-
-<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-
-<input id="password" type="password" placeholder="Mot de passe" name="password" required>
-@if ($errors->has('password'))
-<span class="help-block">
-<strong>{{ $errors->first('password') }}</strong>
-</span>
-@endif
-</div>
-
-<div class="form-group">
-
-<input id="password-confirm" type="password"  placeholder="Confirmez le mot de passe" name="password_confirmation" required>
-</div>
-</div>
-
-
-
-
-<div class="form-group">
-
-<button type="submit" id="submit" >
-Register
-</button>
-
+    </a>
 </form>
-
-
-
-
-            <script src="js/app.js"></script>
-
-  </body>
+      <script src="js/app.js"></script>
+   </body>
 </html>

@@ -7,7 +7,7 @@
     <div class="card card-custom mx-2 mb-3">
       <a href="pageProduit">
         <img
-          src="/public/images/bottle.png"
+          src="/images/illustrations/bottle.png"
           class="card-img-top"
           alt="vin1"
         >

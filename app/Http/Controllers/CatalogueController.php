@@ -65,10 +65,12 @@ class CatalogueController extends Controller
         $prixttc_format = number_format($prixttc_round, 2, '.', '');
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
+        $vinid = $id;
         return view('productPage', [
             'vins'=> $vins,
             'prixttc'=>$prixttc_format,
             'prixeuro'=>$prixeuro_round,
+            'vinid'=>$vinid,
             ]);
     }
 }

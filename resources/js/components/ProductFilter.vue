@@ -113,13 +113,13 @@
           <div id="tri-produit" class="row">
             <div class="col-sm">
               <a class="icon_display" id="icon_display2" href="#">
-                <img src="/public/images/display2.svg">
+                <img src="images/icons/display2.svg">
               </a>
               <a class="icon_display" id="icon_display3" href="#">
-                <img src="/public/images/display3.svg">
+                <img src="images/icons/display3.svg">
               </a>
               <a class="icon_display" id="icon_display4" href="#">
-                <img src="/public/images/display4.svg">
+                <img src="images/icons/display4.svg">
               </a>
             </div>
             <div class="col-sm">
