@@ -15,7 +15,7 @@
             {{ __("Inscription") }}
 
         </label>
-            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required >
+            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required autofucs>
             @error('nom')
             <span class="invalid-feedback" role="alert">
 
@@ -82,7 +82,13 @@
          <button type="submit" id="submit" >
             {{ __("S'inscrire") }}
          </button>
-      </form>
+
+      <a id="login-link" href="{{ route('login') }}">
+
+        {{ __("Se connecter") }}
+
+    </a>
+</form>
       <script src="js/app.js"></script>
    </body>
 </html>

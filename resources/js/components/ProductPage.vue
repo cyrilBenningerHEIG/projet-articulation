@@ -176,21 +176,40 @@
                 aria-labelledby="v-pills-profile-tab"
               >
                 <table class="p table">
+                <tr>
+                    <td>Appellation</td>
+                    <td>{{vin.appel.libelle}}</td>
+                  </tr>
                   <tr>
                     <td>Teneur en alcool</td>
                     <td>{{vin.alcool}}</td>
                   </tr>
                   <tr>
                     <td>Cotation</td>
+                    <div v-if="vin.cotation">
                     <td>{{vin.cotation}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Classement</td>
+                    <div v-if="vin.classement">
                     <td>{{vin.classement}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Apogée</td>
+                    <div v-if="vin.apogee">
                     <td>{{vin.apogee}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
                   </tr>
                   <tr>
                     <td>Producteur</td>

@@ -16,10 +16,10 @@
         <div id="app">
             <div class="container">
             @if(Auth::check())
-            <h2>Connecté</h2>
+                <h6>Connecté</h6>
                 <nav-bar-login></nav-bar-login>
                 @else
-                <h2>Déconnecté</h2>
+                <h6>Déconnecté</h6>
                 <nav-bar-logout></nav-bar-logout>
                 
                 @endif

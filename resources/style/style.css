@@ -62,19 +62,27 @@ label {
 }
 
 #icon_search {
-    width: 50px;
+    height: 45px;
+    width: 45px;
+    padding: 10px;
 }
 
 #icon_account {
-    width: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 2px;
+    height: 45px;
+    width: 45px;
+    padding: 10px;
 }
 
 #icon_cart {
-    width: 35px;
-    margin-bottom: 2px;
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+
+#icon_langue {
+    height: 45px;
+    width: 45px;
+    padding: 10px;
 }
 
 .menu {
@@ -462,6 +470,8 @@ P.blocktext {
     font-weight: bold;
 }
 
+
+/* LOGIN & REGISTER FORM */ 
 #login-form {
     background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -523,6 +533,7 @@ P.blocktext {
     border-radius: 15px;
     transition: 0.25s;
     margin-bottom: 25;
+    height : 25px;
 }
 
 #box_register label {
@@ -573,7 +584,8 @@ P.blocktext {
 
 #register-link,
 #home-link,
-#forgot-pass {
+#forgot-pass
+#login-link {
     display: block;
     padding-top: 25px;
     color: white;
