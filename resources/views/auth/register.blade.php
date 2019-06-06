@@ -15,7 +15,7 @@
             {{ __("Inscription") }}
 
         </label>
-            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required >
+            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required autofucs>
             @error('nom')
             <span class="invalid-feedback" role="alert">
 
