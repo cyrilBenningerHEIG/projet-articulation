@@ -64,7 +64,7 @@
             </div>
             <div class="col mt-5">
               <div>
-                <h3>{{vin.nom}} - {{vin.millesime}}</h3>
+                <h3> {{vin.nom}} - {{vin.millesime}}</h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
@@ -166,7 +166,7 @@
                   </span>
                 </div>
               </div>
-              <button type="button" class="btn btn-outline-danger btn-xl btn-basket">
+              <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
                 <span>Ajouter au panier</span>
               </button>
@@ -290,13 +290,29 @@
 
 export default {
   
-  props: ["vins","prixttc", "prixeuro"],
+  props: ["vins","prixttc", "prixeuro", "vinid"],
   
   data() {
     return {
       vin: '',
+      
     };
-  }
+  },
+ /*  mounted(){
+    if (localStorage.name){
+      this.name = localStorage.name
+    }
+  }, 
+ */
+  methods:{
+
+    addCart:function(){
+      
+      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+     
+    },
+
+  },
 
 };
 </script>
