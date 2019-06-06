@@ -26,6 +26,8 @@ class CatalogueController extends Controller
                 $prixttc_round = round($prixttc * 20, 0) /20;
                 $prixttc_format = number_format($prixttc_round, 2, '.', '');
                 $vins[$i]['prix']['prixht'] = $prixttc_format;
+                $photoUrl = "";
+                $vins[$i]['photoUrl'] = $photoUrl;
             }
 
         //---------------------------------Show Filters---------------------------------//
