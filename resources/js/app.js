@@ -54,6 +54,8 @@ window.axios = require('axios');
 Vue.use(BootstrapVue);
 
 
+
+
 //Home
 Vue.component('nav-bar-login', require('./components/NavBarLogin.vue').default);
 Vue.component('nav-bar-logout', require('./components/NavBarLogout.vue').default);

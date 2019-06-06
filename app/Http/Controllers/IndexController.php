@@ -16,7 +16,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $vins = Vin::all();
+        $vins = vin::with(['produ', 'appel', 'types'])
+            ->get();
         $nbvins = Vin::count();
         $nbregions = Regn::count();
         $nbprodu = Produ::count();
