@@ -2,10 +2,12 @@
 
 namespace App;
 
+
 use Illuminate\Database\Eloquent\Model;
 
 class vin extends Model
 {
+
     public function appel() {
         return $this->belongsTo('App\appel');
     }
@@ -58,7 +60,4 @@ class vin extends Model
     //     return money_format ('CHF%i', $this->prix*0.89*1,07);
     // }
 
-
-
-    
 }
