@@ -18,7 +18,7 @@
         <div id="app">
             <div class="container">
             <nav-product-bar></nav-product-bar>
-            <product-page :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}'></product-page>
+            <product-page :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :vinid='{{$vinid}}'></product-page>
             <br>
             <selection-card class="mt-5" ></selection-card> 
             <footer-bar></footer-bar>

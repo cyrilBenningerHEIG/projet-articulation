@@ -4,6 +4,32 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
+require('./bootstrap');
+
+window.Vue = require('vue');
+
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+
+// const files = require.context('./', true, /\.vue$/i);
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+
+
 window.Vue = require('vue');
 import Vue from 'vue';
 import Router from './routes.js'
@@ -69,6 +95,20 @@ Vue.component('cgv-texte', require('./components/CGV.vue').default);
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
 
+//Paiement
+Vue.component('header-paiement', require('./components/HeaderPaiement.vue').default);
+Vue.component('header-retour', require('./components/Retour.vue').default);
+Vue.component('paiement-etape1', require('./components/Paiement1.vue').default);
+Vue.component('paiement-compte', require('./components/ComptePaiement.vue').default);
+
+Vue.component('paiement-etape2', require('./components/Paiement2.vue').default);
+Vue.component('paiement-livraison', require('./components/LivraisonPaiement.vue').default);
+
+Vue.component('paiement-etape3', require('./components/Paiement3.vue').default);
+Vue.component('paiement-page', require('./components/PagePaiement.vue').default);
+
+Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
+Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);
 //Compte
 Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
 
@@ -77,6 +117,7 @@ const app = new Vue({
     router: Router,
 });
 
+//////////////////////////////////////  Chargement du type de carte sur Leaflet
 
 var map = L.map('mapid').setView([47.02, 8.33], 8.5);
 
@@ -101,6 +142,24 @@ var blackIcon = new L.Icon({
 L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
+////////////////////////////////////// Formulaire adresse de paiement
+
+$(document).ready(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
 
 // Chargement du type de carte sur Leaflet
-

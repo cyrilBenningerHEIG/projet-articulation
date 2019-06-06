@@ -1,11 +1,58 @@
 <template>
+  <section>
+    <div class="roadMap">
+      <span>
+        <a href="#">PRODUITS</a>
+        <img class="arrow" src="images/arrow.svg">
+        <a href="#">VIN ROUGE</a>
+      </span>
+    </div>
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col">
+          <img class="bottleImg" src="images/bottle.png">
+        </div>
+        <div class="col mt-5">
+          <div>
+            <h3>Château Cambon la Pelouse - 2015</h3>
+            <span> </span>
+            <h5 class="mt-3 mb-3 price-font">CHF <b>17.40  </b><i class="price-ht-font">(<span>13</span> CHF hors TVA)</i></h5>
+       
+            <span> </span>
+            <span> </span>
+            <p class="font-weight-light mt-2 mb-2 article-font"> Numéro d'article : HFIWOMSH</p>
+          </div>
+              <br>
+          
+          <div class="mt-4 mb-4">
+            <label class="label-produits">TAILLE :</label> 
+            <div>
+              <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">37.5 cl</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm active" role="button" aria-disabled="true">50 cl</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">75 cl</a>
+            </div>
+          </div>
+
+          <div class="mt-4 mb-4">
+            <label class="label-produits">VARIANTES :</label> 
+            <div>
+              <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">2012</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm active" role="button" aria-disabled="true">2015</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm disabled" role="button" aria-disabled="true">2017</a>
+              </div>
+          </div>
+        </div>
+       </div>
+    </div>
+        
   <div class="containe">
     <div class="container" v-for="vin in vins" :key="vin.id">
-      <section>
+      
         <div class="roadMap">
           <span>
             <a href="#">PRODUITS</a>
-            <img class="arrow" src="/public/images/arrow.svg">
+            <img class="arrow" src="/public/images/icons/arrow.svg">
             <a href="#">VIN ROUGE</a>
           </span>
         </div>
@@ -13,11 +60,11 @@
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/public/images/bottle.png">
+              <img class="bottleImg" src="images/illustrations/bottle.png">
             </div>
             <div class="col mt-5">
               <div>
-                <h3>{{vin.nom}} - {{vin.millesime}}</h3>
+                <h3> {{vin.nom}} - {{vin.millesime}}</h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
@@ -31,8 +78,12 @@
                 <span></span>
                 <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
               </div>
+            
               <br>
+              </div>
 
+          <div class="mt-4 mb-4">
+            <label class="mr-4 my-auto label-produits">QUANTITÉS : </label>
               <div class="mt-4 mb-4">
                 <label>TAILLE :</label>
                 <div>
@@ -115,7 +166,7 @@
                   </span>
                 </div>
               </div>
-              <button type="button" class="btn btn-outline-danger btn-xl btn-basket">
+              <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
                 <span>Ajouter au panier</span>
               </button>
@@ -229,21 +280,39 @@
             </div>
           </div>
         </div>
+        </div>
+        </div>
       </section>
-    </div>
+      </div>
   </div>
 </template>
 <script>
 
 export default {
   
-  props: ["vins","prixttc", "prixeuro"],
+  props: ["vins","prixttc", "prixeuro", "vinid"],
   
   data() {
     return {
       vin: '',
+      
     };
-  }
+  },
+ /*  mounted(){
+    if (localStorage.name){
+      this.name = localStorage.name
+    }
+  }, 
+ */
+  methods:{
+
+    addCart:function(){
+      
+      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+     
+    },
+
+  },
 
 };
 </script>

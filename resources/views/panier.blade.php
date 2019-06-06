@@ -14,6 +14,14 @@
     <body>
         <div id="app">
             <div class="container">
+            @if(Auth::check())
+            <h2>Connecté</h2>
+                <nav-bar-login></nav-bar-login>
+                @else
+                <h2>Déconnecté</h2>
+                <nav-bar-logout></nav-bar-logout>
+                
+                @endif
                 <nav-bar></nav-bar>
                 <panier-produit></panier-produit>
                 <footer-bar></footer-bar>

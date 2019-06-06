@@ -39,12 +39,33 @@ Route::get('/panier', function () {
     return view('panier');
 });
 
+Route::get('/paiement-etape1', function () {
+    return view('paiement1');
+});
+
+Route::get('/paiement-etape2', function () {
+    return view('paiement2');
+});
+
+Route::get('/paiement-etape3', function () {
+    return view('paiement3');
+});
+
+Route::get('/paiement-etape4', function () {
+    return view('paiement4');
+});
+
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 Route::get('/cgv', function () {
     return view('cgv');
 });
