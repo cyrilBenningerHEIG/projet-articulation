@@ -42,8 +42,6 @@ import './counter.js';
 import L from 'leaflet';
 
 
-
-
 // import Counter from './countUp/dist/countUp'
 
 window.$ = require('jquery')

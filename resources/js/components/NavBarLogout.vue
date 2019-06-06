@@ -9,9 +9,37 @@
           </a>
         </div>
                 <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="icon" id="icon_search" href="#"><img src="/images/icons/recherche.svg" /></a>
-                    <a class="icon" id="icon_account" href="login"><img src="/images/icons/compte.svg" /></a>
-                    <a class="icon" id="icon_cart" href="#"><img src="/images/icons/panier.svg" /></a>
+                  <ul class="nav nav-pills">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/terre.svg"/></a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">FR</a>
+                        <a class="dropdown-item" href="#">EN</a>
+                        <a class="dropdown-item" href="#">IT</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="tab" aria-selected="false"><img src="/images/icons/recherche.svg"/></a>
+                      <div class="dropdown-menu">
+                        <div class="form-group m-2">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/login">Connexion</a>
+                        <a class="dropdown-item" href="#">Inscription</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link icon" id="icon_search" data-toggle="pill" href="#" role="tab" aria-selected="false"><img src="/images/icons/panier.svg"/></a>
+                      <div class="dropdown-menu">
+                      </div>
+                    </li>
+                  </ul>
                 </div>
       </div>
     </header>
