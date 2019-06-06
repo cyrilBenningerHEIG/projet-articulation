@@ -1,5 +1,5 @@
  <template>
   <div class="etapeImg">
-    <img class="img-fluid" :src="'/images/etape2.png'">
+    <img class="img-fluid" :src="'images/etapes/etape2.png'">
   </div>
 </template>

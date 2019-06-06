@@ -5,7 +5,7 @@
     <footer class="page-footer font-small stylish-color-dark pt-2">
       <!-- Footer Links -->
       <div class="container text-center text-md-left">
-          <img class="image-footer" :src="'./images/logo_footer.svg'">
+          <img class="image-footer" :src="'./images/logo/logo_footer.svg'">
           <p class="font-weight-bold text-uppercase mt-2 mb-0">Adresse</p>
         <!-- Grid row -->
         <div class="row">

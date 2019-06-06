@@ -52,7 +52,7 @@
         <div class="roadMap">
           <span>
             <a href="#">PRODUITS</a>
-            <img class="arrow" src="/public/images/arrow.svg">
+            <img class="arrow" src="/public/images/icons/arrow.svg">
             <a href="#">VIN ROUGE</a>
           </span>
         </div>
@@ -60,7 +60,7 @@
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/public/images/bottle.png">
+              <img class="bottleImg" src="images/illustrations/bottle.png">
             </div>
             <div class="col mt-5">
               <div>

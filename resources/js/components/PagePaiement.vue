@@ -6,12 +6,12 @@
         <hr>
         <p class="text-justify small-text">Vous allez être redirigié vers la page de paiement sécurisé Ogone pour confirmer votre commande et votre paiement</p>
         <div class="row">
-            <div class="col cartes-img"><img class="img-fluid" :src="'/images/PostFinance.png'"></div>
-            <div class="col cartes-img "><img class="img-fluid" :src="'/images/e-finance.png'"></div>
+            <div class="col cartes-img"><img class="img-fluid" :src="'images/carteCredits/PostFinance.png'"></div>
+            <div class="col cartes-img "><img class="img-fluid" :src="'images/carteCredits/e-finance.png'"></div>
             <div class="w-100"></div>
 
-            <div class="col cartes-img"><img class="img-fluid" :src="'/images/visa.png'"></div>
-            <div class="col cartes-img"><img class="img-fluid" :src="'/images/mastercard.png'"></div>
+            <div class="col cartes-img"><img class="img-fluid" :src="'images/carteCredits/visa.png'"></div>
+            <div class="col cartes-img"><img class="img-fluid" :src="'images/carteCredits/mastercard.png'"></div>
         </div>
       </div>
       
