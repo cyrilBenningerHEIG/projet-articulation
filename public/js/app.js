@@ -2432,11 +2432,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["vins", "prixttc", "prixeuro"],
+  props: ["vins", "prixttc", "prixeuro", "vinid"],
   data: function data() {
     return {
       vin: ''
     };
+  },
+
+  /*  mounted(){
+     if (localStorage.name){
+       this.name = localStorage.name
+     }
+   }, 
+  */
+  methods: {
+    addCart: function addCart() {
+      localStorage.setItem('vin' + this.vins[this.vinid - 1].id, JSON.stringify(this.vins[this.vinid - 1]));
+    }
   }
 });
 
@@ -82133,7 +82145,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("td"),
               _vm._v(" "),
-              _c("td", [_vm._v("Sout total")]),
+              _c("td", [_vm._v("Sous total")]),
               _vm._v(" "),
               _c("td", [_vm._v("X")])
             ]),
@@ -82590,7 +82602,9 @@ var render = function() {
               _c("div", { staticClass: "col mt-5" }, [
                 _c("div", [
                   _c("h3", [
-                    _vm._v(_vm._s(vin.nom) + " - " + _vm._s(vin.millesime))
+                    _vm._v(
+                      " " + _vm._s(vin.nom) + " - " + _vm._s(vin.millesime)
+                    )
                   ]),
                   _vm._v(" "),
                   _c("span"),
@@ -82625,13 +82639,25 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(4, true),
                 _vm._v(" "),
-                _vm._m(5, true)
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-outline-danger btn-xl btn-basket",
+                    attrs: { type: "button" },
+                    on: { click: _vm.addCart }
+                  },
+                  [
+                    _c("span", { staticClass: "icon" }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Ajouter au panier")])
+                  ]
+                )
               ])
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
-            _vm._m(6, true),
+            _vm._m(5, true),
             _vm._v(" "),
             _c("div", { staticClass: "col-8" }, [
               _c(
@@ -82745,7 +82771,7 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(7, true)
+                  _vm._m(6, true)
                 ]
               )
             ])
@@ -82912,23 +82938,6 @@ var staticRenderFns = [
         ])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "btn btn-outline-danger btn-xl btn-basket",
-        attrs: { type: "button" }
-      },
-      [
-        _c("span", { staticClass: "icon" }),
-        _vm._v(" "),
-        _c("span", [_vm._v("Ajouter au panier")])
-      ]
-    )
   },
   function() {
     var _vm = this
@@ -99545,8 +99554,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\TestVoyager\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\TestVoyager\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

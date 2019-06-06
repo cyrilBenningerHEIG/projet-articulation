@@ -55,7 +55,7 @@
           <tr>
           <td></td>
           <td></td>
-          <td>Sout total</td>
+          <td>Sous total</td>
           <td>X</td>
           </tr>
           <tr>
