@@ -543,3 +543,15 @@
 	border-radius: 50%;
 	background: white;
 }
+
+/* Style for dot color depending on wine type*/
+
+.type-circle-1{
+    fill : #a62b35;
+}
+.type-circle-2{
+    fill : #f2ebda;
+}
+.type-circle-3{
+    fill : white;
+}
