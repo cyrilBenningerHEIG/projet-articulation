@@ -9,12 +9,14 @@ use DB;
 
 class CatalogueController extends Controller
 {
-    function index ()
-    {
 
+    function index (Request $request)
+    {
             // Display all products
-            $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
+            $vins = vin::with(['produ', 'appel', 'frmt', 'prix.promops', 'condi', 'cepags', 'types', 'regn.pays'])
             ->get();
+            $nbvins = count($vins);
+            $filters = [];
             
             // ----------Prices---------//
 
@@ -25,7 +27,8 @@ class CatalogueController extends Controller
                 $prixttc_format = number_format($prixttc_round, 2, '.', '');
                 $vins[$i]['prix']['prixht'] = $prixttc_format;
             }
-        //---------------------------------Filters---------------------------------//
+
+        //---------------------------------Show Filters---------------------------------//
         $types = DB::table('types')->get();
         $pays = DB::table('pays')->orderBy('nom')->get();
         $regns = DB::table('regns')->orderBy('nom')->get();
@@ -42,7 +45,8 @@ class CatalogueController extends Controller
             'appels'=> $appels,
             'produs'=> $produs,
             'frmts'=> $frmts,
-            'millesimes'=> $millesimes
+            'millesimes'=> $millesimes,
+            'nbvins'=> $nbvins,
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
         //     $prix = ($prix)*1.07;

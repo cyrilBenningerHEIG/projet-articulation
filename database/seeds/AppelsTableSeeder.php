@@ -19,9 +19,6 @@ class AppelsTableSeeder extends Seeder
                 'libelle' => 'Haut-Médoc',
             ],
             [
-                'libelle' => 'Corton-Bressandes', 
-            ],
-            [
                 'libelle' => 'Châteauneauf-du-Pape', 
             ],
             [

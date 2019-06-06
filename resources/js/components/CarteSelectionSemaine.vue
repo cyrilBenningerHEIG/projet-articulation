@@ -1,6 +1,6 @@
 <template>  
-<div class="container" >
-      <div class="card card-custom" v-for="vin in vins" :key=vin.id>
+<div class="container">
+      <div class="card card-custom" v-for="vin in limit" :key=vin.id>
         <a v-bind:href="'produit/'+ vin.id"> 
     <img src="/public/images/bottle.png" class="card-img-top" alt="vin1">
     </a>

@@ -23,12 +23,13 @@
                 
                 @endif
                 <menu-produit></menu-produit>
-                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}'></product-filter>
+                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}' :nbvins='{{ $nbvins }}'></product-filter>
                 <carte-produit :vins='{{ $vins }}'></carte-produit>
                 <footer-bar></footer-bar>
                 
             </div>
         </div>
             <script src="js/app.js"></script>
+           
     </body>
 </html>
