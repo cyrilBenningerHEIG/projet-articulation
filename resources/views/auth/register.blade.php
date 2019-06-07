@@ -40,18 +40,9 @@
 
             </span>
             @enderror
-            
-            {{-- <label class="container">Homme
-                <input type="radio" checked="checked" id="0" name="sexe" value="0">
-                <span class="checkmark"></span>
-    
-                <label class="container">Femme
-    
-                <input type="radio" name="sexe" id="1" value="1">
-    
-                <span class="checkmark"></span>
-     --}}
-                
+            <input type="hidden" id="sexe" name="sexe" value="1">
+            <input type="hidden" id="dateNaissance" name="dateNaissance" value="1998-05-21">
+
                 <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" required>
             @error('email')
             <span class="invalid-feedback" role="alert">
