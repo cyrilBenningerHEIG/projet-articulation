@@ -22,7 +22,7 @@
                       <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="tab" aria-selected="false"><img src="/images/icons/recherche.svg"/></a>
                       <div class="dropdown-menu">
                         <div class="form-group m-2">
-                          <label for="exampleInputEmail1">Email address</label>
+                          <label for="exampleInputEmail1">Recherche</label>
                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
                         </div>
                       </div>
@@ -30,7 +30,7 @@
                     <li class="nav-item dropdown">
                       <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Gaëtan</a>
+                        <a class="dropdown-item" href="#">Hello, Gaëtan</a>
                         <a class="dropdown-item" href="/logout">Déconnection</a>
                       </div>
                     </li>

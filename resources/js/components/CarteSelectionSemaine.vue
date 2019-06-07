@@ -1,23 +1,24 @@
 <template>  
 <div class="container" >
-      <div class="card card-custom" v-for="vin in vins.slice(0,3)" :key=vin.id>
-        <div class="container">
+  <div class="row">
+      <div class="card card-custom col" v-for="vin in vins.slice(0,4)" :key=vin.id>
+        <div class="">
 
           <a v-bind:href="'produit/'+ vin.id"> 
-          <img src="images/illustrations/bottle.png" class="card-img-top" alt="vin1">
+          <img src="images/illustrations/bottle.png" class="card-img-top center" alt="vin1">
           </a>
         </div>
-        <div class="container" id="carteproduit">
+        <div id="carteproduit" class="center">
           <div v-for="value in vin.types">
             <h6 class="card-title" id="nom-carte">
               <div class="container">
                 <div class="row">
-                  <div class="col-">
+                  <div class="col-1 pl-1 pr-1">
                       <svg height="20" width="20">
                         <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
                       </svg>
                   </div>
-                  <div class="col-sm vin-titre">
+                  <div class="col-11 pr-1 pl-1 vin-titre">
                         {{vin.nom}} - {{vin.millesime}}
                   </div>
                 </div>
@@ -26,6 +27,7 @@
           </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
