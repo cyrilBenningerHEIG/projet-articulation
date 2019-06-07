@@ -254,11 +254,35 @@
 </template>
 <script>
 
-export default {
+ export default {
+  
   
   props: ["vins","prixttc", "prixeuro", "vinid"],
+
+   data() {
+    return {
+      vin: '',
+      vinCarts: [],
+      
+    };
+  },
+methods: {
+    addCart() {
+      var entry = this.vins[this.vinid-1]
+      localStorage.setItem("entry", JSON.stringify(entry))
+      this.vinCarts.push(entry)
+      localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
+    },
+  },
+  mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    if( this.vinCarts == null)  this.vinCarts = [];
+  },
+
+}
   
-  data() {
+/*   data() {
     return {
       vin: '',
       vinCarts: [],
@@ -272,7 +296,7 @@ methods: {
   },
   mounted() {
     console.log('App mounted!');
-    if (localStorage.getItem('vinCarts')) this.vinCart = JSON.parse(localStorage.getItem('vinCarts'));
+    if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
   },
   watch: {
     vinCarts: {
@@ -283,15 +307,7 @@ methods: {
       deep: true,
     },
   }
-}
- /* methods:{
+}  */
 
-    addCart:function(){
-      
-      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
-     
-    },
-
-  }, */
 </script>
 

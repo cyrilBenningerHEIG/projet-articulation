@@ -16,6 +16,14 @@ const router = new VueRouter({
         {
             path: "/login",
             component: NavBarLogout
+        },
+        {
+            path: "/panier",
+            component: NavBarLogin
+        },
+        {
+            path: "/panier",
+            component: NavBarLogout
         }
     ]
 })

@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2015,6 +2027,138 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Panier.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Panier.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      vinCarts: [],
+      id: []
+    };
+  },
+  methods: {
+    removeCart: function removeCart() {
+      this.vinCarts.splice(this.id, 1);
+      localStorage.setItem('vinCarts', JSON.stringify(this.vinCarts));
+    }
+  },
+  mounted: function mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+  }
+});
+/* methods:{
+
+   addCart:function(){
+     
+     localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+    
+   },
+
+ }, */
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js& ***!
@@ -2177,8 +2321,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes'],
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins', 'filters'],
   data: function data() {
     return {
       type: '',
@@ -2186,8 +2331,81 @@ __webpack_require__.r(__webpack_exports__);
       regn: '',
       appel: '',
       produ: '',
-      frmt: ''
+      frmt: '',
+      filters: ''
     };
+  },
+  methods: {
+    // filterType:function(filters){
+    //Type
+    //       var type = $(event.target).text();
+    //       filters[0].push(type);
+    //       console.log(filters);
+    //       var filters_array = filters
+    //       $('#pays-btn').text(type);
+    //       $('.card-custom').each(function(filters_array) {
+    //         $(this).hide();
+    //         filters_array.forEach(function(value) {
+    //        $("*[data-type='" + this.value[i] + "']").show();
+    // });
+    // });
+    // },
+    filterPays: function filterPays() {
+      //Pays
+      var pays = $(event.target).text();
+      console.log(pays);
+      $('#pays-btn').text(pays);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-pays='" + pays + "']").show();
+      });
+    },
+    filterRegn: function filterRegn() {
+      //Région
+      var regn = $(event.target).text();
+      console.log(regn);
+      $('#region-btn').text(regn);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-region='" + regn + "']").show();
+      });
+    },
+    filterAppel: function filterAppel() {
+      //Appellation
+      var appel = $(event.target).text();
+      $('#appel-btn').text(appel);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-appel='" + appel + "']").show();
+      });
+    },
+    filterMille: function filterMille() {
+      //Millesime
+      var mille = $(event.target).text();
+      $('#millesime-btn').text(mille);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-millesime='" + mille + "']").show();
+      });
+    },
+    filterProdu: function filterProdu() {
+      //Producteur
+      var produ = $(event.target).text();
+      $('#produ-btn').text(produ);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-produ='" + produ + "']").show();
+      });
+    },
+    filterFormat: function filterFormat() {
+      //Format
+      var format = $(event.target).text();
+      $('#format-btn').text(format);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-format='" + format + "']").show(); //your_data_attribute_value.split(" ");
+      });
+    }
   }
 });
 
@@ -2437,26 +2655,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["vins", "prixttc", "prixeuro", "vinid"],
   data: function data() {
     return {
-      vin: ''
+      vin: '',
+      vinCarts: []
     };
   },
-
-  /*  mounted(){
-     if (localStorage.name){
-       this.name = localStorage.name
-     }
-   }, 
-  */
   methods: {
     addCart: function addCart() {
-      localStorage.setItem('vin' + this.vins[this.vinid - 1].id, JSON.stringify(this.vins[this.vinid - 1]));
+      var entry = this.vins[this.vinid - 1];
+      localStorage.setItem("entry", JSON.stringify(entry));
+      this.vinCarts.push(entry);
+      localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     }
+  },
+  mounted: function mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    if (this.vinCarts == null) this.vinCarts = [];
   }
 });
+/*   data() {
+    return {
+      vin: '',
+      vinCarts: [],
+      
+    };
+  },
+methods: {
+    addCart() {
+      this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
+    },
+  },
+  mounted() {
+    console.log('App mounted!');
+    if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
+  },
+  watch: {
+    vinCarts: {
+      handler() {
+        console.log('Vins changed!');
+        localStorage.setItem('vinCarts', JSON.stringify(this.vins[this.vinid-1]));
+      },
+      deep: true,
+    },
+  }
+}  */
 
 /***/ }),
 
@@ -25289,7 +25554,7 @@ var hasIntersectionObserverSupport = isBrowser && 'IntersectionObserver' in wind
 
 var getEnv = function getEnv(key) {
   var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}) || false : {};
+  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}) || false : {};
 
   if (!key) {
     /* istanbul ignore next */
@@ -34208,7 +34473,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    font-size: 70%;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    font-size: 70%;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    padding-top: 50px;\n}\n\n.card-body {\n    width: 15rem;\n    margin-top: -25px;\n}\n\n.card-title {\n    height: 3rem;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\n.arrow {\n    width: 2.5%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n#btn-quantity {\n    padding-right: 325px;\n}\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: #2B2B2B;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #f2ebda;\n    font-size: 16px;\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n.contact-form {\n    background: #2B2B2B;\n    margin-top: 10%;\n    margin-bottom: 5%;\n    width: 70%;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #dc3545;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    padding-top: -20px;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding-left: 20px;\n    padding-right: 20px;\n    margin-top: 45px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 50px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n#login-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n}\n\n#box,\n#box_register {\n    width: 400px;\n    height: 700px;\n    padding: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 130%;\n    margin-top: 25px;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 200px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 280px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n    margin-top: 35px;\n    font-size: 75%;\n    padding-top: -25px;\n}\n\n#register-link,\n#home-link,\n#forgot-pass {\n    display: block;\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    padding: 40px;\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* The container */\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 22px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n\n/* Hide the browser's default radio button */\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n\n/* Create a custom radio button */\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 25px;\n    width: 25px;\n    background-color: #eee;\n    border-radius: 50%;\n}\n\n\n/* On mouse-over, add a grey background color */\n\n.container:hover input~.checkmark {\n    background-color: #ccc;\n}\n\n\n/* When the radio button is checked, add a blue background */\n\n.container input:checked~.checkmark {\n    background-color: #0000007e;\n}\n\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n\n/* Show the indicator (dot/circle) when checked */\n\n.container input:checked~.checkmark:after {\n    display: block;\n}\n\n\n/* Style the indicator (dot/circle) */\n\n.container .checkmark:after {\n    top: 9px;\n    left: 9px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n    background: white;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}", ""]);
+exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 70%;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 70%;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    padding-top: 50px;\r\n}\r\n\r\n.card-body {\r\n    width: 15rem;\r\n    margin-top: -25px;\r\n}\r\n\r\n.card-title {\r\n    height: 3rem;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    -webkit-transform: translateY(-50%);\r\n            transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\n.arrow {\r\n    width: 2.5%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n#btn-quantity {\r\n    padding-right: 325px;\r\n}\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: #2B2B2B;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #f2ebda;\r\n    font-size: 16px;\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n.contact-form {\r\n    background: #2B2B2B;\r\n    margin-top: 10%;\r\n    margin-bottom: 5%;\r\n    width: 70%;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    -webkit-transform: rotate(29deg);\r\n            transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #dc3545;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    padding-top: -20px;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    margin-top: 45px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 50px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */ \r\n#login-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n}\r\n\r\n#box,\r\n#box_register {\r\n    width: 400px;\r\n    height: 700px;\r\n    padding: 40px;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 130%;\r\n    margin-top: 25px;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 200px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height : 25px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 280px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n    margin-top: 35px;\r\n    font-size: 75%;\r\n    padding-top: -25px;\r\n}\r\n\r\n#register-link,\r\n#home-link,\r\n#forgot-pass\r\n#login-link {\r\n    display: block;\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    padding: 40px;\r\n    position: absolute;\r\n    top: 100%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* The container */\r\n\r\n.container {\r\n    display: block;\r\n    position: relative;\r\n    padding-left: 35px;\r\n    margin-bottom: 12px;\r\n    cursor: pointer;\r\n    font-size: 22px;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n}\r\n\r\n\r\n/* Hide the browser's default radio button */\r\n\r\n.container input {\r\n    position: absolute;\r\n    opacity: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n/* Create a custom radio button */\r\n\r\n.checkmark {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    height: 25px;\r\n    width: 25px;\r\n    background-color: #eee;\r\n    border-radius: 50%;\r\n}\r\n\r\n\r\n/* On mouse-over, add a grey background color */\r\n\r\n.container:hover input~.checkmark {\r\n    background-color: #ccc;\r\n}\r\n\r\n\r\n/* When the radio button is checked, add a blue background */\r\n\r\n.container input:checked~.checkmark {\r\n    background-color: #0000007e;\r\n}\r\n\r\n\r\n/* Create the indicator (the dot/circle - hidden when not checked) */\r\n\r\n.checkmark:after {\r\n    content: \"\";\r\n    position: absolute;\r\n    display: none;\r\n}\r\n\r\n\r\n/* Show the indicator (dot/circle) when checked */\r\n\r\n.container input:checked~.checkmark:after {\r\n    display: block;\r\n}\r\n\r\n\r\n/* Style the indicator (dot/circle) */\r\n\r\n.container .checkmark:after {\r\n    top: 9px;\r\n    left: 9px;\r\n    width: 8px;\r\n    height: 8px;\r\n    border-radius: 50%;\r\n    background: white;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}", ""]);
 
 // exports
 
@@ -79526,6 +79791,743 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/setimmediate/setImmediate.js":
 /*!***************************************************!*\
   !*** ./node_modules/setimmediate/setImmediate.js ***!
@@ -80600,83 +81602,102 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    {
+      staticClass: "container carteContainer",
+      attrs: { id: "carteContainer" }
+    },
     _vm._l(_vm.vins, function(vin) {
-      return _c("div", { key: vin.id, staticClass: "card card-custom" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("a", { attrs: { href: "produit/" + vin.id } }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: { src: "images/illustrations/bottle.png", alt: "vin1" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "container", attrs: { id: "carteproduit" } },
-          [
-            _vm._l(vin.types, function(value) {
-              return _c("div", [
-                _c(
-                  "h6",
-                  { staticClass: "card-title", attrs: { id: "nom-carte" } },
-                  [
-                    _c("svg", { attrs: { height: "20", width: "20" } }, [
-                      _c("circle", {
-                        class: "type-circle-" + value.id,
-                        attrs: {
-                          cx: "10",
-                          cy: "10",
-                          r: "5",
-                          stroke: "black",
-                          "stroke-width": "0.3"
-                        }
-                      })
-                    ]),
-                    _vm._v("\n\n       " + _vm._s(vin.nom))
-                  ]
-                )
-              ])
-            }),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              vin.millesime > 1
-                ? _c("div", { staticClass: "check-full" }, [
-                    _c(
-                      "h6",
-                      {
+      return _c(
+        "div",
+        {
+          key: vin.id,
+          staticClass: "card card-custom",
+          attrs: {
+            "data-type": vin.types[0].type,
+            "data-pays": vin.regn.pays.nom,
+            "data-region": vin.regn.nom,
+            "data-appel": vin.appel.libelle,
+            "data-millesime": vin.millesime,
+            "data-produ": vin.produ.nom,
+            "data-format": vin.frmt.quantite
+          }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("a", { attrs: { href: "produit/" + vin.id } }, [
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: { src: "images/illustrations/bottle.png", alt: "vin1" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "container", attrs: { id: "carteproduit" } },
+            [
+              _vm._l(vin.types, function(value) {
+                return _c("div", [
+                  _c(
+                    "h6",
+                    { staticClass: "card-title", attrs: { id: "nom-carte" } },
+                    [
+                      _c("svg", { attrs: { height: "20", width: "20" } }, [
+                        _c("circle", {
+                          class: "type-circle-" + value.id,
+                          attrs: {
+                            cx: "10",
+                            cy: "10",
+                            r: "5",
+                            stroke: "black",
+                            "stroke-width": "0.3"
+                          }
+                        })
+                      ]),
+                      _vm._v("\r\n\r\n       " + _vm._s(vin.nom))
+                    ]
+                  )
+                ])
+              }),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                vin.millesime > 1
+                  ? _c("div", { staticClass: "check-full" }, [
+                      _c(
+                        "h6",
+                        {
+                          staticClass: "card-text",
+                          attrs: { id: "millesime-carte" }
+                        },
+                        [_vm._v(_vm._s(vin.millesime))]
+                      )
+                    ])
+                  : _c("div", { staticClass: "check-full" }, [
+                      _c("h6", {
                         staticClass: "card-text",
                         attrs: { id: "millesime-carte" }
-                      },
-                      [_vm._v(_vm._s(vin.millesime))]
-                    )
-                  ])
-                : _c("div", { staticClass: "check-full" }, [
-                    _c("h6", {
-                      staticClass: "card-text",
-                      attrs: { id: "millesime-carte" }
-                    })
-                  ]),
-              _vm._v(" "),
-              _c(
-                "h6",
-                { staticClass: "card-text", attrs: { id: "produ-carte" } },
-                [_vm._v(_vm._s(vin.produ.nom))]
-              ),
-              _vm._v(" "),
-              _c(
-                "h6",
-                { staticClass: "card-text", attrs: { id: "prix-carte" } },
-                [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
-              )
-            ])
-          ],
-          2
-        )
-      ])
+                      })
+                    ]),
+                _vm._v(" "),
+                _c(
+                  "h6",
+                  { staticClass: "card-text", attrs: { id: "produ-carte" } },
+                  [_vm._v(_vm._s(vin.produ.nom))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h6",
+                  { staticClass: "card-text", attrs: { id: "prix-carte" } },
+                  [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
+                )
+              ])
+            ],
+            2
+          )
+        ]
+      )
     }),
     0
   )
@@ -80788,7 +81809,7 @@ var render = function() {
                         }
                       })
                     ]),
-                    _vm._v("\n\n       " + _vm._s(vin.nom))
+                    _vm._v("\r\n\r\n       " + _vm._s(vin.nom))
                   ]
                 )
               ])
@@ -82344,7 +83365,10 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        {
+                          staticClass: "dropdown-item",
+                          attrs: { href: "/logout" }
+                        },
                         [_vm._v("Déconnection")]
                       )
                     ])
@@ -82355,13 +83379,7 @@ var staticRenderFns = [
                       "a",
                       {
                         staticClass: "nav-link icon",
-                        attrs: {
-                          id: "icon_search",
-                          "data-toggle": "pill",
-                          href: "#",
-                          role: "tab",
-                          "aria-selected": "false"
-                        }
+                        attrs: { id: "icon_search", href: "/panier" }
                       },
                       [
                         _c("img", {
@@ -82565,13 +83583,7 @@ var staticRenderFns = [
                       "a",
                       {
                         staticClass: "nav-link icon",
-                        attrs: {
-                          id: "icon_search",
-                          "data-toggle": "pill",
-                          href: "#",
-                          role: "tab",
-                          "aria-selected": "false"
-                        }
+                        attrs: { id: "icon_search", href: "/panier" }
                       },
                       [
                         _c("img", {
@@ -83009,159 +84021,228 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("h2", [_vm._v("Panier")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "table-responsive-sm" }, [
+      _c("table", { staticClass: "table" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          [
+            _vm._l(_vm.vinCarts, function(vinCart) {
+              return _c("tr", [
+                _vm._m(1, true),
+                _vm._v(" "),
+                _c("td", [
+                  _c(
+                    "div",
+                    { staticClass: "card-body", attrs: { id: "weekproduct" } },
+                    [
+                      _c("div", { staticClass: "produit-descr" }, [
+                        _c("p", { staticClass: "card-title" }, [
+                          _vm._v(_vm._s(vinCart.nom))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-title" }, [
+                          _vm._v(_vm._s(vinCart.produ.nom))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "p",
+                          {
+                            staticClass: "card-text",
+                            model: {
+                              value: _vm.id,
+                              callback: function($$v) {
+                                _vm.id = $$v
+                              },
+                              expression: "id"
+                            }
+                          },
+                          [_vm._v(_vm._s(vinCart.id))]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(_vm._s(vinCart.millesime))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(_vm._s(vinCart.regn.nom))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(_vm._s(vinCart.regn.pays.nom))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v(_vm._s(vinCart.prix.prixht))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-white btn-rounded btn-sm",
+                            attrs: { type: "button", href: "#" },
+                            on: { click: _vm.removeCart }
+                          },
+                          [_vm._v("Supprimer")]
+                        )
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(2, true),
+                _vm._v(" "),
+                _c("td", [_vm._v("40 chf")])
+              ])
+            }),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
+            _vm._m(6)
+          ],
+          2
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(7)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("h2", [_vm._v("Panier")]),
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Produit")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Quantité / Prix")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Sous total")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", { attrs: { scope: "row" } }, [
+      _c("div", { staticClass: "card card-custom mx-2 mb-3" }, [
+        _c("img", {
+          staticClass: "card-img-top",
+          attrs: {
+            src: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
+            alt: "vin1",
+            id: "cart-produit-img"
+          }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("form", [
+        _c("div", { staticClass: "form-group" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: {
+              type: "number",
+              id: "formGroupExampleInput",
+              placeholder: "Quantité"
+            }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td"),
       _vm._v(" "),
-      _c("div", { staticClass: "table-responsive-sm" }, [
-        _c("table", { staticClass: "table" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Produit")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [
-                _vm._v("Quantité / Prix")
-              ]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Sous total")])
-            ])
+      _c("td"),
+      _vm._v(" "),
+      _c("td", [_vm._v("Sous total")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("X")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td"),
+      _vm._v(" "),
+      _c("td"),
+      _vm._v(" "),
+      _c("td", [_vm._v("TVA & autres taxes")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("X")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td"),
+      _vm._v(" "),
+      _c("td"),
+      _vm._v(" "),
+      _c("td", [_vm._v("Total HT")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("X")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td"),
+      _vm._v(" "),
+      _c("td"),
+      _vm._v(" "),
+      _c("td", [
+        _c("h4", [_vm._v("Total de la commande")]),
+        _c("br"),
+        _vm._v("(Hors frais de livraison)")
+      ]),
+      _vm._v(" "),
+      _c("td", [_c("h4", [_vm._v("X")])])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "action-btn" }, [
+      _c("div", { staticClass: "row mt-5 justify-content-center" }, [
+        _c("div", { staticClass: "filters mx-auto" }, [
+          _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
+            _vm._v("Continuer mes achats")
           ]),
           _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "card card-custom mx-2 mb-3" }, [
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: {
-                      src:
-                        "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-                      alt: "vin1",
-                      id: "cart-produit-img"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "div",
-                  { staticClass: "card-body", attrs: { id: "weekproduct" } },
-                  [
-                    _c("div", { staticClass: "produit-descr" }, [
-                      _c("p", { staticClass: "card-title" }, [_vm._v("nom")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-title" }, [
-                        _vm._v("domaine")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [
-                        _vm._v("millesime")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("region")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("pays")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("prix")]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-white btn-rounded btn-sm",
-                          attrs: { type: "button", href: "#" }
-                        },
-                        [_vm._v("Supprimer")]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c("form", [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "number",
-                        id: "formGroupExampleInput",
-                        placeholder: "Quantité"
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("40 chf")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("Sous total")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("TVA & autres taxes")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("Total HT")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [
-                _c("h4", [_vm._v("Total de la commande")]),
-                _c("br"),
-                _vm._v("(Hors frais de livraison)")
-              ]),
-              _vm._v(" "),
-              _c("td", [_c("h4", [_vm._v("X")])])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "action-btn" }, [
-          _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-            _c("div", { staticClass: "filters mx-auto" }, [
-              _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
-                _vm._v("Continuer mes achats")
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "paiement-etape1" } }, [
-                _c("button", { staticClass: "btn btn-danger btn-panier" }, [
-                  _vm._v("Passer commande")
-                ])
-              ])
+          _c("a", { attrs: { href: "paiement-etape1" } }, [
+            _c("button", { staticClass: "btn btn-danger btn-panier" }, [
+              _vm._v("Passer commande")
             ])
           ])
         ])
@@ -83216,11 +84297,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.types, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v(_vm._s(value.type))
-                ])
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "typeList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterType }
+                    },
+                    [_vm._v(_vm._s(value.type))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83249,13 +84339,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.pays, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "paysList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterPays }
+                    },
+                    [_vm._v(_vm._s(value.nom))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83267,7 +84364,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "regions-btn",
+                id: "region-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83284,13 +84381,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.regns, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "rgnList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterRegn }
+                    },
+                    [_vm._v(_vm._s(value.nom))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83302,7 +84406,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "pays-btn",
+                id: "appel-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83319,13 +84423,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.appels, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.libelle))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "appelList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterAppel }
+                    },
+                    [_vm._v(_vm._s(value.libelle))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83341,7 +84452,8 @@ var render = function() {
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
-                "aria-expanded": "true"
+                "aria-expanded": "true",
+                value: "Millésime"
               }
             },
             [_vm._v("Millésime")]
@@ -83354,13 +84466,21 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.millesimes, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.millesime))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "milleList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { id: "milleOption" },
+                      on: { click: _vm.filterMille }
+                    },
+                    [_vm._v(_vm._s(value.millesime))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83372,7 +84492,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "producteur-btn",
+                id: "produ-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83389,13 +84509,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.produs, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "produList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterProdu }
+                    },
+                    [_vm._v(_vm._s(value.nom))]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83424,19 +84551,38 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.frmts, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.quantite))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "frmtList" } },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item",
+                      on: { click: _vm.filterFormat }
+                    },
+                    [_vm._v(_vm._s(value.quantite))]
+                  )
+                ]
+              )
             }),
             0
           )
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm" }, [
+              _c("p", { staticClass: "number_results" }, [
+                _vm._v(_vm._s(_vm.nbvins) + " résultats")
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ])
       ])
     ])
   ])
@@ -83446,88 +84592,84 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
-        _c("div", { staticClass: "col-sm" }, [
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display2", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display2.svg" } })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display3", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display3.svg" } })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display4", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
-          )
-        ]),
+    return _c("div", { staticClass: "col-sm" }, [
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display2", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display2.svg" } })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display3", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display3.svg" } })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display4", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm" }, [
+      _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-white dropdown-toggle btn-filter",
+            attrs: {
+              id: "tri-btn",
+              type: "button",
+              "data-toggle": "dropdown",
+              "aria-haspopup": "false",
+              "aria-expanded": "true"
+            }
+          },
+          [_vm._v("Tri")]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _c("p", { staticClass: "number_results" }, [_vm._v("X résultats")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "tri-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Tri")]
-            ),
+        _c(
+          "div",
+          {
+            staticClass: "dropdown-menu",
+            attrs: { "aria-labelledby": "btnGroupDrop1" }
+          },
+          [
+            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Prix croissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Prix décroissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Age croissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Age décroissant")
-                ])
-              ]
-            )
-          ])
-        ])
+            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Prix croissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Prix décroissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Age croissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Age décroissant")
+            ])
+          ]
+        )
       ])
     ])
   }
@@ -83659,6 +84801,12 @@ var render = function() {
                     [
                       _c("table", { staticClass: "p table" }, [
                         _c("tr", [
+                          _c("td", [_vm._v("Appellation")]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(vin.appel.libelle))])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
                           _c("td", [_vm._v("Teneur en alcool")]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(vin.alcool))])
@@ -83667,19 +84815,31 @@ var render = function() {
                         _c("tr", [
                           _c("td", [_vm._v("Cotation")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.cotation))])
+                          vin.cotation
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.cotation))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
                           _c("td", [_vm._v("Classement")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.classement))])
+                          vin.classement
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.classement))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
                           _c("td", [_vm._v("Apogée")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.apogee))])
+                          vin.apogee
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.apogee))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
@@ -99252,6 +100412,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _counter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_counter_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _lib_JsonStorage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/JsonStorage */ "./resources/js/lib/JsonStorage.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -99278,6 +100439,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('example-component', __webp
  */
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 
 
 
@@ -99379,7 +100541,7 @@ $(document).ready(function () {
       }, false);
     });
   }, false);
-})(); // Chargement du type de carte sur Leaflet
+})();
 
 /***/ }),
 
@@ -100909,15 +102071,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Panier_vue_vue_type_template_id_def28278___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Panier.vue?vue&type=template&id=def28278& */ "./resources/js/components/Panier.vue?vue&type=template&id=def28278&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Panier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Panier.vue?vue&type=script&lang=js& */ "./resources/js/components/Panier.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Panier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Panier_vue_vue_type_template_id_def28278___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Panier_vue_vue_type_template_id_def28278___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -100931,6 +102095,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Panier.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Panier.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Panier.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Panier.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Panier.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Panier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -101336,6 +102514,506 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./resources/js/lib/JsonStorage.js":
+/*!*****************************************!*\
+  !*** ./resources/js/lib/JsonStorage.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/** 
+ * Class representing a LocalStorage handler, with JSON and storage's name management 
+ *
+ * Licence: GNU General Public License v3.0  
+ * Author: Nicolas Chabloz  
+ */
+var _default =
+/*#__PURE__*/
+function () {
+  /**
+   * Create a JsonStorage.
+   * 
+   * @param {Object} [options={}] - Options
+   * @param {string} [options.name="default"] - The name of the storage.
+   * @param {boolean} [options.listen=true] - Listen to storage events for data update
+   * @param {boolean} [options.trigger=true] - Trigger an event on "window" when data is set, changed or deleted in the storage
+   * @param {boolean} [options.eventName="jsonstorage"] - The event's name to trigger 
+   */
+  function _default() {
+    var _this = this;
+
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    _classCallCheck(this, _default);
+
+    this.options = {
+      name: options.name || "default",
+      listen: options.listen || true,
+      trigger: options.trigger || true,
+      eventName: options.eventName || "jsonstorage"
+    };
+
+    this._reloadKeys(); // reload keys data when storage change from another tab
+
+
+    if (this.options.listen) {
+      window.addEventListener('storage', function (evt) {
+        if (!evt.key.startsWith("".concat(_this.options.name, "_"))) return;
+
+        _this._reloadKeys();
+
+        if (_this.options.trigger) {
+          window.dispatchEvent(new Event(_this.options.eventName));
+        }
+      });
+    }
+  }
+  /**
+   * Private method
+   */
+
+
+  _createClass(_default, [{
+    key: "_reloadKeys",
+    value: function _reloadKeys() {
+      var _this2 = this;
+
+      this.storageKeys = Object.keys(localStorage).filter(function (key) {
+        return key.startsWith("".concat(_this2.options.name, "_"));
+      }).reduce(function (map, key) {
+        return map.set(key.substring("".concat(_this2.options.name, "_").length), 1);
+      }, new Map());
+    }
+    /**
+     * Returns a new Iterator object that contains an array of [key, value] for each element in the storage
+     */
+
+  }, {
+    key: Symbol.iterator,
+    value: function value() {
+      return this.entries();
+    }
+    /**
+     * Returns a new Iterator object that contains the keys for each element in the storage.
+     */
+
+  }, {
+    key: "keys",
+    value: function keys() {
+      return this.storageKeys.keys();
+    }
+    /**
+     * Returns the name of the nth key in the storage
+     * 
+     * @param {integer} ind Indice
+     */
+
+  }, {
+    key: "key",
+    value: function key(ind) {
+      var keys = _toConsumableArray(this.keys());
+
+      if (ind < 0 || ind >= keys.length) return null;
+      return keys[ind];
+    }
+    /**
+     * Returns a new Iterator object that contains the values for each element in the storage.
+     */
+
+  }, {
+    key: "values",
+    value:
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function values() {
+      var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, k;
+
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function values$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _iteratorNormalCompletion = true;
+              _didIteratorError = false;
+              _iteratorError = undefined;
+              _context.prev = 3;
+              _iterator = this.storageKeys.keys()[Symbol.iterator]();
+
+            case 5:
+              if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+                _context.next = 12;
+                break;
+              }
+
+              k = _step.value;
+              _context.next = 9;
+              return this.getItem(k);
+
+            case 9:
+              _iteratorNormalCompletion = true;
+              _context.next = 5;
+              break;
+
+            case 12:
+              _context.next = 18;
+              break;
+
+            case 14:
+              _context.prev = 14;
+              _context.t0 = _context["catch"](3);
+              _didIteratorError = true;
+              _iteratorError = _context.t0;
+
+            case 18:
+              _context.prev = 18;
+              _context.prev = 19;
+
+              if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+                _iterator["return"]();
+              }
+
+            case 21:
+              _context.prev = 21;
+
+              if (!_didIteratorError) {
+                _context.next = 24;
+                break;
+              }
+
+              throw _iteratorError;
+
+            case 24:
+              return _context.finish(21);
+
+            case 25:
+              return _context.finish(18);
+
+            case 26:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, values, this, [[3, 14, 18, 26], [19,, 21, 25]]);
+    })
+    /**
+     * Returns a new Iterator object that contains an array of [key, value] for each element in the storage.
+     */
+
+  }, {
+    key: "entries",
+    value:
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function entries() {
+      var _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, k;
+
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function entries$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _iteratorNormalCompletion2 = true;
+              _didIteratorError2 = false;
+              _iteratorError2 = undefined;
+              _context2.prev = 3;
+              _iterator2 = this.storageKeys.keys()[Symbol.iterator]();
+
+            case 5:
+              if (_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done) {
+                _context2.next = 12;
+                break;
+              }
+
+              k = _step2.value;
+              _context2.next = 9;
+              return [k, this.getItem(k)];
+
+            case 9:
+              _iteratorNormalCompletion2 = true;
+              _context2.next = 5;
+              break;
+
+            case 12:
+              _context2.next = 18;
+              break;
+
+            case 14:
+              _context2.prev = 14;
+              _context2.t0 = _context2["catch"](3);
+              _didIteratorError2 = true;
+              _iteratorError2 = _context2.t0;
+
+            case 18:
+              _context2.prev = 18;
+              _context2.prev = 19;
+
+              if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+                _iterator2["return"]();
+              }
+
+            case 21:
+              _context2.prev = 21;
+
+              if (!_didIteratorError2) {
+                _context2.next = 24;
+                break;
+              }
+
+              throw _iteratorError2;
+
+            case 24:
+              return _context2.finish(21);
+
+            case 25:
+              return _context2.finish(18);
+
+            case 26:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, entries, this, [[3, 14, 18, 26], [19,, 21, 25]]);
+    })
+    /**
+     * Calls callback once for each key-value pair present in the storage. The callback is called with the value and the key as parameters.
+     * 
+     * @param {function} callback 
+     */
+
+  }, {
+    key: "forEach",
+    value: function forEach(callback) {
+      var _iteratorNormalCompletion3 = true;
+      var _didIteratorError3 = false;
+      var _iteratorError3 = undefined;
+
+      try {
+        for (var _iterator3 = this[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+          var entrie = _step3.value;
+          callback(entrie[1], entrie[0]);
+        }
+      } catch (err) {
+        _didIteratorError3 = true;
+        _iteratorError3 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+            _iterator3["return"]();
+          }
+        } finally {
+          if (_didIteratorError3) {
+            throw _iteratorError3;
+          }
+        }
+      }
+    }
+    /**
+     * Return an array of [key, value] for each element in the storage.
+     */
+
+  }, {
+    key: "toArray",
+    value: function toArray() {
+      return _toConsumableArray(this.entries());
+    }
+    /**
+     * Return an object with a propertie key: value for each element in the storage.
+     */
+
+  }, {
+    key: "toObject",
+    value: function toObject() {
+      var obj = {};
+      var _iteratorNormalCompletion4 = true;
+      var _didIteratorError4 = false;
+      var _iteratorError4 = undefined;
+
+      try {
+        for (var _iterator4 = this[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+          var ent = _step4.value;
+          obj[ent[0]] = ent[1];
+        }
+      } catch (err) {
+        _didIteratorError4 = true;
+        _iteratorError4 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
+            _iterator4["return"]();
+          }
+        } finally {
+          if (_didIteratorError4) {
+            throw _iteratorError4;
+          }
+        }
+      }
+
+      return obj;
+    }
+    /**
+     * Return a JSON string representing an object with a propertie key: value for each element in the storage.
+     */
+
+  }, {
+    key: "toJSON",
+    value: function toJSON() {
+      return JSON.stringify(this.toObject());
+    }
+    /**
+     * Return the numbers of elements in the storage
+     */
+
+  }, {
+    key: "setItem",
+
+    /**
+     * Add the key and the key's value to the storage, or update that key's value if it already exists
+     * 
+     * @param {string} key the name of the key you want to create/update.
+     * @param {*} val the value you want to give the key you are creating/updating.
+     */
+    value: function setItem(key, val) {
+      localStorage.setItem("".concat(this.options.name, "_").concat(key), JSON.stringify(val));
+      this.storageKeys.set(key, 1);
+
+      if (this.options.trigger) {
+        window.dispatchEvent(new Event(this.options.eventName));
+      }
+    }
+    /**
+     * Private method
+     */
+
+  }, {
+    key: "_genKey",
+    value: function _genKey() {
+      return 'uid_' + Math.random().toString(36).substring(2, 10);
+    }
+    /**
+     * Add the value with a random unique key to the storage
+     * Return the key.
+     * 
+     * @param {*} val the value you want to give the key you are creating/updating.
+     */
+
+  }, {
+    key: "addItem",
+    value: function addItem(val) {
+      var key = this._genKey();
+
+      while (this.storageKeys.has(key)) {
+        key = this._genKey();
+      }
+
+      this.setItem(key, val);
+      return key;
+    }
+    /**
+     * Return the value of the key in the storage. If the key does not exist, null is returned.
+     * 
+     * @param {string} key the name of the key you want to retrieve the value of.
+     */
+
+  }, {
+    key: "getItem",
+    value: function getItem(key) {
+      var val = localStorage.getItem("".concat(this.options.name, "_").concat(key));
+      if (val == null) return null;
+      return JSON.parse(val);
+    }
+    /**
+     * Remove the key from the storage if it exists. If there is no item associated with the given key, this method will do nothing.
+     * 
+     * @param {string} the name of the key you want to remove. 
+     */
+
+  }, {
+    key: "removeItem",
+    value: function removeItem(key) {
+      localStorage.removeItem("".concat(this.options.name, "_").concat(key));
+      this.storageKeys["delete"](key);
+
+      if (this.options.trigger) {
+        window.dispatchEvent(new Event(this.options.eventName));
+      }
+    }
+    /**
+     * Clears all keys in the storage
+     */
+
+  }, {
+    key: "clear",
+    value: function clear() {
+      var _iteratorNormalCompletion5 = true;
+      var _didIteratorError5 = false;
+      var _iteratorError5 = undefined;
+
+      try {
+        for (var _iterator5 = this.keys()[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          var key = _step5.value;
+          localStorage.removeItem("".concat(this.options.name, "_").concat(key));
+        }
+      } catch (err) {
+        _didIteratorError5 = true;
+        _iteratorError5 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion5 && _iterator5["return"] != null) {
+            _iterator5["return"]();
+          }
+        } finally {
+          if (_didIteratorError5) {
+            throw _iteratorError5;
+          }
+        }
+      }
+
+      this.storageKeys.clear();
+
+      if (this.options.trigger) {
+        window.dispatchEvent(new Event(this.options.eventName));
+      }
+    }
+  }, {
+    key: "length",
+    get: function get() {
+      return this.storageKeys.size;
+    }
+    /**
+     * Return the numbers of elements in the storage (alias for this.length)
+     */
+
+  }, {
+    key: "size",
+    get: function get() {
+      return this.length;
+    }
+  }]);
+
+  return _default;
+}();
+
+
+
+/***/ }),
+
 /***/ "./resources/js/routes.js":
 /*!********************************!*\
   !*** ./resources/js/routes.js ***!
@@ -101361,6 +103039,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _components_NavBarLogin__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
     path: "/login",
+    component: _components_NavBarLogout__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }, {
+    path: "/panier",
+    component: _components_NavBarLogin__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }, {
+    path: "/panier",
     component: _components_NavBarLogout__WEBPACK_IMPORTED_MODULE_3__["default"]
   }]
 });
@@ -101416,8 +103100,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
