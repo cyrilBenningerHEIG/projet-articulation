@@ -5,16 +5,16 @@
       
         <div class="roadMap">
           <span>
-            <a href="#">PRODUITS</a>
+            <a href="../produits">PRODUITS</a>
             <img class="arrow" src="/images/icons/arrow.svg">
-            <a href="#">VIN ROUGE</a>
+            <a href="#">{{vin.nom}}</a>
           </span>
         </div>
 
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/images/illustrations/bottle.png">
+              <img class="bottleImg" v-bind:src="vin.photoUrl">
             </div>
           <div class="col mt-4 mb-4">
               <div>
@@ -213,7 +213,9 @@
                   </tr>
                   <tr>
                     <td>Producteur</td>
-                    <td>{{vin.produ.nom}}</td>
+                    <a v-bind:href="vin.produ.url" target="_blank"> 
+                    <td >{{vin.produ.nom}}</td>
+                    </a> 
                   </tr>
                   <tr>
                     <td>Cépage(s)</td>
@@ -254,11 +256,35 @@
 </template>
 <script>
 
-export default {
+ export default {
+  
   
   props: ["vins","prixttc", "prixeuro", "vinid"],
+
+   data() {
+    return {
+      vin: '',
+      vinCarts: [],
+      
+    };
+  },
+methods: {
+    addCart() {
+      var entry = this.vins[this.vinid-1]
+      localStorage.setItem("entry", JSON.stringify(entry))
+      this.vinCarts.push(entry)
+      localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
+    },
+  },
+  mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    if( this.vinCarts == null)  this.vinCarts = [];
+  },
+
+}
   
-  data() {
+/*   data() {
     return {
       vin: '',
       vinCarts: [],
@@ -272,7 +298,7 @@ methods: {
   },
   mounted() {
     console.log('App mounted!');
-    if (localStorage.getItem('vinCarts')) this.vinCart = JSON.parse(localStorage.getItem('vinCarts'));
+    if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
   },
   watch: {
     vinCarts: {
@@ -283,15 +309,7 @@ methods: {
       deep: true,
     },
   }
-}
- /* methods:{
+}  */
 
-    addCart:function(){
-      
-      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
-     
-    },
-
-  }, */
 </script>
 
