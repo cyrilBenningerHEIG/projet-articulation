@@ -5,16 +5,16 @@
       
         <div class="roadMap">
           <span>
-            <a href="#">PRODUITS</a>
+            <a href="../produits">PRODUITS</a>
             <img class="arrow" src="/images/icons/arrow.svg">
-            <a href="#">VIN ROUGE</a>
+            <a href="#">{{vin.nom}}</a>
           </span>
         </div>
 
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/images/illustrations/bottle.png">
+              <img class="bottleImg" v-bind:src="vin.photoUrl">
             </div>
           <div class="col mt-4 mb-4">
               <div>
@@ -218,7 +218,9 @@
                   </tr>
                   <tr>
                     <td>Producteur</td>
-                    <td>{{vin.produ.nom}}</td>
+                    <a v-bind:href="vin.produ.url" target="_blank"> 
+                    <td >{{vin.produ.nom}}</td>
+                    </a> 
                   </tr>
                   <tr>
                     <td>Cépage(s)</td>
