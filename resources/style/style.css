@@ -361,7 +361,13 @@ P.blocktext {
 
 .card-title {
     width: 15rem;
-    padding-top: -20px;
+    height: 60px;
+    position: relative;
+}
+
+#title-position {
+    position: absolute;
+    bottom: 0;
 }
 
 .btn-filter {
