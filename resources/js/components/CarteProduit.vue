@@ -11,12 +11,20 @@
    
       <div v-for="value in vin.types">
          <h6 class="card-title" id="nom-carte">
-      <svg height="20" width="20">
-       <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
-       </svg>
-
-       {{vin.nom}}</h6>
+              <div class="container p-0">
+                <div class="row">
+                  <div class="col-">
+                      <svg height="20" width="20" class="svg-center">
+                        <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
+                      </svg>
+                  </div>
+                  <div class="col-sm produit-titre ">
+                        <h6>{{vin.nom}}</h6>
+                  </div>
+                </div>
               </div>
+            </h6>
+      </div>
     <hr>
     <div class="card-body">
       <div class="check-full" v-if="vin.millesime > 1">
