@@ -35,7 +35,7 @@
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link icon" id="icon_search" data-toggle="pill" href="#" role="tab" aria-selected="false"><img src="/images/icons/panier.svg"/></a>
+                      <a class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/></a>
                       <div class="dropdown-menu">
                       </div>
                     </li>
