@@ -40,6 +40,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import '../style/style.css';
 import './counter.js';
 import L from 'leaflet';
+import JsonStorage from "./lib/JsonStorage";
 
 
 
