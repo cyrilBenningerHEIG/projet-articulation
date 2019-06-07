@@ -14,7 +14,7 @@
         </thead>
         <tbody>
            
-          <tr v-model="vinCarts"> 
+          <tr v-for="vinCart in vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
                 <img
@@ -28,13 +28,14 @@
             <td>
               <div class="card-body" id="weekproduct">
                 <div class="produit-descr">
-                  <p class="card-title">{{vinCarts.nom}}</p>
-                  <p class="card-title">{{vinCarts.produ.nom}}</p>
-                  <p class="card-text">{{vinCarts.millesime}}</p>
-                  <p class="card-text">{{vinCarts.regn.nom}}</p>
-                  <p class="card-text">{{vinCarts.regn.pays.nom}}</p>
-                  <p class="card-text">{{vinCarts.prix.prixht}}</p>
-                  <button type="button" href="#" class="btn btn-white btn-rounded btn-sm">Supprimer</button>
+                  <p class="card-title">{{vinCart.nom}}</p>
+                  <p class="card-title">{{vinCart.produ.nom}}</p>
+                  <p class="card-text" v-model="id">{{vinCart.id}}</p>
+                  <p class="card-text">{{vinCart.millesime}}</p>
+                  <p class="card-text">{{vinCart.regn.nom}}</p>
+                  <p class="card-text">{{vinCart.regn.pays.nom}}</p>
+                  <p class="card-text">{{vinCart.prix.prixht}}</p>
+                  <button type="button" href="#" class="btn btn-white btn-rounded btn-sm" @click="removeCart">Supprimer</button>
                 </div>
               </div>
             </td>
@@ -91,18 +92,27 @@
 </template>
 
 <script>
+
 export default {
 
   data() {
     return {
       vinCarts: [],
+      id: [],
       
     };
   },
+  methods:{
+    removeCart(){
+      this.vinCarts.splice(this.id, 1)
+      localStorage.setItem('vinCarts',JSON.stringify(this.vinCarts));
+    }
+  },
   
-  mounted() {
+ mounted() {
     console.log('App mounted!');
-    if (localStorage.getItem('vinCarts')) this.vinCarts = JSON.parse(localStorage.getItem('vinCarts'));
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    
   },
  
 }
