@@ -120,6 +120,7 @@ const app = new Vue({
     router: Router,
 });
 
+
 //////////////////////////////////////  Chargement du type de carte sur Leaflet
 
 var map = L.map('mapid').setView([47.02, 8.33], 8.5);

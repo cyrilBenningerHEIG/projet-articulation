@@ -103,7 +103,7 @@
                     value="1"
                     min="1"
                     max="20"
-                  > </input>
+                  >
                   <span class="input-group-btn">
                     <button
                     
