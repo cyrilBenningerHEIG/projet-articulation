@@ -4,7 +4,7 @@
        <div class="container">
 
      <a v-bind:href="'produit/'+ vin.id">   
-    <img src="images/illustrations/bottle.png" class="card-img-top" alt="vin1">
+    <img v-bind:src="vin.photoUrl" class="card-img-top" alt="vin1">
     </a>
     </div>
     <div class="container" id="carteproduit">

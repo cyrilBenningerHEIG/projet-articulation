@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class clnt extends Authenticatable
 {
+    protected $guard = 'user';
 
     protected $table = 'clnts';
 
