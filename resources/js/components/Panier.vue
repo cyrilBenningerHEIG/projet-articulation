@@ -57,19 +57,19 @@
           <td ></td>
           <td></td>
           <td>Sous total</td>
-          <td>{{totalCart}}</td>
+          <td>{{Math.round(totalCart * 10) / 10 }}</td>
           </tr>
           <tr>
           <td></td>
           <td></td>
           <td>TVA & autres taxes</td>
-          <td>{{totalCart*0.077}}</td>
+          <td>{{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
           </tr>
            <tr>
           <td></td>
           <td></td>
           <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>{{(totalCart*0.077)+totalCart}}</h4></td>
+          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
           </tr>
         </tbody>
       </table>
@@ -77,7 +77,8 @@
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
@@ -86,6 +87,7 @@
 </template>
 
 <script>
+
 
 export default {
 

@@ -2210,6 +2210,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -84485,7 +84486,7 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v("Sous total")]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.totalCart))])
+              _c("td", [_vm._v(_vm._s(Math.round(_vm.totalCart * 10) / 10))])
             ]),
             _vm._v(" "),
             _c("tr", [
@@ -84495,7 +84496,9 @@ var render = function() {
               _vm._v(" "),
               _c("td", [_vm._v("TVA & autres taxes")]),
               _vm._v(" "),
-              _c("td", [_vm._v(_vm._s(_vm.totalCart * 0.077))])
+              _c("td", [
+                _vm._v(_vm._s(Math.round(_vm.totalCart * 0.077 * 10) / 10))
+              ])
             ]),
             _vm._v(" "),
             _c("tr", [
@@ -84507,7 +84510,12 @@ var render = function() {
               _vm._v(" "),
               _c("td", [
                 _c("h4", [
-                  _vm._v(_vm._s(_vm.totalCart * 0.077 + _vm.totalCart))
+                  _vm._v(
+                    _vm._s(
+                      Math.round((_vm.totalCart * 0.077 + _vm.totalCart) * 10) /
+                        10
+                    )
+                  )
                 ])
               ])
             ])
@@ -84516,7 +84524,27 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(3)
+      _c("div", { staticClass: "action-btn" }, [
+        _c("div", { staticClass: "row mt-5 justify-content-center" }, [
+          _c("div", { staticClass: "filters mx-auto" }, [
+            _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
+              _vm._v("Continuer mes achats")
+            ]),
+            _vm._v(" "),
+            _vm.userIsLoggedIn == false
+              ? _c("a", { attrs: { href: "paiement-etape1" } }, [
+                  _c("button", { staticClass: "btn btn-danger btn-panier" }, [
+                    _vm._v("Passer commande")
+                  ])
+                ])
+              : _c("a", { attrs: { href: "paiement-etape2" } }, [
+                  _c("button", { staticClass: "btn btn-danger btn-panier" }, [
+                    _vm._v("Passer commande")
+                  ])
+                ])
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -84562,26 +84590,6 @@ var staticRenderFns = [
       _c("h4", [_vm._v("Total de la commande")]),
       _c("br"),
       _vm._v("(Hors frais de livraison)")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "action-btn" }, [
-      _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-        _c("div", { staticClass: "filters mx-auto" }, [
-          _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
-            _vm._v("Continuer mes achats")
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "paiement-etape1" } }, [
-            _c("button", { staticClass: "btn btn-danger btn-panier" }, [
-              _vm._v("Passer commande")
-            ])
-          ])
-        ])
-      ])
     ])
   }
 ]

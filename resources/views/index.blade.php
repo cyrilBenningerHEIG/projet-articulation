@@ -15,7 +15,7 @@
     <body>
         <div id="app">
             <div class="container">
-            @if(Auth::check())
+            @if(Auth::guard('user')->check())
                 <h6>Connecté</h6>
                 <nav-bar-login></nav-bar-login>
                 @else
