@@ -49,12 +49,7 @@ Route::get('/paiement-etape4', function () {
     return view('paiement4');
 });
 
-Route::get('/login',function(){
-    return view('auth/login');
-});
-Route::post('/login', 'auth\LoginController@login')->name('login');
-Route::get('/logout', 'auth\LoginController@logout')->name('logout');
-Route::get('/register', 'auth\RegisterController@login')->name('register');
+
 
 
 
@@ -66,7 +61,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-//Auth::routes();
+Auth::routes();
+Route::get('/logout', 'auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/cgv', function () {
