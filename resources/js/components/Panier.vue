@@ -14,7 +14,7 @@
         </thead>
         <tbody>
            
-          <tr v-for="vinCart in vinCarts"> 
+          <tr v-for="(vinCart,index) in vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
                 <img
@@ -28,54 +28,48 @@
             <td>
               <div class="card-body" id="weekproduct">
                 <div class="produit-descr">
-                  <p class="card-title">{{vinCart.nom}}</p>
-                  <p class="card-title">{{vinCart.produ.nom}}</p>
-                  <p class="card-text" v-model="id">{{vinCart.id}}</p>
-                  <p class="card-text">{{vinCart.millesime}}</p>
-                  <p class="card-text">{{vinCart.regn.nom}}</p>
-                  <p class="card-text">{{vinCart.regn.pays.nom}}</p>
-                  <p class="card-text">{{vinCart.prix.prixht}}</p>
-                  <button type="button" href="#" class="btn btn-white btn-rounded btn-sm" @click="removeCart">Supprimer</button>
+                  <p class="card-title">{{vinCart.vin.nom}}</p>
+                  <p class="card-title">{{vinCart.vin.produ.nom}}</p>
+                  <p class="card-text">{{vinCart.vin.millesime}}</p>
+                  <p class="card-text">{{vinCart.vin.regn.nom}}</p>
+                  <p class="card-text">{{vinCart.vin.regn.pays.nom}}</p>
+                  <p class="card-text">{{vinCart.vin.prix.prixht}}</p>
+                  <button type="button" class="btn btn-white btn-rounded btn-sm" @click="removeCart(index)">Supprimer</button>
                 </div>
               </div>
             </td>
             <td>
               <form>
                 <div class="form-group">
-                  <input
+                {{vinCart.quantity}}
+                   <!-- <input
                     type="number"
                     class="form-control"
                     id="formGroupExampleInput"
                     placeholder="Quantité"
-                  >
+                  > -->
                 </div>
               </form>
             </td>
-            <td>40 chf</td>
+            <td>{{vinCart.vin.prix.prixht*vinCart.quantity}} CHF</td>
           </tr>
           <tr>
-          <td></td>
+          <td ></td>
           <td></td>
           <td>Sous total</td>
-          <td>X</td>
+          <td>{{Math.round(totalCart * 10) / 10 }}</td>
           </tr>
           <tr>
           <td></td>
           <td></td>
           <td>TVA & autres taxes</td>
-          <td>X</td>
-          </tr>
-          <tr>
-          <td></td>
-          <td></td>
-          <td>Total HT</td>
-          <td>X</td>
+          <td>{{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
           </tr>
            <tr>
           <td></td>
           <td></td>
           <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>X</h4></td>
+          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
           </tr>
         </tbody>
       </table>
@@ -83,7 +77,8 @@
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
@@ -93,19 +88,21 @@
 
 <script>
 
+
 export default {
 
   data() {
     return {
       vinCarts: [],
-      id: [],
-      
+      vinTotal:0,
+         
     };
   },
   methods:{
-    removeCart(){
-      this.vinCarts.splice(this.id, 1)
+    removeCart(index){
+      this.vinCarts.splice(index, 1)
       localStorage.setItem('vinCarts',JSON.stringify(this.vinCarts));
+      console.log(index)
     }
   },
   
@@ -114,6 +111,19 @@ export default {
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     
   },
+
+  computed: {
+    totalCart: function(){
+      let sum = 0;
+      this.vinCarts.forEach(function(vinCart) {
+         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity));
+      });
+
+     return sum;
+   },
+
+}
+
  
 }
  /* methods:{
