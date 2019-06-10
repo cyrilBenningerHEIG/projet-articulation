@@ -15,6 +15,7 @@
     <body>
         <div id="app">
             <div class="container">
+                    <loading-screen></loading-screen>
             @if(Auth::check())
                 <h6>Connecté</h6>
                 <nav-bar-login></nav-bar-login>
@@ -32,5 +33,9 @@
             </div>
         </div>
             <script src="js/app.js"></script>
+            <script> window.addEventListener("load", function () {
+                    const loader = document.querySelector(".loader");
+                    loader.className += " hidden"; // class "loader hidden"
+                });</script>
     </body>
 </html>
