@@ -86,14 +86,16 @@
                   <span class="input-group-btn">
                     <button
                       type="button"
+                      @click="decrement()"
                       class="quantity-left-minus btn btn-outline-secondary btn-sm"
                       data-type="minus"
                       data-field
+                      
                     >
                       <span class="glyphicon glyphicon-minus">-</span>
                     </button>
                   </span>
-                  <input
+                  <input 
                     type="text"
                     id="quantity"
                     name="quantity"
@@ -104,10 +106,13 @@
                   >
                   <span class="input-group-btn">
                     <button
+                    
                       type="button"
                       class="quantity-right-plus btn btn-outline-secondary btn-sm"
+                      @click="increment()"
                       data-type="plus"
                       data-field
+                      
                     >
                       <span class="glyphicon glyphicon-plus">+</span>
                     </button>
@@ -256,6 +261,8 @@
 </template>
 <script>
 
+
+
  export default {
   
   
@@ -265,16 +272,29 @@
     return {
       vin: '',
       vinCarts: [],
+      quantity:1,
       
     };
   },
 methods: {
     addCart() {
-      var entry = this.vins[this.vinid-1]
+      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
+    increment () {
+      this.quantity++
+    },
+    decrement () {
+      if(this.quantity === 1) {
+        alert('Negative quantity not allowed')
+      } else {
+        this.quantity--
+      }
+    }
+    
+
   },
   mounted() {
     console.log('App mounted!');
