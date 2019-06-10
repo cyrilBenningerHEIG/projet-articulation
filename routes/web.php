@@ -14,7 +14,7 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/produits', 'CatalogueController@index');
+Route::get('/produits', 'CatalogueController@index')->name('test');
 Route::get('/produit/{vins}', 'CatalogueController@show');
 
 Route::get('/promos', 'PromosController@index');
@@ -49,17 +49,26 @@ Route::get('/paiement-etape4', function () {
     return view('paiement4');
 });
 
+Route::get('/login',function(){
+    return view('auth/login');
+});
+Route::post('/login', 'auth\LoginController@login')->name('login');
+Route::get('/logout', 'auth\LoginController@logout')->name('logout');
+Route::get('/register', 'auth\RegisterController@login')->name('register');
 
 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::group(['middleware'=>'user'], function() {
+    
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/cgv', function () {
     return view('cgv');
 });
