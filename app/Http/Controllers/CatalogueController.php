@@ -59,9 +59,6 @@ class CatalogueController extends Controller
     {   
         $vins_all = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])->get();
         $vins = $vins_all->where('id', $id);
-        
-
-        
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
         $vinid = $id;

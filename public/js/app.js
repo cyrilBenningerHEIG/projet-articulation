@@ -2166,8 +2166,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2191,6 +2189,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -9684,7 +9683,7 @@ var components = {
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/components/index.js ***!
   \***********************************************************/
-/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, default */
+/*! exports provided: default, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20289,7 +20288,7 @@ var NAME = 'BTooltip'; // @vue/component
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/directives/index.js ***!
   \***********************************************************/
-/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, default */
+/*! exports provided: default, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85310,7 +85309,9 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [_vm._v("Sous total")]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.totalCart))])
+                    _c("td", [
+                      _vm._v(_vm._s(Math.round(_vm.totalCart * 10) / 10))
+                    ])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
@@ -85320,7 +85321,11 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [_vm._v("TVA & autres taxes")]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.totalCart * 0.077))])
+                    _c("td", [
+                      _vm._v(
+                        _vm._s(Math.round(_vm.totalCart * 0.077 * 10) / 10)
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
                   _c("tr", [
@@ -85332,7 +85337,13 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [
                       _c("h4", [
-                        _vm._v(_vm._s(_vm.totalCart * 0.077 + _vm.totalCart))
+                        _vm._v(
+                          _vm._s(
+                            Math.round(
+                              (_vm.totalCart * 0.077 + _vm.totalCart) * 10
+                            ) / 10
+                          )
+                        )
                       ])
                     ])
                   ])
@@ -85341,13 +85352,37 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(3)
+            _c("div", { staticClass: "action-btn" }, [
+              _c("div", { staticClass: "row mt-5 justify-content-center" }, [
+                _c("div", { staticClass: "filters mx-auto" }, [
+                  _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
+                    _vm._v("Continuer mes achats")
+                  ]),
+                  _vm._v(" "),
+                  _vm.userIsLoggedIn == false
+                    ? _c("a", { attrs: { href: "paiement-etape1" } }, [
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-danger btn-panier" },
+                          [_vm._v("Passer commande")]
+                        )
+                      ])
+                    : _c("a", { attrs: { href: "paiement-etape2" } }, [
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-danger btn-panier" },
+                          [_vm._v("Passer commande")]
+                        )
+                      ])
+                ])
+              ])
+            ])
           ])
         ])
       : _c("div", { staticClass: "container" }, [
-          _vm._m(4),
+          _vm._m(3),
           _vm._v(" "),
-          _vm._m(5)
+          _vm._m(4)
         ])
   ])
 }
@@ -85393,28 +85428,6 @@ var staticRenderFns = [
       _c("h4", [_vm._v("Total de la commande")]),
       _c("br"),
       _vm._v("(Hors frais de livraison)")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "action-btn" }, [
-      _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-        _c("div", { staticClass: "filters mx-auto" }, [
-          _c("a", { attrs: { href: "/" } }, [
-            _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
-              _vm._v("Continuer mes achats")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "paiement-etape1" } }, [
-            _c("button", { staticClass: "btn btn-danger btn-panier" }, [
-              _vm._v("Passer commande")
-            ])
-          ])
-        ])
-      ])
     ])
   },
   function() {
