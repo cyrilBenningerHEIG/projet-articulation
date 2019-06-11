@@ -1,6 +1,6 @@
 <template>  
 <div id="carteContainer" class="container carteContainer">
-<div v-for="vin in vins" :key="vin.id" class="card card-custom" v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite'> 
+<div v-for="vin in vins" :key="vin.id" class="card card-custom" v-bind:class="[visibleClass]" v-bind:data-nom='vin.nom' v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite' v-bind:data-prix='vin.prix.prixht'> 
        <div class="container">
      <a v-bind:href="'produit/'+ vin.id">   
     <img v-bind:src="vin.photoUrl" class="card-img-top center" alt="vin1">
@@ -15,6 +15,9 @@
                       <svg height="20" width="20">
                         <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
                       </svg>
+                      <div v-if=vin.estBio>
+                      <img src="/images/icons/bio.svg" style="width : 20px;" alt="bio"/>
+                      </div>
                   </div>
                   <div class="col pr-2 pl-2 vin-titre">
                         <h6 class="mb-0">{{vin.nom}}</h6>
@@ -45,6 +48,7 @@ export default {
 
     data(){
         return{
+          visibleClass: 'visible',
           vin:'',
         }
      },

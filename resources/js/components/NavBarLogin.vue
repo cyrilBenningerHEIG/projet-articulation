@@ -23,15 +23,15 @@
                       <div class="dropdown-menu">
                         <div class="form-group m-2">
                           <label for="exampleInputEmail1">Recherche</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Recherche...">
                         </div>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link icon" id="icon_account" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Hello, Gaëtan</a>
-                        <a class="dropdown-item" href="/logout">Déconnection</a>
+                        <a class="dropdown-item" href="/compte">Hello {{user.nom}}</a>
+                        <a class="dropdown-item" href="/logout">Déconnexion</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -48,3 +48,17 @@
   
 
 </template>
+<script>
+export default {
+    props: ["user"],
+
+   data() {
+    return {
+      user: '',
+      
+      
+    };
+  },
+}
+
+</script>

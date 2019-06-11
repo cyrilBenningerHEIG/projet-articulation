@@ -23,7 +23,7 @@
                       <div class="dropdown-menu">
                         <div class="form-group m-2">
                           <label for="exampleInputEmail1">Recherche</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Recherche...">
                         </div>
                       </div>
                     </li>
@@ -31,11 +31,15 @@
                       <a class="nav-link icon" id="icon_account" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="/login">Connexion</a>
-                        <a class="dropdown-item" href="#">Inscription</a>
+                        <a class="dropdown-item" href="/register">Inscription</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a  class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/> <span class='badge badge-warning' id='lblCartCount' v-show="vinCarts.length > 0" > {{vinCarts.length}} </span></a>
+                      <a  class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/> 
+                      <div v-if=vinCarts>
+                      <span class='badge badge-warning' id='lblCartCount' v-show="vinCarts.length > 0" > {{vinCarts.length}} </span>
+                      </div>
+                      </a>
                      
                     </li>
                   </ul>
@@ -43,9 +47,6 @@
       </div>
     </header>
   </div>
-
-  
-
 </template>
 
 <script>
