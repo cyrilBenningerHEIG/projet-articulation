@@ -68,6 +68,18 @@ class Type_VinTableSeeder extends Seeder
                 'vin_id' => '14',
                 'type_id' => '2'
             ],
+            [
+                'vin_id' => '15',
+                'type_id' => '1'
+            ],
+            [
+                'vin_id' => '16',
+                'type_id' => '1'
+            ],
+            [
+                'vin_id' => '17',
+                'type_id' => '1'
+            ],
         ]);
     }
 }

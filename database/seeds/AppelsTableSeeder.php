@@ -30,7 +30,12 @@ class AppelsTableSeeder extends Seeder
             [
                 'libelle' => 'Greco di Tufo', 
             ],
-            
+            [
+                'libelle' => 'Pauillac', 
+            ],
+            [
+                'libelle' => 'St-Emilion', 
+            ],
         ]);
     }
 }
