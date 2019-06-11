@@ -18,7 +18,7 @@
             </div>
           <div class="col mt-4 mb-4">
               <div>
-                <h3> {{vin.nom}} - {{vin.millesime}}</h3>
+                <h3> {{vin.nom}} - <span>{{vin.millesime}}</span></h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
