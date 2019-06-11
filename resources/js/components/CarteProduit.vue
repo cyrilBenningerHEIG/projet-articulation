@@ -15,6 +15,9 @@
                       <svg height="20" width="20">
                         <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
                       </svg>
+                      <div v-if=vin.estBio>
+                      <img src="/images/icons/bio.svg" style="width : 20px;" alt="bio"/>
+                      </div>
                   </div>
                   <div class="col pr-2 pl-2 vin-titre">
                         <h6 class="mb-0">{{vin.nom}}</h6>

@@ -87,8 +87,11 @@
            <tr>
           <td></td>
           <td></td>
-          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
+          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)
+          <br>
+          <input style="margin-top : 25px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promotionel"></td>
+          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4>
+          </td>
           </tr>
         </tbody>
       </table>
