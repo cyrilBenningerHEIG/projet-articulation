@@ -14,7 +14,7 @@
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="typeList" class="container" v-for="t in types">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</a>
+              <label class="dropdown-item" ><input type="checkbox" v-on:click="filter"/>{{t.type}}</label>
               </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default {
         console.log(category);
         filters.push(category); 
         console.log(filters);
-      });
+      }); 
 
       //Sélection des vins correspondants
       
