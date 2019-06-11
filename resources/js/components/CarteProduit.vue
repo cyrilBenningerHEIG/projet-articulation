@@ -1,6 +1,6 @@
 <template>  
 <div id="carteContainer" class="container carteContainer">
-<div v-for="vin in vins" :key="vin.id" class="card card-custom" v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite'> 
+<div v-for="vin in vins" :key="vin.id" class="card card-custom" v-bind:class="[visibleClass]" v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite'> 
        <div class="container">
 
      <a v-bind:href="'produit/'+ vin.id">   
@@ -47,6 +47,7 @@ export default {
 
     data(){
         return{
+          visibleClass: 'visible',
           vin:'',
         }
      },

@@ -1892,6 +1892,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['vins', 'prixttc', 'prixeuro'],
   data: function data() {
     return {
+      visibleClass: 'visible',
       vin: ''
     };
   }
@@ -2142,12 +2143,14 @@ __webpack_require__.r(__webpack_exports__);
   }
 });
 /* methods:{
-    addCart:function(){
+
+   addCart:function(){
      
      localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
     
    },
-  }, */
+
+ }, */
 
 /***/ }),
 
@@ -2313,8 +2316,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes'],
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
   data: function data() {
     return {
       type: '',
@@ -2324,6 +2328,129 @@ __webpack_require__.r(__webpack_exports__);
       produ: '',
       frmt: ''
     };
+  },
+  updated: function updated() {
+    console.log("change");
+  },
+  methods: {
+    filter: function filter() {
+      //Ajout de tous les filtres dans un tableau
+      $('.card-custom').removeClass("visible").hide();
+      var filters = [];
+      $('#filters :input:checked').each(function () {
+        var category = $(this).parent().text();
+        console.log(category);
+        filters.push(category);
+        console.log(filters);
+      }); //Sélection des vins correspondants
+
+      filters.forEach(function (filter) {
+        $('.card-custom').each(function () {
+          $nbAttributs = 0;
+
+          if (filter == this.dataset.type) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.pays) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.region) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.appel) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.millesime) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.produ) {
+            $(this).addClass("visible");
+          }
+
+          if (filter == this.dataset.format) {
+            $(this).addClass("visible");
+          }
+        });
+        $('.visible').fadeIn();
+      });
+
+      if (filters.length == 0) {
+        $('.card-custom').addClass("visible").fadeIn();
+      }
+
+      ;
+    },
+    filterPays: function filterPays() {
+      //Pays
+      var filter = $(event.target).text();
+      $('#type-btn').text(filter);
+      $('.card-custom').each(function () {
+        $(this).removeClass("visible").hide();
+        var type = this.dataset.type;
+
+        if (type == filter) {
+          $(this).addClass("visible").fadeIn();
+        }
+
+        ;
+      });
+    },
+    filterRegn: function filterRegn() {
+      //Région
+      var filter = $(event.target).text();
+      $('#region-btn').text(filter);
+      $('.card-custom.visible').each(function () {
+        $(this).removeClass("visible").hide();
+        var region = this.dataset.region;
+
+        if (region == filter) {
+          $(this).addClass("visible").show();
+        }
+
+        ;
+      });
+    },
+    filterAppel: function filterAppel() {
+      //Appellation
+      var appel = $(event.target).text();
+      $('#appel-btn').text(appel);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-appel='" + appel + "']").show();
+      });
+    },
+    filterMille: function filterMille() {
+      //Millesime
+      var mille = $(event.target).text();
+      $('#millesime-btn').text(mille);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-millesime='" + mille + "']").show();
+      });
+    },
+    filterProdu: function filterProdu() {
+      //Producteur
+      var produ = $(event.target).text();
+      $('#produ-btn').text(produ);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-produ='" + produ + "']").show();
+      });
+    },
+    filterFormat: function filterFormat() {
+      //Format
+      var format = $(event.target).text();
+      $('#format-btn').text(format);
+      $('.card-custom').each(function () {
+        $(this).hide();
+        $("*[data-format='" + format + "']").show(); //your_data_attribute_value.split(" ");
+      });
+    }
   }
 });
 
@@ -2338,6 +2465,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2604,12 +2746,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
   /* methods:{
-      addCart:function(){
+  
+     addCart:function(){
        
        localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
       
      },
-    }, */
+  
+   }, */
 
 });
 
@@ -25444,7 +25588,7 @@ var hasIntersectionObserverSupport = isBrowser && 'IntersectionObserver' in wind
 
 var getEnv = function getEnv(key) {
   var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}) || false : {};
+  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}) || false : {};
 
   if (!key) {
     /* istanbul ignore next */
@@ -34363,7 +34507,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    font-size: 70%;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    font-size: 70%;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    padding-top: 50px;\n}\n\n.card-body {\n    width: 15rem;\n    margin-top: -25px;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\n.arrow {\n    width: 2.5%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n#btn-quantity {\n    padding-right: 325px;\n}\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: #2B2B2B;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #f2ebda;\n    font-size: 16px;\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n.contact-form {\n    background: #2B2B2B;\n    margin-top: 10%;\n    margin-bottom: 5%;\n    width: 70%;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #dc3545;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    padding-top: -20px;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding-left: 20px;\n    padding-right: 20px;\n    margin-top: 45px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 50px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n}\n\n#box,\n#box_register {\n    width: 400px;\n    height: 700px;\n    padding: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 130%;\n    margin-top: 25px;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 200px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 25px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 280px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n    margin-top: 35px;\n    font-size: 75%;\n    padding-top: -25px;\n}\n\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    display: block;\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    padding: 40px;\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* The container */\n\n.container {\n    display: block;\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 12px;\n    cursor: pointer;\n    font-size: 22px;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n\n/* Hide the browser's default radio button */\n\n.container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n}\n\n\n/* Create a custom radio button */\n\n.checkmark {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 25px;\n    width: 25px;\n    background-color: #eee;\n    border-radius: 50%;\n}\n\n\n/* On mouse-over, add a grey background color */\n\n.container:hover input~.checkmark {\n    background-color: #ccc;\n}\n\n\n/* When the radio button is checked, add a blue background */\n\n.container input:checked~.checkmark {\n    background-color: #0000007e;\n}\n\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n\n.checkmark:after {\n    content: \"\";\n    position: absolute;\n    display: none;\n}\n\n\n/* Show the indicator (dot/circle) when checked */\n\n.container input:checked~.checkmark:after {\n    display: block;\n}\n\n\n/* Style the indicator (dot/circle) */\n\n.container .checkmark:after {\n    top: 9px;\n    left: 9px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n    background: white;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}", ""]);
+exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_box {\n    height: 2em;\n    width: 2em;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    /* padding-top: 50px; */\n}\n\n#card-body {\n    padding: 0.5em;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\na.produit-liens {\n    color: #CCBE9F;\n}\n\n.arrow {\n    width: 1.7%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n#btn-quantity {\n    padding-right: 325px;\n}\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: white;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #2B2B2B;\n    font-size: 16px;\n}\n\n#a-producteur:link {\n    color: #CCBE9F;\n}\n\n#a-producteur {\n    font-family: 'Roboto', sans-serif;\n    text-decoration: none;\n    color: #CCBE9F\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n.contact-form {\n    background: #2B2B2B;\n    margin-top: 10%;\n    margin-bottom: 5%;\n    width: 70%;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #dc3545;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    height: 60px;\n    position: relative;\n    margin-top: 1em;\n}\n\n#title-position {\n    position: absolute;\n    bottom: 0;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\n    margin-top: 15px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 20px;\n    font-size: 12px;\n}\n\n#millesime-carte {\n    font-size: 12px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n}\n\n#box,\n#box_register {\n    width: 400px;\n    height: 700px;\n    padding: 40px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 130%;\n    margin-top: 25px;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 200px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 25px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 280px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n    margin-top: 35px;\n    font-size: 75%;\n    padding-top: -25px;\n}\n\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    display: block;\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    padding: 40px;\n    position: absolute;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}", ""]);
 
 // exports
 
@@ -80755,99 +80899,119 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    {
+      staticClass: "container carteContainer",
+      attrs: { id: "carteContainer" }
+    },
     _vm._l(_vm.vins, function(vin) {
-      return _c("div", { key: vin.id, staticClass: "card card-custom" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("a", { attrs: { href: "produit/" + vin.id } }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: { src: "images/illustrations/bottle.png", alt: "vin1" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "container", attrs: { id: "carteproduit" } },
-          [
-            _vm._l(vin.types, function(value) {
-              return _c("div", [
-                _c(
-                  "h6",
-                  { staticClass: "card-title", attrs: { id: "nom-carte" } },
-                  [
-                    _c("div", { staticClass: "container p-0" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-" }, [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "svg-center",
-                              attrs: { height: "20", width: "20" }
-                            },
-                            [
-                              _c("circle", {
-                                class: "type-circle-" + value.id,
-                                attrs: {
-                                  cx: "10",
-                                  cy: "10",
-                                  r: "5",
-                                  stroke: "black",
-                                  "stroke-width": "0.3"
-                                }
-                              })
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm produit-titre " }, [
-                          _c("h6", [_vm._v(_vm._s(vin.nom))])
+      return _c(
+        "div",
+        {
+          key: vin.id,
+          staticClass: "card card-custom",
+          class: [_vm.visibleClass],
+          attrs: {
+            "data-type": vin.types[0].type,
+            "data-pays": vin.regn.pays.nom,
+            "data-region": vin.regn.nom,
+            "data-appel": vin.appel.libelle,
+            "data-millesime": vin.millesime,
+            "data-produ": vin.produ.nom,
+            "data-format": vin.frmt.quantite
+          }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("a", { attrs: { href: "produit/" + vin.id } }, [
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: { src: "images/illustrations/bottle.png", alt: "vin1" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "container", attrs: { id: "carteproduit" } },
+            [
+              _vm._l(vin.types, function(value) {
+                return _c("div", [
+                  _c(
+                    "h6",
+                    { staticClass: "card-title", attrs: { id: "nom-carte" } },
+                    [
+                      _c("div", { staticClass: "container p-0" }, [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-" }, [
+                            _c(
+                              "svg",
+                              {
+                                staticClass: "svg-center",
+                                attrs: { height: "20", width: "20" }
+                              },
+                              [
+                                _c("circle", {
+                                  class: "type-circle-" + value.id,
+                                  attrs: {
+                                    cx: "10",
+                                    cy: "10",
+                                    r: "5",
+                                    stroke: "black",
+                                    "stroke-width": "0.3"
+                                  }
+                                })
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm produit-titre " }, [
+                            _c("h6", [_vm._v(_vm._s(vin.nom))])
+                          ])
                         ])
                       ])
+                    ]
+                  )
+                ])
+              }),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                vin.millesime > 1
+                  ? _c("div", { staticClass: "check-full" }, [
+                      _c(
+                        "h6",
+                        {
+                          staticClass: "card-text",
+                          attrs: { id: "millesime-carte" }
+                        },
+                        [_vm._v(_vm._s(vin.millesime))]
+                      )
                     ])
-                  ]
-                )
-              ])
-            }),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              vin.millesime > 1
-                ? _c("div", { staticClass: "check-full" }, [
-                    _c(
-                      "h6",
-                      {
+                  : _c("div", { staticClass: "check-full" }, [
+                      _c("h6", {
                         staticClass: "card-text",
                         attrs: { id: "millesime-carte" }
-                      },
-                      [_vm._v(_vm._s(vin.millesime))]
-                    )
-                  ])
-                : _c("div", { staticClass: "check-full" }, [
-                    _c("h6", {
-                      staticClass: "card-text",
-                      attrs: { id: "millesime-carte" }
-                    })
-                  ]),
-              _vm._v(" "),
-              _c(
-                "h6",
-                { staticClass: "card-text", attrs: { id: "produ-carte" } },
-                [_vm._v(_vm._s(vin.produ.nom))]
-              ),
-              _vm._v(" "),
-              _c(
-                "h6",
-                { staticClass: "card-text", attrs: { id: "prix-carte" } },
-                [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
-              )
-            ])
-          ],
-          2
-        )
-      ])
+                      })
+                    ]),
+                _vm._v(" "),
+                _c(
+                  "h6",
+                  { staticClass: "card-text", attrs: { id: "produ-carte" } },
+                  [_vm._v(_vm._s(vin.produ.nom))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h6",
+                  { staticClass: "card-text", attrs: { id: "prix-carte" } },
+                  [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
+                )
+              ])
+            ],
+            2
+          )
+        ]
+      )
     }),
     0
   )
@@ -80965,11 +81129,11 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "col-sm vin-titre" }, [
                         _vm._v(
-                          "\n                        " +
+                          "\r\n                        " +
                             _vm._s(vin.nom) +
                             " - " +
                             _vm._s(vin.millesime) +
-                            "\n                  "
+                            "\r\n                  "
                         )
                       ])
                     ])
@@ -83430,7 +83594,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-      _c("div", { staticClass: "filters mx-auto" }, [
+      _c("div", { staticClass: "filters mx-auto", attrs: { id: "filters" } }, [
         _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
           _c(
             "button",
@@ -83453,12 +83617,21 @@ var render = function() {
               staticClass: "dropdown-menu",
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
-            _vm._l(_vm.types, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v(_vm._s(value.type))
-                ])
-              ])
+            _vm._l(_vm.types, function(t) {
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "typeList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(t.type))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83487,13 +83660,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.pays, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "paysList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.nom))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83505,7 +83685,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "regions-btn",
+                id: "region-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83522,13 +83702,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.regns, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "rgnList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.nom))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83540,7 +83727,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "pays-btn",
+                id: "appel-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83557,13 +83744,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.appels, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.libelle))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "appelList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.libelle))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83579,7 +83773,8 @@ var render = function() {
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
-                "aria-expanded": "true"
+                "aria-expanded": "true",
+                value: "Millésime"
               }
             },
             [_vm._v("Millésime")]
@@ -83592,13 +83787,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.millesimes, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.millesime))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "milleList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.millesime))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83610,7 +83812,7 @@ var render = function() {
             {
               staticClass: "btn btn-white dropdown-toggle btn-filter",
               attrs: {
-                id: "producteur-btn",
+                id: "produ-btn",
                 type: "button",
                 "data-toggle": "dropdown",
                 "aria-haspopup": "false",
@@ -83627,13 +83829,20 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.produs, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.nom))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "produList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.nom))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
@@ -83662,19 +83871,38 @@ var render = function() {
               attrs: { "aria-labelledby": "btnGroupDrop1" }
             },
             _vm._l(_vm.frmts, function(value) {
-              return _c("div", { staticClass: "container" }, [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [_vm._v(_vm._s(value.quantite))]
-                )
-              ])
+              return _c(
+                "div",
+                { staticClass: "container", attrs: { id: "frmtList" } },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", on: { click: _vm.filter } },
+                    [
+                      _c("input", { attrs: { type: "checkbox" } }),
+                      _vm._v(_vm._s(value.quantite))
+                    ]
+                  )
+                ]
+              )
             }),
             0
           )
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm" }, [
+              _c("p", { staticClass: "number_results" }, [
+                _vm._v(_vm._s(_vm.nbResults) + " résultats")
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
+        ])
       ])
     ])
   ])
@@ -83684,88 +83912,84 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
-        _c("div", { staticClass: "col-sm" }, [
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display2", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display2.svg" } })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display3", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display3.svg" } })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "icon_display",
-              attrs: { id: "icon_display4", href: "#" }
-            },
-            [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
-          )
-        ]),
+    return _c("div", { staticClass: "col-sm" }, [
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display2", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display2.svg" } })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display3", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display3.svg" } })]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "icon_display",
+          attrs: { id: "icon_display4", href: "#" }
+        },
+        [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm" }, [
+      _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-white dropdown-toggle btn-filter",
+            attrs: {
+              id: "tri-btn",
+              type: "button",
+              "data-toggle": "dropdown",
+              "aria-haspopup": "false",
+              "aria-expanded": "true"
+            }
+          },
+          [_vm._v("Tri")]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _c("p", { staticClass: "number_results" }, [_vm._v("X résultats")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "tri-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Tri")]
-            ),
+        _c(
+          "div",
+          {
+            staticClass: "dropdown-menu",
+            attrs: { "aria-labelledby": "btnGroupDrop1" }
+          },
+          [
+            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              [
-                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Prix croissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Prix décroissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Age croissant")
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "dropdown-item" }, [
-                  _vm._v("Age décroissant")
-                ])
-              ]
-            )
-          ])
-        ])
+            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Prix croissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Prix décroissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Age croissant")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "dropdown-item" }, [
+              _vm._v("Age décroissant")
+            ])
+          ]
+        )
       ])
     ])
   }
@@ -83911,19 +84135,31 @@ var render = function() {
                         _c("tr", [
                           _c("td", [_vm._v("Cotation")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.cotation))])
+                          vin.cotation
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.cotation))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
                           _c("td", [_vm._v("Classement")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.classement))])
+                          vin.classement
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.classement))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
                           _c("td", [_vm._v("Apogée")]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(vin.apogee))])
+                          vin.apogee
+                            ? _c("div", [
+                                _c("td", [_vm._v(_vm._s(vin.apogee))])
+                              ])
+                            : _c("div", [_c("td", [_vm._v("-")])])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
@@ -99623,7 +99859,7 @@ $(document).ready(function () {
       }, false);
     });
   }, false);
-})(); // Chargement du type de carte sur Leaflet
+})();
 
 /***/ }),
 
@@ -101676,8 +101912,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\evanv\Desktop\HEIG-VD\ProjetArtic\projet-articulation\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\evanv\Desktop\HEIG-VD\ProjetArtic\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

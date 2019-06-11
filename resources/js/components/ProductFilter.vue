@@ -2,7 +2,7 @@
 
   <div class="container">
     <div class="row mt-5 justify-content-center">
-      <div class="filters mx-auto">
+      <div id="filters" class="filters mx-auto">
         <div class="btn-group" role="group">
           <button
             id="type-btn"
@@ -13,9 +13,9 @@
             aria-expanded="true"
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <div id="typeList" class="container" v-for="value in types">
-            <a class="dropdown-item" v-on:click="filterType">{{value.type}}</a>
-            </div>
+          <div id="typeList" class="container" v-for="t in types">
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</a>
+              </div>
           </div>
         </div>
         <div class="btn-group" role="group">
@@ -29,7 +29,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-            <a class="dropdown-item" v-on:click="filterPays">{{value.nom}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
             </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-            <a class="dropdown-item" v-on:click="filterRegn">{{value.nom}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
             </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-            <a class="dropdown-item" v-on:click="filterAppel">{{value.libelle}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</a>
             </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-            <a id="milleOption" class="dropdown-item" v-on:click="filterMille">{{value.millesime}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</a>
             </div>
             </div>
         </div>
@@ -90,8 +90,8 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-            <a class="dropdown-item" v-on:click="filterProdu">{{value.nom}}</a>
-            </div>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+          </div>
             </div>
         </div>
         <div class="btn-group" role="group">
@@ -105,7 +105,7 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-            <a class="dropdown-item" v-on:click="filterFormat">{{value.quantite}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</a>
             </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
               </a>
             </div>
             <div class="col-sm">
-              <p class="number_results">{{nbvins}} résultats</p>
+              <p class="number_results">{{nbResults}} résultats</p>
             </div>
             <div class="col-sm">
               <div class="btn-group" role="group">
@@ -155,7 +155,7 @@
 <script>
 
 export default {
-  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins', 'filters'],
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
 
     data(){
         return{
@@ -165,47 +165,86 @@ export default {
           appel:'',
           produ:'',
           frmt:'',
-          filters:'',
         }
      },
 
-     methods:{
+  updated:function() {
+    console.log("change");
+  },
 
-    // filterType:function(filters){
-      
-      //Type
-//       var type = $(event.target).text();
-//       filters[0].push(type);
-//       console.log(filters);
-//       var filters_array = filters
-//       $('#pays-btn').text(type);
-//       $('.card-custom').each(function(filters_array) {
-//         $(this).hide();
-//         filters_array.forEach(function(value) {
-//        $("*[data-type='" + this.value[i] + "']").show();
-// });
-      // });
-    // },
+  methods:{
+
+    filter:function(){
+      //Ajout de tous les filtres dans un tableau
+      $('.card-custom').removeClass("visible").hide();
+      var filters = [];
+      $('#filters :input:checked').each(function(){
+        var category= $(this).parent().text();
+        console.log(category);
+        filters.push(category); 
+        console.log(filters);
+      });
+
+      //Sélection des vins correspondants
+      filters.forEach(function(filter) {
+        $('.card-custom').each(function(){
+
+          $nbAttributs = 0;
+
+          if(filter == this.dataset.type){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.pays){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.region){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.appel){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.millesime){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.produ){
+            $(this).addClass("visible");
+          }
+          if(filter == this.dataset.format){
+            $(this).addClass("visible");
+          }
+        });
+
+        $('.visible').fadeIn();
+      });
+
+      if(filters.length == 0){
+        $('.card-custom').addClass("visible").fadeIn();
+      };
+  },
 
     filterPays:function(){
       //Pays
-      var pays = $(event.target).text();
-      console.log(pays);
-      $('#pays-btn').text(pays);
+      var filter = $(event.target).text();
+      $('#type-btn').text(filter);
       $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-pays='" + pays + "']").show();
+        $(this).removeClass("visible").hide();
+        var type = this.dataset.type;
+        if (type == filter){
+          $(this).addClass("visible").fadeIn();
+        };
       });
     },
 
     filterRegn:function(){
       //Région
-      var regn = $(event.target).text();
-      console.log(regn);
-      $('#region-btn').text(regn);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-region='" + regn + "']").show();
+      var filter = $(event.target).text();
+      $('#region-btn').text(filter);
+      $('.card-custom.visible').each(function() {
+        $(this).removeClass("visible").hide();
+        var region = this.dataset.region;
+        if (region == filter){
+          $(this).addClass("visible").show();
+        };
       });
     },
 
