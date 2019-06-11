@@ -2338,18 +2338,20 @@ __webpack_require__.r(__webpack_exports__);
     totalCart: function totalCart() {
       var sum = 0;
       this.vinCarts.forEach(function (vinCart) {
-        sum += parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity);
+        sum += parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
       });
       return sum;
     }
   }
   /* methods:{
-      addCart:function(){
+  
+     addCart:function(){
        
        localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
       
      },
-    }, */
+  
+   }, */
 
 });
 
@@ -2606,8 +2608,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -2879,33 +2879,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
+/* harmony default export */ __webpack_exports__["default"] = ({
   props: ["vins", "prixttc", "prixeuro", "vinid"],
   data: function data() {
     return {
       vin: '',
       vinCarts: [],
-      quantity: 1
+      quantite: 1,
+      unchecked: false
     };
   },
   methods: {
     addCart: function addCart() {
       var entry = {
         vin: this.vins[this.vinid - 1],
-        quantity: this.quantity
+        quantity: this.quantite
       };
       localStorage.setItem("entry", JSON.stringify(entry));
       this.vinCarts.push(entry);
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
     increment: function increment() {
-      this.quantity++;
+      this.quantite++;
     },
     decrement: function decrement() {
-      if (this.quantity === 1) {
+      if (this.quantite === 1) {
         alert('Negative quantity not allowed');
       } else {
-        this.quantity--;
+        this.quantite--;
       }
     }
   },
@@ -2914,11 +2915,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if (this.vinCarts == null) this.vinCarts = [];
   }
-}, "data", function data() {
-  return {
-    unchecked: this.prixeuro
-  };
-}));
+});
 /*   data() {
     return {
       vin: '',
@@ -11503,7 +11500,7 @@ var components = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "props", function() { return props; });
-/* harmony import */ var _utils_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/vue */ "./node_modules/bootstrap-vue/es/utils/vue.js");
+/* harmony import */ var _utils_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/vue */ "./node_modules/bootstrap-vue/esm/utils/vue.js");
 /* harmony import */ var vue_functional_data_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-functional-data-merge */ "./node_modules/vue-functional-data-merge/dist/lib.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -84535,22 +84532,26 @@ var render = function() {
                     [
                       _c("img", { attrs: { src: "/images/icons/panier.svg" } }),
                       _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.vinCarts.length > 0,
-                              expression: "vinCarts.length > 0"
-                            }
-                          ],
-                          staticClass: "badge badge-warning",
-                          attrs: { id: "lblCartCount" }
-                        },
-                        [_vm._v(" " + _vm._s(_vm.vinCarts.length) + " ")]
-                      )
+                      _vm.vinCarts
+                        ? _c("div", [
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: _vm.vinCarts.length > 0,
+                                    expression: "vinCarts.length > 0"
+                                  }
+                                ],
+                                staticClass: "badge badge-warning",
+                                attrs: { id: "lblCartCount" }
+                              },
+                              [_vm._v(" " + _vm._s(_vm.vinCarts.length) + " ")]
+                            )
+                          ])
+                        : _vm._e()
                     ]
                   )
                 ])
@@ -85167,7 +85168,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _vm.totalCart
+    _vm.vinCarts.length
       ? _c("div", [
           _c("h2", [_vm._v("Panier")]),
           _vm._v(" "),
@@ -85306,9 +85307,11 @@ var render = function() {
                         _c("form", [
                           _c("div", { staticClass: "form-group" }, [
                             _vm._v(
-                              "\n                " +
+                              "\n               " +
                                 _vm._s(vinCart.quantity) +
-                                "\n                   "
+                                " cartons de " +
+                                _vm._s(vinCart.vin.condi.nombre) +
+                                " bouteilles\n                  \n                "
                             )
                           ])
                         ])
@@ -85316,8 +85319,13 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [
                         _vm._v(
-                          _vm._s(vinCart.vin.prix.prixht * vinCart.quantity) +
-                            " CHF"
+                          _vm._s(
+                            Math.round(
+                              vinCart.vin.prix.prixht *
+                                (vinCart.quantity * vinCart.vin.condi.nombre) *
+                                10
+                            ) / 10
+                          ) + " CHF"
                         )
                       ])
                     ])
@@ -86156,11 +86164,7 @@ var render = function() {
                                 {
                                   staticClass:
                                     "quantity-left-minus btn btn-outline-secondary btn-sm",
-                                  attrs: {
-                                    type: "button",
-                                    "data-type": "minus",
-                                    "data-field": ""
-                                  },
+                                  attrs: { type: "button" },
                                   on: {
                                     click: function($event) {
                                       return _vm.decrement()
@@ -86182,14 +86186,8 @@ var render = function() {
                             _c("input", {
                               staticClass:
                                 "form-control input-number form-control-sm quantity-bar",
-                              attrs: {
-                                type: "text",
-                                id: "quantity",
-                                name: "quantity",
-                                value: "1",
-                                min: "1",
-                                max: "20"
-                              }
+                              attrs: { type: "text", min: "1", max: "20" },
+                              domProps: { value: _vm.quantite }
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "input-group-btn" }, [
@@ -86198,11 +86196,7 @@ var render = function() {
                                 {
                                   staticClass:
                                     "quantity-right-plus btn btn-outline-secondary btn-sm",
-                                  attrs: {
-                                    type: "button",
-                                    "data-type": "plus",
-                                    "data-field": ""
-                                  },
+                                  attrs: { type: "button" },
                                   on: {
                                     click: function($event) {
                                       return _vm.increment()

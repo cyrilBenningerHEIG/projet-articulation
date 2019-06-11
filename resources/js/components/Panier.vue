@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-    <div v-if=totalCart>
+    <div v-if=vinCarts.length > 
     <h2>Panier</h2>
 
     <div class="table-responsive-sm">
@@ -60,17 +60,12 @@
             <td>
               <form>
                 <div class="form-group">
-                {{vinCart.quantity}}
-                   <!-- <input
-                    type="number"
-                    class="form-control"
-                    id="formGroupExampleInput"
-                    placeholder="Quantité"
-                  > -->
+               {{vinCart.quantity}} cartons de {{vinCart.vin.condi.nombre}} bouteilles
+                  
                 </div>
               </form>
             </td>
-            <td>{{vinCart.vin.prix.prixht*vinCart.quantity}} CHF</td>
+            <td>{{Math.round((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*10)) / 10 }} CHF</td>
           </tr>
           <tr>
           <td ></td>
@@ -149,7 +144,7 @@ export default {
     totalCart: function(){
       let sum = 0;
       this.vinCarts.forEach(function(vinCart) {
-         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity));
+         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity*vinCart.vin.condi.nombre));
       });
 
      return sum;
