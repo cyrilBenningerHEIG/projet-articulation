@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Gazzar</title>
 
@@ -13,12 +14,12 @@
       
 
         <!-- Styles -->
-                </head>
+    </head>
     <body>
         <div id="app">
             <div class="container">
             <nav-product-bar></nav-product-bar>
-            <product-page :vins='{{ $vins }}'></product-page>
+            <product-page :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :vinid='{{$vinid}}'></product-page>
             <br>
             <selection-card class="mt-5" ></selection-card> 
             <footer-bar></footer-bar>

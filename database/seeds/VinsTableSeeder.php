@@ -186,7 +186,7 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '7',
-                'appel_id' => '4',
+                'appel_id' => '3',
                 'frmt_id' => '1',
                 'regn_id' => '4',
                 'prix_id' => '7',
@@ -208,7 +208,7 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '8',
-                'appel_id' => '4',
+                'appel_id' => '3',
                 'frmt_id' => '1',
                 'regn_id' => '5',
                 'prix_id' => '8',
@@ -235,7 +235,7 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '9',
-                'appel_id' => '5',
+                'appel_id' => '4',
                 'frmt_id' => '1',
                 'regn_id' => '1',
                 'prix_id' => '9',
@@ -284,7 +284,7 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '11',
-                'appel_id' => '6',
+                'appel_id' => '5',
                 'frmt_id' => '2',
                 'regn_id' => '7',
                 'prix_id' => '13',
@@ -305,8 +305,8 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '11',
-                'appel_id' => '6',
-                'frmt_id' => '4',
+                'appel_id' => '5',
+                'frmt_id' => '3',
                 'regn_id' => '7',
                 'prix_id' => '14',
                 'condi_id' => '3',

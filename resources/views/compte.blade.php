@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
 
         <title>Gazzar</title>
 
@@ -14,7 +16,15 @@
     <body>
         <div id="app">
             <div class="container">
-                <nav-bar></nav-bar>
+            @if(Auth::check())
+            <h2>Connecté</h2>
+                <nav-bar-login></nav-bar-login>
+                @else
+                <h2>Déconnecté</h2>
+                <nav-bar-logout></nav-bar-logout>
+                
+                @endif
+                <adresse-form></adresse-form>
 
                 <footer-bar></footer-bar>
 
