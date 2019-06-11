@@ -35,14 +35,8 @@
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-<<<<<<< HEAD
                       <a  class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/> <span class='badge badge-warning' id='lblCartCount' v-show="vinCarts.length > 0" > {{vinCarts.length}} </span></a>
                      
-=======
-                      <a class="nav-link icon" id="icon_account"  href="/panier"><img src="/images/icons/panier.svg"/></a>
-                      <div class="dropdown-menu">
-                      </div>
->>>>>>> d7d2be378c2a0cc09040f126a88e1b7ac9667ae1
                     </li>
                   </ul>
                 </div>
