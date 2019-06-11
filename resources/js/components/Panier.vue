@@ -1,5 +1,7 @@
 <template>
+
   <div class="container">
+    <div v-if=totalCart>
     <h2>Panier</h2>
 
     <div class="table-responsive-sm">
@@ -26,17 +28,34 @@
               </div>
             </th>
             <td>
+                  <div class="container" id="carteproduit">
+   
               <div class="card-body" id="weekproduct">
                 <div class="produit-descr">
-                  <p class="card-title">{{vinCart.vin.nom}}</p>
-                  <p class="card-title">{{vinCart.vin.produ.nom}}</p>
-                  <p class="card-text">{{vinCart.vin.millesime}}</p>
-                  <p class="card-text">{{vinCart.vin.regn.nom}}</p>
-                  <p class="card-text">{{vinCart.vin.regn.pays.nom}}</p>
-                  <p class="card-text">{{vinCart.vin.prix.prixht}}</p>
-                  <button type="button" class="btn btn-white btn-rounded btn-sm" @click="removeCart(index)">Supprimer</button>
+         <h6 class="card-title" id="nom-carte">
+              <div class="container p-0">
+                <div class="row">
+                  <div class="col-sm produit-titre ">
+                        <h5>{{vinCart.vin.nom}}</h5>
+                  </div>
                 </div>
               </div>
+            </h6>
+      </div>
+    <hr>
+    <div class="card-body">
+      <div class="check-full" v-if="vinCart.vin.millesime > 1">
+      <h6  class="card-text" id="millesime-carte">{{vinCart.vin.millesime}}</h6>
+      </div>
+      <div class="check-full" v-else>
+      <h6  class="card-text" id="millesime-carte"></h6>
+      </div>
+      <h6  class="card-text" id="produ-carte">{{vinCart.vin.produ.nom}}</h6>
+      <h6  class="card-text" id="prix-carte"  style="margin-top : 45px">CHF {{vinCart.vin.prix.prixht}} </h6>
+                        <button type="button" class="btn btn-white btn-rounded btn-sm" @click="removeCart(index)">Supprimer</button>
+      </div>
+    </div>
+     </div>
             </td>
             <td>
               <form>
@@ -76,13 +95,29 @@
       <div class="action-btn">
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
+<<<<<<< HEAD
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
         <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
         <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+=======
+     <a href="/"><button class="btn btn-white btn-panier-2">Continuer mes achats</button></a>
+        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+>>>>>>> df4b4c19f3c5ef9949a62c9057eef5933362b446
     </div>
 </div>
   </div>
       </div>
+  </div>
+  <div v-else class="container" >
+    <div class="container" style="height : 100px;text-align: center;">
+    <h2 style="color : #a62b35; padding-top : 50px;">Votre panier est vide</h2>
+    </div>
+        <div class="container" style="height : 300px;text-align: center;">
+      <a href="/"><button class="btn btn-danger" style="margin-top : 35px">Revenir à la boutique</button></a>
+    </div>
+
+  </div>
+  
   </div>
 </template>
 

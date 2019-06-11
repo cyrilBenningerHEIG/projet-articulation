@@ -95,6 +95,8 @@ Vue.component('history-page', require('./components/HistoryPage.vue').default);
 //CGV 
 Vue.component('cgv-texte', require('./components/CGV.vue').default);
 
+//Histoire
+
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
 
@@ -112,9 +114,12 @@ Vue.component('paiement-page', require('./components/PagePaiement.vue').default)
 
 Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
 Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);
+
 //Compte
 Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
-
+Vue.component('compte-client', require('./components/Compte.vue').default);
+//LOADING
+Vue.component('loading-screen', require('./components/LoadingScreen.vue').default);
 const app = new Vue({
     el: '#app',
     router: Router,
@@ -165,3 +170,9 @@ $(document).ready(function() {
         });
     }, false);
 })();
+
+
+////////////////////////////////////// Carousel de la page produits 
+$('.carousel').carousel({
+    interval: 1
+})

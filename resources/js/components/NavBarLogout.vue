@@ -11,7 +11,7 @@
                 <div class="col-4 d-flex justify-content-end align-items-center">
                   <ul class="nav nav-pills">
                     <li class="nav-item dropdown">
-                      <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/terre.svg"/></a>
+                      <a class="nav-link icon" id="icon_langue" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/terre.svg"/></a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">FR</a>
                         <a class="dropdown-item" href="#">EN</a>
@@ -28,15 +28,21 @@
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link icon" id="icon_search" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
+                      <a class="nav-link icon" id="icon_account" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="/login">Connexion</a>
                         <a class="dropdown-item" href="#">Inscription</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
+<<<<<<< HEAD
                       <a  class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/> <span class='badge badge-warning' id='lblCartCount' v-show="vinCarts.length > 0" > {{vinCarts.length}} </span></a>
                      
+=======
+                      <a class="nav-link icon" id="icon_account"  href="/panier"><img src="/images/icons/panier.svg"/></a>
+                      <div class="dropdown-menu">
+                      </div>
+>>>>>>> d7d2be378c2a0cc09040f126a88e1b7ac9667ae1
                     </li>
                   </ul>
                 </div>

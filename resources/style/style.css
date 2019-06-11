@@ -83,6 +83,11 @@ label {
     padding: 10px;
 }
 
+#icon_box {
+    height: 2em;
+    width: 2em;
+}
+
 .menu {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -98,6 +103,61 @@ label {
     justify-content: center;
     align-items: center;
     margin: 20px;
+}
+
+
+/*Nav bar*/
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 1.35em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+.go a:before,
+.go a:after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.go a:before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translate(20px);
+    -moz-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.go a:after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
+    transform: translate(-20px);
+}
+
+.go a:hover:before,
+.go a:hover:after,
+.go a:focus:before,
+.go a:focus:after {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    transform: translate(0px);
 }
 
 
@@ -217,8 +277,12 @@ P.blocktext {
     white-space: nowrap;
 }
 
+a.produit-liens {
+    color: #CCBE9F;
+}
+
 .arrow {
-    width: 2.5%;
+    width: 1.7%;
 }
 
 .bottleImg {
@@ -242,19 +306,30 @@ P.blocktext {
     font-family: 'Montserrat', sans-serif;
 }
 
-#btn-quantity {
+
+/* #btn-quantity {
     padding-right: 325px;
-}
+} */
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: #2B2B2B;
+    color: white;
     background-color: #CCBE9F;
 }
 
 .pills {
-    color: #f2ebda;
+    color: #2B2B2B;
     font-size: 16px;
+}
+
+#a-producteur:link {
+    color: #CCBE9F;
+}
+
+#a-producteur {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #CCBE9F
 }
 
 .btn-basket {
@@ -283,11 +358,14 @@ P.blocktext {
 
 /* CONTACT */
 
+.img-contact {
+    max-width: 100%;
+    max-height: auto;
+}
+
 .contact-form {
     background: #2B2B2B;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    width: 70%;
+    height: 505px;
 }
 
 .contact-form .form-control {
@@ -363,6 +441,7 @@ P.blocktext {
     width: 15rem;
     height: 60px;
     position: relative;
+    margin-top: 1em;
 }
 
 #title-position {
@@ -402,7 +481,7 @@ P.blocktext {
 
 .card-custom {
     display: inline-flex;
-    padding: 0.75rem;
+    padding: 1.5rem 0.8rem 1.5rem 0.8rem;
     margin-top: 15px;
 }
 
@@ -462,6 +541,11 @@ P.blocktext {
 
 #produ-carte {
     height: 20px;
+    font-size: 12px;
+}
+
+#millesime-carte {
+    font-size: 12px;
 }
 
 #prix-carte {
@@ -472,7 +556,7 @@ P.blocktext {
 /* LOGIN & REGISTER FORM */
 
 #login-form {
-    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
+    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -492,29 +576,39 @@ P.blocktext {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background: #a62b35;
+    display: inline-block;
 }
-
+.container-login100{
+    width: 100%;  
+    min-height: 60vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color : #a62b35;
+}
 #box,
 #box_register {
-    width: 400px;
-    height: 700px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     background: #a62b35;
     text-align: center;
     border-radius: 25px;
     opacity: 60%;
+
 }
 
 #box label,
 #box_register label {
     color: white;
     font-weight: 400;
-    font-size: 130%;
+    font-size: 2rem;
     margin-top: 25px;
+    display : inline;
 }
 
 #box input,
@@ -526,13 +620,13 @@ P.blocktext {
     text-align: center;
     border: 2px solid black;
     padding: 14px 10px;
-    width: 200px;
+    width: 350px;
     outline: none;
     color: black;
     border-radius: 15px;
     transition: 0.25s;
     margin-bottom: 25;
-    height: 25px;
+    height: 50px;
 }
 
 #box_register label {
@@ -545,7 +639,7 @@ P.blocktext {
 
 #box input:focus,
 #box_register input:focus {
-    width: 280px;
+    width: 350px;
     border-color: black;
     background: white;
     color: black;
@@ -576,15 +670,20 @@ P.blocktext {
 }
 
 #remember {
-    margin-top: 35px;
-    font-size: 75%;
-    padding-top: -25px;
-}
 
+    font-size: 75%;
+}
+#box > a, #box_register > a {
+    padding-top : 25px;
+    display : block;
+    color : white;
+}
+#login-title, #register-title{
+    color : white;
+}
 #register-link,
 #home-link,
 #forgot-pass #login-link {
-    display: block;
     padding-top: 25px;
     color: white;
 }
@@ -592,8 +691,6 @@ P.blocktext {
 #register #box {
     width: 400px;
     height: 1050px;
-    padding: 40px;
-    position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -641,6 +738,7 @@ P.blocktext {
     margin: 5px;
 }
 
+<<<<<<< HEAD
 .badge {
     padding-left: 9px;
     padding-right: 9px;
@@ -662,3 +760,44 @@ P.blocktext {
       margin-left: 20px; 
       margin-top: -30px
   }
+=======
+/* LOADING */
+#loading-pic{
+    width : 300px;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+/* MOBILE */
+>>>>>>> e12a8859fe25b4f8e64aab3477f73e626c96d31c

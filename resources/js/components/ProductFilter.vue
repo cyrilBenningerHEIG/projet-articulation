@@ -1,7 +1,7 @@
 <template>
-
+<div>
   <div class="container">
-    <div class="row mt-5 justify-content-center">
+    <div class="row mt-5 mb-5 justify-content-center">
       <div class="filters mx-auto">
         <div class="btn-group" role="group">
           <button
@@ -14,7 +14,7 @@
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="typeList" class="container" v-for="value in types">
-            <a class="dropdown-item" v-on:click="filterType">{{value.type}}</a>
+            <a class="dropdown-item" v-on:click="filterType"><input type="checkbox"/>{{value.type}}</a>
             </div>
           </div>
         </div>
@@ -109,47 +109,37 @@
             </div>
             </div>
         </div>
-        <div class="container">
-          <div id="tri-produit" class="row">
-            <div class="col-sm">
-              <a class="icon_display" id="icon_display2" href="#">
-                <img src="images/icons/display2.svg">
-              </a>
-              <a class="icon_display" id="icon_display3" href="#">
-                <img src="images/icons/display3.svg">
-              </a>
-              <a class="icon_display" id="icon_display4" href="#">
-                <img src="images/icons/display4.svg">
-              </a>
+      </div>
+    </div>
+  </div>
+    <div class="d-flex justify-content-between pt-5">
+      <div>
+          <a class="icon_display" id="icon_display2" href="#">
+            <img src="images/icons/display2.svg">
+          </a>
+          <a class="icon_display" id="icon_display3" href="#">
+            <img src="images/icons/display3.svg">
+          </a>
+          <a class="icon_display" id="icon_display4" href="#">
+            <img src="images/icons/display4.svg">
+          </a>
+      </div>
+      <div><p class="number_results">{{nbvins}} résultats</p></div>
+      <div>
+        <div class="btn-group" role="group">
+          <button id="tri-btn" type="button" class="btn btn-white dropdown-toggle btn-filter" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Tri</button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item">Nom A-Z</a>
+              <a class="dropdown-item">Nom Z-A</a>
+              <a class="dropdown-item">Prix croissant</a>
+              <a class="dropdown-item">Prix décroissant</a>
+              <a class="dropdown-item">Age croissant</a>
+              <a class="dropdown-item">Age décroissant</a>
             </div>
-            <div class="col-sm">
-              <p class="number_results">{{nbvins}} résultats</p>
-            </div>
-            <div class="col-sm">
-              <div class="btn-group" role="group">
-                <button
-                  id="tri-btn"
-                  type="button"
-                  class="btn btn-white dropdown-toggle btn-filter"
-                  data-toggle="dropdown"
-                  aria-haspopup="false"
-                  aria-expanded="true"
-                >Tri</button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a class="dropdown-item">Nom A-Z</a>
-
-                  <a class="dropdown-item">Nom Z-A</a>
-                  <a class="dropdown-item">Prix croissant</a>
-                  <a class="dropdown-item">Prix décroissant</a>
-                  <a class="dropdown-item">Age croissant</a>
-                  <a class="dropdown-item">Age décroissant</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+    <hr class="mt-0">
   </div>
 </template>
 <script>
