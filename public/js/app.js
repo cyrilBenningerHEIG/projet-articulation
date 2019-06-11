@@ -2113,6 +2113,76 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["user"],
+  data: function data() {
+    return {
+      user: ''
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBarLogout.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBarLogout.vue?vue&type=script&lang=js& ***!
@@ -2122,6 +2192,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -2195,11 +2269,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
 //
 //
 //
@@ -9689,7 +9758,7 @@ var components = {
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/components/index.js ***!
   \***********************************************************/
-/*! exports provided: default, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip */
+/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11500,7 +11569,7 @@ var components = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "props", function() { return props; });
-/* harmony import */ var _utils_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/vue */ "./node_modules/bootstrap-vue/esm/utils/vue.js");
+/* harmony import */ var _utils_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/vue */ "./node_modules/bootstrap-vue/es/utils/vue.js");
 /* harmony import */ var vue_functional_data_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-functional-data-merge */ "./node_modules/vue-functional-data-merge/dist/lib.esm.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -20294,7 +20363,7 @@ var NAME = 'BTooltip'; // @vue/component
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/es/directives/index.js ***!
   \***********************************************************/
-/*! exports provided: default, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
+/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25774,7 +25843,7 @@ var hasIntersectionObserverSupport = isBrowser && 'IntersectionObserver' in wind
 
 var getEnv = function getEnv(key) {
   var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}) || false : {};
+  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}) || false : {};
 
   if (!key) {
     /* istanbul ignore next */
@@ -34693,7 +34762,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_box {\n    height: 2em;\n    width: 2em;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/*Nav bar*/\n\nnav a {\n    position: relative;\n    display: inline-block;\n    margin: 15px 25px;\n    outline: none;\n    text-decoration: none;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #000;\n    font-size: 1.35em;\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\n}\n\nnav a:link {\n    text-decoration: none;\n}\n\n.go a:before,\n.go a:after {\n    display: inline-block;\n    opacity: 0;\n    transition: opacity 0.2s, -webkit-transform 0.3s;\n    transition: transform 0.3s, opacity 0.2s;\n    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;\n}\n\n.go a:before {\n    margin-right: 10px;\n    content: '[';\n    -webkit-transform: translate(20px);\n    transform: translate(20px);\n}\n\n.go a:after {\n    margin-left: 10px;\n    content: ']';\n    -webkit-transform: translate(-20px);\n    transform: translate(-20px);\n}\n\n.go a:hover:before,\n.go a:hover:after,\n.go a:focus:before,\n.go a:focus:after {\n    opacity: 1;\n    -webkit-transform: translate(0px);\n    transform: translate(0px);\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    /* padding-top: 50px; */\n}\n\n#card-body {\n    padding: 0.5em;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\na.produit-liens {\n    color: #CCBE9F;\n}\n\n.arrow {\n    width: 1.7%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n\n/* #btn-quantity {\n    padding-right: 325px;\n} */\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: white;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #2B2B2B;\n    font-size: 16px;\n}\n\n#a-producteur:link {\n    color: #CCBE9F;\n}\n\n#a-producteur {\n    font-family: 'Roboto', sans-serif;\n    text-decoration: none;\n    color: #CCBE9F\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n.img-contact {\n    max-width: 100%;\n    max-height: auto;\n}\n\n.contact-form {\n    background: #2B2B2B;\n    height: 505px;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #dc3545;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    height: 60px;\n    position: relative;\n    margin-top: 1em;\n}\n\n#title-position {\n    position: absolute;\n    bottom: 0;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\n    margin-top: 15px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 20px;\n    font-size: 12px;\n}\n\n#millesime-carte {\n    font-size: 12px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n    display: inline-block;\n}\n.container-login100{\n    width: 100%;  \n    min-height: 60vh;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: center;\n    padding: 15px;\n    background-color : #a62b35;\n}\n#box,\n#box_register {\n\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 2rem;\n    margin-top: 25px;\n    display : inline;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 350px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 50px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 350px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n\n    font-size: 75%;\n}\n#box > a, #box_register > a {\n    padding-top : 25px;\n    display : block;\n    color : white;\n}\n#login-title, #register-title{\n    color : white;\n}\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}\n\n.badge {\n    padding-left: 9px;\n    padding-right: 9px;\n    border-radius: 9px;\n  }\n  \n  .label-warning[href],\n  .badge-warning[href] {\n    background-color: #c67605;\n  }\n  #lblCartCount {\n      font-size: 12px;\n      background: #a62b35;\n      color: #fff;\n      padding: 2px 5px;\n      vertical-align: top;\n      margin-left: 20px; \n      margin-top: -30px\n  }\n/* LOADING */\n#loading-pic{\n    width : 300px;\n}\n.loader {\n    position: fixed;\n    z-index: 99;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: white;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.loader > img {\n    width: 100px;\n}\n\n.loader.hidden {\n    -webkit-animation: fadeOut 2s;\n            animation: fadeOut 2s;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n}\n\n@-webkit-keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n@keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n.thumb {\n    height: 100px;\n    border: 1px solid black;\n    margin: 10px;\n}\n/* MOBILE */\n", ""]);
+exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\r\n}\r\n\r\nnav a:link {\r\n    text-decoration: none;\r\n}\r\n\r\n.go a:before,\r\n.go a:after {\r\n    display: inline-block;\r\n    opacity: 0;\r\n    transition: opacity 0.2s, -webkit-transform 0.3s;\r\n    transition: transform 0.3s, opacity 0.2s;\r\n    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;\r\n}\r\n\r\n.go a:before {\r\n    margin-right: 10px;\r\n    content: '[';\r\n    -webkit-transform: translate(20px);\r\n    transform: translate(20px);\r\n}\r\n\r\n.go a:after {\r\n    margin-left: 10px;\r\n    content: ']';\r\n    -webkit-transform: translate(-20px);\r\n    transform: translate(-20px);\r\n}\r\n\r\n.go a:hover:before,\r\n.go a:hover:after,\r\n.go a:focus:before,\r\n.go a:focus:after {\r\n    opacity: 1;\r\n    -webkit-transform: translate(0px);\r\n    transform: translate(0px);\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    -webkit-transform: translateY(-50%);\r\n            transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #2B2B2B;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    -webkit-transform: rotate(29deg);\r\n            transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #dc3545;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n.container-login100{\r\n    width: 100%;  \r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color : #a62b35;\r\n}\r\n#box,\r\n#box_register {\r\n\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display : inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n\r\n    font-size: 75%;\r\n}\r\n#box > a, #box_register > a {\r\n    padding-top : 25px;\r\n    display : block;\r\n    color : white;\r\n}\r\n#login-title, #register-title{\r\n    color : white;\r\n}\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n  }\r\n  \r\n  .label-warning[href],\r\n  .badge-warning[href] {\r\n    background-color: #c67605;\r\n  }\r\n  #lblCartCount {\r\n      font-size: 12px;\r\n      background: #a62b35;\r\n      color: #fff;\r\n      padding: 2px 5px;\r\n      vertical-align: top;\r\n      margin-left: 20px; \r\n      margin-top: -30px\r\n  }\r\n/* LOADING */\r\n#loading-pic{\r\n    width : 300px;\r\n}\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader > img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n/* MOBILE */\r\n", ""]);
 
 // exports
 
@@ -81804,63 +81873,63 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h5", [
         _vm._v(
-          "\n1. Droit de révocation et réclamations au sujet de la marchandise \n"
+          "\r\n1. Droit de révocation et réclamations au sujet de la marchandise \r\n"
         )
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nLa commande, quel que soit le moyen de paiement choisi, est ferme et définitive. L’acheteur ne dispose d’aucun droit de rétractation ou de révocation de sa commande et ne peut donc restituer la marchandise commandée. Pour le surplus, toute réclamation concernant la marchandise doit être faite par écrit auprès de Elie Gazzar SA dans les 8 jours dès la livraison. \n"
+          "\r\nLa commande, quel que soit le moyen de paiement choisi, est ferme et définitive. L’acheteur ne dispose d’aucun droit de rétractation ou de révocation de sa commande et ne peut donc restituer la marchandise commandée. Pour le surplus, toute réclamation concernant la marchandise doit être faite par écrit auprès de Elie Gazzar SA dans les 8 jours dès la livraison. \r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n2. Goût de bouchon\n")]),
+      _c("h5", [_vm._v("\r\n2. Goût de bouchon\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nElie Gazzar S.A. calcule les prix de vente de ses vins au plus juste. Ceux-ci n'incluent pas de marge pour les bouteilles présentant un éventuel goût de bouchon. Aussi, un cas isolé de goût de bouchon ne peut donner droit à aucune prétention de la part du client.\n"
+          "\r\nElie Gazzar S.A. calcule les prix de vente de ses vins au plus juste. Ceux-ci n'incluent pas de marge pour les bouteilles présentant un éventuel goût de bouchon. Aussi, un cas isolé de goût de bouchon ne peut donner droit à aucune prétention de la part du client.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n3. Interdiction de vente à des mineurs\n")]),
+      _c("h5", [_vm._v("\r\n3. Interdiction de vente à des mineurs\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nPar son acceptation des conditions générales, le client certifie qu’il est âgé d’au moins 18 ans. En effet, est prohibée expressément par la loi la vente de spiritueux, d’apéritifs et d’alcopops aux personnes de moins de 18 ans, ainsi que la vente de vins, cidres et bières aux moins de 16 ans.\n"
+          "\r\nPar son acceptation des conditions générales, le client certifie qu’il est âgé d’au moins 18 ans. En effet, est prohibée expressément par la loi la vente de spiritueux, d’apéritifs et d’alcopops aux personnes de moins de 18 ans, ainsi que la vente de vins, cidres et bières aux moins de 16 ans.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n4. Cas spécial des vins vendus en primeurs\n")]),
+      _c("h5", [_vm._v("\r\n4. Cas spécial des vins vendus en primeurs\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nLa commande ne sera honorée que si elle est payée d’avance dans les trente jours.\nEn raison de la modification du paiement de la TVA à l’administration fédérale des Contributions, celle-ci se fait dès la fin de 2009 lors de l’encaissement chaque trimestre.\nSi, sans la faute d’Elie Gazzar SA, les vins vendus en primeurs commandées à ses fournisseurs ne lui sont pas livrées, le client n’aura droit qu’au remboursement du prix qu’il a payé, à l’exclusion de tous autres dommages intérêts.\n"
+          "\r\nLa commande ne sera honorée que si elle est payée d’avance dans les trente jours.\r\nEn raison de la modification du paiement de la TVA à l’administration fédérale des Contributions, celle-ci se fait dès la fin de 2009 lors de l’encaissement chaque trimestre.\r\nSi, sans la faute d’Elie Gazzar SA, les vins vendus en primeurs commandées à ses fournisseurs ne lui sont pas livrées, le client n’aura droit qu’au remboursement du prix qu’il a payé, à l’exclusion de tous autres dommages intérêts.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n5. Moment du paiement\n")]),
+      _c("h5", [_vm._v("\r\n5. Moment du paiement\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nElie Gazzar SA exige systématiquement de ses nouveaux clients le paiement par avance, c’est-à-dire avant la livraison. Dans les autres cas, sauf convention contraire entre les parties, le délai de paiement est de trente jours net dès la commande.\n"
+          "\r\nElie Gazzar SA exige systématiquement de ses nouveaux clients le paiement par avance, c’est-à-dire avant la livraison. Dans les autres cas, sauf convention contraire entre les parties, le délai de paiement est de trente jours net dès la commande.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n6. Participation aux frais de livraison\n")]),
+      _c("h5", [_vm._v("\r\n6. Participation aux frais de livraison\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nFr. 20.- jusqu'à 12 bouteilles de 75 cl.\nFr. 30.- pour 24 bouteilles de 75 cl.\nDès 36 bouteilles de 75 cl., la livraison est gratuite dans toute la Suisse.\n"
+          "\r\nFr. 20.- jusqu'à 12 bouteilles de 75 cl.\r\nFr. 30.- pour 24 bouteilles de 75 cl.\r\nDès 36 bouteilles de 75 cl., la livraison est gratuite dans toute la Suisse.\r\n"
         )
       ]),
       _vm._v(" "),
       _c("h5", [
-        _vm._v("\n7. Dispositions en matière de protection des données\n")
+        _vm._v("\r\n7. Dispositions en matière de protection des données\r\n")
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nEn s’inscrivant sur le site www.gazzar.ch, le client consent à ce que les données personnelles transmises soient enregistrées et utilisées afin qu’il reçoive des informations de nature publicitaire ou autre de la part de Elie Gazzar SA.\nElie Gazzar SA transmet les données personnelles à des tiers uniquement dans la mesure où cela est indispensable pour la bonne exécution de la commande (transmission aux partenaires logistiques pour la livraison des commandes) ou du paiement (transmission à une société de recouvrement en cas de défaut de paiement).\nLes informations sont traitées avec la plus grande confidentialité et conformément aux règles de la bonne foi. Le site www.gazzar.ch est sécurisé (certificat de sécurité SSL). Elie Gazzar SA décline toutefois toute responsabilité concernant la sécurité des données transmises par Internet.\nConformément à la Loi sur la protection des données, le client dispose d’un droit d’accès, de rectification et d’opposition aux données le concernant. Pour cela, il lui suffit de s’adresser à Elie Gazzar SA.\n    "
+          "\r\nEn s’inscrivant sur le site www.gazzar.ch, le client consent à ce que les données personnelles transmises soient enregistrées et utilisées afin qu’il reçoive des informations de nature publicitaire ou autre de la part de Elie Gazzar SA.\r\nElie Gazzar SA transmet les données personnelles à des tiers uniquement dans la mesure où cela est indispensable pour la bonne exécution de la commande (transmission aux partenaires logistiques pour la livraison des commandes) ou du paiement (transmission à une société de recouvrement en cas de défaut de paiement).\r\nLes informations sont traitées avec la plus grande confidentialité et conformément aux règles de la bonne foi. Le site www.gazzar.ch est sécurisé (certificat de sécurité SSL). Elie Gazzar SA décline toutefois toute responsabilité concernant la sécurité des données transmises par Internet.\r\nConformément à la Loi sur la protection des données, le client dispose d’un droit d’accès, de rectification et d’opposition aux données le concernant. Pour cela, il lui suffit de s’adresser à Elie Gazzar SA.\r\n    "
         )
       ])
     ])
@@ -82266,11 +82335,11 @@ var render = function() {
                           { staticClass: "col-11 pr-1 pl-1 vin-titre" },
                           [
                             _vm._v(
-                              "\n                        " +
+                              "\r\n                        " +
                                 _vm._s(vin.nom) +
                                 " - " +
                                 _vm._s(vin.millesime) +
-                                "\n                  "
+                                "\r\n                  "
                             )
                           ]
                         )
@@ -84436,7 +84505,7 @@ var staticRenderFns = [
                       _c(
                         "a",
                         { staticClass: "dropdown-item", attrs: { href: "#" } },
-                        [_vm._v("Hello, Gaëtan")]
+                        [_vm._v("Hello ")]
                       ),
                       _vm._v(" "),
                       _c(
@@ -84682,9 +84751,11 @@ var staticRenderFns = [
           _vm._v("Connexion")
         ]),
         _vm._v(" "),
-        _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-          _vm._v("Inscription")
-        ])
+        _c(
+          "a",
+          { staticClass: "dropdown-item", attrs: { href: "/register" } },
+          [_vm._v("Inscription")]
+        )
       ])
     ])
   }
@@ -103167,15 +103238,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavBarLogin_vue_vue_type_template_id_4c71f7be___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavBarLogin.vue?vue&type=template&id=4c71f7be& */ "./resources/js/components/NavBarLogin.vue?vue&type=template&id=4c71f7be&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _NavBarLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBarLogin.vue?vue&type=script&lang=js& */ "./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NavBarLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _NavBarLogin_vue_vue_type_template_id_4c71f7be___WEBPACK_IMPORTED_MODULE_0__["render"],
   _NavBarLogin_vue_vue_type_template_id_4c71f7be___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -103189,6 +103262,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/NavBarLogin.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBarLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./NavBarLogin.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBarLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -104636,8 +104723,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\projet-articulation\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

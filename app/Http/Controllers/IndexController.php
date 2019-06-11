@@ -22,7 +22,7 @@ class IndexController extends Controller
         $nbvins = Vin::count();
         $nbregions = Regn::count();
         $nbprodu = Produ::count();
-        $user = Auth:guard('user')->user();
+        $user = Auth::guard('user')->user();
 
         return view('index', [
             'vins' => $vins,
