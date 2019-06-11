@@ -9,7 +9,7 @@
         <div class="">
 
           <a v-bind:href="'produit/'+ vin.id"> 
-          <img v-bind:src="vin.photoUrl" class="card-img-top center" alt="vin1">
+          <img v-bind:src="vin.photoUrl"  v-bind:alt="'vin1'+vin.id" class="card-img-top center">
           </a>
         </div>
         <div id="carteproduit" class="center">

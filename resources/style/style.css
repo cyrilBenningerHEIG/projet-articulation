@@ -104,6 +104,9 @@ label {
     align-items: center;
     margin: 20px;
 }
+.nav p{
+    margin-top : 1rem;
+}
 
 /* NAV BAH ANIM */  
   nav > a,

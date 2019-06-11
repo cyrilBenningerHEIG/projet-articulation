@@ -112,15 +112,7 @@
         <div class="container">
           <div id="tri-produit" class="row">
             <div class="col-sm">
-              <a class="icon_display" id="icon_display2" href="#">
-                <img src="images/icons/display2.svg">
-              </a>
-              <a class="icon_display" id="icon_display3" href="#">
-                <img src="images/icons/display3.svg">
-              </a>
-              <a class="icon_display" id="icon_display4" href="#">
-                <img src="images/icons/display4.svg">
-              </a>
+              <button  class="btn btn-white btn-filter" v-on:click="emptyFilters">Réinitialiser les filtres</button>
             </div>
             <div class="col-sm">
               <p class="number_results">{{nbvins}} résultats</p>
@@ -305,6 +297,9 @@ sortByAgeDesc:function(){
       return ($(b).data('millesime')) > ($(a).data('millesime')) ? 1 : -1;   
   } 
 },
+emptyFilters:function(){
+  location.reload();
+}
 }
 }
 </script>
