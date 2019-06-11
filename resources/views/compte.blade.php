@@ -19,11 +19,13 @@
             @if(Auth::check())
             <h2>Connecté</h2>
                 <nav-bar-login></nav-bar-login>
+                <Compte-client></compte-client>
                 @else
                 <h2>Déconnecté</h2>
                 <nav-bar-logout></nav-bar-logout>
-                
                 @endif
+                <Compte-client></compte-client>
+
                 <adresse-form></adresse-form>
 
                 <footer-bar></footer-bar>

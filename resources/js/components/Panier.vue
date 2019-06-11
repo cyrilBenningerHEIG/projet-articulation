@@ -1,5 +1,7 @@
 <template>
+
   <div class="container">
+    <div v-if=totalCart>
     <h2>Panier</h2>
 
     <div class="table-responsive-sm">
@@ -14,7 +16,7 @@
         </thead>
         <tbody>
            
-          <tr v-model="vinCarts"> 
+          <tr v-for="(vinCart,index) in vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
                 <img
@@ -26,55 +28,67 @@
               </div>
             </th>
             <td>
+                  <div class="container" id="carteproduit">
+   
               <div class="card-body" id="weekproduct">
                 <div class="produit-descr">
-                  <p class="card-title">{{vinCarts.nom}}</p>
-                  <p class="card-title">{{vinCarts.produ.nom}}</p>
-                  <p class="card-text">{{vinCarts.millesime}}</p>
-                  <p class="card-text">{{vinCarts.regn.nom}}</p>
-                  <p class="card-text">{{vinCarts.regn.pays.nom}}</p>
-                  <p class="card-text">{{vinCarts.prix.prixht}}</p>
-                  <button type="button" href="#" class="btn btn-white btn-rounded btn-sm">Supprimer</button>
+         <h6 class="card-title" id="nom-carte">
+              <div class="container p-0">
+                <div class="row">
+                  <div class="col-sm produit-titre ">
+                        <h5>{{vinCart.vin.nom}}</h5>
+                  </div>
                 </div>
               </div>
+            </h6>
+      </div>
+    <hr>
+    <div class="card-body">
+      <div class="check-full" v-if="vinCart.vin.millesime > 1">
+      <h6  class="card-text" id="millesime-carte">{{vinCart.vin.millesime}}</h6>
+      </div>
+      <div class="check-full" v-else>
+      <h6  class="card-text" id="millesime-carte"></h6>
+      </div>
+      <h6  class="card-text" id="produ-carte">{{vinCart.vin.produ.nom}}</h6>
+      <h6  class="card-text" id="prix-carte"  style="margin-top : 45px">CHF {{vinCart.vin.prix.prixht}} </h6>
+                        <button type="button" class="btn btn-white btn-rounded btn-sm" @click="removeCart(index)">Supprimer</button>
+      </div>
+    </div>
+     </div>
             </td>
             <td>
               <form>
                 <div class="form-group">
-                  <input
+                {{vinCart.quantity}}
+                   <!-- <input
                     type="number"
                     class="form-control"
                     id="formGroupExampleInput"
                     placeholder="Quantité"
-                  >
+                  > -->
                 </div>
               </form>
             </td>
-            <td>40 chf</td>
+            <td>{{vinCart.vin.prix.prixht*vinCart.quantity}} CHF</td>
           </tr>
           <tr>
-          <td></td>
+          <td ></td>
           <td></td>
           <td>Sous total</td>
-          <td>X</td>
+          <td>{{Math.round(totalCart * 10) / 10 }}</td>
           </tr>
           <tr>
           <td></td>
           <td></td>
           <td>TVA & autres taxes</td>
-          <td>X</td>
-          </tr>
-          <tr>
-          <td></td>
-          <td></td>
-          <td>Total HT</td>
-          <td>X</td>
+          <td>{{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
           </tr>
            <tr>
           <td></td>
           <td></td>
           <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>X</h4></td>
+          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
           </tr>
         </tbody>
       </table>
@@ -82,28 +96,64 @@
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
       </div>
   </div>
+  <div v-else class="container" >
+    <div class="container" style="height : 100px;text-align: center;">
+    <h2 style="color : #a62b35; padding-top : 50px;">Votre panier est vide</h2>
+    </div>
+        <div class="container" style="height : 300px;text-align: center;">
+      <a href="/"><button class="btn btn-danger" style="margin-top : 35px">Revenir à la boutique</button></a>
+    </div>
+
+  </div>
+  
+  </div>
 </template>
 
 <script>
+
+
 export default {
 
   data() {
     return {
       vinCarts: [],
-      
+      vinTotal:0,
+         
     };
   },
-  
-  mounted() {
-    console.log('App mounted!');
-    if (localStorage.getItem('vinCarts')) this.vinCarts = JSON.parse(localStorage.getItem('vinCarts'));
+  methods:{
+    removeCart(index){
+      this.vinCarts.splice(index, 1)
+      localStorage.setItem('vinCarts',JSON.stringify(this.vinCarts));
+      console.log(index)
+    }
   },
+  
+ mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    
+  },
+
+  computed: {
+    totalCart: function(){
+      let sum = 0;
+      this.vinCarts.forEach(function(vinCart) {
+         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity));
+      });
+
+     return sum;
+   },
+
+}
+
  
 }
  /* methods:{

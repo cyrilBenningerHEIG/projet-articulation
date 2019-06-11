@@ -1,5 +1,5 @@
 <template>
-
+<div>
   <div class="container">
     <div class="row mt-5 justify-content-center">
       <div id="filters" class="filters mx-auto">
@@ -123,7 +123,7 @@
               </a>
             </div>
             <div class="col-sm">
-              <p class="number_results">{{nbResults}} résultats</p>
+              <p class="number_results">{{nbvins}} résultats</p>
             </div>
             <div class="col-sm">
               <div class="btn-group" role="group">
@@ -146,10 +146,12 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
+    <hr class="mt-0">
+  </div>
+  </div>
   </div>
 </template>
 <script>
@@ -189,7 +191,7 @@ export default {
       filters.forEach(function(filter) {
         $('.card-custom').each(function(){
 
-          $nbAttributs = 0;
+          var nbAttributs = 0;
 
           if(filter == this.dataset.type){
             $(this).addClass("visible");
@@ -220,6 +222,10 @@ export default {
       if(filters.length == 0){
         $('.card-custom').addClass("visible").fadeIn();
       };
+
+      var nbResults = $('.card-custom.visible').length;
+      console.log(nbResults);
+      $('.number_results').text(nbResults + ' résultats');
   },
 
     filterPays:function(){
