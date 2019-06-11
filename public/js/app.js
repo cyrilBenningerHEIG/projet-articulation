@@ -1969,6 +1969,137 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Compte.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Compte.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      destinataire: '',
+      rue: '',
+      numero: '',
+      npa: '',
+      localite: '',
+      pays: ''
+    };
+  },
+  methods: {
+    submitAdress: function submitAdress() {
+      axios.post('adresses', {
+        destinataire: this.destinataire,
+        rue: this.rue,
+        numero: this.numero,
+        npa: this.npa,
+        localite: this.localite,
+        pays: this.pays
+      });
+      console.log(this.destinataire);
+      $("input").val('');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -2047,6 +2178,110 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBarLogout.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBarLogout.vue?vue&type=script&lang=js& ***!
@@ -2103,19 +2338,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-//
-//
-//
-<<<<<<< HEAD
-=======
->>>>>>> FE-modIndex-Audris
-=======
 //
 //
 //
 //
->>>>>>> be-commande-gaetan
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2806,23 +3032,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-=======
-/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
->>>>>>> FE-modIndex-Audris
   props: ["vins", "prixttc", "prixeuro", "vinid"],
   data: function data() {
     return {
@@ -9656,23 +9866,11 @@ var components = {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/bootstrap-vue/es/components/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/bootstrap-vue/es/components/index.js ***!
-  \***********************************************************/
-<<<<<<< HEAD
-/*! exports provided: default, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip */
-=======
-/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, default */
->>>>>>> FE-modIndex-Audris
-=======
 /***/ "./node_modules/bootstrap-vue/esm/components/index.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/components/index.esm.js ***!
   \****************************************************************/
 /*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, componentsPlugin */
->>>>>>> be-commande-gaetan
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9915,14 +10113,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./modal */ "./node_modules/bootstrap-vue/esm/components/modal/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_28__["BModal"]; });
 
-<<<<<<< HEAD
-/* harmony import */ var _form_checkbox__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./form-checkbox */ "./node_modules/bootstrap-vue/es/components/form-checkbox/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormCheckbox", function() { return _form_checkbox__WEBPACK_IMPORTED_MODULE_18__["BFormCheckbox"]; });
-<<<<<<< HEAD
-=======
 /* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./nav */ "./node_modules/bootstrap-vue/esm/components/nav/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNav", function() { return _nav__WEBPACK_IMPORTED_MODULE_29__["BNav"]; });
->>>>>>> be-commande-gaetan
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavItem", function() { return _nav__WEBPACK_IMPORTED_MODULE_29__["BNavItem"]; });
 
@@ -9974,118 +10166,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./tooltip */ "./node_modules/bootstrap-vue/esm/components/tooltip/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_39__["BTooltip"]; });
 
-<<<<<<< HEAD
-=======
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormCheckboxGroup", function() { return _form_checkbox__WEBPACK_IMPORTED_MODULE_18__["BFormCheckboxGroup"]; });
->>>>>>> FE-modIndex-Audris
-
-/* harmony import */ var _form_radio__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./form-radio */ "./node_modules/bootstrap-vue/es/components/form-radio/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormRadio", function() { return _form_radio__WEBPACK_IMPORTED_MODULE_19__["BFormRadio"]; });
-
-<<<<<<< HEAD
- // Export all legacy name component group plugins as named exports
-
- // Export all individual components as named exports
-=======
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormRadioGroup", function() { return _form_radio__WEBPACK_IMPORTED_MODULE_19__["BFormRadioGroup"]; });
-
-/* harmony import */ var _form_input__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./form-input */ "./node_modules/bootstrap-vue/es/components/form-input/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormInput", function() { return _form_input__WEBPACK_IMPORTED_MODULE_20__["BFormInput"]; });
-
-/* harmony import */ var _form_textarea__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./form-textarea */ "./node_modules/bootstrap-vue/es/components/form-textarea/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormTextarea", function() { return _form_textarea__WEBPACK_IMPORTED_MODULE_21__["BFormTextarea"]; });
-
-/* harmony import */ var _form_file__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./form-file */ "./node_modules/bootstrap-vue/es/components/form-file/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormFile", function() { return _form_file__WEBPACK_IMPORTED_MODULE_22__["BFormFile"]; });
-
-/* harmony import */ var _form_select__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./form-select */ "./node_modules/bootstrap-vue/es/components/form-select/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BFormSelect", function() { return _form_select__WEBPACK_IMPORTED_MODULE_23__["BFormSelect"]; });
-
-/* harmony import */ var _image__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./image */ "./node_modules/bootstrap-vue/es/components/image/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BImg", function() { return _image__WEBPACK_IMPORTED_MODULE_24__["BImg"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BImgLazy", function() { return _image__WEBPACK_IMPORTED_MODULE_24__["BImgLazy"]; });
-
-/* harmony import */ var _jumbotron__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./jumbotron */ "./node_modules/bootstrap-vue/es/components/jumbotron/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BJumbotron", function() { return _jumbotron__WEBPACK_IMPORTED_MODULE_25__["BJumbotron"]; });
-
-/* harmony import */ var _link__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./link */ "./node_modules/bootstrap-vue/es/components/link/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BLink", function() { return _link__WEBPACK_IMPORTED_MODULE_26__["BLink"]; });
-
-/* harmony import */ var _list_group__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./list-group */ "./node_modules/bootstrap-vue/es/components/list-group/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BListGroup", function() { return _list_group__WEBPACK_IMPORTED_MODULE_27__["BListGroup"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BListGroupItem", function() { return _list_group__WEBPACK_IMPORTED_MODULE_27__["BListGroupItem"]; });
-
-/* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./media */ "./node_modules/bootstrap-vue/es/components/media/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BMedia", function() { return _media__WEBPACK_IMPORTED_MODULE_28__["BMedia"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BMediaAside", function() { return _media__WEBPACK_IMPORTED_MODULE_28__["BMediaAside"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BMediaBody", function() { return _media__WEBPACK_IMPORTED_MODULE_28__["BMediaBody"]; });
-
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./modal */ "./node_modules/bootstrap-vue/es/components/modal/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_29__["BModal"]; });
-
-/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./nav */ "./node_modules/bootstrap-vue/es/components/nav/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNav", function() { return _nav__WEBPACK_IMPORTED_MODULE_30__["BNav"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavItem", function() { return _nav__WEBPACK_IMPORTED_MODULE_30__["BNavItem"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavText", function() { return _nav__WEBPACK_IMPORTED_MODULE_30__["BNavText"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavForm", function() { return _nav__WEBPACK_IMPORTED_MODULE_30__["BNavForm"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavItemDropdown", function() { return _nav__WEBPACK_IMPORTED_MODULE_30__["BNavItemDropdown"]; });
-
-/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./navbar */ "./node_modules/bootstrap-vue/es/components/navbar/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavbar", function() { return _navbar__WEBPACK_IMPORTED_MODULE_31__["BNavbar"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavbarNav", function() { return _navbar__WEBPACK_IMPORTED_MODULE_31__["BNavbarNav"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavbarBrand", function() { return _navbar__WEBPACK_IMPORTED_MODULE_31__["BNavbarBrand"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BNavbarToggle", function() { return _navbar__WEBPACK_IMPORTED_MODULE_31__["BNavbarToggle"]; });
-
-/* harmony import */ var _pagination__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pagination */ "./node_modules/bootstrap-vue/es/components/pagination/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BPagination", function() { return _pagination__WEBPACK_IMPORTED_MODULE_32__["BPagination"]; });
-
-/* harmony import */ var _pagination_nav__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pagination-nav */ "./node_modules/bootstrap-vue/es/components/pagination-nav/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BPaginationNav", function() { return _pagination_nav__WEBPACK_IMPORTED_MODULE_33__["BPaginationNav"]; });
-
-/* harmony import */ var _popover__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./popover */ "./node_modules/bootstrap-vue/es/components/popover/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BPopover", function() { return _popover__WEBPACK_IMPORTED_MODULE_34__["BPopover"]; });
-
-/* harmony import */ var _progress__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./progress */ "./node_modules/bootstrap-vue/es/components/progress/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BProgress", function() { return _progress__WEBPACK_IMPORTED_MODULE_35__["BProgress"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BProgressBar", function() { return _progress__WEBPACK_IMPORTED_MODULE_35__["BProgressBar"]; });
-
-/* harmony import */ var _spinner__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./spinner */ "./node_modules/bootstrap-vue/es/components/spinner/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BSpinner", function() { return _spinner__WEBPACK_IMPORTED_MODULE_36__["BSpinner"]; });
-
-/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./table */ "./node_modules/bootstrap-vue/es/components/table/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTable", function() { return _table__WEBPACK_IMPORTED_MODULE_37__["BTable"]; });
->>>>>>> FE-modIndex-Audris
-
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./tabs */ "./node_modules/bootstrap-vue/es/components/tabs/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTabs", function() { return _tabs__WEBPACK_IMPORTED_MODULE_38__["BTabs"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTab", function() { return _tabs__WEBPACK_IMPORTED_MODULE_38__["BTab"]; });
-
-/* harmony import */ var _toast__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./toast */ "./node_modules/bootstrap-vue/es/components/toast/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BToast", function() { return _toast__WEBPACK_IMPORTED_MODULE_39__["BToast"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BToaster", function() { return _toast__WEBPACK_IMPORTED_MODULE_39__["BToaster"]; });
-
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./tooltip */ "./node_modules/bootstrap-vue/es/components/tooltip/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_40__["BTooltip"]; });
-
-=======
 // Index file used for the main builds, which does not include legacy plugin names
 // Once es/ buld is removed, then this file will be renamed to index.js
->>>>>>> be-commande-gaetan
 
  // Export all component group plugins as named exports
 
@@ -10124,20 +10206,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Export default as a plugin that installs all the component group plugins
-
-<<<<<<< HEAD
-=======
 
 
 
 
-<<<<<<< HEAD
->>>>>>> FE-modIndex-Audris
-/* harmony default export */ __webpack_exports__["default"] = ({
-=======
+
 var componentsPlugin = {
->>>>>>> be-commande-gaetan
   install: Object(_utils_plugins__WEBPACK_IMPORTED_MODULE_0__["installFactory"])({
     plugins: _plugins__WEBPACK_IMPORTED_MODULE_1__
   })
@@ -20181,23 +20255,11 @@ var NAME = 'BTooltip'; // @vue/component
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/bootstrap-vue/es/directives/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/bootstrap-vue/es/directives/index.js ***!
-  \***********************************************************/
-<<<<<<< HEAD
-/*! exports provided: default, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
-=======
-/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, default */
->>>>>>> FE-modIndex-Audris
-=======
 /***/ "./node_modules/bootstrap-vue/esm/directives/index.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/directives/index.esm.js ***!
   \****************************************************************/
 /*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, directivesPlugin */
->>>>>>> be-commande-gaetan
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20215,20 +20277,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBPopoverPlugin", function() { return _plugins__WEBPACK_IMPORTED_MODULE_1__["VBPopoverPlugin"]; });
 
-<<<<<<< HEAD
-/* harmony import */ var _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plugins-legacy */ "./node_modules/bootstrap-vue/es/directives/plugins-legacy.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BToggle", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BToggle"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BModal", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BModal"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BScrollspy", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BScrollspy"]; });
-<<<<<<< HEAD
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTooltip", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BTooltip"]; });
-=======
 /* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./toggle */ "./node_modules/bootstrap-vue/esm/directives/toggle/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBToggle", function() { return _toggle__WEBPACK_IMPORTED_MODULE_2__["VBToggle"]; });
->>>>>>> be-commande-gaetan
 
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modal */ "./node_modules/bootstrap-vue/esm/directives/modal/index.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_3__["VBModal"]; });
@@ -20251,54 +20301,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
- // Named exports of all directives
-=======
-=======
->>>>>>> be-commande-gaetan
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTooltip", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BTooltip"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BPopover", function() { return _plugins_legacy__WEBPACK_IMPORTED_MODULE_2__["BPopover"]; });
-
-<<<<<<< HEAD
-/* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./toggle */ "./node_modules/bootstrap-vue/es/directives/toggle/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBToggle", function() { return _toggle__WEBPACK_IMPORTED_MODULE_3__["VBToggle"]; });
-
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal */ "./node_modules/bootstrap-vue/es/directives/modal/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBModal", function() { return _modal__WEBPACK_IMPORTED_MODULE_4__["VBModal"]; });
-
-/* harmony import */ var _scrollspy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scrollspy */ "./node_modules/bootstrap-vue/es/directives/scrollspy/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBScrollspy", function() { return _scrollspy__WEBPACK_IMPORTED_MODULE_5__["VBScrollspy"]; });
-
-/* harmony import */ var _tooltip__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tooltip */ "./node_modules/bootstrap-vue/es/directives/tooltip/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBTooltip", function() { return _tooltip__WEBPACK_IMPORTED_MODULE_6__["VBTooltip"]; });
-
-/* harmony import */ var _popover__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./popover */ "./node_modules/bootstrap-vue/es/directives/popover/index.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBPopover", function() { return _popover__WEBPACK_IMPORTED_MODULE_7__["VBPopover"]; });
->>>>>>> FE-modIndex-Audris
-
-
- // Export all directive group plugins as named exports
-
- // Export all legacy named directive group plugins as named exports
-
- // Named exports of all directives
-
- // Default export is a plugin that installs all plugins
-
-<<<<<<< HEAD
-=======
 
 
 
- // Default export is a plugin that installs all plugins
-
->>>>>>> FE-modIndex-Audris
-/* harmony default export */ __webpack_exports__["default"] = ({
-=======
 var directivesPlugin = {
->>>>>>> be-commande-gaetan
   install: Object(_utils_plugins__WEBPACK_IMPORTED_MODULE_0__["installFactory"])({
     plugins: _plugins__WEBPACK_IMPORTED_MODULE_1__
   })
@@ -22130,19 +22136,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/bootstrap-vue/es/mixins/click-out.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/bootstrap-vue/es/mixins/click-out.js ***!
-  \***********************************************************/
-<<<<<<< HEAD
-=======
-=======
 /***/ "./node_modules/bootstrap-vue/esm/mixins/click-out.js":
 /*!************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/mixins/click-out.js ***!
   \************************************************************/
->>>>>>> be-commande-gaetan
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22205,50 +22202,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/bootstrap-vue/es/mixins/dropdown.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/bootstrap-vue/es/mixins/dropdown.js ***!
-  \**********************************************************/
->>>>>>> FE-modIndex-Audris
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/dom */ "./node_modules/bootstrap-vue/es/utils/dom.js");
- // @vue/component
-=======
-/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-/* harmony import */ var _utils_bv_event_class__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/bv-event.class */ "./node_modules/bootstrap-vue/es/utils/bv-event.class.js");
-/* harmony import */ var _utils_key_codes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/key-codes */ "./node_modules/bootstrap-vue/es/utils/key-codes.js");
-/* harmony import */ var _utils_warn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/warn */ "./node_modules/bootstrap-vue/es/utils/warn.js");
-/* harmony import */ var _utils_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/dom */ "./node_modules/bootstrap-vue/es/utils/dom.js");
-/* harmony import */ var _utils_inspect__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/inspect */ "./node_modules/bootstrap-vue/es/utils/inspect.js");
-/* harmony import */ var _click_out__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./click-out */ "./node_modules/bootstrap-vue/es/mixins/click-out.js");
-/* harmony import */ var _focus_in__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./focus-in */ "./node_modules/bootstrap-vue/es/mixins/focus-in.js");
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
->>>>>>> FE-modIndex-Audris
-
-
-
-
-
-
-/***/ "./node_modules/bootstrap-vue/es/mixins/dropdown.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/bootstrap-vue/es/mixins/dropdown.js ***!
-  \**********************************************************/
-=======
 /***/ "./node_modules/bootstrap-vue/esm/mixins/dropdown.js":
 /*!***********************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/mixins/dropdown.js ***!
   \***********************************************************/
->>>>>>> be-commande-gaetan
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25666,25 +25623,12 @@ var getBreakpointsDown = function getBreakpointsDown() {
 /* istanbul ignore next: we don't use this method anywhere, yet */
 
 
-<<<<<<< HEAD
-var getBreakpointsDownCached = Object(_memoize__WEBPACK_IMPORTED_MODULE_2__["default"])(function () {
-  var breakpoints = getBreakpointsCached().slice();
-  breakpoints[breakpoints.length - 1] = '';
-  return breakpoints;
-}); // Named Exports
-<<<<<<< HEAD
-
-
-=======
-=======
 var getBreakpointsDownCached = function getBreakpointsDownCached() {
   return _vue__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.$bvConfig.getBreakpointsDownCached();
 }; // Named Exports
 
->>>>>>> be-commande-gaetan
 
 
->>>>>>> FE-modIndex-Audris
 
 /***/ }),
 
@@ -35047,15 +34991,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-<<<<<<< HEAD
-<<<<<<< HEAD
-exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_box {\n    height: 2em;\n    width: 2em;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/*Nav bar*/\n\nnav a {\n    position: relative;\n    display: inline-block;\n    margin: 15px 25px;\n    outline: none;\n    text-decoration: none;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #000;\n    font-size: 1.35em;\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\n}\n\nnav a:link {\n    text-decoration: none;\n}\n\n.go a:before,\n.go a:after {\n    display: inline-block;\n    opacity: 0;\n    transition: opacity 0.2s, -webkit-transform 0.3s;\n    transition: transform 0.3s, opacity 0.2s;\n    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;\n}\n\n.go a:before {\n    margin-right: 10px;\n    content: '[';\n    -webkit-transform: translate(20px);\n    transform: translate(20px);\n}\n\n.go a:after {\n    margin-left: 10px;\n    content: ']';\n    -webkit-transform: translate(-20px);\n    transform: translate(-20px);\n}\n\n.go a:hover:before,\n.go a:hover:after,\n.go a:focus:before,\n.go a:focus:after {\n    opacity: 1;\n    -webkit-transform: translate(0px);\n    transform: translate(0px);\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    /* padding-top: 50px; */\n}\n\n#card-body {\n    padding: 0.5em;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\na.produit-liens {\n    color: #CCBE9F;\n}\n\n.arrow {\n    width: 1.7%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n\n/* #btn-quantity {\n    padding-right: 325px;\n} */\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: white;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #2B2B2B;\n    font-size: 16px;\n}\n\n#a-producteur:link {\n    color: #CCBE9F;\n}\n\n#a-producteur {\n    font-family: 'Roboto', sans-serif;\n    text-decoration: none;\n    color: #CCBE9F\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n.img-contact {\n    max-width: 100%;\n    max-height: auto;\n}\n\n.contact-form {\n    background: #2B2B2B;\n    height: 505px;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #dc3545;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    height: 60px;\n    position: relative;\n    margin-top: 1em;\n}\n\n#title-position {\n    position: absolute;\n    bottom: 0;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\n    margin-top: 15px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 20px;\n    font-size: 12px;\n}\n\n#millesime-carte {\n    font-size: 12px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n    display: inline-block;\n}\n.container-login100{\n    width: 100%;  \n    min-height: 60vh;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: center;\n    padding: 15px;\n    background-color : #a62b35;\n}\n#box,\n#box_register {\n\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 2rem;\n    margin-top: 25px;\n    display : inline;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 350px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 50px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 350px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n\n    font-size: 75%;\n}\n#box > a, #box_register > a {\n    padding-top : 25px;\n    display : block;\n    color : white;\n}\n#login-title, #register-title{\n    color : white;\n}\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}\n\n.badge {\n    padding-left: 9px;\n    padding-right: 9px;\n    border-radius: 9px;\n  }\n  \n  .label-warning[href],\n  .badge-warning[href] {\n    background-color: #c67605;\n  }\n  #lblCartCount {\n      font-size: 12px;\n      background: #a62b35;\n      color: #fff;\n      padding: 2px 5px;\n      vertical-align: top;\n      margin-left: 20px; \n      margin-top: -30px\n  }\n/* LOADING */\n#loading-pic{\n    width : 300px;\n}\n.loader {\n    position: fixed;\n    z-index: 99;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: white;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.loader > img {\n    width: 100px;\n}\n\n.loader.hidden {\n    -webkit-animation: fadeOut 2s;\n            animation: fadeOut 2s;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n}\n\n@-webkit-keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n@keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n.thumb {\n    height: 100px;\n    border: 1px solid black;\n    margin: 10px;\n}\n/* MOBILE */\n", ""]);
-=======
-exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_box {\n    height: 2em;\n    width: 2em;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n\n/*Nav bar*/\n\nnav a {\n    position: relative;\n    display: inline-block;\n    margin: 15px 25px;\n    outline: none;\n    text-decoration: none;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #000;\n    font-size: 1.35em;\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\n}\n\nnav a:link {\n    text-decoration: none;\n}\n\n.go a:before,\n.go a:after {\n    display: inline-block;\n    opacity: 0;\n    transition: opacity 0.2s, -webkit-transform 0.3s;\n    transition: transform 0.3s, opacity 0.2s;\n    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;\n}\n\n.go a:before {\n    margin-right: 10px;\n    content: '[';\n    -webkit-transform: translate(20px);\n    transform: translate(20px);\n}\n\n.go a:after {\n    margin-left: 10px;\n    content: ']';\n    -webkit-transform: translate(-20px);\n    transform: translate(-20px);\n}\n\n.go a:hover:before,\n.go a:hover:after,\n.go a:focus:before,\n.go a:focus:after {\n    opacity: 1;\n    -webkit-transform: translate(0px);\n    transform: translate(0px);\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    /* padding-top: 50px; */\n}\n\n#card-body {\n    padding: 0.5em;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 20%;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 11px;\n    line-height: 11px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\na.produit-liens {\n    color: #CCBE9F;\n}\n\n.arrow {\n    width: 1.7%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n\n/* #btn-quantity {\n    padding-right: 325px;\n} */\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: white;\n    background-color: #CCBE9F;\n}\n\n.pills {\n    color: #2B2B2B;\n    font-size: 16px;\n}\n\n#a-producteur:link {\n    color: #CCBE9F;\n}\n\n#a-producteur {\n    font-family: 'Roboto', sans-serif;\n    text-decoration: none;\n    color: #CCBE9F\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n#googleMap {\n    width: 555px;\n    height: 505px;\n}\n\n.img-contact {\n    max-width: 100%;\n    max-height: auto;\n}\n\n.contact-form {\n    background: #953640;\n    height: 505px;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #2B2B2B;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    height: 60px;\n    position: relative;\n    margin-top: 1em;\n}\n\n#title-position {\n    position: absolute;\n    bottom: 0;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\n    margin-top: 15px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 20px;\n    font-size: 12px;\n}\n\n#millesime-carte {\n    font-size: 12px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n    display: inline-block;\n}\n\n.container-login100 {\n    width: 100%;\n    min-height: 60vh;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: center;\n    padding: 15px;\n    background-color: #a62b35;\n}\n\n#box,\n#box_register {\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 2rem;\n    margin-top: 25px;\n    display: inline;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 350px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 50px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 350px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n    font-size: 75%;\n}\n\n#box>a,\n#box_register>a {\n    padding-top: 25px;\n    display: block;\n    color: white;\n}\n\n#login-title,\n#register-title {\n    color: white;\n}\n\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}\n\n.badge {\n    padding-left: 9px;\n    padding-right: 9px;\n    border-radius: 9px;\n}\n\n.label-warning[href],\n.badge-warning[href] {\n    background-color: #c67605;\n}\n\n#lblCartCount {\n    font-size: 12px;\n    background: #a62b35;\n    color: #fff;\n    padding: 2px 5px;\n    vertical-align: top;\n    margin-left: 20px;\n    margin-top: -30px\n}\n\n\n/* LOADING */\n\n#loading-pic {\n    width: 300px;\n}\n\n.loader {\n    position: fixed;\n    z-index: 99;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: white;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.loader>img {\n    width: 100px;\n}\n\n.loader.hidden {\n    -webkit-animation: fadeOut 2s;\n            animation: fadeOut 2s;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n}\n\n@-webkit-keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n@keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n.thumb {\n    height: 100px;\n    border: 1px solid black;\n    margin: 10px;\n}\n\n\n/* MOBILE */", ""]);
->>>>>>> FE-modIndex-Audris
-=======
-exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\r\n}\r\n\r\nnav a:link {\r\n    text-decoration: none;\r\n}\r\n\r\n.go a:before,\r\n.go a:after {\r\n    display: inline-block;\r\n    opacity: 0;\r\n    transition: transform 0.3s, opacity 0.2s;\r\n}\r\n\r\n.go a:before {\r\n    margin-right: 10px;\r\n    content: '[';\r\n    transform: translate(20px);\r\n}\r\n\r\n.go a:after {\r\n    margin-left: 10px;\r\n    content: ']';\r\n    transform: translate(-20px);\r\n}\r\n\r\n.go a:hover:before,\r\n.go a:hover:after,\r\n.go a:focus:before,\r\n.go a:focus:after {\r\n    opacity: 1;\r\n    transform: translate(0px);\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #2B2B2B;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #dc3545;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n.container-login100{\r\n    width: 100%;  \r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color : #a62b35;\r\n}\r\n#box,\r\n#box_register {\r\n\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display : inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n\r\n    font-size: 75%;\r\n}\r\n#box > a, #box_register > a {\r\n    padding-top : 25px;\r\n    display : block;\r\n    color : white;\r\n}\r\n#login-title, #register-title{\r\n    color : white;\r\n}\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n  }\r\n  \r\n  .label-warning[href],\r\n  .badge-warning[href] {\r\n    background-color: #c67605;\r\n  }\r\n  #lblCartCount {\r\n      font-size: 12px;\r\n      background: #a62b35;\r\n      color: #fff;\r\n      padding: 2px 5px;\r\n      vertical-align: top;\r\n      margin-left: 20px; \r\n      margin-top: -30px\r\n  }\r\n/* LOADING */\r\n#loading-pic{\r\n    width : 300px;\r\n}\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader > img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n/* MOBILE */\r\n", ""]);
->>>>>>> be-commande-gaetan
+exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\r\n}\r\n\r\nnav a:link {\r\n    text-decoration: none;\r\n}\r\n\r\n.go a:before,\r\n.go a:after {\r\n    display: inline-block;\r\n    opacity: 0;\r\n    transition: transform 0.3s, opacity 0.2s;\r\n}\r\n\r\n.go a:before {\r\n    margin-right: 10px;\r\n    content: '[';\r\n    transform: translate(20px);\r\n}\r\n\r\n.go a:after {\r\n    margin-left: 10px;\r\n    content: ']';\r\n    transform: translate(-20px);\r\n}\r\n\r\n.go a:hover:before,\r\n.go a:hover:after,\r\n.go a:focus:before,\r\n.go a:focus:after {\r\n    opacity: 1;\r\n    transform: translate(0px);\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n#googleMap {\r\n    width: 555px;\r\n    height: 505px;\r\n}\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #953640;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #2B2B2B;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n\r\n.container-login100 {\r\n    width: 100%;\r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color: #a62b35;\r\n}\r\n\r\n#box,\r\n#box_register {\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display: inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n    font-size: 75%;\r\n}\r\n\r\n#box>a,\r\n#box_register>a {\r\n    padding-top: 25px;\r\n    display: block;\r\n    color: white;\r\n}\r\n\r\n#login-title,\r\n#register-title {\r\n    color: white;\r\n}\r\n\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n}\r\n\r\n.label-warning[href],\r\n.badge-warning[href] {\r\n    background-color: #c67605;\r\n}\r\n\r\n#lblCartCount {\r\n    font-size: 12px;\r\n    background: #a62b35;\r\n    color: #fff;\r\n    padding: 2px 5px;\r\n    vertical-align: top;\r\n    margin-left: 20px;\r\n    margin-top: -30px\r\n}\r\n\r\n\r\n/* LOADING */\r\n\r\n#loading-pic {\r\n    width: 300px;\r\n}\r\n\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader>img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n\r\n\r\n/* MOBILE */", ""]);
 
 // exports
 
@@ -82671,391 +82607,209 @@ var render = function() {
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
-        _c("form", [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "exampleInputNom1" } }, [
-              _vm._v("Adresse de livraison")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.destinataire,
-                  expression: "destinataire"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "destinataire",
-                placeholder: "Destinataire",
-                value: ""
-              },
-              domProps: { value: _vm.destinataire },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.destinataire = $event.target.value
-                }
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.submitAdress($event)
               }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-row" }, [
-            _c("div", { staticClass: "form-group col-md-10" }, [
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputNom1" } }, [
+                _vm._v("Adresse de livraison")
+              ]),
+              _vm._v(" "),
               _c("input", {
                 directives: [
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.rue,
-                    expression: "rue"
+                    value: _vm.destinataire,
+                    expression: "destinataire"
                   }
                 ],
                 staticClass: "form-control",
                 attrs: {
                   type: "text",
-                  name: "rue",
-                  placeholder: "Rue",
+                  name: "destinataire",
+                  placeholder: "Destinataire",
                   value: ""
                 },
-                domProps: { value: _vm.rue },
+                domProps: { value: _vm.destinataire },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.rue = $event.target.value
+                    _vm.destinataire = $event.target.value
                   }
                 }
               })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-2" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.numero,
-                    expression: "numero"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "numero",
-                  placeholder: "N°",
-                  value: ""
-                },
-                domProps: { value: _vm.numero },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+            _c("div", { staticClass: "form-row" }, [
+              _c("div", { staticClass: "form-group col-md-10" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.rue,
+                      expression: "rue"
                     }
-                    _vm.numero = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-row" }, [
-            _c("div", { staticClass: "form-group col-md-3" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.npa,
-                    expression: "npa"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "npa",
-                  placeholder: "NPA",
-                  value: ""
-                },
-                domProps: { value: _vm.npa },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "rue",
+                    placeholder: "Rue",
+                    value: ""
+                  },
+                  domProps: { value: _vm.rue },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.rue = $event.target.value
                     }
-                    _vm.npa = $event.target.value
                   }
-                }
-              })
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-2" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.numero,
+                      expression: "numero"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "numero",
+                    placeholder: "N°",
+                    value: ""
+                  },
+                  domProps: { value: _vm.numero },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.numero = $event.target.value
+                    }
+                  }
+                })
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-5" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.localite,
-                    expression: "localite"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "localite",
-                  placeholder: "Localite",
-                  value: ""
-                },
-                domProps: { value: _vm.localite },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+            _c("div", { staticClass: "form-row" }, [
+              _c("div", { staticClass: "form-group col-md-3" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.npa,
+                      expression: "npa"
                     }
-                    _vm.localite = $event.target.value
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "npa",
+                    placeholder: "NPA",
+                    value: ""
+                  },
+                  domProps: { value: _vm.npa },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.npa = $event.target.value
+                    }
                   }
-                }
-              })
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-5" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.localite,
+                      expression: "localite"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "localite",
+                    placeholder: "Localite",
+                    value: ""
+                  },
+                  domProps: { value: _vm.localite },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.localite = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group col-md-4" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.pays,
+                      expression: "pays"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "pays",
+                    placeholder: "Pays",
+                    value: ""
+                  },
+                  domProps: { value: _vm.pays },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.pays = $event.target.value
+                    }
+                  }
+                })
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-4" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.pays,
-                    expression: "pays"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "pays",
-                  placeholder: "Pays",
-                  value: ""
-                },
-                domProps: { value: _vm.pays },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.pays = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-danger btn-block ",
-              attrs: { type: "submit" }
-            },
-            [_vm._v("Ajouter une adresse")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("form", { staticStyle: { "padding-top": "25px" } }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "exampleInputNom1" } }, [
-              _vm._v("Adresse de facturation")
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.destinataire,
-                  expression: "destinataire"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "destinataire",
-                placeholder: "Destinataire",
-                value: ""
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger btn-block ",
+                attrs: { type: "submit" }
               },
-              domProps: { value: _vm.destinataire },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.destinataire = $event.target.value
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-row" }, [
-            _c("div", { staticClass: "form-group col-md-10" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.rue,
-                    expression: "rue"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "rue",
-                  placeholder: "Rue",
-                  value: ""
-                },
-                domProps: { value: _vm.rue },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.rue = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-2" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.numero,
-                    expression: "numero"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "numero",
-                  placeholder: "N°",
-                  value: ""
-                },
-                domProps: { value: _vm.numero },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.numero = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-row" }, [
-            _c("div", { staticClass: "form-group col-md-3" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.npa,
-                    expression: "npa"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "npa",
-                  placeholder: "NPA",
-                  value: ""
-                },
-                domProps: { value: _vm.npa },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.npa = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-5" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.localite,
-                    expression: "localite"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "localite",
-                  placeholder: "Localite",
-                  value: ""
-                },
-                domProps: { value: _vm.localite },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.localite = $event.target.value
-                  }
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group col-md-4" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.pays,
-                    expression: "pays"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  name: "pays",
-                  placeholder: "Pays",
-                  value: ""
-                },
-                domProps: { value: _vm.pays },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.pays = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-danger btn-block ",
-              attrs: { type: "submit" }
-            },
-            [_vm._v("Ajoute une adresse")]
-          )
-        ])
+              [_vm._v("Ajouter une adresse")]
+            )
+          ]
+        )
       ])
     ])
   ])
@@ -83233,37 +82987,21 @@ var staticRenderFns = [
                 },
                 [_vm._v("Créer un compte")]
               )
-<<<<<<< HEAD
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-              _c("span", [
-                _c("a", { staticClass: "p", attrs: { href: "/" } }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-outline-danger btn-outline-form btn-block "
-                    },
-                    [_vm._v("Commander en tant qu'invité")]
-                  )
-                ])
-              ])
-=======
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-            _c("a", { staticClass: "p", attrs: { href: "/paiement-etape2" } }, [
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "btn btn-outline-danger btn-outline-form btn-block "
-                },
-                [_vm._v("Commander en tant qu'invité")]
-              )
->>>>>>> be-commande-gaetan
+            _c("span", [
+              _c("a", { staticClass: "p", attrs: { href: "/" } }, [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "btn btn-outline-danger btn-outline-form btn-block "
+                  },
+                  [_vm._v("Commander en tant qu'invité")]
+                )
+              ])
             ])
           ])
         ])
@@ -84115,7 +83853,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _c("form", { staticClass: "mr-5 ml-5" }, [
+          _c("div", { staticClass: "mr-5 ml-5" }, [
             _c("p", [_vm._v("Identique à l'adresse de facturation")]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group mt-3 mb-5" }, [
@@ -102643,15 +102381,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Compte_vue_vue_type_template_id_67d603eb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Compte.vue?vue&type=template&id=67d603eb& */ "./resources/js/components/Compte.vue?vue&type=template&id=67d603eb&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Compte_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Compte.vue?vue&type=script&lang=js& */ "./resources/js/components/Compte.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Compte_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Compte_vue_vue_type_template_id_67d603eb___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Compte_vue_vue_type_template_id_67d603eb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -102665,6 +102405,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Compte.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Compte.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Compte.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Compte_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Compte.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Compte.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Compte_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -103093,21 +102847,24 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************!*\
   !*** ./resources/js/components/LivraisonPaiement.vue ***!
   \*******************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LivraisonPaiement_vue_vue_type_template_id_6f3421fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LivraisonPaiement.vue?vue&type=template&id=6f3421fe& */ "./resources/js/components/LivraisonPaiement.vue?vue&type=template&id=6f3421fe&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LivraisonPaiement.vue?vue&type=script&lang=js& */ "./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _LivraisonPaiement_vue_vue_type_template_id_6f3421fe___WEBPACK_IMPORTED_MODULE_0__["render"],
   _LivraisonPaiement_vue_vue_type_template_id_6f3421fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -103121,6 +102878,22 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/LivraisonPaiement.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LivraisonPaiement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -104939,18 +104712,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-__webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
->>>>>>> FE-modIndex-Audris
-=======
 __webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\wamp64\www\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> be-commande-gaetan
 
 
 /***/ })
