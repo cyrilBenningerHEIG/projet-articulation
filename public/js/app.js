@@ -2107,9 +2107,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2541,18 +2538,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -9650,7 +9635,7 @@ var components = {
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/components/index.esm.js ***!
   \****************************************************************/
-/*! exports provided: componentsPlugin, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip */
+/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, componentsPlugin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20039,7 +20024,7 @@ var NAME = 'BTooltip'; // @vue/component
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/directives/index.esm.js ***!
   \****************************************************************/
-/*! exports provided: directivesPlugin, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
+/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, directivesPlugin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21554,7 +21539,7 @@ var removeTooltip = function removeTooltip(el) {
 /*!*************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/index.js ***!
   \*************************************************/
-/*! exports provided: BVConfigPlugin, BVConfig, BootstrapVue, install, setConfig, default, componentsPlugin, directivesPlugin, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover */
+/*! exports provided: BVConfigPlugin, BVConfig, BootstrapVue, install, setConfig, default, BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, componentsPlugin, VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, directivesPlugin */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21571,8 +21556,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BVConfigPlugin", function() { return _bv_config__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BVConfig", function() { return _bv_config__WEBPACK_IMPORTED_MODULE_4__["default"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "componentsPlugin", function() { return _components_index_esm__WEBPACK_IMPORTED_MODULE_2__["componentsPlugin"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BVModalPlugin", function() { return _components_index_esm__WEBPACK_IMPORTED_MODULE_2__["BVModalPlugin"]; });
 
@@ -21824,7 +21807,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BTooltip", function() { return _components_index_esm__WEBPACK_IMPORTED_MODULE_2__["BTooltip"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "directivesPlugin", function() { return _directives_index_esm__WEBPACK_IMPORTED_MODULE_3__["directivesPlugin"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "componentsPlugin", function() { return _components_index_esm__WEBPACK_IMPORTED_MODULE_2__["componentsPlugin"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBTogglePlugin", function() { return _directives_index_esm__WEBPACK_IMPORTED_MODULE_3__["VBTogglePlugin"]; });
 
@@ -21845,6 +21828,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBTooltip", function() { return _directives_index_esm__WEBPACK_IMPORTED_MODULE_3__["VBTooltip"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "VBPopover", function() { return _directives_index_esm__WEBPACK_IMPORTED_MODULE_3__["VBPopover"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "directivesPlugin", function() { return _directives_index_esm__WEBPACK_IMPORTED_MODULE_3__["directivesPlugin"]; });
 
 /*!
  * BoostrapVue 2.0.0-rc.22
@@ -34771,7 +34756,7 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
-exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\r\n}\r\n\r\nnav a:link {\r\n    text-decoration: none;\r\n}\r\n\r\n.go a:before,\r\n.go a:after {\r\n    display: inline-block;\r\n    opacity: 0;\r\n    transition: transform 0.3s, opacity 0.2s;\r\n}\r\n\r\n.go a:before {\r\n    margin-right: 10px;\r\n    content: '[';\r\n    transform: translate(20px);\r\n}\r\n\r\n.go a:after {\r\n    margin-left: 10px;\r\n    content: ']';\r\n    transform: translate(-20px);\r\n}\r\n\r\n.go a:hover:before,\r\n.go a:hover:after,\r\n.go a:focus:before,\r\n.go a:focus:after {\r\n    opacity: 1;\r\n    transform: translate(0px);\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #2B2B2B;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #dc3545;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n.container-login100{\r\n    width: 100%;  \r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color : #a62b35;\r\n}\r\n#box,\r\n#box_register {\r\n\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display : inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n\r\n    font-size: 75%;\r\n}\r\n#box > a, #box_register > a {\r\n    padding-top : 25px;\r\n    display : block;\r\n    color : white;\r\n}\r\n#login-title, #register-title{\r\n    color : white;\r\n}\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n  }\r\n  \r\n  .label-warning[href],\r\n  .badge-warning[href] {\r\n    background-color: #c67605;\r\n  }\r\n  #lblCartCount {\r\n      font-size: 12px;\r\n      background: #a62b35;\r\n      color: #fff;\r\n      padding: 2px 5px;\r\n      vertical-align: top;\r\n      margin-left: 20px; \r\n      margin-top: -30px\r\n  }\r\n/* LOADING */\r\n#loading-pic{\r\n    width : 300px;\r\n}\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader > img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n/* MOBILE */\r\n", ""]);
+exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);\r\n}\r\n\r\nnav a:link {\r\n    text-decoration: none;\r\n}\r\n\r\n.go a:before,\r\n.go a:after {\r\n    display: inline-block;\r\n    opacity: 0;\r\n    transition: transform 0.3s, opacity 0.2s;\r\n}\r\n\r\n.go a:before {\r\n    margin-right: 10px;\r\n    content: '[';\r\n    transform: translate(20px);\r\n}\r\n\r\n.go a:after {\r\n    margin-left: 10px;\r\n    content: ']';\r\n    transform: translate(-20px);\r\n}\r\n\r\n.go a:hover:before,\r\n.go a:hover:after,\r\n.go a:focus:before,\r\n.go a:focus:after {\r\n    opacity: 1;\r\n    transform: translate(0px);\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n#googleMap {\r\n    width: 555px;\r\n    height: 505px;\r\n}\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #953640;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #2B2B2B;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n\r\n.container-login100 {\r\n    width: 100%;\r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color: #a62b35;\r\n}\r\n\r\n#box,\r\n#box_register {\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display: inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n    font-size: 75%;\r\n}\r\n\r\n#box>a,\r\n#box_register>a {\r\n    padding-top: 25px;\r\n    display: block;\r\n    color: white;\r\n}\r\n\r\n#login-title,\r\n#register-title {\r\n    color: white;\r\n}\r\n\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n}\r\n\r\n.label-warning[href],\r\n.badge-warning[href] {\r\n    background-color: #c67605;\r\n}\r\n\r\n#lblCartCount {\r\n    font-size: 12px;\r\n    background: #a62b35;\r\n    color: #fff;\r\n    padding: 2px 5px;\r\n    vertical-align: top;\r\n    margin-left: 20px;\r\n    margin-top: -30px\r\n}\r\n\r\n\r\n/* LOADING */\r\n\r\n#loading-pic {\r\n    width: 300px;\r\n}\r\n\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader>img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n\r\n\r\n/* MOBILE */", ""]);
 
 // exports
 
@@ -82990,10 +82975,8 @@ var staticRenderFns = [
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-              _c(
-                "a",
-                { staticClass: "p", attrs: { href: "/paiement-etape2" } },
-                [
+              _c("span", [
+                _c("a", { staticClass: "p", attrs: { href: "/" } }, [
                   _c(
                     "button",
                     {
@@ -83002,8 +82985,8 @@ var staticRenderFns = [
                     },
                     [_vm._v("Commander en tant qu'invité")]
                   )
-                ]
-              )
+                ])
+              ])
             ])
           ])
         ])
@@ -83032,70 +83015,81 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row pt-4 pb-4" }, [
-        _c("div", { staticClass: "col pl-0 pr-0" }, [
-          _c("img", {
-            staticClass: "img-contact",
-            attrs: { src: "images/nav/contact.jpg" }
-          })
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
-      ])
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col pl-0 pr-0" }, [
-      _c("div", { staticClass: "container contact-form " }, [
-        _c("form", { attrs: { method: "post" } }, [
-          _c("h3", [_vm._v("Contacter nous")]),
+    return _c("div", [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row pt-4" }, [
+          _c("div", { staticClass: "col pl-0 pr-0" }, [
+            _c("iframe", {
+              staticStyle: { border: "0" },
+              attrs: {
+                src:
+                  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.762195969216!2d6.555731315822994!3d46.53260736953746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c31173a0301e1%3A0x559c04025ad5e74c!2sElie+Gazzar+S.A.!5e0!3m2!1sfr!2sch!4v1560246364104!5m2!1sfr!2sch",
+                width: "555",
+                height: "497",
+                frameborder: "0",
+                allowfullscreen: ""
+              }
+            })
+          ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "txtName",
-                    placeholder: "Nom et prénom",
-                    value: ""
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "txtEmail",
-                    placeholder: "Email",
-                    value: ""
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("textarea", {
-                  staticClass: "form-control",
-                  staticStyle: { width: "100%", height: "150px" },
-                  attrs: { name: "txtMsg", placeholder: "Votre message" }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c("input", {
-                  staticClass: "btnContact rounded",
-                  attrs: { type: "submit", name: "btnSubmit", value: "Envoyer" }
-                })
+          _c("div", { staticClass: "col pl-0 pr-0" }, [
+            _c("div", { staticClass: "container contact-form " }, [
+              _c("form", { attrs: { method: "post" } }, [
+                _c("h3", [_vm._v("Contacter nous")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          name: "txtName",
+                          placeholder: "Nom et prénom",
+                          value: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          name: "txtEmail",
+                          placeholder: "Email",
+                          value: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("textarea", {
+                        staticClass: "form-control",
+                        staticStyle: { width: "100%", height: "150px" },
+                        attrs: { name: "txtMsg", placeholder: "Votre message" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        staticClass: "btnContact rounded",
+                        attrs: {
+                          type: "submit",
+                          name: "btnSubmit",
+                          value: "Envoyer"
+                        }
+                      })
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
@@ -83938,67 +83932,184 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "homepageImg" }, [
-      _c("img", {
-        staticClass: "img-fluid",
-        attrs: { src: "images/nav/home.jpg" }
-      })
-    ]),
-    _vm._v(" "),
-    _vm._m(0)
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "nav-scroller py-3 mb-2" }, [
-      _c("nav", { staticClass: "go nav d-flex justify-content-between" }, [
-        _c(
-          "a",
-          {
-            staticClass: "pt-2 text-muted menu",
-            attrs: { id: "products-link", href: "produits" }
-          },
-          [_vm._v("PRODUITS")]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "pt-2 text-muted menu",
-            attrs: { id: "primeurs-link", href: "primeurs" }
-          },
-          [_vm._v("PRIMEURS")]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "pt-2 text-muted menu",
-            attrs: { id: "news-link", href: "nouveautes" }
-          },
-          [_vm._v("NOUVEAUTÉS")]
-        ),
-        _vm._v(" "),
-        _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "pt-2 text-muted menu",
-            attrs: { id: "promo-link", href: "promos" }
-          },
-          [_vm._v("PROMOTIONS")]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "line" })
+    return _c("div", [
+      _c(
+        "div",
+        {
+          staticClass: "carousel slide",
+          attrs: { id: "carouselExampleIndicators", "data-ride": "carousel" }
+        },
+        [
+          _c("ol", { staticClass: "carousel-indicators" }, [
+            _c("li", {
+              staticClass: "active",
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "0"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "1"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "2"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "3"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "4"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "carousel-inner" }, [
+            _c("div", { staticClass: "carousel-item active" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/nav/home.jpg", alt: "First slide" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/nav/02V2.png", alt: "Second slide" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/nav/03V2.png", alt: "Third slide" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/nav/07V2.png", alt: "Fouth slide" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "d-block w-100",
+                attrs: { src: "/images/nav/04V2.png", alt: "Fifth slide" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "carousel-control-prev",
+              attrs: {
+                href: "#carouselExampleIndicators",
+                role: "button",
+                "data-slide": "prev"
+              }
+            },
+            [
+              _c("span", {
+                staticClass: "carousel-control-prev-icon",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "carousel-control-next",
+              attrs: {
+                href: "#carouselExampleIndicators",
+                role: "button",
+                "data-slide": "next"
+              }
+            },
+            [
+              _c("span", {
+                staticClass: "carousel-control-next-icon",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "nav-scroller py-3 mb-2" }, [
+        _c("nav", { staticClass: "go nav d-flex justify-content-between" }, [
+          _c(
+            "a",
+            {
+              staticClass: "pt-2 text-muted menu",
+              attrs: { id: "products-link", href: "produits" }
+            },
+            [_vm._v("PRODUITS")]
+          ),
+          _vm._v(" "),
+          _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "pt-2 text-muted menu",
+              attrs: { id: "primeurs-link", href: "primeurs" }
+            },
+            [_vm._v("PRIMEURS")]
+          ),
+          _vm._v(" "),
+          _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "pt-2 text-muted menu",
+              attrs: { id: "news-link", href: "nouveautes" }
+            },
+            [_vm._v("NOUVEAUTÉS")]
+          ),
+          _vm._v(" "),
+          _c("p", { staticClass: "p-2 pt-4 text-muted" }, [_vm._v("|")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "pt-2 text-muted menu",
+              attrs: { id: "promo-link", href: "promos" }
+            },
+            [_vm._v("PROMOTIONS")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "line" })
+        ])
       ])
     ])
   }
@@ -84472,7 +84583,7 @@ var staticRenderFns = [
                             type: "email",
                             id: "exampleInputEmail1",
                             "aria-describedby": "emailHelp",
-                            placeholder: "Search"
+                            placeholder: "Recherche..."
                           }
                         })
                       ])
@@ -84720,7 +84831,7 @@ var staticRenderFns = [
               type: "email",
               id: "exampleInputEmail1",
               "aria-describedby": "emailHelp",
-              placeholder: "Search"
+              placeholder: "Recherche..."
             }
           })
         ])
@@ -84791,143 +84902,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("body", [
-      _c(
-        "div",
-        {
-          staticClass: "carousel slide",
-          attrs: { id: "carouselExampleIndicators", "data-ride": "carousel" }
-        },
-        [
-          _c("ol", { staticClass: "carousel-indicators" }, [
-            _c("li", {
-              staticClass: "active",
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "0"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "1"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "2"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "3"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "4"
-              }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: {
-                "data-target": "#carouselExampleIndicators",
-                "data-slide-to": "5"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "carousel-inner" }, [
-            _c("div", { staticClass: "carousel-item active" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/01.png", alt: "First slide" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/02.png", alt: "Second slide" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/03.png", alt: "Third slide" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/07.png", alt: "Fouth slide" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/04.png", alt: "Fifth slide" }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: "/images/nav/06.png", alt: "Sixth slide" }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-prev",
-              attrs: {
-                href: "#carouselExampleIndicators",
-                role: "button",
-                "data-slide": "prev"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-prev-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "carousel-control-next",
-              attrs: {
-                href: "#carouselExampleIndicators",
-                role: "button",
-                "data-slide": "next"
-              }
-            },
-            [
-              _c("span", {
-                staticClass: "carousel-control-next-icon",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
-            ]
-          )
-        ]
-      ),
+      _c("div", { staticClass: "productImg" }, [
+        _c("img", {
+          staticClass: "img-fluid",
+          attrs: { src: "/images/nav/04.png" }
+        })
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "nav-scroller py-3 mb-2" }, [
@@ -86042,7 +86022,7 @@ var render = function() {
       { staticClass: "containe" },
       _vm._l(_vm.vins, function(vin) {
         return _c("div", { key: vin.id, staticClass: "container" }, [
-          _c("div", { staticClass: "roadMap pt-5 pb-5" }, [
+          _c("div", { staticClass: "roadMap pt-2 pb-5" }, [
             _c("span", [
               _vm._m(0, true),
               _vm._v(" "),
@@ -86184,19 +86164,6 @@ var render = function() {
                     _c(
                       "a",
                       {
-                        staticClass: "btn btn-outline-secondary btn-sm",
-                        attrs: {
-                          href: "#",
-                          role: "button",
-                          "aria-disabled": "true"
-                        }
-                      },
-                      [_vm._v("50 cl")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
                         staticClass: "btn btn-outline-secondary btn-sm active ",
                         attrs: {
                           href: "#",
@@ -86213,12 +86180,38 @@ var render = function() {
                   _c("label", [_vm._v("VARIANTES : ")]),
                   _c("span", [_vm._v(" " + _vm._s(vin.millesime))]),
                   _vm._v(" "),
-                  _vm._m(1, true)
+                  _c("div", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-outline-secondary btn-sm",
+                        attrs: {
+                          href: "#",
+                          role: "button",
+                          "aria-disabled": "true"
+                        }
+                      },
+                      [_vm._v("2012")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-outline-secondary btn-sm active",
+                        attrs: {
+                          href: "#",
+                          role: "button",
+                          "aria-disabled": "true"
+                        }
+                      },
+                      [_vm._v(_vm._s(vin.millesime))]
+                    )
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "mt-4 mb-4" }, [
                   _c("label", { staticClass: "mr-4 my-auto" }, [
-                    _vm._v("QUANTITÉS :")
+                    _vm._v("QUANTITÉS : ")
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
@@ -86329,7 +86322,7 @@ var render = function() {
           _c("br"),
           _vm._v(" "),
           _c("div", { staticClass: "row mb-5" }, [
-            _vm._m(2, true),
+            _vm._m(1, true),
             _vm._v(" "),
             _c("div", { staticClass: "col-8" }, [
               _c(
@@ -86471,7 +86464,7 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(3, true)
+                  _vm._m(2, true)
                 ]
               )
             ])
@@ -86492,39 +86485,6 @@ var staticRenderFns = [
       { staticClass: "produit-liens", attrs: { href: "../produits" } },
       [_c("b", [_vm._v("PRODUITS")])]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-secondary btn-sm",
-          attrs: { href: "#", role: "button", "aria-disabled": "true" }
-        },
-        [_vm._v("2012")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-secondary btn-sm active",
-          attrs: { href: "#", role: "button", "aria-disabled": "true" }
-        },
-        [_vm._v("2015")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "btn btn-outline-secondary btn-sm",
-          attrs: { href: "#", role: "button", "aria-disabled": "true" }
-        },
-        [_vm._v("2017")]
-      )
-    ])
   },
   function() {
     var _vm = this
@@ -87020,7 +86980,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mt-5" }, [
-      _c("h4", [_vm._v("Sélection de la semaine")])
+      _c("h4", [_vm._v("Sélection de la semaine")]),
+      _vm._v(" "),
+      _c("hr")
     ])
   }
 ]
