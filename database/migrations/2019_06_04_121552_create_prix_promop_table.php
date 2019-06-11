@@ -18,7 +18,7 @@ class CreatePrixPromopTable extends Migration
             $table->foreign('prix_id')->references('id')->on('prixes');
             $table->integer('promop_id')->unsigned();
             $table->foreign('promop_id')->references('id')->on('promops');
-
+            $table->float('prixPromo')->nullable();
             $table->timestamps();
         });
     }
