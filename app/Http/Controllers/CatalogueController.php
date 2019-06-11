@@ -61,17 +61,15 @@ class CatalogueController extends Controller
         $vins = $vins_all->where('id', $id);
         
 
-        $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
-        $prixttc_round = round($prixttc * 20, 0) /20;
-        $prixttc_format = number_format($prixttc_round, 2, '.', '');
+        
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
         $vinid = $id;
         for ($i=0; $i < sizeof($vins_all); $i++) { 
             $prixht = $vins_all[$i]['prix']['prixht'];
-            $prixttc = ($prixht)*1.07;
-            $prixttc_round = round($prixttc * 20, 0) /20;
-            $prixttc_format = number_format($prixttc_round, 2, '.', '');
+            $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
+        $prixttc_round = round($prixttc * 20, 0) /20;
+        $prixttc_format = number_format($prixttc_round, 2, '.', '');
             $vins_all[$i]['prix']['prixht'] = $prixttc_format;
         }
         return view('productPage', [
