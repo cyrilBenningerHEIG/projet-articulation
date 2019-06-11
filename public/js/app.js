@@ -82973,54 +82973,17 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _c("form", { staticClass: "mr-5 ml-5" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  type: "email",
-                  id: "exampleInputEmail1",
-                  "aria-describedby": "emailHelp",
-                  placeholder: "example@gazzar.ch"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: {
-                  type: "password",
-                  id: "exampleInputPassword1",
-                  placeholder: "Password"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group form-check" }, [
-              _c("input", {
-                staticClass: "form-check-input",
-                attrs: { type: "checkbox", id: "exampleCheck1" }
-              }),
-              _vm._v(" "),
+          _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+            _c("a", { staticClass: "p", attrs: { href: "/login" } }, [
               _c(
-                "label",
+                "button",
                 {
-                  staticClass: "form-check-label",
-                  attrs: { for: "exampleCheck1" }
+                  staticClass:
+                    "btn btn-outline-danger btn-outline-form btn-block "
                 },
-                [_vm._v("Check me out")]
+                [_vm._v("Se connecter")]
               )
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-danger btn-block ",
-                attrs: { type: "submit" }
-              },
-              [_vm._v("Submit")]
-            )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -83031,31 +82994,30 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _c("form", { staticClass: "mr-5 ml-5" }, [
-            _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+          _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+            _c("a", { staticClass: "p", attrs: { href: "/register" } }, [
               _c(
                 "button",
                 {
                   staticClass:
-                    "btn btn-outline-danger btn-outline-form  btn-block ",
-                  attrs: { type: "submit" }
+                    "btn btn-outline-danger btn-outline-form  btn-block "
                 },
                 [_vm._v("Créer un compte")]
               )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-              _c("span", [
-                _c("a", { staticClass: "p", attrs: { href: "/" } }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-outline-danger btn-outline-form btn-block "
-                    },
-                    [_vm._v("Commander en tant qu'invité")]
-                  )
-                ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+            _c("span", [
+              _c("a", { staticClass: "p", attrs: { href: "/" } }, [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "btn btn-outline-danger btn-outline-form btn-block "
+                  },
+                  [_vm._v("Commander en tant qu'invité")]
+                )
               ])
             ])
           ])
@@ -85506,37 +85468,13 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "action-btn" }, [
-              _c("div", { staticClass: "row mt-5 justify-content-center" }, [
-                _c("div", { staticClass: "filters mx-auto" }, [
-                  _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
-                    _vm._v("Continuer mes achats")
-                  ]),
-                  _vm._v(" "),
-                  _vm.userIsLoggedIn == false
-                    ? _c("a", { attrs: { href: "paiement-etape1" } }, [
-                        _c(
-                          "button",
-                          { staticClass: "btn btn-danger btn-panier" },
-                          [_vm._v("Passer commande")]
-                        )
-                      ])
-                    : _c("a", { attrs: { href: "paiement-etape2" } }, [
-                        _c(
-                          "button",
-                          { staticClass: "btn btn-danger btn-panier" },
-                          [_vm._v("Passer commande")]
-                        )
-                      ])
-                ])
-              ])
-            ])
+            _vm._m(3)
           ])
         ])
       : _c("div", { staticClass: "container" }, [
-          _vm._m(3),
+          _vm._m(4),
           _vm._v(" "),
-          _vm._m(4)
+          _vm._m(5)
         ])
   ])
 }
@@ -85594,6 +85532,26 @@ var staticRenderFns = [
           placeholder: "Code promotionel"
         }
       })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "action-btn" }, [
+      _c("div", { staticClass: "row mt-5 justify-content-center" }, [
+        _c("div", { staticClass: "filters mx-auto" }, [
+          _c("button", { staticClass: "btn btn-white btn-panier-2" }, [
+            _vm._v("Continuer mes achats")
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "paiement-etape1" } }, [
+            _c("button", { staticClass: "btn btn-danger btn-panier" }, [
+              _vm._v("Passer commande")
+            ])
+          ])
+        ])
+      ])
     ])
   },
   function() {
