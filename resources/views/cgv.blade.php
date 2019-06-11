@@ -15,14 +15,14 @@
     <body>
         <div id="app">
             <div class="container">
-                @if(Auth::check())
-                <h2>Connecté</h2>
-                    <nav-bar-login></nav-bar-login>
-                    @else
-                    <h2>Déconnecté</h2>
-                    <nav-bar-logout></nav-bar-logout>
-                    
-                    @endif
+            @if(Auth::guard('user')->check())
+                <h6>Connecté</h6>
+                <nav-bar-login :user='{{$user}}'></nav-bar-login>
+                @else
+                <h6>Déconnecté</h6>
+                <nav-bar-logout></nav-bar-logout>
+                
+                @endif
                 <cgv-texte></cgv-texte>
                 <footer-bar></footer-bar>
 

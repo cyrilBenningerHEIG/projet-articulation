@@ -31,7 +31,7 @@
                       <a class="nav-link icon" id="icon_account" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="/images/icons/compte.svg"/></a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="/login">Connexion</a>
-                        <a class="dropdown-item" href="#">Inscription</a>
+                        <a class="dropdown-item" href="/register">Inscription</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">

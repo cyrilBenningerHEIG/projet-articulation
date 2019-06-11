@@ -187,6 +187,56 @@ class Cepag_VinTableSeeder extends Seeder
                 'cepag_id' => '12',
                 'pourcentage' => 100,
             ],
+            [
+                'vin_id' => '15',
+                'cepag_id' => '2',
+                'pourcentage' => 65,
+            ],
+            [
+                'vin_id' => '15',
+                'cepag_id' => '1',
+                'pourcentage' => 30,
+            ],
+            [
+                'vin_id' => '15',
+                'cepag_id' => '3',
+                'pourcentage' => 4,
+            ],
+            [
+                'vin_id' => '15',
+                'cepag_id' => '4',
+                'pourcentage' => 1,
+            ],
+            [
+                'vin_id' => '16',
+                'cepag_id' => '1',
+                'pourcentage' => 85,
+            ],
+            [
+                'vin_id' => '16',
+                'cepag_id' => '3',
+                'pourcentage' => 15,
+            ],
+            [
+                'vin_id' => '17',
+                'cepag_id' => '2',
+                'pourcentage' => 65,
+            ],
+            [
+                'vin_id' => '17',
+                'cepag_id' => '1',
+                'pourcentage' => 30,
+            ],
+            [
+                'vin_id' => '17',
+                'cepag_id' => '3',
+                'pourcentage' => 4,
+            ],
+            [
+                'vin_id' => '17',
+                'cepag_id' => '4',
+                'pourcentage' => 1,
+            ],
         ]);
     }
 }
