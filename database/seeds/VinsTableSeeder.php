@@ -208,7 +208,7 @@ class VinsTableSeeder extends Seeder
             ],
             [
                 'produ_id' => '8',
-                'appel_id' => '3',
+                'appel_id' => '6',
                 'frmt_id' => '1',
                 'regn_id' => '5',
                 'prix_id' => '8',

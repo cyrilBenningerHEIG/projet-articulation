@@ -170,10 +170,6 @@ export default {
         }
      },
 
-  updated:function() {
-    console.log("change");
-  },
-
   methods:{
 
     filter:function(){
@@ -188,35 +184,47 @@ export default {
       });
 
       //Sélection des vins correspondants
-      filters.forEach(function(filter) {
+      
         $('.card-custom').each(function(){
-
           var nbAttributs = 0;
+          var type = this.dataset.type;
+          var pays = this.dataset.pays;
+          var region = this.dataset.region;
+          var appel = this.dataset.appel;
+          var millesime = this.dataset.millesime;
+          var produ = this.dataset.produ;
+          var format = this.dataset.format;
 
-          if(filter == this.dataset.type){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.pays){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.region){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.appel){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.millesime){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.produ){
-            $(this).addClass("visible");
-          }
-          if(filter == this.dataset.format){
-            $(this).addClass("visible");
-          }
-        });
+          filters.forEach(function(filter) {
 
-        $('.visible').fadeIn();
+            if(filter == type){
+              nbAttributs++;
+            }
+            if(filter == pays){
+              nbAttributs++;
+            }
+            if(filter == region){
+              nbAttributs++;
+            }
+            if(filter == appel){
+              nbAttributs++;
+            }
+            if(filter == millesime){
+              nbAttributs++;
+            }
+            if(filter == produ){
+              nbAttributs++;
+            }
+            if(filter == format){
+              nbAttributs++;
+            }
+            });
+
+          console.log(nbAttributs);
+          
+          if(nbAttributs >= filters.length){
+            $(this).addClass("visible").fadeIn();
+          }
       });
 
       if(filters.length == 0){
@@ -224,78 +232,8 @@ export default {
       };
 
       var nbResults = $('.card-custom.visible').length;
-      console.log(nbResults);
       $('.number_results').text(nbResults + ' résultats');
   },
-
-    filterPays:function(){
-      //Pays
-      var filter = $(event.target).text();
-      $('#type-btn').text(filter);
-      $('.card-custom').each(function() {
-        $(this).removeClass("visible").hide();
-        var type = this.dataset.type;
-        if (type == filter){
-          $(this).addClass("visible").fadeIn();
-        };
-      });
-    },
-
-    filterRegn:function(){
-      //Région
-      var filter = $(event.target).text();
-      $('#region-btn').text(filter);
-      $('.card-custom.visible').each(function() {
-        $(this).removeClass("visible").hide();
-        var region = this.dataset.region;
-        if (region == filter){
-          $(this).addClass("visible").show();
-        };
-      });
-    },
-
-    filterAppel:function(){
-      //Appellation
-      var appel = $(event.target).text();
-      $('#appel-btn').text(appel);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-appel='" + appel + "']").show();
-      });
-    },
-
-    filterMille:function(){
-      //Millesime
-      var mille = $(event.target).text();
-      $('#millesime-btn').text(mille);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-millesime='" + mille + "']").show();
-      });
-    },
-
-    filterProdu:function(){
-      //Producteur
-      var produ = $(event.target).text();
-      $('#produ-btn').text(produ);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-produ='" + produ + "']").show();
-      });
-    },
-
-    filterFormat:function(){
-      //Format
-      var format = $(event.target).text();
-      $('#format-btn').text(format);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-format='" + format + "']").show();
-
-        //your_data_attribute_value.split(" ");
-      });
-    },
-
-  },
+}
 }
 </script>

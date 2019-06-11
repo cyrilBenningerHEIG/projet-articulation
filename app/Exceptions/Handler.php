@@ -63,6 +63,6 @@ class Handler extends ExceptionHandler
             $login = '/admin';
             break;
         }
-        return redirect($login));
+        return redirect($login);
     }
 }

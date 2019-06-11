@@ -2463,9 +2463,6 @@ __webpack_require__.r(__webpack_exports__);
       frmt: ''
     };
   },
-  updated: function updated() {
-    console.log("change");
-  },
   methods: {
     filter: function filter() {
       //Ajout de tous les filtres dans un tableau
@@ -2478,39 +2475,49 @@ __webpack_require__.r(__webpack_exports__);
         console.log(filters);
       }); //Sélection des vins correspondants
 
-      filters.forEach(function (filter) {
-        $('.card-custom').each(function () {
-          var nbAttributs = 0;
-
-          if (filter == this.dataset.type) {
-            $(this).addClass("visible");
+      $('.card-custom').each(function () {
+        var nbAttributs = 0;
+        var type = this.dataset.type;
+        var pays = this.dataset.pays;
+        var region = this.dataset.region;
+        var appel = this.dataset.appel;
+        var millesime = this.dataset.millesime;
+        var produ = this.dataset.produ;
+        var format = this.dataset.format;
+        filters.forEach(function (filter) {
+          if (filter == type) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.pays) {
-            $(this).addClass("visible");
+          if (filter == pays) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.region) {
-            $(this).addClass("visible");
+          if (filter == region) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.appel) {
-            $(this).addClass("visible");
+          if (filter == appel) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.millesime) {
-            $(this).addClass("visible");
+          if (filter == millesime) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.produ) {
-            $(this).addClass("visible");
+          if (filter == produ) {
+            nbAttributs++;
           }
 
-          if (filter == this.dataset.format) {
-            $(this).addClass("visible");
+          if (filter == format) {
+            nbAttributs++;
           }
         });
-        $('.visible').fadeIn();
+        console.log(nbAttributs);
+
+        if (nbAttributs >= filters.length) {
+          $(this).addClass("visible").fadeIn();
+        }
       });
 
       if (filters.length == 0) {
@@ -2519,74 +2526,7 @@ __webpack_require__.r(__webpack_exports__);
 
       ;
       var nbResults = $('.card-custom.visible').length;
-      console.log(nbResults);
       $('.number_results').text(nbResults + ' résultats');
-    },
-    filterPays: function filterPays() {
-      //Pays
-      var filter = $(event.target).text();
-      $('#type-btn').text(filter);
-      $('.card-custom').each(function () {
-        $(this).removeClass("visible").hide();
-        var type = this.dataset.type;
-
-        if (type == filter) {
-          $(this).addClass("visible").fadeIn();
-        }
-
-        ;
-      });
-    },
-    filterRegn: function filterRegn() {
-      //Région
-      var filter = $(event.target).text();
-      $('#region-btn').text(filter);
-      $('.card-custom.visible').each(function () {
-        $(this).removeClass("visible").hide();
-        var region = this.dataset.region;
-
-        if (region == filter) {
-          $(this).addClass("visible").show();
-        }
-
-        ;
-      });
-    },
-    filterAppel: function filterAppel() {
-      //Appellation
-      var appel = $(event.target).text();
-      $('#appel-btn').text(appel);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-appel='" + appel + "']").show();
-      });
-    },
-    filterMille: function filterMille() {
-      //Millesime
-      var mille = $(event.target).text();
-      $('#millesime-btn').text(mille);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-millesime='" + mille + "']").show();
-      });
-    },
-    filterProdu: function filterProdu() {
-      //Producteur
-      var produ = $(event.target).text();
-      $('#produ-btn').text(produ);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-produ='" + produ + "']").show();
-      });
-    },
-    filterFormat: function filterFormat() {
-      //Format
-      var format = $(event.target).text();
-      $('#format-btn').text(format);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-format='" + format + "']").show(); //your_data_attribute_value.split(" ");
-      });
     }
   }
 });
@@ -103807,14 +103747,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/ProductFilter.vue ***!
   \***************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductFilter_vue_vue_type_template_id_6c2bf56c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductFilter.vue?vue&type=template&id=6c2bf56c& */ "./resources/js/components/ProductFilter.vue?vue&type=template&id=6c2bf56c&");
 /* harmony import */ var _ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductFilter.vue?vue&type=script&lang=js& */ "./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ProductFilter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -103844,7 +103785,7 @@ component.options.__file = "resources/js/components/ProductFilter.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/ProductFilter.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
