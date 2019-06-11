@@ -3,7 +3,7 @@
   <div class="containe">
     <div class="container" v-for="vin in vins" :key="vin.id">
       
-        <div class="roadMap pt-5 pb-5">
+        <div class="roadMap pt-2 pb-5">
           <span>
             <a href="../produits" class="produit-liens"><b>PRODUITS</b></a>
             <img class="arrow" src="/images/icons/arrow.svg">
@@ -67,12 +67,6 @@
                   >37.5 cl</a>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >50 cl</a>
-                  <a
-                    href="#"
                     class="btn btn-outline-secondary btn-sm active "
                     role="button"
                     aria-disabled="true"
@@ -94,18 +88,12 @@
                     class="btn btn-outline-secondary btn-sm active"
                     role="button"
                     aria-disabled="true"
-                  >2015</a>
-                  <a
-                    href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >2017</a>
+                  >{{vin.millesime}}</a>
                 </div>
               </div>
 
               <div class="mt-4 mb-4">
-                <label class="mr-4 my-auto">QUANTITÉS :</label>
+                <label class="mr-4 my-auto">QUANTITÉS : </label>
                 <div class="container">
                   <div class="row">
                     <div class="col-3 pl-0">
@@ -271,8 +259,6 @@
 </template>
 <script>
 
-
-
  export default {
   
   
@@ -286,7 +272,7 @@
       
     };
   },
-methods: {
+  methods: {
     addCart() {
       var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
       localStorage.setItem("entry", JSON.stringify(entry))

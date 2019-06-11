@@ -358,13 +358,18 @@ a.produit-liens {
 
 /* CONTACT */
 
+#googleMap {
+    width: 555px;
+    height: 505px;
+}
+
 .img-contact {
     max-width: 100%;
     max-height: auto;
 }
 
 .contact-form {
-    background: #2B2B2B;
+    background: #953640;
     height: 505px;
 }
 
@@ -403,7 +408,7 @@ a.produit-liens {
     border: none;
     border-radius: 25px;
     padding: 1.5%;
-    background: #dc3545;
+    background: #2B2B2B;
     font-weight: 600;
     color: #fff;
     cursor: pointer;

@@ -23,7 +23,7 @@
                       <div class="dropdown-menu">
                         <div class="form-group m-2">
                           <label for="exampleInputEmail1">Recherche</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search">
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Recherche...">
                         </div>
                       </div>
                     </li>
