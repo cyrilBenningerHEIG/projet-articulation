@@ -136,13 +136,12 @@
                   aria-expanded="true"
                 >Tri</button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a class="dropdown-item">Nom A-Z</a>
-
-                  <a class="dropdown-item">Nom Z-A</a>
-                  <a class="dropdown-item">Prix croissant</a>
-                  <a class="dropdown-item">Prix décroissant</a>
-                  <a class="dropdown-item">Age croissant</a>
-                  <a class="dropdown-item">Age décroissant</a>
+                  <a class="dropdown-item" v-on:click="sortByNameAZ">Nom A-Z</a>
+                  <a class="dropdown-item" v-on:click="sortByNameZA">Nom Z-A</a>
+                  <a class="dropdown-item" v-on:click="sortByPriceAsc">Prix croissant</a>
+                  <a class="dropdown-item" v-on:click="sortByPriceDesc">Prix décroissant</a>
+                  <a class="dropdown-item" v-on:click="sortByAgeAsc">Millésime croissant</a>
+                  <a class="dropdown-item" v-on:click="sortByAgeDesc">Millésime décroissant</a>
                 </div>
               </div>
             </div>
@@ -234,6 +233,78 @@ export default {
       var nbResults = $('.card-custom.visible').length;
       $('.number_results').text(nbResults + ' résultats');
   },
+
+  sortByNameAZ:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('nom')) < ($(a).data('nom')) ? 1 : -1;   
+  } 
+},
+
+  sortByNameZA:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('nom')) > ($(a).data('nom')) ? 1 : -1;   
+  } 
+},
+
+sortByPriceAsc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('prix')) < ($(a).data('prix')) ? 1 : -1;   
+  } 
+},
+
+sortByPriceDesc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('prix')) > ($(a).data('prix')) ? 1 : -1;   
+  } 
+},
+
+sortByAgeAsc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('millesime')) < ($(a).data('millesime')) ? 1 : -1;   
+  } 
+},
+
+sortByAgeDesc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('millesime')) > ($(a).data('millesime')) ? 1 : -1;   
+  } 
+},
 }
 }
 </script>
