@@ -20,9 +20,6 @@ class PromosController extends Controller
             
             // ----------Prices---------//
 
-            $promotab = array();
-
-
             for ($i=0; $i < sizeof($vins); $i++) { 
                 $prixht = $vins[$i]['prix']['prixht'];
                 $pourcentagePromo = $vins[$i]['prix']['promops'][0]['pourcentage'];
@@ -31,10 +28,10 @@ class PromosController extends Controller
                 $prixttc_format = number_format($prixttc_round, 2, '.', '');
                 $vins[$i]['prix']['prixht'] = $prixttc_format;
                 $prixpromo = $prixttc_format - ($prixttc_format * ($pourcentagePromo / 100));
-                array_push($promotab, $prixpromo);
+                $prixpromo_round = round($prixpromo * 20, 0) /20;
+                $prixpromo_format = number_format($prixpromo_round, 2, '.', '');
+                $vins[$i]['prix']['prixPromo'] = $prixpromo_format;
             }
-
-            // $promotab2 = (object) $promotab;
 
         //---------------------------------Filters---------------------------------//
         $types = DB::table('types')->get();

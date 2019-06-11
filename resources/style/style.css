@@ -105,7 +105,82 @@ label {
     margin: 20px;
 }
 
+/* NAV BAH ANIM */  
+  nav > a,
+  nav > a:after,
+  nav > a:before {
+    transition: all .5s;
+  }
+  nav > a:hover {
+    color: #555;
+  }
+  
+  
+  /* stroke */
+  a{
+    text-decoration: none;
+  }
+  nav > a  {
+    position: relative;
+  }
+  nav > a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background : white;
+    height: 1px;
+  }
+  
+  nav > a  {
+    transition: all 1s;
+  }
+  nav > a.selected  {
+    transition: all 0s;
+  }
+  
+  nav > a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav > a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav > a:not(.selected):hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+  .selected{
+      font-weight: bold;
+    }
 
+  /* Keyframes */
+  @-webkit-keyframes fill {
+    0% {
+      width: 100%;
+      height: 5px;
+
+    }
+    50% {
+      width: 100%;
+      height: 7px;
+    }
+    100% {
+      width: 100%;
+      height: 7px;
+      background: #a62b35;
+    }
+  }
 /*Nav bar*/
 
 nav a {
@@ -113,53 +188,12 @@ nav a {
     display: inline-block;
     margin: 15px 25px;
     outline: none;
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #000;
     font-size: 1.35em;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    /* text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */
 }
-
-nav a:link {
-    text-decoration: none;
-}
-
-.go a:before,
-.go a:after {
-    display: inline-block;
-    opacity: 0;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
-    transition: transform 0.3s, opacity 0.2s;
-}
-
-.go a:before {
-    margin-right: 10px;
-    content: '[';
-    -webkit-transform: translate(20px);
-    -moz-transform: translate(20px);
-    transform: translate(20px);
-}
-
-.go a:after {
-    margin-left: 10px;
-    content: ']';
-    -webkit-transform: translate(-20px);
-    -moz-transform: translate(-20px);
-    transform: translate(-20px);
-}
-
-.go a:hover:before,
-.go a:hover:after,
-.go a:focus:before,
-.go a:focus:after {
-    opacity: 1;
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    transform: translate(0px);
-}
-
 
 /* Histoire */
 
@@ -798,3 +832,4 @@ a.produit-liens {
     margin: 10px;
 }
 /* MOBILE */
+

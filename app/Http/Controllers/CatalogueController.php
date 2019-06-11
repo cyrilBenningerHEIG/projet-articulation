@@ -16,7 +16,6 @@ class CatalogueController extends Controller
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix.promops', 'condi', 'cepags', 'types', 'regn.pays'])
             ->get();
             $nbvins = count($vins);
-            $filters = [];
             
             // ----------Prices---------//
 
@@ -63,7 +62,6 @@ class CatalogueController extends Controller
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
         $prixeurottc = $prixeuro_round * 1.07;
         $prixeuro_format = number_format($prixeurottc, 2, '.', '');
-        $prixpromo = 
         $vinid = $id;
 
         for ($i=0; $i < sizeof($vins_all); $i++) { 

@@ -23,13 +23,13 @@
 </template>
 <script>
 export default {
-  props: ['nbvins', 'nbregions', 'nbprodu'],
+  props: ['nbregions', 'nbvins', 'nbprodu'],
   
 
     data(){
         return{
-          nbvins:'',
           nbregions:'',
+          nbvins:'',
           nbprodu:'',
         }
      },
