@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Vin;
 use App\regn;
 use App\produ;
-//use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -22,13 +22,14 @@ class IndexController extends Controller
         $nbvins = Vin::count();
         $nbregions = Regn::count();
         $nbprodu = Produ::count();
-        //$user = Auth::guard('user')->user();
+        $user = Auth::guard('user')->user();
 
         return view('index', [
             'vins' => $vins,
             'nbvins' => $nbvins,
             'nbregions' => $nbregions,
             'nbprodu' => $nbprodu,
+            'user' => $user,
         ]);
     }
 }
