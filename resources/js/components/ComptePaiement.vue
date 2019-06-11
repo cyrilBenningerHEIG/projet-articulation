@@ -23,14 +23,12 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2"><b>Je suis nouveau</b></h4>
         <hr>
-        <form  class="mr-5 ml-5">
           <div class="form-group mt-5 mb-5">
             <button type="submit" class="btn btn-outline-danger btn-outline-form  btn-block ">Créer un compte</button>
           </div>
           <div class="form-group mt-5 mb-5">
-            <span><a href="/" class="p"><button class="btn btn-outline-danger btn-outline-form btn-block ">Commander en tant qu'invité</button></a></span>
+            <span><a href="paiement-etape2" class="p"><button class="btn btn-outline-danger btn-outline-form btn-block ">Commander en tant qu'invité</button></a></span>
           </div>
-        </form>
       </div>
     </div>
   </div>

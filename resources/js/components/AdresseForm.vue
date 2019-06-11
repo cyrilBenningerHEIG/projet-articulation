@@ -27,16 +27,11 @@
                             <input type="text" name="pays" class="form-control" v-model="pays" placeholder="Pays" value="" />
                         </div>
                         </div>
-                       
-
-                        
-                        
+                    
 
                         <div class="form-group">
                             <input type="submit" name="btnSubmit" class="btnContact rounded" value="Envoyer" />
                         </div>
-                        
-                   
                 
             </form>
 </div>

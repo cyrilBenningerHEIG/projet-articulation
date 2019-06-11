@@ -95,7 +95,7 @@
       <div class="filters mx-auto">
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
         <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
-        <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+        <a v-else href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
