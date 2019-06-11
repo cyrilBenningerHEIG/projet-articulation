@@ -32,7 +32,7 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2"><b>Adresses</b></h4>
         <hr>               
-        <form>
+        <form @submit.prevent="submitAdress">
                         <div class="form-group">
                                         <label for="exampleInputNom1">Adresse de livraison</label>
                             <input type="text" name="destinataire" class="form-control" v-model="destinataire" placeholder="Destinataire" value="" />
@@ -59,7 +59,7 @@
                         </div>
           <button type="submit" class="btn btn-danger btn-block ">Ajouter une adresse</button>
             </form>
-             <form style="padding-top : 25px;">
+             <!-- <form @submit.prevent="submitAdress" style="padding-top : 25px;">
                         <div class="form-group">
                                         <label for="exampleInputNom1">Adresse de facturation</label>
                             <input type="text" name="destinataire" class="form-control" v-model="destinataire" placeholder="Destinataire" value="" />
@@ -84,9 +84,48 @@
                             <input type="text" name="pays" class="form-control" v-model="pays" placeholder="Pays" value="" />
                         </div>
                         </div>
-          <button type="submit" class="btn btn-danger btn-block ">Ajoute une adresse</button>
-            </form>
+          <button type="submit"  class="btn btn-danger btn-block ">Ajoute une adresse</button>
+            </form> -->
       </div>
     </div>
   </div>
 </template>
+
+<script>
+
+export default{
+
+    data(){
+        return{
+            destinataire: '',
+            rue: '',
+            numero: '',
+            npa: '',
+            localite: '',
+            pays: '',
+            
+
+        }
+    },
+    methods: {
+
+        submitAdress(){
+            axios.post('adresses',{
+                destinataire: this.destinataire,
+                 rue: this.rue,
+            numero: this.numero,
+            npa: this.npa,
+            localite: this.localite,
+            pays: this.pays,
+            
+          
+            })
+              console.log(this.destinataire)
+            $("input").val('')
+        }
+
+    }
+        
+}
+
+</script>
