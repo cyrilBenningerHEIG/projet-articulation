@@ -111,13 +111,13 @@
                     <div class="col-3 pl-0">
                         <div class="input-group" id="btn-quantity">
                           <span class="input-group-btn">
-                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field>
+                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" >
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
                           </span>
-                          <input type="text" id="quantity" name="quantity" class="form-control input-number form-control-sm quantity-bar" value="1" min="1" max="20">
+                          <input type="text"  class="form-control input-number form-control-sm quantity-bar"  :value="quantite" min="1" max="20">
                           <span class="input-group-btn">
-                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" data-type="plus" data-field>
+                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" >
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </span>
@@ -282,27 +282,29 @@
     return {
       vin: '',
       vinCarts: [],
-      quantity:1,
+      quantite: 1,
+      unchecked:false,
       
     };
   },
 methods: {
     addCart() {
-      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
+      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
     increment () {
-      this.quantity++
+      this.quantite++
     },
     decrement () {
-      if(this.quantity === 1) {
+      if(this.quantite === 1) {
         alert('Negative quantity not allowed')
       } else {
-        this.quantity--
+        this.quantite--
       }
-    }
+    },
+    
     
 
   },
@@ -312,12 +314,7 @@ methods: {
     if( this.vinCarts == null)  this.vinCarts = [];
   },
   
-  data() {
-      return {
-        unchecked: this.prixeuro
-      }
-  
-  }
+ 
 
 }
   

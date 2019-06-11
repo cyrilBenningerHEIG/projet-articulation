@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-    <div v-if=totalCart>
+    <div v-if=vinCarts.length > 
     <h2>Panier</h2>
 
     <div class="table-responsive-sm">
@@ -60,17 +60,12 @@
             <td>
               <form>
                 <div class="form-group">
-                {{vinCart.quantity}}
-                   <!-- <input
-                    type="number"
-                    class="form-control"
-                    id="formGroupExampleInput"
-                    placeholder="Quantité"
-                  > -->
+               {{vinCart.quantity}} cartons de {{vinCart.vin.condi.nombre}} bouteilles
+                  
                 </div>
               </form>
             </td>
-            <td>{{vinCart.vin.prix.prixht*vinCart.quantity}} CHF</td>
+            <td>{{Math.round((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*10)) / 10 }} CHF</td>
           </tr>
           <tr>
           <td ></td>
@@ -87,8 +82,11 @@
            <tr>
           <td></td>
           <td></td>
-          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
+          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)
+          <br>
+          <input style="margin-top : 25px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promotionel"></td>
+          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4>
+          </td>
           </tr>
         </tbody>
       </table>
@@ -146,7 +144,7 @@ export default {
     totalCart: function(){
       let sum = 0;
       this.vinCarts.forEach(function(vinCart) {
-         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity));
+         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity*vinCart.vin.condi.nombre));
       });
 
      return sum;
