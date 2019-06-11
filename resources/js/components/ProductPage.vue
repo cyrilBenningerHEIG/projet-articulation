@@ -111,13 +111,13 @@
                     <div class="col-3 pl-0">
                         <div class="input-group" id="btn-quantity">
                           <span class="input-group-btn">
-                            <button type="button" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field>
+                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field>
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
                           </span>
                           <input type="text" id="quantity" name="quantity" class="form-control input-number form-control-sm quantity-bar" value="1" min="1" max="20">
                           <span class="input-group-btn">
-                            <button type="button" class="quantity-right-plus btn btn-outline-secondary btn-sm" data-type="plus" data-field>
+                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" data-type="plus" data-field>
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </span>
@@ -128,9 +128,6 @@
                     </div>
                   </div>
                 </div>
-
-                
-                
               </div>
               <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
@@ -274,6 +271,8 @@
 </template>
 <script>
 
+
+
  export default {
   
   
@@ -283,17 +282,30 @@
     return {
       vin: '',
       vinCarts: [],
+      quantity:1,
       
     };
   },
-  methods: {
-      addCart() {
-        var entry = this.vins[this.vinid-1]
-        localStorage.setItem("entry", JSON.stringify(entry))
-        this.vinCarts.push(entry)
-        localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
-      },
+methods: {
+    addCart() {
+      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
+      localStorage.setItem("entry", JSON.stringify(entry))
+      this.vinCarts.push(entry)
+      localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
+    increment () {
+      this.quantity++
+    },
+    decrement () {
+      if(this.quantity === 1) {
+        alert('Negative quantity not allowed')
+      } else {
+        this.quantity--
+      }
+    }
+    
+
+  },
   mounted() {
     console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
