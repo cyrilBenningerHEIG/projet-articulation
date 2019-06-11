@@ -1,26 +1,48 @@
 <template>
 <body>
-  <div class="container">
-    <header class="blog-header py-3">
-      <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="col-4 pt-1"></div>
-        <div class="col-4">
-          <a class="blog-header-logo text-dark" href="/">
-            <img class="logo" id="img-logo" src="/images/logo/logo.svg">
-          </a>
-        </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                    <a class="icon" id="icon_search" href="#"><img src="/images/icons/recherche.svg" /></a>
-                    <a class="icon" id="icon_account" href="../compte"><img src="/images/icons/compte.svg" /></a>
-                    <a class="icon" id="icon_cart" href="../panier"><img src="/images/icons/panier.svg" /></a>
-                </div>
-      </div>
-    </header>
-  </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
 
-   <div class="productImg">
-         <img class="img-fluid" src="/images/nav/product.png" />
+    <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/nav/01.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/nav/02.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/nav/03.png" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/nav/07.png" alt="Fouth slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/nav/04.png" alt="Fifth slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/nav/06.png" alt="Sixth slide">
+          </div>
+
+    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
   </div>
+   <!-- <div class="productImg">
+         <img class="img-fluid" src="/images/nav/product.png" />
+  </div> -->
 
 
   <div class="container">
