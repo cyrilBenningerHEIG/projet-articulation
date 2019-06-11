@@ -1905,6 +1905,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['vins', 'prixttc', 'prixeuro'],
   data: function data() {
     return {
+      visibleClass: 'visible',
       vin: ''
     };
   }
@@ -2101,11 +2102,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['nbvins', 'nbregions', 'nbprodu'],
+  props: ['nbregions', 'nbvins', 'nbprodu'],
   data: function data() {
     return {
-      nbvins: '',
       nbregions: '',
+      nbvins: '',
       nbprodu: ''
     };
   }
@@ -2508,8 +2509,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins', 'filters'],
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
   data: function data() {
     return {
       type: '',
@@ -2517,80 +2529,139 @@ __webpack_require__.r(__webpack_exports__);
       regn: '',
       appel: '',
       produ: '',
-      frmt: '',
-      filters: ''
+      frmt: ''
     };
   },
   methods: {
-    // filterType:function(filters){
-    //Type
-    //       var type = $(event.target).text();
-    //       filters[0].push(type);
-    //       console.log(filters);
-    //       var filters_array = filters
-    //       $('#pays-btn').text(type);
-    //       $('.card-custom').each(function(filters_array) {
-    //         $(this).hide();
-    //         filters_array.forEach(function(value) {
-    //        $("*[data-type='" + this.value[i] + "']").show();
-    // });
-    // });
-    // },
-    filterPays: function filterPays() {
-      //Pays
-      var pays = $(event.target).text();
-      console.log(pays);
-      $('#pays-btn').text(pays);
+    filter: function filter() {
+      //Ajout de tous les filtres dans un tableau
+      $('.card-custom').removeClass("visible").hide();
+      var filters = [];
+      $('#filters :input:checked').each(function () {
+        var category = $(this).parent().text();
+        console.log(category);
+        filters.push(category);
+        console.log(filters);
+      }); //Sélection des vins correspondants
+
       $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-pays='" + pays + "']").show();
+        var nbAttributs = 0;
+        var type = this.dataset.type;
+        var pays = this.dataset.pays;
+        var region = this.dataset.region;
+        var appel = this.dataset.appel;
+        var millesime = this.dataset.millesime;
+        var produ = this.dataset.produ;
+        var format = this.dataset.format;
+        filters.forEach(function (filter) {
+          if (filter == type) {
+            nbAttributs++;
+          }
+
+          if (filter == pays) {
+            nbAttributs++;
+          }
+
+          if (filter == region) {
+            nbAttributs++;
+          }
+
+          if (filter == appel) {
+            nbAttributs++;
+          }
+
+          if (filter == millesime) {
+            nbAttributs++;
+          }
+
+          if (filter == produ) {
+            nbAttributs++;
+          }
+
+          if (filter == format) {
+            nbAttributs++;
+          }
+        });
+        console.log(nbAttributs);
+
+        if (nbAttributs >= filters.length) {
+          $(this).addClass("visible").fadeIn();
+        }
       });
+
+      if (filters.length == 0) {
+        $('.card-custom').addClass("visible").fadeIn();
+      }
+
+      ;
+      var nbResults = $('.card-custom.visible').length;
+      $('.number_results').text(nbResults + ' résultats');
     },
-    filterRegn: function filterRegn() {
-      //Région
-      var regn = $(event.target).text();
-      console.log(regn);
-      $('#region-btn').text(regn);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-region='" + regn + "']").show();
-      });
+    sortByNameAZ: function sortByNameAZ() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('nom') < $(a).data('nom') ? 1 : -1;
+      }
     },
-    filterAppel: function filterAppel() {
-      //Appellation
-      var appel = $(event.target).text();
-      $('#appel-btn').text(appel);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-appel='" + appel + "']").show();
-      });
+    sortByNameZA: function sortByNameZA() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('nom') > $(a).data('nom') ? 1 : -1;
+      }
     },
-    filterMille: function filterMille() {
-      //Millesime
-      var mille = $(event.target).text();
-      $('#millesime-btn').text(mille);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-millesime='" + mille + "']").show();
-      });
+    sortByPriceAsc: function sortByPriceAsc() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('prix') < $(a).data('prix') ? 1 : -1;
+      }
     },
-    filterProdu: function filterProdu() {
-      //Producteur
-      var produ = $(event.target).text();
-      $('#produ-btn').text(produ);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-produ='" + produ + "']").show();
-      });
+    sortByPriceDesc: function sortByPriceDesc() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('prix') > $(a).data('prix') ? 1 : -1;
+      }
     },
-    filterFormat: function filterFormat() {
-      //Format
-      var format = $(event.target).text();
-      $('#format-btn').text(format);
-      $('.card-custom').each(function () {
-        $(this).hide();
-        $("*[data-format='" + format + "']").show(); //your_data_attribute_value.split(" ");
-      });
+    sortByAgeAsc: function sortByAgeAsc() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('millesime') < $(a).data('millesime') ? 1 : -1;
+      }
+    },
+    sortByAgeDesc: function sortByAgeDesc() {
+      var tri = $(event.target).text();
+      $('#tri-btn').text(tri);
+      $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+      // sort function callback
+
+      function sort(a, b) {
+        return $(b).data('millesime') > $(a).data('millesime') ? 1 : -1;
+      }
     }
   }
 });
@@ -81902,14 +81973,17 @@ var render = function() {
         {
           key: vin.id,
           staticClass: "card card-custom",
+          class: [_vm.visibleClass],
           attrs: {
+            "data-nom": vin.nom,
             "data-type": vin.types[0].type,
             "data-pays": vin.regn.pays.nom,
             "data-region": vin.regn.nom,
             "data-appel": vin.appel.libelle,
             "data-millesime": vin.millesime,
             "data-produ": vin.produ.nom,
-            "data-format": vin.frmt.quantite
+            "data-format": vin.frmt.quantite,
+            "data-prix": vin.prix.prixht
           }
         },
         [
@@ -85550,323 +85624,479 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row mt-5 mb-5 justify-content-center" }, [
-        _c("div", { staticClass: "filters mx-auto" }, [
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "type-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Type")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.types, function(value) {
-                return _c(
+      _c(
+        "div",
+        {
+          staticClass: "row mt-5 justify-content-center",
+          staticStyle: { "margin-left": "2rem" }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "filters mx-auto", attrs: { id: "filters" } },
+            [
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "type-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Type")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.types, function(t) {
+                      return _c(
+                        "div",
+                        { staticClass: "container", attrs: { id: "typeList" } },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(t.type))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "pays-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Pays")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.pays, function(value) {
+                      return _c(
+                        "div",
+                        { staticClass: "container", attrs: { id: "paysList" } },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.nom))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "region-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Régions")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.regns, function(value) {
+                      return _c(
+                        "div",
+                        { staticClass: "container", attrs: { id: "rgnList" } },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.nom))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "appel-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Appellation")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.appels, function(value) {
+                      return _c(
+                        "div",
+                        {
+                          staticClass: "container",
+                          attrs: { id: "appelList" }
+                        },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.libelle))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "millesime-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true",
+                        value: "Millésime"
+                      }
+                    },
+                    [_vm._v("Millésime")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.millesimes, function(value) {
+                      return _c(
+                        "div",
+                        {
+                          staticClass: "container",
+                          attrs: { id: "milleList" }
+                        },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.millesime))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "produ-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Producteur")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.produs, function(value) {
+                      return _c(
+                        "div",
+                        {
+                          staticClass: "container",
+                          attrs: { id: "produList" }
+                        },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.nom))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "btn-group", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-white dropdown-toggle btn-filter",
+                      attrs: {
+                        id: "format-btn",
+                        type: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "false",
+                        "aria-expanded": "true"
+                      }
+                    },
+                    [_vm._v("Format")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "btnGroupDrop1" }
+                    },
+                    _vm._l(_vm.frmts, function(value) {
+                      return _c(
+                        "div",
+                        { staticClass: "container", attrs: { id: "frmtList" } },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "dropdown-item",
+                              on: { click: _vm.filter }
+                            },
+                            [
+                              _c("input", { attrs: { type: "checkbox" } }),
+                              _vm._v(_vm._s(value.quantite))
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "container" }, [
+                _c(
                   "div",
-                  { staticClass: "container", attrs: { id: "typeList" } },
+                  { staticClass: "row", attrs: { id: "tri-produit" } },
                   [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterType }
-                      },
-                      [
-                        _c("input", { attrs: { type: "checkbox" } }),
-                        _vm._v(_vm._s(value.type))
-                      ]
-                    )
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm" }, [
+                      _c("p", { staticClass: "number_results" }, [
+                        _vm._v(_vm._s(_vm.nbvins) + " résultats")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm" }, [
+                      _c(
+                        "div",
+                        { staticClass: "btn-group", attrs: { role: "group" } },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "btn btn-white dropdown-toggle btn-filter",
+                              attrs: {
+                                id: "tri-btn",
+                                type: "button",
+                                "data-toggle": "dropdown",
+                                "aria-haspopup": "false",
+                                "aria-expanded": "true"
+                              }
+                            },
+                            [_vm._v("Tri")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass: "dropdown-menu",
+                              attrs: { "aria-labelledby": "btnGroupDrop1" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByNameAZ }
+                                },
+                                [_vm._v("Nom A-Z")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByNameZA }
+                                },
+                                [_vm._v("Nom Z-A")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByPriceAsc }
+                                },
+                                [_vm._v("Prix croissant")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByPriceDesc }
+                                },
+                                [_vm._v("Prix décroissant")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByAgeAsc }
+                                },
+                                [_vm._v("Millésime croissant")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  on: { click: _vm.sortByAgeDesc }
+                                },
+                                [_vm._v("Millésime décroissant")]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
                   ]
                 )
-              }),
-              0
-            )
-          ]),
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "pays-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Pays")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.pays, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "paysList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterPays }
-                      },
-                      [_vm._v(_vm._s(value.nom))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "region-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Régions")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.regns, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "rgnList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterRegn }
-                      },
-                      [_vm._v(_vm._s(value.nom))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "appel-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Appellation")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.appels, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "appelList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterAppel }
-                      },
-                      [_vm._v(_vm._s(value.libelle))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "millesime-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true",
-                  value: "Millésime"
-                }
-              },
-              [_vm._v("Millésime")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.millesimes, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "milleList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        attrs: { id: "milleOption" },
-                        on: { click: _vm.filterMille }
-                      },
-                      [_vm._v(_vm._s(value.millesime))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "produ-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Producteur")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.produs, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "produList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterProdu }
-                      },
-                      [_vm._v(_vm._s(value.nom))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-white dropdown-toggle btn-filter",
-                attrs: {
-                  id: "format-btn",
-                  type: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "false",
-                  "aria-expanded": "true"
-                }
-              },
-              [_vm._v("Format")]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "btnGroupDrop1" }
-              },
-              _vm._l(_vm.frmts, function(value) {
-                return _c(
-                  "div",
-                  { staticClass: "container", attrs: { id: "frmtList" } },
-                  [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "dropdown-item",
-                        on: { click: _vm.filterFormat }
-                      },
-                      [_vm._v(_vm._s(value.quantite))]
-                    )
-                  ]
-                )
-              }),
-              0
-            )
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "d-flex justify-content-between pt-5" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", [
-        _c("p", { staticClass: "number_results" }, [
-          _vm._v(_vm._s(_vm.nbvins) + " résultats")
-        ])
-      ]),
-      _vm._v(" "),
-      _vm._m(1)
-    ]),
-    _vm._v(" "),
-    _c("hr", { staticClass: "mt-0" })
+          _c("hr", { staticClass: "mt-0" })
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -85874,7 +86104,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
+    return _c("div", { staticClass: "col-sm" }, [
       _c(
         "a",
         {
@@ -85901,58 +86131,6 @@ var staticRenderFns = [
         },
         [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-white dropdown-toggle btn-filter",
-            attrs: {
-              id: "tri-btn",
-              type: "button",
-              "data-toggle": "dropdown",
-              "aria-haspopup": "false",
-              "aria-expanded": "true"
-            }
-          },
-          [_vm._v("Tri")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "dropdown-menu",
-            attrs: { "aria-labelledby": "btnGroupDrop1" }
-          },
-          [
-            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom A-Z")]),
-            _vm._v(" "),
-            _c("a", { staticClass: "dropdown-item" }, [_vm._v("Nom Z-A")]),
-            _vm._v(" "),
-            _c("a", { staticClass: "dropdown-item" }, [
-              _vm._v("Prix croissant")
-            ]),
-            _vm._v(" "),
-            _c("a", { staticClass: "dropdown-item" }, [
-              _vm._v("Prix décroissant")
-            ]),
-            _vm._v(" "),
-            _c("a", { staticClass: "dropdown-item" }, [
-              _vm._v("Age croissant")
-            ]),
-            _vm._v(" "),
-            _c("a", { staticClass: "dropdown-item" }, [
-              _vm._v("Age décroissant")
-            ])
-          ]
-        )
-      ])
     ])
   }
 ]
