@@ -80,6 +80,18 @@ class ProdusTableSeeder extends Seeder
                 'description' => 'L’AVY, ou Artisans Vignerons d’Yvorne, est une société coopérative fondée en 1902. Aujourd\'hui, notre équipe, forte d’une dizaine de professionnels, encave, vinifie et commercialise la production de vins suisses de ses quelque 120 membres.',
                 'url' => 'https://www.avy.ch/',
             ],
+            [
+                'nom' => 'Château Pontet-Canet',
+                'description' => 'Jean-François de Pontet avait fait carrière à Versailles ; très en cour, il avait occupé la charge de Grand Ecuyer de Louis XV. Revenu en Guyenne, il devient Gouverneur du Médoc. En 1705, il achète quelques arpents de terre au nord du village de Pauillac pour créer un vignoble. Quelques années plus tard, il ajoute des parcelles au lieu-dit Canet. Comme c’était l’usage à l’époque, il associe son nom à celui de la terre médocaine pour donner son identité au domaine. Un siècle plus tard, le château Pontet-Canet prospère et entre dans la cour des grands en devenant Grand Cru Classé dans le célèbre classement de 1855 ordonné par l’Empereur Napoléon III.
+                
+                En 1865, le domaine change de main pour la première fois en devenant la propriété d’Herman Cruse, négociant en vins. La famille Cruse conservera le domaine pendant 110 ans, jusqu’en 1975, année où il sera acheté par Guy Tesseron, négociant en cognac. En près de trois siècles, le Château Pontet-Canet n’aura connu que trois propriétaires, trois familles… Une singularité dans le Médoc.',
+                'url' => 'http://www.pontet-canet.com/fr/',
+            ],
+            [
+                'nom' => 'Château Fonroque',
+                'description' => 'Le château a été acquis en 1931 par Adèle et Jean Moueix. Alain Moueix, leur arrière-petit-fils, en hérite de son père puis dirige la propriété depuis 2001. Il y instaure d’emblée la pratique désormais certifiée, d’une démarche qui place l’intelligence biologique et l’observation au cœur des avancées du vignoble, la biodynamie.',
+                'url' => 'http://chateaufonroque.net/',
+            ],
         ]);
     }
 }

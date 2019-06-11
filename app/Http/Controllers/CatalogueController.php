@@ -16,7 +16,6 @@ class CatalogueController extends Controller
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix.promops', 'condi', 'cepags', 'types', 'regn.pays'])
             ->get();
             $nbvins = count($vins);
-            $filters = [];
             
             // ----------Prices---------//
 
