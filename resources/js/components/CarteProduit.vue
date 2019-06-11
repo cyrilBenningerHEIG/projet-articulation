@@ -32,7 +32,8 @@
       <h6  class="card-text" id="millesime-carte"> - </h6>
       </div>
       <h6  class="card-text" id="produ-carte">{{vin.produ.nom}}</h6>
-      <h6  class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
+      <h6  v-if =prix_promop class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
+      <h6  v-else class="card-text" id="prix-carte" style="text-decoration: line-through; text-decoration-color:red">CHF {{vin.prix.prixht}}</h6>
       </div>
     </div>
     </div>

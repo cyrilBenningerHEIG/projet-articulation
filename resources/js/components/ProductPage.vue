@@ -21,15 +21,17 @@
                 <h3> {{vin.nom}} <span>- {{vin.millesime}}</span></h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
-                  CHF
-                  <b>{{prixttc}}</b>
+                  
+                  <b v-if="unchecked ==true">{{prixeurottc}} €</b>
+                  <b v-else>CHF {{prixttc}}</b>
                   <i class="price-ht-font">
-                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
+                    <span v-if="unchecked ==true">({{prixeuro}} € hors TVA)</span>
+                    <span v-else>({{vin.prix.prixht}}  CHF hors TVA)</span> 
                   </i>
                 </h5>
                 <div>
-                    <b-form-checkbox v-model="checked" name="check-button" switch>
-                      Switch Checkbox <b>(Checked: {{ unchecked }})</b>
+                    <b-form-checkbox v-model="unchecked" name="check-button" switch>
+                      Prix euro <b></b>
                     </b-form-checkbox>
                 </div>
 
@@ -276,13 +278,14 @@
  export default {
   
   
-  props: ["vins","prixttc", "prixeuro", "vinid"],
+  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid"],
 
    data() {
     return {
       vin: '',
       vinCarts: [],
       quantity:1,
+      unchecked: false
       
     };
   },
@@ -311,13 +314,7 @@ methods: {
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
-  
-  data() {
-      return {
-        unchecked: this.prixeuro
-      }
-  
-  }
+
 
 }
   
