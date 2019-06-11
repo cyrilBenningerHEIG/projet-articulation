@@ -738,6 +738,29 @@ a.produit-liens {
     margin: 5px;
 }
 
+<<<<<<< HEAD
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #a62b35;
+      color: #fff;
+      padding: 2px 5px;
+      vertical-align: top;
+      margin-left: 20px; 
+      margin-top: -30px
+  }
+=======
 /* LOADING */
 #loading-pic{
     width : 300px;
@@ -777,3 +800,4 @@ a.produit-liens {
     margin: 10px;
 }
 /* MOBILE */
+>>>>>>> e12a8859fe25b4f8e64aab3477f73e626c96d31c
