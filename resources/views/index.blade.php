@@ -15,6 +15,7 @@
     <body>
         <div id="app">
             <div class="container">
+                    <loading-screen></loading-screen>
             @if(Auth::guard('user')->check())
                 <h6>Connecté</h6>
                 <nav-bar-login></nav-bar-login>
