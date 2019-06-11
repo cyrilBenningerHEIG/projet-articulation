@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\vin;
+use Illuminate\Support\Facades\Auth;
 // use App\User;
 
 use DB;
@@ -22,11 +23,17 @@ class PromosController extends Controller
 
             for ($i=0; $i < sizeof($vins); $i++) { 
                 $prixht = $vins[$i]['prix']['prixht'];
+                $pourcentagePromo = $vins[$i]['prix']['promops'][0]['pourcentage'];
                 $prixttc = ($prixht)*1.07;
                 $prixttc_round = round($prixttc * 20, 0) /20;
                 $prixttc_format = number_format($prixttc_round, 2, '.', '');
                 $vins[$i]['prix']['prixht'] = $prixttc_format;
+                $prixpromo = $prixttc_format - ($prixttc_format * ($pourcentagePromo / 100));
+                $prixpromo_round = round($prixpromo * 20, 0) /20;
+                $prixpromo_format = number_format($prixpromo_round, 2, '.', '');
+                $vins[$i]['prix']['prixPromo'] = $prixpromo_format;
             }
+
         //---------------------------------Filters---------------------------------//
         $types = DB::table('types')->get();
         $pays = DB::table('pays')->orderBy('nom')->get();
@@ -35,6 +42,7 @@ class PromosController extends Controller
         $produs = DB::table('produs')->orderBy('nom')->get();
         $frmts = DB::table('frmts')->orderBy('quantite')->get();
         $millesimes = DB::table('vins')->select('millesime')->distinct('millesime')->orderBy('millesime')->where('millesime', '<>', '0')->get();
+        $user = Auth::guard('user')->user();
 
         return view('promos', [
             'vins'=> $vins,
@@ -44,12 +52,13 @@ class PromosController extends Controller
             'appels'=> $appels,
             'produs'=> $produs,
             'frmts'=> $frmts,
-            'millesimes'=> $millesimes
+            'millesimes'=> $millesimes,
+            'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
         //     $prix = ($prix)*1.07;
         // }
 
         // }
-    }
+        }
 }

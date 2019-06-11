@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\vin;
+use Illuminate\Support\Facades\Auth;
 // use App\User;
 
 use DB;
@@ -34,6 +35,7 @@ class NouveautesController extends Controller
         $produs = DB::table('produs')->orderBy('nom')->get();
         $frmts = DB::table('frmts')->orderBy('quantite')->get();
         $millesimes = DB::table('vins')->select('millesime')->distinct('millesime')->orderBy('millesime')->where('millesime', '<>', '0')->get();
+        $user = Auth::guard('user')->user();
 
         return view('nouveautes', [
             'vins'=> $vins,
@@ -43,7 +45,8 @@ class NouveautesController extends Controller
             'appels'=> $appels,
             'produs'=> $produs,
             'frmts'=> $frmts,
-            'millesimes'=> $millesimes
+            'millesimes'=> $millesimes,
+            'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
         //     $prix = ($prix)*1.07;

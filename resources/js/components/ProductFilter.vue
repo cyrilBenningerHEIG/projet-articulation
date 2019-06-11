@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="container">
-    <div class="row mt-5 justify-content-center">
+    <div class="row mt-5 justify-content-center" style="margin-left : 2rem">
       <div id="filters" class="filters mx-auto">
         <div class="btn-group" role="group">
           <button
@@ -14,7 +14,11 @@
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="typeList" class="container" v-for="t in types">
+<<<<<<< HEAD
               <label class="dropdown-item" ><input type="checkbox" v-on:click="filter"/>{{t.type}}</label>
+=======
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</label>
+>>>>>>> 5c0cc37720439017031f8381d88301e23ea93b93
               </div>
           </div>
         </div>
@@ -29,7 +33,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -44,7 +48,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -59,7 +63,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</label>
             </div>
             </div>
         </div>
@@ -75,7 +79,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</label>
             </div>
             </div>
         </div>
@@ -90,7 +94,7 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
           </div>
             </div>
         </div>
@@ -105,7 +109,7 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</label>
             </div>
             </div>
         </div>

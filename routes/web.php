@@ -34,6 +34,10 @@ Route::get('/panier', function () {
 });
 
 Route::get('/paiement-etape1', function () {
+    if(Auth::guard('user')->check()){
+        return redirect('/paiement-etape2');
+        
+    };
     return view('paiement1');
 });
 

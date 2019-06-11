@@ -15,6 +15,9 @@
                       <svg height="20" width="20">
                         <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
                       </svg>
+                      <div v-if=vin.estBio>
+                      <img src="/images/icons/bio.svg" style="width : 20px;" alt="bio"/>
+                      </div>
                   </div>
                   <div class="col pr-2 pl-2 vin-titre">
                         <h6 class="mb-0">{{vin.nom}}</h6>
@@ -32,7 +35,11 @@
       <h6  class="card-text" id="millesime-carte"> - </h6>
       </div>
       <h6  class="card-text" id="produ-carte">{{vin.produ.nom}}</h6>
-      <h6  class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
+      <h6  v-if ="vin.prix.prixPromo==null" class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
+      <div v-else>
+      <h6 class="card-text" id="prix-carte" style="text-decoration: line-through; text-decoration-color:red">CHF {{vin.prix.prixht}}</h6>
+      <h6 class="card-text" id="prix-carte" >CHF {{vin.prix.prixPromo}}</h6>
+      </div>
       </div>
     </div>
     </div>

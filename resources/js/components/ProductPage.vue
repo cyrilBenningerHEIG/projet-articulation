@@ -3,7 +3,7 @@
   <div class="containe">
     <div class="container" v-for="vin in vins" :key="vin.id">
       
-        <div class="roadMap pt-5 pb-5">
+        <div class="roadMap pt-2 pb-5">
           <span>
             <a href="../produits" class="produit-liens"><b>PRODUITS</b></a>
             <img class="arrow" src="/images/icons/arrow.svg">
@@ -21,15 +21,17 @@
                 <h3> {{vin.nom}} <span>- {{vin.millesime}}</span></h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
-                  CHF
-                  <b>{{prixttc}}</b>
+                  
+                  <b v-if="unchecked ==true">{{prixeurottc}} €</b>
+                  <b v-else>CHF {{prixttc}}</b>
                   <i class="price-ht-font">
-                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
+                    <span v-if="unchecked ==true">({{prixeuro}} € hors TVA)</span>
+                    <span v-else>({{vin.prix.prixht}}  CHF hors TVA)</span> 
                   </i>
                 </h5>
                 <div>
-                    <b-form-checkbox v-model="checked" name="check-button" switch>
-                      Switch Checkbox <b>(Checked: {{ unchecked }})</b>
+                    <b-form-checkbox v-model="unchecked" name="check-button" switch>
+                      Prix euro <b></b>
                     </b-form-checkbox>
                 </div>
 
@@ -67,12 +69,6 @@
                   >37.5 cl</a>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >50 cl</a>
-                  <a
-                    href="#"
                     class="btn btn-outline-secondary btn-sm active "
                     role="button"
                     aria-disabled="true"
@@ -94,30 +90,24 @@
                     class="btn btn-outline-secondary btn-sm active"
                     role="button"
                     aria-disabled="true"
-                  >2015</a>
-                  <a
-                    href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >2017</a>
+                  >{{vin.millesime}}</a>
                 </div>
               </div>
 
               <div class="mt-4 mb-4">
-                <label class="mr-4 my-auto">QUANTITÉS :</label>
+                <label class="mr-4 my-auto">QUANTITÉS : </label>
                 <div class="container">
                   <div class="row">
                     <div class="col-3 pl-0">
                         <div class="input-group" id="btn-quantity">
                           <span class="input-group-btn">
-                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field>
+                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" >
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
                           </span>
-                          <input type="text" id="quantity" name="quantity" class="form-control input-number form-control-sm quantity-bar" value="1" min="1" max="20">
+                          <input type="text"  class="form-control input-number form-control-sm quantity-bar"  :value="quantite" min="1" max="20">
                           <span class="input-group-btn">
-                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" data-type="plus" data-field>
+                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" >
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </span>
@@ -271,38 +261,38 @@
 </template>
 <script>
 
-
-
  export default {
   
   
-  props: ["vins","prixttc", "prixeuro", "vinid"],
+  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid"],
 
    data() {
     return {
       vin: '',
       vinCarts: [],
-      quantity:1,
+      quantite: 1,
+      unchecked:false,
       
     };
   },
-methods: {
+  methods: {
     addCart() {
-      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
+      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
     increment () {
-      this.quantity++
+      this.quantite++
     },
     decrement () {
-      if(this.quantity === 1) {
+      if(this.quantite === 1) {
         alert('Negative quantity not allowed')
       } else {
-        this.quantity--
+        this.quantite--
       }
-    }
+    },
+    
     
 
   },
@@ -311,13 +301,12 @@ methods: {
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
+<<<<<<< HEAD
   
-  data() {
-      return {
-        unchecked: this.prixeuro
-      }
-  
-  }
+ 
+=======
+
+>>>>>>> BE-Monday-Alvis
 
 }
   
