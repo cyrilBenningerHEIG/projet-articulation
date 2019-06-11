@@ -18,10 +18,18 @@
     <body>
         <div id="app">
             <div class="container">
+            @if(Auth::check())
+                <h6>Connecté</h6>
+                <nav-bar-login></nav-bar-login>
+                @else
+                <h6>Déconnecté</h6>
+                <nav-bar-logout></nav-bar-logout>
+                
+                @endif
             <nav-product-bar></nav-product-bar>
-            <product-page :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :vinid='{{$vinid}}'></product-page>
+            <product-page class=" mb-5" :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :vinid='{{$vinid}}'></product-page>
             <br>
-            <selection-card class="mt-5" :vins='{{ $vins_all }}' :prixttc='{{$prixttc}}' ></selection-card> 
+            <selection-card class="mt-5 mb-5" :vins='{{ $vins_all }}' :prixttc='{{$prixttc}}' ></selection-card> 
             <footer-bar></footer-bar>
             </div>
         </div>

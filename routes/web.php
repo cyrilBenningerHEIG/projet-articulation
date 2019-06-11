@@ -14,7 +14,7 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/produits', 'CatalogueController@index');
+Route::get('/produits', 'CatalogueController@index')->name('test');
 Route::get('/produit/{vins}', 'CatalogueController@show');
 
 Route::get('/promos', 'PromosController@index');
@@ -52,14 +52,19 @@ Route::get('/paiement-etape4', function () {
 
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::group(['middleware'=>'user'], function() {
+    
+});
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Auth::routes();
+Route::get('/logout', 'auth\LoginController@logout')->name('logout');
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/cgv', function () {
     return view('cgv');
 });

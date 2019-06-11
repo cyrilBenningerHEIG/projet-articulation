@@ -95,6 +95,8 @@ Vue.component('history-page', require('./components/HistoryPage.vue').default);
 //CGV 
 Vue.component('cgv-texte', require('./components/CGV.vue').default);
 
+//Histoire
+
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
 
@@ -122,6 +124,7 @@ const app = new Vue({
     el: '#app',
     router: Router,
 });
+
 
 //////////////////////////////////////  Chargement du type de carte sur Leaflet
 
@@ -167,3 +170,9 @@ $(document).ready(function() {
         });
     }, false);
 })();
+
+
+////////////////////////////////////// Carousel de la page produits 
+$('.carousel').carousel({
+    interval: 1
+})

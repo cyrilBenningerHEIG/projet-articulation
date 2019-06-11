@@ -83,6 +83,11 @@ label {
     padding: 10px;
 }
 
+#icon_box {
+    height: 2em;
+    width: 2em;
+}
+
 .menu {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -98,6 +103,61 @@ label {
     justify-content: center;
     align-items: center;
     margin: 20px;
+}
+
+
+/*Nav bar*/
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 1.35em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+.go a:before,
+.go a:after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.go a:before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translate(20px);
+    -moz-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.go a:after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
+    transform: translate(-20px);
+}
+
+.go a:hover:before,
+.go a:hover:after,
+.go a:focus:before,
+.go a:focus:after {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    transform: translate(0px);
 }
 
 
@@ -217,8 +277,12 @@ P.blocktext {
     white-space: nowrap;
 }
 
+a.produit-liens {
+    color: #CCBE9F;
+}
+
 .arrow {
-    width: 2.5%;
+    width: 1.7%;
 }
 
 .bottleImg {
@@ -242,19 +306,30 @@ P.blocktext {
     font-family: 'Montserrat', sans-serif;
 }
 
-#btn-quantity {
+
+/* #btn-quantity {
     padding-right: 325px;
-}
+} */
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: #2B2B2B;
+    color: white;
     background-color: #CCBE9F;
 }
 
 .pills {
-    color: #f2ebda;
+    color: #2B2B2B;
     font-size: 16px;
+}
+
+#a-producteur:link {
+    color: #CCBE9F;
+}
+
+#a-producteur {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #CCBE9F
 }
 
 .btn-basket {
@@ -283,11 +358,14 @@ P.blocktext {
 
 /* CONTACT */
 
+.img-contact {
+    max-width: 100%;
+    max-height: auto;
+}
+
 .contact-form {
     background: #2B2B2B;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    width: 70%;
+    height: 505px;
 }
 
 .contact-form .form-control {
@@ -363,6 +441,7 @@ P.blocktext {
     width: 15rem;
     height: 60px;
     position: relative;
+    margin-top: 1em;
 }
 
 #title-position {
@@ -402,7 +481,7 @@ P.blocktext {
 
 .card-custom {
     display: inline-flex;
-    padding: 0.75rem;
+    padding: 1.5rem 0.8rem 1.5rem 0.8rem;
     margin-top: 15px;
 }
 
@@ -462,6 +541,11 @@ P.blocktext {
 
 #produ-carte {
     height: 20px;
+    font-size: 12px;
+}
+
+#millesime-carte {
+    font-size: 12px;
 }
 
 #prix-carte {
@@ -654,6 +738,29 @@ P.blocktext {
     margin: 5px;
 }
 
+<<<<<<< HEAD
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #a62b35;
+      color: #fff;
+      padding: 2px 5px;
+      vertical-align: top;
+      margin-left: 20px; 
+      margin-top: -30px
+  }
+=======
 /* LOADING */
 #loading-pic{
     width : 300px;
@@ -693,3 +800,4 @@ P.blocktext {
     margin: 10px;
 }
 /* MOBILE */
+>>>>>>> e12a8859fe25b4f8e64aab3477f73e626c96d31c
