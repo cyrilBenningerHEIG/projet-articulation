@@ -21,14 +21,12 @@ h6 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 70%;
     padding: 0;
     margin: 0;
 }
 
 .p {
     font-family: 'Roboto', sans-serif;
-    font-size: 70%;
     padding: 0;
     margin: 0;
 }
@@ -85,6 +83,11 @@ label {
     padding: 10px;
 }
 
+#icon_box {
+    height: 2em;
+    width: 2em;
+}
+
 .menu {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -100,6 +103,61 @@ label {
     justify-content: center;
     align-items: center;
     margin: 20px;
+}
+
+
+/*Nav bar*/
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 1.35em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+.go a:before,
+.go a:after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.go a:before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translate(20px);
+    -moz-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.go a:after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
+    transform: translate(-20px);
+}
+
+.go a:hover:before,
+.go a:hover:after,
+.go a:focus:before,
+.go a:focus:after {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    transform: translate(0px);
 }
 
 
@@ -144,12 +202,11 @@ p.box {
 }
 
 .card-group {
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 
-.card-body {
-    width: 15rem;
-    margin-top: -25px;
+#card-body {
+    padding: 0.5em;
 }
 
 .btn-danger {
@@ -220,8 +277,12 @@ P.blocktext {
     white-space: nowrap;
 }
 
+a.produit-liens {
+    color: #CCBE9F;
+}
+
 .arrow {
-    width: 2.5%;
+    width: 1.7%;
 }
 
 .bottleImg {
@@ -245,19 +306,30 @@ P.blocktext {
     font-family: 'Montserrat', sans-serif;
 }
 
-#btn-quantity {
+
+/* #btn-quantity {
     padding-right: 325px;
-}
+} */
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: #2B2B2B;
+    color: white;
     background-color: #CCBE9F;
 }
 
 .pills {
-    color: #f2ebda;
+    color: #2B2B2B;
     font-size: 16px;
+}
+
+#a-producteur:link {
+    color: #CCBE9F;
+}
+
+#a-producteur {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #CCBE9F
 }
 
 .btn-basket {
@@ -286,11 +358,14 @@ P.blocktext {
 
 /* CONTACT */
 
+.img-contact {
+    max-width: 100%;
+    max-height: auto;
+}
+
 .contact-form {
     background: #2B2B2B;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    width: 70%;
+    height: 505px;
 }
 
 .contact-form .form-control {
@@ -364,7 +439,14 @@ P.blocktext {
 
 .card-title {
     width: 15rem;
-    padding-top: -20px;
+    height: 60px;
+    position: relative;
+    margin-top: 1em;
+}
+
+#title-position {
+    position: absolute;
+    bottom: 0;
 }
 
 .btn-filter {
@@ -399,9 +481,8 @@ P.blocktext {
 
 .card-custom {
     display: inline-flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 45px;
+    padding: 1.5rem 0.8rem 1.5rem 0.8rem;
+    margin-top: 15px;
 }
 
 #img-logo-header {
@@ -459,7 +540,12 @@ P.blocktext {
 }
 
 #produ-carte {
-    height: 50px;
+    height: 20px;
+    font-size: 12px;
+}
+
+#millesime-carte {
+    font-size: 12px;
 }
 
 #prix-carte {
@@ -470,7 +556,7 @@ P.blocktext {
 /* LOGIN & REGISTER FORM */
 
 #login-form {
-    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
+    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -490,29 +576,39 @@ P.blocktext {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background: #a62b35;
+    display: inline-block;
 }
-
+.container-login100{
+    width: 100%;  
+    min-height: 60vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color : #a62b35;
+}
 #box,
 #box_register {
-    width: 400px;
-    height: 700px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     background: #a62b35;
     text-align: center;
     border-radius: 25px;
     opacity: 60%;
+
 }
 
 #box label,
 #box_register label {
     color: white;
     font-weight: 400;
-    font-size: 130%;
+    font-size: 2rem;
     margin-top: 25px;
+    display : inline;
 }
 
 #box input,
@@ -524,13 +620,13 @@ P.blocktext {
     text-align: center;
     border: 2px solid black;
     padding: 14px 10px;
-    width: 200px;
+    width: 350px;
     outline: none;
     color: black;
     border-radius: 15px;
     transition: 0.25s;
     margin-bottom: 25;
-    height: 25px;
+    height: 50px;
 }
 
 #box_register label {
@@ -543,7 +639,7 @@ P.blocktext {
 
 #box input:focus,
 #box_register input:focus {
-    width: 280px;
+    width: 350px;
     border-color: black;
     background: white;
     color: black;
@@ -574,15 +670,20 @@ P.blocktext {
 }
 
 #remember {
-    margin-top: 35px;
-    font-size: 75%;
-    padding-top: -25px;
-}
 
+    font-size: 75%;
+}
+#box > a, #box_register > a {
+    padding-top : 25px;
+    display : block;
+    color : white;
+}
+#login-title, #register-title{
+    color : white;
+}
 #register-link,
 #home-link,
 #forgot-pass #login-link {
-    display: block;
     padding-top: 25px;
     color: white;
 }
@@ -590,8 +691,6 @@ P.blocktext {
 #register #box {
     width: 400px;
     height: 1050px;
-    padding: 40px;
-    position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -607,86 +706,6 @@ P.blocktext {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-
-/* The container */
-
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-/* Hide the browser's default radio button */
-
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-
-/* Create a custom radio button */
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-
-/* On mouse-over, add a grey background color */
-
-.container:hover input~.checkmark {
-    background-color: #ccc;
-}
-
-
-/* When the radio button is checked, add a blue background */
-
-.container input:checked~.checkmark {
-    background-color: #0000007e;
-}
-
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-
-/* Show the indicator (dot/circle) when checked */
-
-.container input:checked~.checkmark:after {
-    display: block;
-}
-
-
-/* Style the indicator (dot/circle) */
-
-.container .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
 }
 
 
@@ -718,3 +737,64 @@ P.blocktext {
 .svg-center {
     margin: 5px;
 }
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #a62b35;
+      color: #fff;
+      padding: 2px 5px;
+      vertical-align: top;
+      margin-left: 20px; 
+      margin-top: -30px
+  }
+/* LOADING */
+#loading-pic{
+    width : 300px;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+/* MOBILE */

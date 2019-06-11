@@ -1,8 +1,8 @@
 <template>
-
+<div>
   <div class="container">
     <div class="row mt-5 justify-content-center">
-      <div class="filters mx-auto">
+      <div id="filters" class="filters mx-auto">
         <div class="btn-group" role="group">
           <button
             id="type-btn"
@@ -13,9 +13,9 @@
             aria-expanded="true"
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <div id="typeList" class="container" v-for="value in types">
-            <a class="dropdown-item" v-on:click="filterType">{{value.type}}</a>
-            </div>
+          <div id="typeList" class="container" v-for="t in types">
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</a>
+              </div>
           </div>
         </div>
         <div class="btn-group" role="group">
@@ -29,7 +29,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-            <a class="dropdown-item" v-on:click="filterPays">{{value.nom}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
             </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-            <a class="dropdown-item" v-on:click="filterRegn">{{value.nom}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
             </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-            <a class="dropdown-item" v-on:click="filterAppel">{{value.libelle}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</a>
             </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-            <a id="milleOption" class="dropdown-item" v-on:click="filterMille">{{value.millesime}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</a>
             </div>
             </div>
         </div>
@@ -90,8 +90,8 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-            <a class="dropdown-item" v-on:click="filterProdu">{{value.nom}}</a>
-            </div>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+          </div>
             </div>
         </div>
         <div class="btn-group" role="group">
@@ -105,7 +105,7 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-            <a class="dropdown-item" v-on:click="filterFormat">{{value.quantite}}</a>
+              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</a>
             </div>
             </div>
         </div>
@@ -136,26 +136,27 @@
                   aria-expanded="true"
                 >Tri</button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <a class="dropdown-item">Nom A-Z</a>
-
-                  <a class="dropdown-item">Nom Z-A</a>
-                  <a class="dropdown-item">Prix croissant</a>
-                  <a class="dropdown-item">Prix décroissant</a>
-                  <a class="dropdown-item">Age croissant</a>
-                  <a class="dropdown-item">Age décroissant</a>
+                  <a class="dropdown-item" v-on:click="sortByNameAZ">Nom A-Z</a>
+                  <a class="dropdown-item" v-on:click="sortByNameZA">Nom Z-A</a>
+                  <a class="dropdown-item" v-on:click="sortByPriceAsc">Prix croissant</a>
+                  <a class="dropdown-item" v-on:click="sortByPriceDesc">Prix décroissant</a>
+                  <a class="dropdown-item" v-on:click="sortByAgeAsc">Millésime croissant</a>
+                  <a class="dropdown-item" v-on:click="sortByAgeDesc">Millésime décroissant</a>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
+    <hr class="mt-0">
+  </div>
+  </div>
   </div>
 </template>
 <script>
 
 export default {
-  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins', 'filters'],
+  props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
 
     data(){
         return{
@@ -165,92 +166,145 @@ export default {
           appel:'',
           produ:'',
           frmt:'',
-          filters:'',
         }
      },
 
-     methods:{
+  methods:{
 
-    // filterType:function(filters){
+    filter:function(){
+      //Ajout de tous les filtres dans un tableau
+      $('.card-custom').removeClass("visible").hide();
+      var filters = [];
+      $('#filters :input:checked').each(function(){
+        var category= $(this).parent().text();
+        console.log(category);
+        filters.push(category); 
+        console.log(filters);
+      });
+
+      //Sélection des vins correspondants
       
-      //Type
-//       var type = $(event.target).text();
-//       filters[0].push(type);
-//       console.log(filters);
-//       var filters_array = filters
-//       $('#pays-btn').text(type);
-//       $('.card-custom').each(function(filters_array) {
-//         $(this).hide();
-//         filters_array.forEach(function(value) {
-//        $("*[data-type='" + this.value[i] + "']").show();
-// });
-      // });
-    // },
+        $('.card-custom').each(function(){
+          var nbAttributs = 0;
+          var type = this.dataset.type;
+          var pays = this.dataset.pays;
+          var region = this.dataset.region;
+          var appel = this.dataset.appel;
+          var millesime = this.dataset.millesime;
+          var produ = this.dataset.produ;
+          var format = this.dataset.format;
 
-    filterPays:function(){
-      //Pays
-      var pays = $(event.target).text();
-      console.log(pays);
-      $('#pays-btn').text(pays);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-pays='" + pays + "']").show();
+          filters.forEach(function(filter) {
+
+            if(filter == type){
+              nbAttributs++;
+            }
+            if(filter == pays){
+              nbAttributs++;
+            }
+            if(filter == region){
+              nbAttributs++;
+            }
+            if(filter == appel){
+              nbAttributs++;
+            }
+            if(filter == millesime){
+              nbAttributs++;
+            }
+            if(filter == produ){
+              nbAttributs++;
+            }
+            if(filter == format){
+              nbAttributs++;
+            }
+            });
+
+          console.log(nbAttributs);
+          
+          if(nbAttributs >= filters.length){
+            $(this).addClass("visible").fadeIn();
+          }
       });
-    },
 
-    filterRegn:function(){
-      //Région
-      var regn = $(event.target).text();
-      console.log(regn);
-      $('#region-btn').text(regn);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-region='" + regn + "']").show();
-      });
-    },
+      if(filters.length == 0){
+        $('.card-custom').addClass("visible").fadeIn();
+      };
 
-    filterAppel:function(){
-      //Appellation
-      var appel = $(event.target).text();
-      $('#appel-btn').text(appel);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-appel='" + appel + "']").show();
-      });
-    },
-
-    filterMille:function(){
-      //Millesime
-      var mille = $(event.target).text();
-      $('#millesime-btn').text(mille);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-millesime='" + mille + "']").show();
-      });
-    },
-
-    filterProdu:function(){
-      //Producteur
-      var produ = $(event.target).text();
-      $('#produ-btn').text(produ);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-produ='" + produ + "']").show();
-      });
-    },
-
-    filterFormat:function(){
-      //Format
-      var format = $(event.target).text();
-      $('#format-btn').text(format);
-      $('.card-custom').each(function() {
-        $(this).hide();
-        $("*[data-format='" + format + "']").show();
-
-        //your_data_attribute_value.split(" ");
-      });
-    },
-
+      var nbResults = $('.card-custom.visible').length;
+      $('.number_results').text(nbResults + ' résultats');
   },
+
+  sortByNameAZ:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('nom')) < ($(a).data('nom')) ? 1 : -1;   
+  } 
+},
+
+  sortByNameZA:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('nom')) > ($(a).data('nom')) ? 1 : -1;   
+  } 
+},
+
+sortByPriceAsc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('prix')) < ($(a).data('prix')) ? 1 : -1;   
+  } 
+},
+
+sortByPriceDesc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('prix')) > ($(a).data('prix')) ? 1 : -1;   
+  } 
+},
+
+sortByAgeAsc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('millesime')) < ($(a).data('millesime')) ? 1 : -1;   
+  } 
+},
+
+sortByAgeDesc:function(){
+    var tri = $(event.target).text();
+    $('#tri-btn').text(tri);
+
+    $(".card-custom").sort(sort) // sort elements
+      .appendTo('#carteContainer'); // append again to the list
+    // sort function callback
+    function sort(a, b){
+      return ($(b).data('millesime')) > ($(a).data('millesime')) ? 1 : -1;   
+  } 
+},
+}
 }
 </script>

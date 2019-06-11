@@ -4,18 +4,15 @@
       <meta charset="utf-8">
       <title> Enregistrement </title>
    </head>
-   <body id="register-form">
+   <div id="app">
+        <div class="container">
+            <nav-bar-login></nav-bar-login>
+            <register-form>
+                    <div class="container-login100">
       <form method="POST" id="box_register" class="" action="{{ route('register') }}">
          {{ csrf_field() }}
-         <div class="homepageImg">
-            <img class="logo" id="img-logo" src="images/logo.svg">
-         </div>
-         <label id="connect-text">
-
-            {{ __("Inscription") }}
-
-        </label>
-            <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required autofucs>
+         <h2 id="register-title">Inscription</h2>
+         <input id="nom" type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" class="form-group{{ $errors->has('nom') ? ' has-error' : '' }}" required autofucs>
             @error('nom')
             <span class="invalid-feedback" role="alert">
 
@@ -43,6 +40,7 @@
             <input type="hidden" id="sexe" name="sexe" value="1">
             <input type="hidden" id="dateNaissance" name="dateNaissance" value="1998-05-21">
 
+            <hr style="line-height : 2px">
                 <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" required>
             @error('email')
             <span class="invalid-feedback" role="alert">
@@ -80,6 +78,9 @@
 
     </a>
 </form>
+</div>
+</register-form>
+<footer-bar></footer-bar>
       <script src="js/app.js"></script>
    </body>
 </html>

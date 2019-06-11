@@ -3,22 +3,43 @@
   <div class="containe">
     <div class="container" v-for="vin in vins" :key="vin.id">
       
-        <div class="roadMap">
+        <div class="roadMap pt-5 pb-5">
           <span>
-            <a href="#">PRODUITS</a>
+            <a href="../produits" class="produit-liens"><b>PRODUITS</b></a>
             <img class="arrow" src="/images/icons/arrow.svg">
-            <a href="#">VIN ROUGE</a>
+            <a href="#produit" class="produit-liens"><b>{{vin.nom}}</b></a>
           </span>
         </div>
 
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" src="/images/illustrations/bottle.png">
+              <img class="bottleImg" id="produit" v-bind:src="vin.photoUrl">
             </div>
           <div class="col mt-4 mb-4">
-              <div>
-                <h3> {{vin.nom}} - {{vin.millesime}}</h3>
+              <div v-if="vin.millesime">
+                <h3> {{vin.nom}} <span>- {{vin.millesime}}</span></h3>
+                <span></span>
+                <h5 class="mt-3 mb-3 price-font">
+                  CHF
+                  <b>{{prixttc}}</b>
+                  <i class="price-ht-font">
+                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
+                  </i>
+                </h5>
+                <div>
+                    <b-form-checkbox v-model="checked" name="check-button" switch>
+                      Switch Checkbox <b>(Checked: {{ unchecked }})</b>
+                    </b-form-checkbox>
+                </div>
+
+                <span></span>
+                <span></span>
+                <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
+              </div>
+
+              <div v-else>
+                <h3> {{vin.nom}} <span> </span></h3>
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
@@ -32,36 +53,39 @@
                 <span></span>
                 <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
               </div>
+
+
+
               <div class="mt-4 mb-4">
-                <label>TAILLE :</label>
+                <label>TAILLE : </label><span> {{vin.frmt.quantite}}</span>
                 <div>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm disabled"
+                    class="btn btn-outline-secondary btn-sm"
                     role="button"
                     aria-disabled="true"
                   >37.5 cl</a>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm active"
+                    class="btn btn-outline-secondary btn-sm"
                     role="button"
                     aria-disabled="true"
                   >50 cl</a>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm disabled"
+                    class="btn btn-outline-secondary btn-sm active "
                     role="button"
                     aria-disabled="true"
-                  >75 cl</a>
+                  >{{vin.frmt.quantite}}</a>
                 </div>
               </div>
 
               <div class="mt-4 mb-4">
-                <label>VARIANTES :</label>
+                <label>VARIANTES : </label><span> {{vin.millesime}}</span>
                 <div>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm disabled"
+                    class="btn btn-outline-secondary btn-sm"
                     role="button"
                     aria-disabled="true"
                   >2012</a>
@@ -73,7 +97,7 @@
                   >2015</a>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm disabled"
+                    class="btn btn-outline-secondary btn-sm"
                     role="button"
                     aria-disabled="true"
                   >2017</a>
@@ -82,36 +106,27 @@
 
               <div class="mt-4 mb-4">
                 <label class="mr-4 my-auto">QUANTITÉS :</label>
-                <div class="input-group" id="btn-quantity">
-                  <span class="input-group-btn">
-                    <button
-                      type="button"
-                      class="quantity-left-minus btn btn-outline-secondary btn-sm"
-                      data-type="minus"
-                      data-field
-                    >
-                      <span class="glyphicon glyphicon-minus">-</span>
-                    </button>
-                  </span>
-                  <input
-                    type="text"
-                    id="quantity"
-                    name="quantity"
-                    class="form-control input-number form-control-sm quantity-bar"
-                    value="1"
-                    min="1"
-                    max="20"
-                  >
-                  <span class="input-group-btn">
-                    <button
-                      type="button"
-                      class="quantity-right-plus btn btn-outline-secondary btn-sm"
-                      data-type="plus"
-                      data-field
-                    >
-                      <span class="glyphicon glyphicon-plus">+</span>
-                    </button>
-                  </span>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-3 pl-0">
+                        <div class="input-group" id="btn-quantity">
+                          <span class="input-group-btn">
+                            <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" data-type="minus" data-field>
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                          </span>
+                          <input type="text" id="quantity" name="quantity" class="form-control input-number form-control-sm quantity-bar" value="1" min="1" max="20">
+                          <span class="input-group-btn">
+                            <button type="button" @click="increment()" class="quantity-right-plus btn btn-outline-secondary btn-sm" data-type="plus" data-field>
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} par boîte en {{vin.condi.type}}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
@@ -122,7 +137,7 @@
           </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row mb-5" >
           <div class="col-4">
             <div
               class="nav flex-column nav-pills text-info"
@@ -213,7 +228,9 @@
                   </tr>
                   <tr>
                     <td>Producteur</td>
-                    <td>{{vin.produ.nom}}</td>
+                    <a v-bind:href="vin.produ.url" target="_blank"> 
+                    <td id="a-producteur" >{{vin.produ.nom}}</td>
+                    </a> 
                   </tr>
                   <tr>
                     <td>Cépage(s)</td>
@@ -254,6 +271,8 @@
 </template>
 <script>
 
+
+
  export default {
   
   
@@ -263,22 +282,42 @@
     return {
       vin: '',
       vinCarts: [],
+      quantity:1,
       
     };
   },
 methods: {
     addCart() {
-      var entry = this.vins[this.vinid-1]
+      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantity}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
     },
+    increment () {
+      this.quantity++
+    },
+    decrement () {
+      if(this.quantity === 1) {
+        alert('Negative quantity not allowed')
+      } else {
+        this.quantity--
+      }
+    }
+    
+
   },
   mounted() {
     console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
+  
+  data() {
+      return {
+        unchecked: this.prixeuro
+      }
+  
+  }
 
 }
   
