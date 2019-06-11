@@ -95,14 +95,9 @@
       <div class="action-btn">
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
-<<<<<<< HEAD
       <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
         <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
         <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
-=======
-     <a href="/"><button class="btn btn-white btn-panier-2">Continuer mes achats</button></a>
-        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
->>>>>>> df4b4c19f3c5ef9949a62c9057eef5933362b446
     </div>
 </div>
   </div>
