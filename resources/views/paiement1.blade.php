@@ -16,7 +16,7 @@
     <body>
         <div id="app">
             <div class="container">
-                <header-paiement class="mt-3"></header-paiement>
+                <header-paiement></header-paiement>
                 <header-retour class="mb-3 mt-3"></header-retour>
                 <paiement-etape1 class="mt-3 mb-3"></paiement-etape1>
                 <paiement-compte></paiement-compte>

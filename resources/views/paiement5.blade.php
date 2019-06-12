@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-       
-       
 
         <title>Gazzar</title>
 
@@ -17,20 +15,15 @@
     <body>
         <div id="app">
             <div class="container">
-            @if(Auth::guard('user')->check())
-                <h6>Connecté</h6>
-                @else
-                <h6>Déconnecté</h6>
-                <nav-bar-logout></nav-bar-logout>
-                
-                @endif
-               
-                <panier-produit></panier-produit>
+                <header-paiement></header-paiement>
+                <paiement-validation class="pb-5 pt-5"></paiement-validation>
+
+
+
                 <footer-bar></footer-bar>
 
             </div>
         </div>
             <script src="js/app.js"></script>
-            <script>var userIsLoggedIn = {{ Auth::guard('user')->check() }};</script>
     </body>
 </html>
