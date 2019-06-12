@@ -95,7 +95,7 @@
               </div>
 
               <div class="mt-4 mb-4">
-                <label class="mr-4 my-auto">QUANTITÉS : </label>
+                <label class="mr-4 my-auto">Nombre de boîte : </label>
                 <div class="container">
                   <div class="row">
                     <div class="col-3 pl-0">
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div class="col">
-                      <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} par boîte en {{vin.condi.type}}</span>
+                      <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} bouteille par boîte ({{vin.condi.type}})</span>
                     </div>
                   </div>
                 </div>
