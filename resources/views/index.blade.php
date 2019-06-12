@@ -9,9 +9,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-                </head>
+        
+        </head>
     <body>
         <div id="app">
             <div class="container">
@@ -33,9 +32,14 @@
             </div>
         </div>
             <script src="js/app.js"></script>
-            <script> window.addEventListener("load", function () {
+            <script> 
+                window.addEventListener("load", function () {
                     const loader = document.querySelector(".loader");
                     loader.className += " hidden"; // class "loader hidden"
-                });</script>
+                });
+                
+            </script>
+           
+
     </body>
 </html>

@@ -90,7 +90,6 @@
       <div class="filters mx-auto">
       <a href="/"><button class="btn btn-white btn-panier-2">Continuer mes achats</button></a>
         <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
-        
     </div>
 </div>
   </div>
