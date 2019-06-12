@@ -110,7 +110,7 @@
             </div> 
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="close p-3" aria-label="Close">
+          <button type="button" class="close p-3" aria-label="Close" v-on:click="reset">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -230,6 +230,16 @@ export default {
       });
 
       var nbResults = $('.card-custom.visible').length;
+      $('.number_results').text(nbResults + ' résultats');
+  },
+
+  reset:function(){
+    $('#filters :input:checked').each(function(){
+      console.log("log")
+      $(this).prop( "checked", false );
+    });
+    $('.card-custom').addClass("visible").fadeIn();
+    var nbResults = $('.card-custom.visible').length;
       $('.number_results').text(nbResults + ' résultats');
   },
 
