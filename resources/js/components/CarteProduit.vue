@@ -3,7 +3,7 @@
 <div v-for="vin in vins" :key="vin.id" class="card card-custom" v-bind:class="[visibleClass]" v-bind:data-nom='vin.nom' v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite' v-bind:data-prix='vin.prix.prixht'> 
        <div class="container">
      <a v-bind:href="'produit/'+ vin.id">   
-    <img v-bind:src="vin.photoUrl" class="card-img-top center" alt="vin1">
+    <img v-bind:src="vin.photoUrl" class="card-img-top center" v-bind:alt="'vin1'+vin.id">
     </a>
     </div>
     <div id="carteproduit" class="center">
