@@ -14,11 +14,7 @@
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="typeList" class="container" v-for="t in types">
-<<<<<<< HEAD
               <label class="dropdown-item" ><input type="checkbox" v-on:click="filter"/>{{t.type}}</label>
-=======
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</label>
->>>>>>> 5c0cc37720439017031f8381d88301e23ea93b93
               </div>
           </div>
         </div>
@@ -33,7 +29,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -48,7 +44,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -63,7 +59,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.libelle}}</label>
             </div>
             </div>
         </div>
@@ -79,7 +75,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.millesime}}</label>
             </div>
             </div>
         </div>
@@ -94,7 +90,7 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
           </div>
             </div>
         </div>
@@ -109,7 +105,7 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</label>
+              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.quantite}}</label>
             </div>
             </div>
         </div>
@@ -177,7 +173,7 @@ export default {
 
     filter:function(){
       //Ajout de tous les filtres dans un tableau
-      $('.card-custom').removeClass("visible").hide();
+      $('.card-custom').removeClass("visible").fadeOut();
       var filters = [];
       $('#filters :input:checked').each(function(){
         var category= $(this).parent().text();
