@@ -85,6 +85,7 @@ Route::get('/cgv', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::post('/contact','ContactController@send');
 
 Route::get('/histoire', function () {
     return view('histoire');
