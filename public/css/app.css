@@ -3936,6 +3936,11 @@ input[type=button].btn-block {
   background-color: #adb5bd;
   border-radius: 0.5rem;
 <<<<<<< HEAD
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 =======
@@ -3946,6 +3951,7 @@ input[type=button].btn-block {
 =======
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3957,6 +3963,10 @@ input[type=button].btn-block {
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #fff;
 <<<<<<< HEAD
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transform: translateX(0.75rem);
 =======
@@ -3966,6 +3976,7 @@ input[type=button].btn-block {
 =======
   transform: translateX(0.75rem);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -5974,6 +5985,13 @@ a.close.disabled {
 
 .modal.fade .modal-dialog {
 <<<<<<< HEAD
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -50px);
+          transform: translate(0, -50px);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
@@ -5988,6 +6006,7 @@ a.close.disabled {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5998,6 +6017,10 @@ a.close.disabled {
 
 .modal.show .modal-dialog {
 <<<<<<< HEAD
+  -webkit-transform: none;
+          transform: none;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transform: none;
 =======
@@ -6007,6 +6030,7 @@ a.close.disabled {
 =======
   transform: none;
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 .modal-dialog-scrollable {
@@ -6508,6 +6532,11 @@ a.close.disabled {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 <<<<<<< HEAD
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transition: transform 0.6s ease-in-out;
 =======
@@ -6518,6 +6547,7 @@ a.close.disabled {
 =======
   transition: transform 0.6s ease-in-out;
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6535,6 +6565,10 @@ a.close.disabled {
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
 <<<<<<< HEAD
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   transform: translateX(100%);
 =======
@@ -6544,10 +6578,15 @@ a.close.disabled {
 =======
   transform: translateX(100%);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
+<<<<<<< HEAD
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   transform: translateX(-100%);
@@ -6558,11 +6597,16 @@ a.close.disabled {
 =======
   transform: translateX(-100%);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
+<<<<<<< HEAD
+  -webkit-transform: none;
+          transform: none;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   transform: none;
@@ -6573,6 +6617,7 @@ a.close.disabled {
 =======
   transform: none;
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
 }
 
 .carousel-fade .carousel-item.active,
@@ -6709,6 +6754,10 @@ a.close.disabled {
 @-webkit-keyframes spinner-border {
   to {
 <<<<<<< HEAD
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     transform: rotate(360deg);
 =======
@@ -6718,12 +6767,17 @@ a.close.disabled {
 =======
     transform: rotate(360deg);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
   }
 }
 
 @keyframes spinner-border {
   to {
 <<<<<<< HEAD
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     transform: rotate(360deg);
 =======
@@ -6733,6 +6787,7 @@ a.close.disabled {
 =======
     transform: rotate(360deg);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
   }
 }
 
@@ -6757,6 +6812,10 @@ a.close.disabled {
 @-webkit-keyframes spinner-grow {
   0% {
 <<<<<<< HEAD
+    -webkit-transform: scale(0);
+            transform: scale(0);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     transform: scale(0);
 =======
@@ -6766,6 +6825,7 @@ a.close.disabled {
 =======
     transform: scale(0);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
   }
 
   50% {
@@ -6776,6 +6836,10 @@ a.close.disabled {
 @keyframes spinner-grow {
   0% {
 <<<<<<< HEAD
+    -webkit-transform: scale(0);
+            transform: scale(0);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     transform: scale(0);
 =======
@@ -6785,6 +6849,7 @@ a.close.disabled {
 =======
     transform: scale(0);
 >>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
   }
 
   50% {
