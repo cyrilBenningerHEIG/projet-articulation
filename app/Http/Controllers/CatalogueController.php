@@ -76,6 +76,7 @@ class CatalogueController extends Controller
         $prixeuro_format = number_format($prixeurottc, 2, '.', '');
         $vinid = $id;
         $prixpromoeuro_format = 0;
+        $pourcentagePromo = 0;
 
         for ($i=0; $i < sizeof($vins_all); $i++) { 
             $prixht = $vins_all[$i]['prix']['prixht'];
