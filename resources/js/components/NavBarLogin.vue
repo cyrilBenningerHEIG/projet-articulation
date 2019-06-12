@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :key="componentKey">
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1"></div>
@@ -59,13 +59,20 @@ export default {
     return {
       user: '',
       vinCarts: [],
+      componentKey: 0,
       
     };
   },
   mounted() {
     console.log('App mounted!');
-    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
-    
+             this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+
+    this.$root.$on('forceRender',() => { 
+      var test = $('.badge badge-warning').text();
+      $('.badge badge-warning').text(test+1);
+           this.componentKey += 1;  
+         this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    })
   },
 }
 

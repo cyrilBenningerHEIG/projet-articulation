@@ -1,8 +1,7 @@
 <template>
   <section>      
-  <div class="containe">
-    <div class="container" v-for="vin in vins" :key="vin.id">
-      
+  <div class="container">
+    <div class="container" v-for="vin in vins" >
         <div class="roadMap pt-2 pb-5">
           <span>
             <a href="../produits" class="produit-liens"><b>PRODUITS</b></a>
@@ -124,7 +123,7 @@
               </div>
               <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
-                <span>Ajouter au panier</span>
+                <span id="addcarttext">Ajouter au panier</span>
               </button>
             </div>
           </div>
@@ -285,6 +284,10 @@ var numeral = require("numeral");
   },
   methods: {
     addCart() {
+      $("#addcarttext").text("Ajouté au panier ✓");
+      $('.btn-basket').css('border','5px solid green');
+      $('.btn-basket').css('background-color','green');
+      $('.btn-outline-danger:focus').css('box-shadow','0 0 0 0.2rem rgba(0, 153, 0, 0.2)');
       var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)

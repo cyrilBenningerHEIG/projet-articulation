@@ -19,6 +19,7 @@
             <div class="container">
             @if(Auth::guard('user')->check())
                 <h6>Connecté</h6>
+                <nav-bar-login></nav-bar-login>
                 @else
                 <h6>Déconnecté</h6>
                 <nav-bar-logout></nav-bar-logout>
