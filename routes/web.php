@@ -49,7 +49,7 @@ Route::get('/paiement-etape1', function () {
         
     };
     return view('paiement1');
-});
+}); 
 
 
 
