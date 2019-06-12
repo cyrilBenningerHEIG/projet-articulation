@@ -6,7 +6,7 @@
    </head>
    <div id="app">
         <div class="container">
-            <nav-bar-login></nav-bar-login>
+            <nav-bar-logout></nav-bar-logout>
             <register-form>
                     <div class="container-login100">
       <form method="POST" id="box_register" class="" action="{{ route('register') }}">

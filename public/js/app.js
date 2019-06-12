@@ -2113,8 +2113,6 @@ __webpack_require__.r(__webpack_exports__);
         email: this.user.email,
         telephone: this.user.telephone
       });
-      console.log(this.nom);
-      $("input").val('');
     }
   }
 });

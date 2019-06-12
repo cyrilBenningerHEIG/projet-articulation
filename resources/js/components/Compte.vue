@@ -136,8 +136,7 @@ export default {
             
           
             })
-             console.log(this.nom)
-            $("input").val('')
+             
         }
 
     }
