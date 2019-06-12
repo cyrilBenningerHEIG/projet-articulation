@@ -1912,9 +1912,10 @@ Vue.filter("formatNumber", function (value) {
   return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
 });
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['vins'],
+  props: ['vins', 'prixttc', 'prixeuro', 'pourcentagePromo'],
   data: function data() {
     return {
+      visibleClass: 'visible',
       vin: ''
     };
   }
@@ -2078,7 +2079,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["user"],
   data: function data() {
     return {
       destinataire: '',
@@ -2086,7 +2089,11 @@ __webpack_require__.r(__webpack_exports__);
       numero: '',
       npa: '',
       localite: '',
-      pays: ''
+      pays: '',
+      nom: '',
+      prenom: user.prenom,
+      email: user.email,
+      telephone: user.telephone
     };
   },
   methods: {
@@ -2101,6 +2108,14 @@ __webpack_require__.r(__webpack_exports__);
       });
       console.log(this.destinataire);
       $("input").val('');
+    },
+    submitClient: function submitClient() {
+      axios.post('client', {
+        nom: this.user.nom,
+        prenom: this.user.prenom,
+        email: this.user.email,
+        telephone: this.user.telephone
+      });
     }
   }
 });
@@ -2195,9 +2210,11 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -2258,6 +2275,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["adress"],
+  data: function data() {
+    return {
+      adres: '',
+      destinataire: '',
+      rue: '',
+      numero: '',
+      npa: '',
+      localite: '',
+      pays: '',
+      selected: 0
+    };
+  },
+  methods: {
+    submitAdress: function submitAdress() {
+      axios.post('adresses', {
+        destinataire: this.destinataire,
+        rue: this.rue,
+        numero: this.numero,
+        npa: this.npa,
+        localite: this.localite,
+        pays: this.pays
+      });
+      $("input").val('');
+    },
+    submitCmd: function submitCmd() {
+      axios.post('commandes', {
+        adresLivrId: this.selected,
+        adresFactId: this.selected
+      });
+      console.log(this.selected);
+    }
+  }
+});
 
 /***/ }),
 
@@ -2270,6 +2323,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2756,9 +2810,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
   data: function data() {
@@ -2834,7 +2885,13 @@ __webpack_require__.r(__webpack_exports__);
         ;
       });
       var nbResults = $('.card-custom.visible').length;
-      $('.number_results').text(nbResults + ' résultats');
+      $('#nbvins').text(nbResults);
+
+      if (nbResults < 2) {
+        $('#result_text').text("vin qui vous correspondent");
+      } else {
+        $('#result_text').text("vins qui vous correspondent");
+      }
     },
     reset: function reset() {
       $('#filters :input:checked').each(function () {
@@ -3260,6 +3317,174 @@ methods: {
     },
   }
 }  */
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["adresfact", "adreslivr", "lastcmd"]
+});
 
 /***/ }),
 
@@ -83300,63 +83525,63 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("h5", [
         _vm._v(
-          "\n1. Droit de révocation et réclamations au sujet de la marchandise \n"
+          "\r\n1. Droit de révocation et réclamations au sujet de la marchandise \r\n"
         )
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nLa commande, quel que soit le moyen de paiement choisi, est ferme et définitive. L’acheteur ne dispose d’aucun droit de rétractation ou de révocation de sa commande et ne peut donc restituer la marchandise commandée. Pour le surplus, toute réclamation concernant la marchandise doit être faite par écrit auprès de Elie Gazzar SA dans les 8 jours dès la livraison. \n"
+          "\r\nLa commande, quel que soit le moyen de paiement choisi, est ferme et définitive. L’acheteur ne dispose d’aucun droit de rétractation ou de révocation de sa commande et ne peut donc restituer la marchandise commandée. Pour le surplus, toute réclamation concernant la marchandise doit être faite par écrit auprès de Elie Gazzar SA dans les 8 jours dès la livraison. \r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n2. Goût de bouchon\n")]),
+      _c("h5", [_vm._v("\r\n2. Goût de bouchon\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nElie Gazzar S.A. calcule les prix de vente de ses vins au plus juste. Ceux-ci n'incluent pas de marge pour les bouteilles présentant un éventuel goût de bouchon. Aussi, un cas isolé de goût de bouchon ne peut donner droit à aucune prétention de la part du client.\n"
+          "\r\nElie Gazzar S.A. calcule les prix de vente de ses vins au plus juste. Ceux-ci n'incluent pas de marge pour les bouteilles présentant un éventuel goût de bouchon. Aussi, un cas isolé de goût de bouchon ne peut donner droit à aucune prétention de la part du client.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n3. Interdiction de vente à des mineurs\n")]),
+      _c("h5", [_vm._v("\r\n3. Interdiction de vente à des mineurs\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nPar son acceptation des conditions générales, le client certifie qu’il est âgé d’au moins 18 ans. En effet, est prohibée expressément par la loi la vente de spiritueux, d’apéritifs et d’alcopops aux personnes de moins de 18 ans, ainsi que la vente de vins, cidres et bières aux moins de 16 ans.\n"
+          "\r\nPar son acceptation des conditions générales, le client certifie qu’il est âgé d’au moins 18 ans. En effet, est prohibée expressément par la loi la vente de spiritueux, d’apéritifs et d’alcopops aux personnes de moins de 18 ans, ainsi que la vente de vins, cidres et bières aux moins de 16 ans.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n4. Cas spécial des vins vendus en primeurs\n")]),
+      _c("h5", [_vm._v("\r\n4. Cas spécial des vins vendus en primeurs\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nLa commande ne sera honorée que si elle est payée d’avance dans les trente jours.\nEn raison de la modification du paiement de la TVA à l’administration fédérale des Contributions, celle-ci se fait dès la fin de 2009 lors de l’encaissement chaque trimestre.\nSi, sans la faute d’Elie Gazzar SA, les vins vendus en primeurs commandées à ses fournisseurs ne lui sont pas livrées, le client n’aura droit qu’au remboursement du prix qu’il a payé, à l’exclusion de tous autres dommages intérêts.\n"
+          "\r\nLa commande ne sera honorée que si elle est payée d’avance dans les trente jours.\r\nEn raison de la modification du paiement de la TVA à l’administration fédérale des Contributions, celle-ci se fait dès la fin de 2009 lors de l’encaissement chaque trimestre.\r\nSi, sans la faute d’Elie Gazzar SA, les vins vendus en primeurs commandées à ses fournisseurs ne lui sont pas livrées, le client n’aura droit qu’au remboursement du prix qu’il a payé, à l’exclusion de tous autres dommages intérêts.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n5. Moment du paiement\n")]),
+      _c("h5", [_vm._v("\r\n5. Moment du paiement\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nElie Gazzar SA exige systématiquement de ses nouveaux clients le paiement par avance, c’est-à-dire avant la livraison. Dans les autres cas, sauf convention contraire entre les parties, le délai de paiement est de trente jours net dès la commande.\n"
+          "\r\nElie Gazzar SA exige systématiquement de ses nouveaux clients le paiement par avance, c’est-à-dire avant la livraison. Dans les autres cas, sauf convention contraire entre les parties, le délai de paiement est de trente jours net dès la commande.\r\n"
         )
       ]),
       _vm._v(" "),
-      _c("h5", [_vm._v("\n6. Participation aux frais de livraison\n")]),
+      _c("h5", [_vm._v("\r\n6. Participation aux frais de livraison\r\n")]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nFr. 20.- jusqu'à 12 bouteilles de 75 cl.\nFr. 30.- pour 24 bouteilles de 75 cl.\nDès 36 bouteilles de 75 cl., la livraison est gratuite dans toute la Suisse.\n"
+          "\r\nFr. 20.- jusqu'à 12 bouteilles de 75 cl.\r\nFr. 30.- pour 24 bouteilles de 75 cl.\r\nDès 36 bouteilles de 75 cl., la livraison est gratuite dans toute la Suisse.\r\n"
         )
       ]),
       _vm._v(" "),
       _c("h5", [
-        _vm._v("\n7. Dispositions en matière de protection des données\n")
+        _vm._v("\r\n7. Dispositions en matière de protection des données\r\n")
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\nEn s’inscrivant sur le site www.gazzar.ch, le client consent à ce que les données personnelles transmises soient enregistrées et utilisées afin qu’il reçoive des informations de nature publicitaire ou autre de la part de Elie Gazzar SA.\nElie Gazzar SA transmet les données personnelles à des tiers uniquement dans la mesure où cela est indispensable pour la bonne exécution de la commande (transmission aux partenaires logistiques pour la livraison des commandes) ou du paiement (transmission à une société de recouvrement en cas de défaut de paiement).\nLes informations sont traitées avec la plus grande confidentialité et conformément aux règles de la bonne foi. Le site www.gazzar.ch est sécurisé (certificat de sécurité SSL). Elie Gazzar SA décline toutefois toute responsabilité concernant la sécurité des données transmises par Internet.\nConformément à la Loi sur la protection des données, le client dispose d’un droit d’accès, de rectification et d’opposition aux données le concernant. Pour cela, il lui suffit de s’adresser à Elie Gazzar SA.\n    "
+          "\r\nEn s’inscrivant sur le site www.gazzar.ch, le client consent à ce que les données personnelles transmises soient enregistrées et utilisées afin qu’il reçoive des informations de nature publicitaire ou autre de la part de Elie Gazzar SA.\r\nElie Gazzar SA transmet les données personnelles à des tiers uniquement dans la mesure où cela est indispensable pour la bonne exécution de la commande (transmission aux partenaires logistiques pour la livraison des commandes) ou du paiement (transmission à une société de recouvrement en cas de défaut de paiement).\r\nLes informations sont traitées avec la plus grande confidentialité et conformément aux règles de la bonne foi. Le site www.gazzar.ch est sécurisé (certificat de sécurité SSL). Elie Gazzar SA décline toutefois toute responsabilité concernant la sécurité des données transmises par Internet.\r\nConformément à la Loi sur la protection des données, le client dispose d’un droit d’accès, de rectification et d’opposition aux données le concernant. Pour cela, il lui suffit de s’adresser à Elie Gazzar SA.\r\n    "
         )
       ])
     ])
@@ -83597,152 +83822,163 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [
-      _c(
-        "div",
-        { staticClass: "row" },
-        _vm._l(_vm.vins.slice(7, 11), function(vin) {
-          return _c(
-            "div",
-            { key: vin.id, staticClass: "card card-custom col" },
-            [
-              _c("div", {}, [
-                _c("a", { attrs: { href: "produit/" + vin.id } }, [
-                  _c("img", {
-                    staticClass: "card-img-top center",
-                    attrs: { src: vin.photoUrl, alt: "vin1" + vin.id }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "center", attrs: { id: "carteproduit" } },
-                [
-                  _vm._l(vin.types, function(value) {
-                    return _c("div", [
-                      _c(
-                        "h6",
-                        {
-                          staticClass: "card-title",
-                          attrs: { id: "nom-carte" }
-                        },
-                        [
-                          _c("div", { staticClass: "container p-0" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "row",
-                                attrs: { id: "title-position" }
-                              },
-                              [
-                                _c("div", { staticClass: "col-1 pl-1 pr-1" }, [
-                                  _c(
-                                    "svg",
-                                    { attrs: { height: "20", width: "20" } },
-                                    [
-                                      _c("circle", {
-                                        class: "type-circle-" + value.id,
+  return _c(
+    "div",
+    {
+      staticClass: "container carteContainer",
+      attrs: { id: "carteContainer" }
+    },
+    [
+      _c("h3", [_vm._v("Nos suggestions")]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _vm._l(_vm.vins.slice(9, 13), function(vin) {
+        return _c(
+          "div",
+          {
+            key: vin.id,
+            staticClass: "card card-custom",
+            class: [_vm.visibleClass],
+            attrs: {
+              "data-nom": vin.nom,
+              "data-type": vin.types[0].type,
+              "data-pays": vin.regn.pays.nom,
+              "data-region": vin.regn.nom,
+              "data-appel": vin.appel.libelle,
+              "data-millesime": vin.millesime,
+              "data-produ": vin.produ.nom,
+              "data-format": vin.frmt.quantite,
+              "data-prix": vin.prix.prixht
+            }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("a", { attrs: { href: "/produit/" + vin.id } }, [
+                _c("img", {
+                  staticClass: "card-img-top center",
+                  attrs: { src: vin.photoUrl, alt: "vin1" + vin.id }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "center", attrs: { id: "carteproduit" } },
+              [
+                _vm._l(vin.types, function(value) {
+                  return _c("div", [
+                    _c(
+                      "h6",
+                      { staticClass: "card-title", attrs: { id: "nom-carte" } },
+                      [
+                        _c("div", { staticClass: "container p-0" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "row",
+                              attrs: { id: "title-position" }
+                            },
+                            [
+                              _c("div", { staticClass: "col-1 pr-3 pl-2" }, [
+                                _c(
+                                  "svg",
+                                  { attrs: { height: "20", width: "20" } },
+                                  [
+                                    _c("circle", {
+                                      class: "type-circle-" + value.id,
+                                      attrs: {
+                                        cx: "10",
+                                        cy: "10",
+                                        r: "5",
+                                        stroke: "black",
+                                        "stroke-width": "0.3"
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                vin.estBio
+                                  ? _c("div", [
+                                      _c("img", {
+                                        staticStyle: { width: "20px" },
                                         attrs: {
-                                          cx: "10",
-                                          cy: "10",
-                                          r: "5",
-                                          stroke: "black",
-                                          "stroke-width": "0.3"
+                                          src: "/images/icons/bio.svg",
+                                          alt: "bio"
                                         }
                                       })
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "col pr-2 pl-2 vin-titre" },
-                                  [
-                                    _vm._v(
-                                      "\n                      " +
-                                        _vm._s(vin.nom) +
-                                        " - " +
-                                        _vm._s(vin.millesime) +
-                                        "\n                "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ])
-                        ]
-                      )
-                    ])
-                  }),
-                  _vm._v(" "),
-                  _c("hr", { staticClass: "m-0" }),
-                  _vm._v(" "),
-                  _c("div", { attrs: { id: "card-body" } }, [
-                    vin.millesime > 1
-                      ? _c("div", { staticClass: "check-full" }, [
-                          _c(
-                            "h6",
-                            {
-                              staticClass: "card-text",
-                              attrs: { id: "millesime-carte" }
-                            },
-                            [_vm._v(_vm._s(vin.millesime))]
+                                    ])
+                                  : _vm._e()
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col pr-2 pl-2 vin-titre" },
+                                [
+                                  _c("h6", { staticClass: "mb-0" }, [
+                                    _vm._v(_vm._s(vin.nom))
+                                  ])
+                                ]
+                              )
+                            ]
                           )
                         ])
-                      : _c("div", { staticClass: "check-full" }, [
-                          _c(
-                            "h6",
-                            {
-                              staticClass: "card-text",
-                              attrs: { id: "millesime-carte" }
-                            },
-                            [_vm._v(" - ")]
-                          )
-                        ]),
-                    _vm._v(" "),
-                    _c(
-                      "h6",
-                      {
-                        staticClass: "card-text",
-                        attrs: { id: "produ-carte" }
-                      },
-                      [_vm._v(_vm._s(vin.produ.nom))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "h6",
-                      { staticClass: "card-text", attrs: { id: "prix-carte" } },
-                      [_vm._v("CHF " + _vm._s(vin.prix.prixht) + " ")]
+                      ]
                     )
                   ])
-                ],
-                2
-              )
-            ]
-          )
-        }),
-        0
-      )
-    ])
-  ])
+                }),
+                _vm._v(" "),
+                _c("hr", { staticClass: "m-0" }),
+                _vm._v(" "),
+                _c("div", { attrs: { id: "card-body" } }, [
+                  _c(
+                    "h6",
+                    {
+                      staticClass: "card-text m-0",
+                      attrs: { id: "millesime-carte" }
+                    },
+                    [_vm._v(_vm._s(vin.frmt.quantite))]
+                  ),
+                  _vm._v(" "),
+                  vin.millesime > 1
+                    ? _c("div", { staticClass: "check-full" }, [
+                        _c(
+                          "h6",
+                          {
+                            staticClass: "card-text",
+                            attrs: { id: "millesime-carte" }
+                          },
+                          [_vm._v(_vm._s(vin.millesime))]
+                        )
+                      ])
+                    : _c("div", { staticClass: "check-full" }, [
+                        _c(
+                          "h6",
+                          {
+                            staticClass: "card-text",
+                            attrs: { id: "millesime-carte" }
+                          },
+                          [_vm._v(" - ")]
+                        )
+                      ]),
+                  _vm._v(" "),
+                  _c(
+                    "h6",
+                    { staticClass: "card-text", attrs: { id: "produ-carte" } },
+                    [_vm._v(_vm._s(vin.produ.nom))]
+                  )
+                ])
+              ],
+              2
+            )
+          ]
+        )
+      })
+    ],
+    2
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h3", { staticClass: "text-center" }, [
-        _vm._v("NOTRE SÉLECTION"),
-        _c("hr")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -83810,11 +84046,11 @@ var render = function() {
                           { staticClass: "col-11 pr-1 pl-1 vin-titre" },
                           [
                             _vm._v(
-                              "\n                        " +
+                              "\r\n                        " +
                                 _vm._s(vin.nom) +
                                 " - " +
                                 _vm._s(vin.millesime) +
-                                "\n                  "
+                                "\r\n                  "
                             )
                           ]
                         )
@@ -83856,7 +84092,183 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row mt-5 mb-5" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            staticClass: "mr-5 ml-5",
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.submitClient($event)
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputNom1" } }, [
+                _vm._v("Nom")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model:value",
+                    value: _vm.user.nom,
+                    expression: "user.nom",
+                    arg: "value"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "télépone",
+                  id: "nom",
+                  "aria-describedby": "NomHelp",
+                  name: "nom",
+                  required: ""
+                },
+                domProps: { value: _vm.user.nom },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "nom", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputprénom1" } }, [
+                _vm._v("Prénom")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model:value",
+                    value: _vm.user.prenom,
+                    expression: "user.prenom",
+                    arg: "value"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "télépone",
+                  id: "prenom",
+                  "aria-describedby": "prénomHelp",
+                  name: "prenom",
+                  required: ""
+                },
+                domProps: { value: _vm.user.prenom },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "prenom", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                _vm._v("Email")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model:value",
+                    value: _vm.user.email,
+                    expression: "user.email",
+                    arg: "value"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "télépone",
+                  id: "email",
+                  "aria-describedby": "emailHelp",
+                  name: "email",
+                  required: ""
+                },
+                domProps: { value: _vm.user.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "email", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputtelephone1" } }, [
+                _vm._v("Télephone")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model:value",
+                    value: _vm.user.telephone,
+                    expression: "user.telephone",
+                    arg: "value"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "telephone",
+                  id: "telephone",
+                  "aria-describedby": "telephoneHelp",
+                  name: "telephone"
+                },
+                domProps: { value: _vm.user.telephone },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.user, "telephone", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger btn-block ",
+                attrs: { type: "submit" }
+              },
+              [_vm._v("Actualiser mes informations")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-secondary btn-block " }, [
+          _vm._v("Mes commandes")
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn btn-secondary btn-block " }, [
+          _vm._v("Gestion du compte")
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
         _vm._m(1),
@@ -84075,95 +84487,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
-      _c("h4", { staticClass: "text-center mb-2" }, [
-        _c("b", [_vm._v("Mes informations")])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("form", { staticClass: "mr-5 ml-5" }, [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "exampleInputNom1" } }, [_vm._v("Nom")]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "télépone",
-              id: "exampleInputNom1",
-              "aria-describedby": "NomHelp",
-              placeholder: "clnt.nom"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "exampleInputprénom1" } }, [
-            _vm._v("Prénom")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "télépone",
-              id: "exampleInputprénom1",
-              "aria-describedby": "prénomHelp",
-              placeholder: "clnt.prenom"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-            _vm._v("Email")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "télépone",
-              id: "exampleInputEmail1",
-              "aria-describedby": "emailHelp",
-              placeholder: "clnt.email"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "exampleInputtelephone1" } }, [
-            _vm._v("Télephone")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: {
-              type: "telephone",
-              id: "exampleInputtelephone1",
-              "aria-describedby": "telephoneHelp",
-              placeholder: "clnt.telephone"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-danger btn-block ",
-            attrs: { type: "submit" }
-          },
-          [_vm._v("Actualisé mes informations")]
-        ),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-secondary btn-block " }, [
-          _vm._v("Mes commandes")
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-secondary btn-block " }, [
-          _vm._v("Gestion du compte")
-        ])
-      ])
+    return _c("h4", { staticClass: "text-center mb-2" }, [
+      _c("b", [_vm._v("Mes informations")])
     ])
   },
   function() {
@@ -84690,7 +85015,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "test text-center" }, [
-    _c("h4", { staticClass: "mt-5 pt-3" }, [_vm._v("GAZZAR VOUS PROPOSE")]),
+    _c("h4", { staticClass: "mt-2 pt-3" }, [_vm._v("GAZZAR VOUS PROPOSE")]),
     _vm._v(" "),
     _c("div", { staticClass: "container counter" }, [
       _c("div", { staticClass: "row" }, [
@@ -84712,9 +85037,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm" }, [
-          _c("span", { staticClass: "counter h2" }, [
-            _vm._v(_vm._s(_vm.nbprodu))
-          ]),
+          _c("span", { staticClass: "counter" }, [_vm._v(_vm._s(_vm.nbprodu))]),
           _vm._v(" "),
           _c("h6", [_vm._v("PRODUCTEURS")])
         ]),
@@ -84935,13 +85258,58 @@ var render = function() {
         _vm._v(" "),
         _c(
           "select",
-          { staticClass: "custom-select" },
-          _vm._l(_vm.adress, function(adres) {
-            return _c("option", { domProps: { value: adres.id } }, [
-              _vm._v("\n    " + _vm._s(adres.rue) + "\n  ")
-            ])
-          }),
-          0
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selected,
+                expression: "selected"
+              }
+            ],
+            staticClass: "custom-select",
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selected = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          [
+            _c("option", { attrs: { selected: "" } }, [
+              _vm._v(" sélectionner une adresse ")
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.adress, function(adres) {
+              return _c(
+                "option",
+                { key: adres.id, domProps: { value: adres.id } },
+                [
+                  _vm._v(
+                    "\n    " +
+                      _vm._s(adres.rue) +
+                      " " +
+                      _vm._s(adres.numero) +
+                      ", " +
+                      _vm._s(adres.npa) +
+                      " " +
+                      _vm._s(adres.localite) +
+                      "\n  "
+                  )
+                ]
+              )
+            })
+          ],
+          2
         ),
         _vm._v(" "),
         _c(
@@ -85151,7 +85519,33 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
+        _c("h4", { staticClass: "text-center mb-2" }, [
+          _vm._v("Adresse de facturation")
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "mr-5 ml-5" }, [
+          _c("p", [_vm._v("Identique à l'adresse de facturation")]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+            _c("a", { staticClass: "p", attrs: { href: "paiement-etape3" } }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-block",
+                  attrs: { type: "submit" },
+                  on: { click: _vm.submitCmd }
+                },
+                [_vm._v("Continuer")]
+              )
+            ])
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -85160,36 +85554,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
-      _c("h4", { staticClass: "text-center mb-2" }, [
-        _vm._v("Adresse de facturation")
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
-      _c("div", { staticClass: "mr-5 ml-5" }, [
-        _c("p", [_vm._v("Identique à l'adresse de facturation")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group mt-3 mb-5" }, [
-          _c(
-            "button",
-            {
-              staticClass:
-                "btn btn-outline-danger btn-outline-form  btn-block ",
-              attrs: { type: "submit" }
-            },
-            [_vm._v("Modifier")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-          _c("a", { staticClass: "p", attrs: { href: "paiement-etape3" } }, [
-            _c("button", { staticClass: "btn btn-danger btn-block" }, [
-              _vm._v("Continuer")
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "form-group mt-3 mb-5" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-outline-danger btn-outline-form  btn-block ",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("Modifier")]
+      )
     ])
   }
 ]
@@ -87290,19 +87663,27 @@ var render = function() {
           _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
             _c("div", { staticClass: "col-sm" }, [
               _c(
-                "button",
+                "h5",
                 {
-                  staticClass: "btn btn-white btn-filter",
-                  on: { click: _vm.emptyFilters }
+                  staticClass: "number_results",
+                  staticStyle: { display: "inline" }
                 },
-                [_vm._v("Réinitialiser les filtres")]
+                [
+                  _vm._v("Nous avons trouvé "),
+                  _c("b", { attrs: { id: "nbvins" } }, [
+                    _vm._v(_vm._s(_vm.nbvins))
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "h5",
+                {
+                  staticStyle: { display: "inline" },
+                  attrs: { id: "result_text" }
+                },
+                [_vm._v(" vins qui vous correspondent")]
               )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-sm text-center" }, [
-              _c("p", { staticClass: "number_results" }, [
-                _vm._v(_vm._s(_vm.nbvins) + " résultats")
-              ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm text-right" }, [
@@ -88048,31 +88429,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div")
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "producer-logo" }, [
-      _c(
-        "a",
-        { staticClass: "blog-header-logo text-dark", attrs: { href: "#" } },
-        [
-          _c("img", {
-            staticClass: "logo_producer mg-responsive mx-auto",
-            staticStyle: { width: "200px" },
-            attrs: {
-              id: "img-logo-producer",
-              src: "images/illustrations/logo_producer.svg"
-            }
-          })
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -88094,276 +88453,294 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row mt-5 mb-5" }, [
+      _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
+        _c("h4", { staticClass: "text-center mb-2" }, [
+          _vm._v("Vos informations")
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("table", [
+          _c("p", { staticClass: "mt-2 mb-2" }, [
+            _vm._v("Adresse de livraison")
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Destinataire")]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(_vm.adreslivr[0].destinataire))])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Adresse")]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                _vm._s(_vm.adreslivr[0].rue) +
+                  " " +
+                  _vm._s(_vm.adreslivr[0].numero)
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Npa/Localité")]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                _vm._s(_vm.adreslivr[0].npa) +
+                  " " +
+                  _vm._s(_vm.adreslivr[0].localite)
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Pays")]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(_vm.adreslivr[0].pays))])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("table", [
+          _c("p", { staticClass: "mt-2 mb-2" }, [
+            _vm._v("Adresse de facturation")
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Destinataire")]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(_vm.adresfact[0].destinataire))])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Adresse")]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                _vm._s(_vm.adresfact[0].rue) +
+                  " " +
+                  _vm._s(_vm.adresfact[0].numero)
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Npa/Localité")]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                _vm._s(_vm.adresfact[0].npa) +
+                  " " +
+                  _vm._s(_vm.adresfact[0].localite)
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("th", [_vm._v("Pays")]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(_vm.adresfact[0].pays))])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(0)
+    ]),
+    _vm._v(" "),
+    _c("h4", [_vm._v("Résumé de la commande")]),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row mt-5 mb-5" }, [
-        _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
-          _c("h4", { staticClass: "text-center mb-2" }, [
-            _vm._v("Vos informations")
-          ]),
+    return _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
+      _c("h4", { staticClass: "text-center mb-2" }, [
+        _vm._v("Informations de commande")
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("table", [
+        _c("p", { staticClass: "mt-2 mb-2" }, [_vm._v("Adresse de livraison")]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Date de commande")]),
           _vm._v(" "),
-          _c("hr"),
+          _c("td", [_vm._v("2 Juin 2019")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Moyen de paiement")]),
           _vm._v(" "),
-          _c("table", [
-            _c("p", { staticClass: "mt-2 mb-2" }, [
-              _vm._v("Adresse de livraison")
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Nom")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Audris Chen")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Adresse")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Route du Signal 50")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Canton")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Vaud")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Zip/Ville")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1091 Grandvaux")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Pays")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Suisse")])
-            ])
-          ]),
+          _c("td", [_vm._v("Facture")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Numéro de commande")]),
           _vm._v(" "),
-          _c("table", [
-            _c("p", { staticClass: "mt-4 mb-2" }, [
-              _vm._v("Adresse de paiement")
-            ]),
+          _c("td", [_vm._v("AJS23GH")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("Date de réception")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("10.06-15.06")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive-sm" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Produit")]),
             _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Nom")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Audris Chen")])
-            ]),
+            _c("th", { attrs: { scope: "col" } }),
             _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Adresse")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Route du Signal 50")])
-            ]),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Quantité / Prix")]),
             _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Canton")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Vaud")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Zip/Ville")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("1091 Grandvaux")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Pays")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Suisse")])
-            ])
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Sous total")])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col m-5 p-compte-paiement" }, [
-          _c("h4", { staticClass: "text-center mb-2" }, [
-            _vm._v("Informations de commande")
-          ]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("table", [
-            _c("p", { staticClass: "mt-2 mb-2" }, [
-              _vm._v("Adresse de livraison")
+        _c("tbody", [
+          _c("tr", [
+            _c("th", { attrs: { scope: "row" } }, [
+              _c("div", { staticClass: "card card-custom mx-2 mb-3" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: {
+                    src:
+                      "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
+                    alt: "vin1",
+                    id: "cart-produit-img"
+                  }
+                })
+              ])
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Date de commande")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("2 Juin 2019")])
+            _c("td", [
+              _c(
+                "div",
+                { staticClass: "card-body", attrs: { id: "weekproduct" } },
+                [
+                  _c("div", { staticClass: "produit-descr" }, [
+                    _c("p", { staticClass: "card-title" }, [_vm._v("nom")]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-title" }, [_vm._v("domaine")]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v("millesime")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [_vm._v("region")]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [_vm._v("pays")]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [_vm._v("prix")]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-white btn-rounded btn-sm",
+                        attrs: { type: "button", href: "#" }
+                      },
+                      [_vm._v("Supprimer")]
+                    )
+                  ])
+                ]
+              )
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Moyen de paiement")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("Facture")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Numéro de commande")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("AJS23GH")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("th", [_vm._v("Date de réception")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("10.06-15.06")])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Résumé de la commande")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "table-responsive-sm" }, [
-        _c("table", { staticClass: "table" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Produit")]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [
-                _vm._v("Quantité / Prix")
-              ]),
-              _vm._v(" "),
-              _c("th", { attrs: { scope: "col" } }, [_vm._v("Sous total")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", [
-              _c("th", { attrs: { scope: "row" } }, [
-                _c("div", { staticClass: "card card-custom mx-2 mb-3" }, [
-                  _c("img", {
-                    staticClass: "card-img-top",
+            _c("td", [
+              _c("form", [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    staticClass: "form-control",
                     attrs: {
-                      src:
-                        "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-                      alt: "vin1",
-                      id: "cart-produit-img"
+                      type: "number",
+                      id: "formGroupExampleInput",
+                      placeholder: "Quantité"
                     }
                   })
                 ])
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c(
-                  "div",
-                  { staticClass: "card-body", attrs: { id: "weekproduct" } },
-                  [
-                    _c("div", { staticClass: "produit-descr" }, [
-                      _c("p", { staticClass: "card-title" }, [_vm._v("nom")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-title" }, [
-                        _vm._v("domaine")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [
-                        _vm._v("millesime")
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("region")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("pays")]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text" }, [_vm._v("prix")]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-white btn-rounded btn-sm",
-                          attrs: { type: "button", href: "#" }
-                        },
-                        [_vm._v("Supprimer")]
-                      )
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", [
-                _c("form", [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "number",
-                        id: "formGroupExampleInput",
-                        placeholder: "Quantité"
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("40 chf")])
+              ])
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("Sout total")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
+            _c("td", [_vm._v("40 chf")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("Sout total")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("X")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("TVA & autres taxes")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("X")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [_vm._v("Total HT")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("X")])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td"),
+            _vm._v(" "),
+            _c("td"),
+            _vm._v(" "),
+            _c("td", [
+              _c("h4", [_vm._v("Total de la commande")]),
+              _c("br"),
+              _vm._v("(Hors frais de livraison)")
             ]),
             _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("TVA & autres taxes")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [_vm._v("Total HT")]),
-              _vm._v(" "),
-              _c("td", [_vm._v("X")])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td"),
-              _vm._v(" "),
-              _c("td"),
-              _vm._v(" "),
-              _c("td", [
-                _c("h4", [_vm._v("Total de la commande")]),
-                _c("br"),
-                _vm._v("(Hors frais de livraison)")
-              ]),
-              _vm._v(" "),
-              _c("td", [_c("h4", [_vm._v("X")])])
-            ])
+            _c("td", [_c("h4", [_vm._v("X")])])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("a", { attrs: { href: "paiement-etape4" } }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-danger btn-panier center mb-5 mt-5" },
-            [_vm._v("Passer commande")]
-          )
-        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("a", { attrs: { href: "paiement-etape4" } }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-danger btn-panier center mb-5 mt-5" },
+          [_vm._v("Passer commande")]
+        )
       ])
     ])
   }
@@ -88436,9 +88813,35 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mt-5" }, [
-      _c("h4", [_vm._v("Sélection de la semaine")]),
+      _c("hr"),
       _vm._v(" "),
-      _c("hr")
+      _c(
+        "div",
+        { staticClass: "nav-item", staticStyle: { "margin-bottom": "20px" } },
+        [
+          _c("h4", { staticStyle: { display: "inline" } }, [
+            _vm._v("Cette semaine nous mettons en avant "),
+            _c(
+              "a",
+              { attrs: { href: "https://www.domainedemontmollin.ch/" } },
+              [
+                _c("img", {
+                  staticClass: "logo_producer mg-responsive mx-auto",
+                  staticStyle: {
+                    width: "400px",
+                    "padding-left": "150px",
+                    "padding-bottom": "25px"
+                  },
+                  attrs: {
+                    id: "img-logo-producer",
+                    src: "images/illustrations/logo_producer.svg"
+                  }
+                })
+              ]
+            )
+          ])
+        ]
+      )
     ])
   }
 ]
@@ -104379,15 +104782,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************!*\
   !*** ./resources/js/components/LivraisonPaiement.vue ***!
   \*******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LivraisonPaiement_vue_vue_type_template_id_6f3421fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LivraisonPaiement.vue?vue&type=template&id=6f3421fe& */ "./resources/js/components/LivraisonPaiement.vue?vue&type=template&id=6f3421fe&");
 /* harmony import */ var _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LivraisonPaiement.vue?vue&type=script&lang=js& */ "./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -104417,15 +104819,13 @@ component.options.__file = "resources/js/components/LivraisonPaiement.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LivraisonPaiement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LivraisonPaiement.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LivraisonPaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -105491,15 +105891,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ResumePaiement_vue_vue_type_template_id_e66bafba___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ResumePaiement.vue?vue&type=template&id=e66bafba& */ "./resources/js/components/ResumePaiement.vue?vue&type=template&id=e66bafba&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ResumePaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ResumePaiement.vue?vue&type=script&lang=js& */ "./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ResumePaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ResumePaiement_vue_vue_type_template_id_e66bafba___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ResumePaiement_vue_vue_type_template_id_e66bafba___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -105513,6 +105915,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/ResumePaiement.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ResumePaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ResumePaiement.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ResumePaiement.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ResumePaiement_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -106643,8 +107059,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\projet-articulation\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Cyril\Documents\HEIG\ProjetArticulation\projet-articulation\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

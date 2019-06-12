@@ -18,7 +18,7 @@
                 <header-paiement></header-paiement>
                 <header-retour class="mb-3 mt-3"></header-retour>
                 <paiement-etape3 class="mt-3 mb-3"></paiement-etape3>
-                <paiement-resumer></paiement-resumer>
+                <paiement-resumer  :adreslivr='{{$adreslivr}}' :adresfact='{{$adresfact}}' ></paiement-resumer>
 
 
                 <footer-bar></footer-bar>

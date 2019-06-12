@@ -6,7 +6,9 @@ use App\clnt;
 //use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -55,8 +57,13 @@ class RegisterController extends Controller
             'dateNaissance' => ['required', 'date'],
             'telephone' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'password' => ['required', 'string', 'min:8', 'confirmed']
+            ],
+            [
+                'password'    => 'Le mot de passe doit contenir 8 caractères au minimum',
+                
+            ]
+        );
     }
 
     /**
@@ -67,6 +74,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // Validate the form data
+       $this.validate($data);
         return clnt::create([
             'nom' => $data['nom'],
             'prenom' => $data['prenom'],
@@ -77,4 +86,5 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+    
 }

@@ -6,7 +6,7 @@
    </head>
    <div id="app">
         <div class="container">
-            <nav-bar-login></nav-bar-login>
+            <nav-bar-logout></nav-bar-logout>
             <register-form>
                     <div class="container-login100">
       <form method="POST" id="box_register" class="" action="{{ route('register') }}">
@@ -29,7 +29,7 @@
             </span>
             @enderror
 
-         <input id="telephone" type="phone" name="telephone" placeholder="Téléphone" value="{{ old('telephone') }}" class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}" required>
+         <input id="telephone" type="phone" name="telephone" placeholder="Téléphone" value="{{ old('telephone') }}" class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
             @error('telephone')
             <span class="invalid-feedback" role="alert">
 
@@ -50,7 +50,7 @@
             </span>
             @enderror
 
-            <input id="password" type="password" name="password" placeholder="Mot de passe" value="{{ old('password') }}" class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" required>
+            <input id="password" type="password" name="password" placeholder="Mot de passe" value="{{ old('password') }}" class="form-control @error('password') is-invalid @enderror" required>
             @error('password')
             <span class="invalid-feedback" role="alert">
 

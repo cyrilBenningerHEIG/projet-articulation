@@ -1,47 +1,67 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+        <title>Gazzar — Mot de passe</title>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- Styles -->
+                </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                    @if(Auth::guard('user')->check())
+                    <h6>Connecté</h6>
+                    @else
+                    <h6>Déconnecté</h6>
+                    <nav-bar-logout></nav-bar-logout>
+                    
                     @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                        <div class="container-login100">
+                    <form method="POST" id="box" class="" action="{{ route('password.email') }}">
+                        {{ csrf_field() }}
+                    
+                                       <h2 id="login-title">Récupéreration du mot de passe</h2>
+                                <input id="email" type="email" placeholder="Adresse email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
+                    
                                     <span class="invalid-feedback" role="alert">
+                    
                                         <strong>{{ $message }}</strong>
+                    
                                     </span>
+                    
                                 @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                    
+                                                    <button type="submit" id="submit" class="">
+                    
+                                    {{ __('Envoyer un mail de récupération') }}
+                    
                                 </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    
+                                <a id="login-link" href="{{ route('login') }}">
+                    
+                                        {{ __("Se connecter") }}
+                    
+                                    </a>
+                    
+                                <a id="register-link" href="{{ route('register') }}">
+                    
+                                        {{ __("S'inscrire") }}
+                    
+                                    </a>
+                    
+                                    </form>
+                                </div>
+                </login-form>
+                <footer-bar></footer-bar>
             </div>
         </div>
-    </div>
-</div>
-@endsection
+            <script src="/js/app.js"></script>
+    </body>
+</html>

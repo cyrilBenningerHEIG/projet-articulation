@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\cmd;
+
+use App\adres;
+
+use Illuminate\Support\Facades\Auth;
+
+use DB;
+
+class CommandeController extends Controller
+{
+    public function store(){
+        $clntId = Auth::guard("user")->user()->id;
+
+        cmd::create([
+            'clnt_id' => $clntId,
+           'adresLivr_id' => request('adresLivrId'),
+            'adresFact_id' => request('adresFactId'),
+            'total' => 300.00,
+            'modePmt' => 'poste',
+            
+    
+        ]);
+    }
+
+        public function show(){
+            $clntId = Auth::guard("user")->user()->id;
+
+            $lastcmd = DB::table('cmds')->where('clnt_id', $clntId)->orderBy('created_at', 'desc')->first();
+            $factId = $lastcmd['adresFact_id'];
+            $livrId = $lastcmd['adresLivr_id'];
+            
+    
+            $adress_all = adres::all();
+            $adress = $adress_all->where('clnt_id', $clntId);
+            $adres_fact = $adress->where('adresFact_id', $factId);
+            $adres_livr = $adress->where('adresLivr_id', $livrId);
+    
+            return view('paiement3', [
+                'adresfact' => $adres_fact,
+                'adreslivr'=> $adres_livr, 
+                'lastcmd' => $lastcmd,
+            ]);
+        }
+
+
+
+    
+}
