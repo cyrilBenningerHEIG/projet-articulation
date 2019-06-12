@@ -1,360 +1,810 @@
-    @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-    @import url(https://fonts.googleapis.com/css?family=Roboto:200);
-    body {
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    p {
-        font-family: 'Roboto', sans-serif;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .p {
-        font-family: 'Roboto', sans-serif;
-        padding: 0;
-        margin: 0;
-    }
-    
-    a {
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    label {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-    }
-    
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
-        grid-auto-rows: minmax(100px, auto);
-    }
-    
-    .icon:hover {
-        fill-opacity: 0;
-    }
-    
-    .logo {
-        width: 80%;
-    }
-    
-    #icon_search {
-        width: 50px;
-    }
-    
-    #icon_account {
-        width: 40px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 2px;
-    }
-    
-    #icon_cart {
-        width: 35px;
-        margin-bottom: 2px;
-    }
-    
-    .menu {
-        font-size: 20px;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .image {
-        width: 80%;
-        margin: auto auto;
-    }
-    
-    .producer-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
-    }
-    /* Histoire */
-    
-    .test {
-        background-color: #a62b35;
-        color: white;
-    }
-    
-    .btn-history {
-        margin-top: 10px;
-        margin-bottom: 40px;
-        background-color: white;
-        color: #a62b35;
-        border: none;
-    }
-    
-    p.box {
-        margin: 50px;
-    }
-    
-    .counter {
-        padding-top: 50px;
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-    /* Footer */
-    
-    #img-logo {
-        margin-left: 25px;
-    }
-    
-    .text-muted {
-        color: black !important;
-    }
-    
-    .card {
-        border: none;
-    }
-    
-    .card-group {
-        padding-top: 50px;
-    }
-    
-    .card-img-top {
-        height: 350px;
-    }
-    
-    .btn-danger {
-        background-color: #953640 !important;
-        border-color: #953640 !important;
-        color: aliceblue !important;
-    }
-    
-    .page-footer {
-        background-color: #2B2B2B;
-        color: #CCBE9F;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    a.afooter {
-        color: #CCBE9F !important;
-    }
-    
-    .cls-1 {
-        fill: #CCBE9F;
-    }
-    
-    .image-footer {
-        width: 20%;
-    }
-    
-    .footer-size {
-        font-size: 10px;
-    }
-    
-    .footer-col {
-        margin-left: 5px;
-    }
-    
-    .adresse-size {
-        font-size: 11px;
-        line-height: 11px;
-    }
-     /* History page */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:200);
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
-     .paddingTB60 {
-        padding-top:60px;
-        padding-bottom:60px;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
 
-    .col-md-6{
-        padding-top:60px;
-        padding-bottom:60px;
-    }
+.table td {
+    padding: 0.5rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
 
-    P.blocktext {
-        vertical-align: middle;
-        font-weight: bold;
-        font-style: italic;
-        font-size: 2rem;
-        text-transform: uppercase;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+p {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
 
-    /* Product page */
-    
-    .roadMap {
-        white-space: nowrap;
+.p {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.label-produits {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.icon:hover {
+    fill-opacity: 0;
+}
+
+.logo {
+    width: 80%;
+}
+
+#icon_search {
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+
+#icon_account {
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+
+#icon_cart {
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+
+#icon_langue {
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+
+#icon_box {
+    height: 2em;
+    width: 2em;
+}
+
+.menu {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image {
+    width: 80%;
+    margin: auto auto;
+}
+
+.producer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+
+/*Nav bar*/
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 1.35em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+nav a:link {
+    text-decoration: none;
+}
+
+.go a:before,
+.go a:after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.go a:before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translate(20px);
+    -moz-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.go a:after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
+    transform: translate(-20px);
+}
+
+.go a:hover:before,
+.go a:hover:after,
+.go a:focus:before,
+.go a:focus:after {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    transform: translate(0px);
+}
+
+
+/* Histoire */
+
+.test {
+    background-color: #a62b35;
+    color: white;
+}
+
+.btn-history {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: white;
+    color: #a62b35;
+    border: none;
+}
+
+p.box {
+    margin: 50px;
+}
+
+.counter {
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+/* Footer */
+
+#img-logo {
+    margin-left: 25px;
+}
+
+.text-muted {
+    color: black !important;
+}
+
+.card {
+    border: none;
+}
+
+.card-group {
+    /* padding-top: 50px; */
+}
+
+#card-body {
+    padding: 0.5em;
+}
+
+.btn-danger {
+    background-color: #953640 !important;
+    border-color: #953640 !important;
+    color: aliceblue !important;
+}
+
+.page-footer {
+    background-color: #2B2B2B;
+    color: #CCBE9F;
+    font-family: 'Roboto', sans-serif;
+}
+
+a.afooter {
+    color: #CCBE9F !important;
+}
+
+.cls-1 {
+    fill: #CCBE9F;
+}
+
+.image-footer {
+    width: 20%;
+}
+
+.footer-size {
+    font-size: 10px;
+}
+
+.footer-col {
+    margin-left: 5px;
+}
+
+.adresse-size {
+    font-size: 11px;
+    line-height: 11px;
+}
+
+
+/* History page */
+
+.paddingTB60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.col-md-6 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+P.blocktext {
+    vertical-align: middle;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-aboutus-banner {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url("/images/illustrations/histoire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+ }
+
+
+/* Product page */
+
+.roadMap {
+    white-space: nowrap;
+}
+
+a.produit-liens {
+    color: #CCBE9F;
+}
+
+.arrow {
+    width: 1.7%;
+}
+
+.bottleImg {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.price-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price-ht-font {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article-font {
+    font-size: 12px;
+    color: #6c757d;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* #btn-quantity {
+    padding-right: 325px;
+} */
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: white;
+    background-color: #CCBE9F;
+}
+
+.pills {
+    color: #2B2B2B;
+    font-size: 16px;
+}
+
+#a-producteur:link {
+    color: #CCBE9F;
+}
+
+#a-producteur {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #CCBE9F
+}
+
+.btn-basket {
+    padding: 1em 5em 1em 5em;
+    font-family: 'Montserrat', sans-serif;
+    border: 5px solid #2B2B2B;
+    background-color: #2B2B2B;
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn-basket:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #a62b35;
+    border: 5px solid #a62b35;
+    color: white;
+}
+
+#mapid {
+    height: 400px;
+}
+
+
+/* CONTACT */
+
+.img-contact {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.contact-form {
+    background: #2B2B2B;
+    height: 505px;
+}
+
+.contact-form .form-control {
+    border-radius: 25;
+}
+
+.contact-image {
+    text-align: center;
+}
+
+.contact-image img {
+    border-radius: 25;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+
+.contact-form form {
+    padding: 14%;
+}
+
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+
+.contact-form h3 {
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: white;
+}
+
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnContactSubmit {
+    width: 50%;
+    padding: 1.5%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.icon_display img {
+    width: 50px;
+}
+
+#tri-produit {
+    margin-top: 50px;
+}
+
+.number_results {
+    padding-top: 15px;
+}
+
+#weekproduct #carteproduit {
+    width: 10rem;
+}
+
+.card-img-top {
+    width: 10rem;
+}
+
+.card-title {
+    width: 15rem;
+    height: 60px;
+    position: relative;
+    margin-top: 1em;
+}
+
+#title-position {
+    position: absolute;
+    bottom: 0;
+}
+
+.btn-filter {
+    border-color: grey;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 25px;
+}
+
+.price-ht-font {
+    font-size: 10px;
+}
+
+.article-font {
+    font-size: 12px;
+}
+
+#cart-produit-img {
+    width: 68px;
+    height: 150px;
+}
+
+.btn-panier-2 {
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.action-btn {
+    margin-bottom: 25px;
+}
+
+.card-custom {
+    display: inline-flex;
+    padding: 1.5rem 0.8rem 1.5rem 0.8rem;
+    margin-top: 15px;
+}
+
+#img-logo-header {
+    width: 50%;
+}
+
+#p-white {
+    color: white
+}
+
+.etapeImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.p-compte-paiement {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+ ::placeholder {
+    font-size: 10px;
+}
+
+.btn-outline-form {
+    color: #953640;
+    border-color: #953640;
+}
+
+.btn-outline-form:hover,
+.btn-outline-form:focus,
+.btn-outline-form:active,
+.btn-outline-form.active,
+.open>.dropdown-toggle.btn-outline-form {
+    color: #fff;
+    background-color: #953640;
+    border-color: #953640;
+    /*set the color you want here*/
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+.cartes-img {
+    padding: 2.5em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#produ-carte {
+    height: 20px;
+    font-size: 12px;
+}
+
+#millesime-carte {
+    font-size: 12px;
+}
+
+#prix-carte {
+    font-weight: bold;
+}
+
+
+/* LOGIN & REGISTER FORM */
+
+#login-form {
+    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#register-form {
+    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#login-form #register-form {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #a62b35;
+    display: inline-block;
+}
+.container-login100{
+    width: 100%;  
+    min-height: 60vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color : #a62b35;
+}
+#box,
+#box_register {
+
+    background: #a62b35;
+    text-align: center;
+    border-radius: 25px;
+    opacity: 60%;
+
+}
+
+#box label,
+#box_register label {
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 25px;
+    display : inline;
+}
+
+#box input,
+#box_register input {
+    border: 0;
+    background: #a62b35;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 350px;
+    outline: none;
+    color: black;
+    border-radius: 15px;
+    transition: 0.25s;
+    margin-bottom: 25;
+    height: 50px;
+}
+
+#box_register label {
+    display: block;
+}
+
+#box_register input {
+    display: block;
+}
+
+#box input:focus,
+#box_register input:focus {
+    width: 350px;
+    border-color: black;
+    background: white;
+    color: black;
+}
+
+#box input::placeholder,
+#box_register input::placeholder {
+    color: black;
+}
+
+#submit {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background: black;
+}
+
+#remember {
+
+    font-size: 75%;
+}
+#box > a, #box_register > a {
+    padding-top : 25px;
+    display : block;
+    color : white;
+}
+#login-title, #register-title{
+    color : white;
+}
+#register-link,
+#home-link,
+#forgot-pass #login-link {
+    padding-top: 25px;
+    color: white;
+}
+
+#register #box {
+    width: 400px;
+    height: 1050px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #a62b35;
+    text-align: center;
+    border-radius: 25px;
+    opacity: 60%;
+}
+
+#register {
+    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Style for dot color depending on wine type*/
+
+.type-circle-1 {
+    fill: #a62b35;
+}
+
+.type-circle-2 {
+    fill: #f2ebda;
+}
+
+.type-circle-3 {
+    fill: white;
+}
+
+.vin-titre {
+    font-size: 14px;
+    margin: auto;
+}
+
+.produit-titre {
+    font-size: 15px;
+    margin: auto;
+    font-size: bold;
+}
+
+.svg-center {
+    margin: 5px;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #a62b35;
+      color: #fff;
+      padding: 2px 5px;
+      vertical-align: top;
+      margin-left: 20px; 
+      margin-top: -30px
+  }
+/* LOADING */
+#loading-pic{
+    width : 300px;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
-    
-    .arrow {
-        width: 2.5%;
-    }
-    
-    .bottleImg {
-        width: 90%;
-        height: auto;
-        margin: auto;
-    }
-    
-    .price-font {
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .price-ht-font {
-        font-size: 10px;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .article-font {
-        font-size: 12px;
-        color: #6c757d;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    #btn-quantity {
-        padding-right: 325px;
-    }
-    
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link {
-        color: #2B2B2B;
-        background-color: #CCBE9F;
-    }
-    
-    .pills {
-        color: #f2ebda;
-        font-size: 16px;
-    }
-    
-    .btn-basket {
-        padding: 1em 5em 1em 5em;
-        font-family: 'Montserrat', sans-serif;
-        border: 5px solid #2B2B2B;
-        background-color: #2B2B2B;
-        color: white;
-        -webkit-transition-duration: 0.4s;
-        /* Safari */
-        transition-duration: 0.4s;
-        cursor: pointer;
-    }
-    
-    .btn-basket:hover {
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-        background-color: #a62b35;
-        border: 5px solid #a62b35;
-        color: white;
-    }
-    
-    #mapid {
-        height: 400px;
-    }
-    /* CONTACT */
-    
-    .contact-form {
-        background: #2B2B2B;
-        margin-top: 10%;
-        margin-bottom: 5%;
-        width: 70%;
-    }
-    
-    .contact-form .form-control {
-        border-radius: 25;
-    }
-    
-    .contact-image {
-        text-align: center;
-    }
-    
-    .contact-image img {
-        border-radius: 25;
-        width: 11%;
-        margin-top: -3%;
-        transform: rotate(29deg);
-    }
-    
-    .contact-form form {
-        padding: 14%;
-    }
-    
-    .contact-form form .row {
-        margin-bottom: -7%;
-    }
-    
-    .contact-form h3 {
-        margin-bottom: 8%;
-        margin-top: -10%;
-        text-align: center;
-        color: white;
-    }
-    
-    .contact-form .btnContact {
-        width: 50%;
-        border: none;
-        border-radius: 25px;
-        padding: 1.5%;
-        background: #dc3545;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-    }
-    
-    .btnContactSubmit {
-        width: 50%;
-        padding: 1.5%;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .icon_display img {
-        width: 50px;
-    }
-    
-    #tri-produit {
-        margin-top: 50px;
-    }
-    
-    .number_results {
-        padding-top: 15px;
-    }
-    
-    #weekproduct {
-        width: 10rem;
-    }
-    
-    .card-img-top {
-        width: 10rem;
-    }
-    
-    .btn-filter {
-        border-color: grey;
-        border-style: solid;
-        border-width: 0.5px;
-        border-radius: 25px;
-    }
-    
-    .price-ht-font {
-        font-size: 10px;
-    }
-    
-    .article-font {
-        font-size: 12px;
-    }
-    
-    #cart-produit-img {
-        width: 68px;
-        height: 150px;
-    }
-    
-    .btn-panier-2 {
-        border-color: grey;
-        border-style: solid;
-        border-width: 1px;
-    }
-    
-    .action-btn {
-        margin-bottom: 25px;
-    }
-    
-    .card-custom {
-        display: inline-flex;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+/* MOBILE */

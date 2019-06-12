@@ -1,0 +1,322 @@
+* [33m4ecf12d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m add color round & avoid 0 for millesime by loic
+* [33m574994f[m change product page card style
+*   [33m94b95ed[m fixing conflict
+[32m|[m[33m\[m  
+[32m|[m * [33ma2c8be6[m[33m ([m[1;31morigin/BE-pageProduit-Alvis-wesh[m[33m)[m ajout href et produit
+[32m|[m [33m|[m * [33m7f0c2a0[m[33m ([m[1;31morigin/FE-paiement-Audris[m[33m)[m paiement
+[32m|[m [33m|[m [34m|[m *   [33m144b03d[m[33m ([m[1;31morigin/be-filters-Evan[m[33m, [m[1;32mbe-filters-Evan[m[33m)[m Merge branch 'master' of https://github.com/cyrilBenningerHEIG/projet-articulation into be-filters-Evan
+[32m|[m [33m|[m [34m|[m [35m|[m[32m\[m  
+[32m|[m [33m|[m[32m_[m[34m|[m[32m_[m[35m|[m[32m/[m  
+[32m|[m[32m/[m[33m|[m [34m|[m [35m|[m   
+* [33m|[m [34m|[m [35m|[m   [33me938327[m Merge pull request #28 from cyrilBenningerHEIG/be-register-gaetan
+[1;31m|[m[1;32m\[m [33m\[m [34m\[m [35m\[m  
+[1;31m|[m * [33m|[m [34m|[m [35m|[m [33m7b6beab[m[33m ([m[1;31morigin/be-register-gaetan[m[33m)[m amélioration style register mais c'est pas trop ça encore
+[1;31m|[m [1;32m|[m [33m|[m [34m|[m * [33m37f173e[m cleaning controller
+[1;31m|[m [1;32m|[m[1;31m_[m[33m|[m[1;31m_[m[34m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;32m|[m [33m|[m [34m|[m   
+* [1;32m|[m [33m|[m [34m|[m   [33m264ce2e[m Merge pull request #27 from cyrilBenningerHEIG/be-filters-Evan
+[1;32m|[m[1;34m\[m [1;32m\[m [33m\[m [34m\[m  
+[1;32m|[m [1;34m|[m[1;32m/[m [33m/[m [34m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m [33m|[m [34m|[m   
+[1;32m|[m * [33m|[m [34m|[m [33m0bc8eec[m Adding dynamic filters selections
+* [1;34m|[m [33m|[m [34m|[m [33md42f416[m régler problème css
+* [1;34m|[m [33m|[m [34m|[m   [33m7750788[m Merge pull request #26 from cyrilBenningerHEIG/be-login-register-gaetan
+[33m|[m[1;36m\[m [1;34m\[m [33m\[m [34m\[m  
+[33m|[m [1;36m|[m[33m_[m[1;34m|[m[33m/[m [34m/[m  
+[33m|[m[33m/[m[1;36m|[m [1;34m|[m [34m|[m   
+[33m|[m * [1;34m|[m [34m|[m   [33mac9b103[m[33m ([m[1;31morigin/be-login-register-gaetan[m[33m)[m Merge branch 'master' into be-login-register-gaetan
+[33m|[m [31m|[m[33m\[m [1;34m\[m [34m\[m  
+[33m|[m [31m|[m[33m/[m [1;34m/[m [34m/[m  
+[33m|[m[33m/[m[31m|[m [1;34m|[m [34m|[m   
+* [31m|[m [1;34m|[m [34m|[m   [33m1bc414b[m Merge pull request #25 from cyrilBenningerHEIG/FE-Login-Register-Loic
+[33m|[m[34m\[m [31m\[m [1;34m\[m [34m\[m  
+[33m|[m * [31m|[m [1;34m|[m [34m|[m [33m7699a41[m[33m ([m[1;31morigin/FE-Login-Register-Loic[m[33m)[m login style
+[33m|[m * [31m|[m [1;34m|[m [34m|[m [33mfa0fc45[m log in style
+* [34m|[m [31m|[m [1;34m|[m [34m|[m   [33m944e6a8[m Merge pull request #24 from cyrilBenningerHEIG/BE-pageProduit-Alvis-wesh
+[35m|[m[36m\[m [34m\[m [31m\[m [1;34m\[m [34m\[m  
+[35m|[m * [34m|[m [31m|[m [1;34m|[m [34m|[m [33me433668[m ajout prixttc produit
+[35m|[m [36m|[m [34m|[m * [1;34m|[m [34m|[m [33mc6e6e32[m register style à reprendre
+[35m|[m [36m|[m[35m_[m[34m|[m[35m/[m [1;34m/[m [34m/[m  
+[35m|[m[35m/[m[36m|[m [34m|[m [1;34m|[m [34m|[m   
+* [36m|[m [34m|[m [1;34m|[m [34m|[m   [33m944c4ef[m Merge pull request #23 from cyrilBenningerHEIG/be-compte-gaetan
+[36m|[m[1;32m\[m [36m\[m [34m\[m [1;34m\[m [34m\[m  
+[36m|[m [1;32m|[m[36m/[m [34m/[m [1;34m/[m [34m/[m  
+[36m|[m[36m/[m[1;32m|[m [34m|[m [1;34m|[m [34m|[m   
+[36m|[m * [34m|[m [1;34m|[m [34m|[m [33m64f56eb[m[33m ([m[1;31morigin/be-compte-gaetan[m[33m)[m ajout du formulaire d'adresse
+* [1;32m|[m [34m|[m [1;34m|[m [34m|[m   [33m3ffcce5[m Merge pull request #22 from cyrilBenningerHEIG/be-treatments_catalog_pays-Evan
+[34m|[m[1;34m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m  
+[34m|[m [1;34m|[m[34m_[m[1;32m|[m[34m/[m [1;34m/[m [34m/[m  
+[34m|[m[34m/[m[1;34m|[m [1;32m|[m [1;34m/[m [34m/[m   
+[34m|[m [1;34m|[m [1;32m|[m[1;34m/[m [34m/[m    
+[34m|[m [1;34m|[m[1;34m/[m[1;32m|[m [34m|[m     
+[34m|[m * [1;32m|[m [34m|[m [33m3fd9b03[m[33m ([m[1;31morigin/be-treatments_catalog_pays-Evan[m[33m, [m[1;32mbe-treatments_catalog_pays-Evan[m[33m)[m pays for each wine
+* [1;34m|[m [1;32m|[m [34m|[m [33ma4afe13[m add new html and css for login and register pages
+* [1;34m|[m [1;32m|[m [34m|[m [33mcae820c[m log in form style
+* [1;34m|[m [1;32m|[m [34m|[m   [33mf2784d3[m add composer.lock in .gitignore
+[1;35m|[m[1;34m\[m [1;34m\[m [1;32m\[m [34m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [1;32m/[m [34m/[m  
+[1;35m|[m * [1;32m|[m [34m|[m   [33m69005d3[m Merge branch 'master' of github.com:cyrilBenningerHEIG/projet-articulation
+[1;35m|[m [31m|[m[32m\[m [1;32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [1;32m\[m [34m\[m   [33m711f2ea[m do history
+[1;35m|[m [31m|[m [33m|[m[34m\[m [1;32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [34m\[m [1;32m\[m [34m\[m   [33mf0e4d88[m do history
+[1;35m|[m [31m|[m [35m|[m[36m\[m [34m\[m [1;32m\[m [34m\[m  
+[1;35m|[m [31m|[m * [36m|[m [34m|[m [1;32m|[m [34m|[m [33mb8466c4[m histoire de Mika
+[1;35m|[m [31m|[m [34m|[m [36m|[m[34m_[m[34m|[m[34m_[m[1;32m|[m[34m/[m  
+[1;35m|[m [31m|[m [34m|[m[34m/[m[36m|[m [34m|[m [1;32m|[m   
+[1;35m|[m * [34m|[m [36m|[m [34m|[m [1;32m|[m [33mc195ecc[m ajout region dynamique
+[1;35m|[m [34m|[m [34m|[m[34m_[m[36m|[m[34m/[m [1;32m/[m  
+[1;35m|[m [34m|[m[34m/[m[34m|[m [36m|[m [1;32m|[m   
+[1;35m|[m * [34m|[m [36m|[m [1;32m|[m   [33mf13a69e[m Merge pull request #21 from cyrilBenningerHEIG/BE-treatments_catalogue-Evan
+[1;35m|[m [36m|[m[1;32m\[m [34m\[m [36m\[m [1;32m\[m  
+[1;35m|[m [36m|[m [1;32m|[m[36m_[m[34m|[m[36m/[m [1;32m/[m  
+[1;35m|[m [36m|[m[36m/[m[1;32m|[m [34m|[m [1;32m|[m   
+[1;35m|[m [36m|[m * [34m|[m [1;32m|[m [33mfb5147c[m[33m ([m[1;31morigin/BE-treatments_catalogue-Evan[m[33m, [m[1;32mBE-treatments_catalogue-Evan[m[33m)[m Quick modifications on seeds
+[1;35m|[m * [1;32m|[m [34m|[m [1;32m|[m [33me88f5d7[m ajout type produit
+* [1;32m|[m [1;32m|[m [34m|[m [1;32m|[m [33mad6ce21[m add composer.lock in gitignore
+[1;32m|[m[1;32m/[m [1;32m/[m [34m/[m [1;32m/[m  
+* [1;32m|[m [34m|[m [1;32m|[m   [33mee33e43[m Merge pull request #20 from cyrilBenningerHEIG/BE-treatments_catalogue-Evan
+[1;33m|[m[1;32m\[m [1;32m\[m [34m\[m [1;32m\[m  
+[1;33m|[m [1;32m|[m[1;32m/[m [34m/[m [1;32m/[m  
+[1;33m|[m * [34m|[m [1;32m|[m [33mfa9bb07[m Treatments between database and catalog
+* [1;34m|[m [34m|[m [1;32m|[m   [33m2823d58[m Merge branch 'master' of github.com:cyrilBenningerHEIG/projet-articulation
+[1;35m|[m[1;34m\[m [1;34m\[m [34m\[m [1;32m\[m  
+[1;35m|[m [1;34m|[m[1;34m/[m [34m/[m [1;32m/[m  
+[1;35m|[m * [34m|[m [1;32m|[m   [33m08c56de[m Merge pull request #19 from cyrilBenningerHEIG/BE-migrations_adjustments-Evan
+[1;35m|[m [31m|[m[32m\[m [34m\[m [1;32m\[m  
+[1;35m|[m [31m|[m * [34m|[m [1;32m|[m [33m7f70d4d[m[33m ([m[1;31morigin/BE-migrations_adjustments-Evan[m[33m, [m[1;32mBE-migrations_adjustments-Evan[m[33m)[m Adding lat & long in rgns, changing pivot table names and adjusting seeds and models
+[1;35m|[m * [32m|[m [34m|[m [1;32m|[m   [33me5c5d4d[m Merge pull request #18 from cyrilBenningerHEIG/be-compte-gaetan
+[1;35m|[m [33m|[m[1;32m\[m [32m\[m [34m\[m [1;32m\[m  
+[1;35m|[m [33m|[m [1;32m|[m [32m|[m[1;32m_[m[34m|[m[1;32m/[m  
+[1;35m|[m [33m|[m [1;32m|[m[1;32m/[m[32m|[m [34m|[m   
+[1;35m|[m [33m|[m * [32m|[m [34m|[m [33m3e24486[m changement lien navbar login
+[1;35m|[m [33m|[m [34m|[m [32m|[m[34m/[m  
+[1;35m|[m [33m|[m [34m|[m[34m/[m[32m|[m   
+* [33m|[m [34m|[m [32m|[m [33m7a9dc49[m dynamic produit and links
+[33m|[m[33m/[m [34m/[m [32m/[m  
+* [34m|[m [32m|[m [33m01df55f[m implementation pageProduit
+* [34m|[m [32m|[m   [33me0e0147[m productPageController
+[35m|[m[32m\[m [34m\[m [32m\[m  
+[35m|[m [32m|[m [34m|[m[32m/[m  
+[35m|[m [32m|[m[32m/[m[34m|[m   
+[35m|[m * [34m|[m   [33m219fd2f[m Merge pull request #17 from cyrilBenningerHEIG/be-carteProduit_controller-Evan
+[35m|[m [1;31m|[m[1;32m\[m [34m\[m  
+[35m|[m [1;31m|[m * [34m|[m [33mb48b96c[m[33m ([m[1;31morigin/be-carteProduit_controller-Evan[m[33m, [m[1;32mbe-carteProduit_controller-Evan[m[33m)[m Wines and relations added from database to front-end
+[35m|[m * [1;32m|[m [34m|[m [33md7ac4c5[m Update .gitignore
+[35m|[m * [1;32m|[m [34m|[m [33m8db850d[m Update .gitignore
+[35m|[m [34m|[m [1;32m|[m[34m/[m  
+[35m|[m [34m|[m[34m/[m[1;32m|[m   
+[35m|[m * [1;32m|[m [33m91ba98e[m[33m ([m[1;31morigin/fe-navBars-Audris[m[33m)[m navbars + images ordonnées
+[35m|[m [1;32m|[m[1;32m/[m  
+* [1;32m|[m [33mbaf06b1[m modif productPage
+[1;32m|[m[1;32m/[m  
+* [33mbf345fa[m[33m ([m[1;31morigin/lundiAudris[m[33m)[m dernier push lundi bis
+* [33m89641ae[m dernier push lundi
+*   [33m427b1d2[m Merge pull request #16 from cyrilBenningerHEIG/BE-SEEDERS_VARIETY-EVAN
+[1;33m|[m[1;34m\[m  
+[1;33m|[m * [33m5687d5b[m[33m ([m[1;31morigin/BE-SEEDERS_VARIETY-EVAN[m[33m, [m[1;32mBE-SEEDERS_VARIETY-EVAN[m[33m)[m Adding data in tables
+* [1;34m|[m   [33m7d850bc[m fix conflis
+[1;35m|[m[1;36m\[m [1;34m\[m  
+[1;35m|[m * [1;34m|[m [33m73e2b42[m modification page produit + nouveaute
+[1;35m|[m * [1;34m|[m   [33m99a6960[m Merge branch 'lundiLoic' of github.com:cyrilBenningerHEIG/projet-articulation into lundiAudris
+[1;35m|[m [31m|[m[32m\[m [1;34m\[m  
+[1;35m|[m * [32m|[m [1;34m|[m [33m94c342b[m build
+[1;35m|[m * [32m|[m [1;34m|[m   [33mdf416d3[m Merge branch 'master' of github.com:cyrilBenningerHEIG/projet-articulation into lundiAudris
+[1;35m|[m [33m|[m[34m\[m [32m\[m [1;34m\[m  
+[1;35m|[m * [34m|[m [32m|[m [1;34m|[m [33m5380941[m build
+* [34m|[m [34m|[m [32m|[m [1;34m|[m   [33m055688c[m Merge pull request #15 from cyrilBenningerHEIG/be-auth-gaetan
+[35m|[m[36m\[m [34m\[m [34m\[m [32m\[m [1;34m\[m  
+[35m|[m * [34m|[m [34m|[m [32m|[m [1;34m|[m [33mcea5add[m nav bar différente pour authentification
+[35m|[m [1;34m|[m [34m|[m[1;34m_[m[34m|[m[1;34m_[m[32m|[m[1;34m/[m  
+[35m|[m [1;34m|[m[1;34m/[m[34m|[m [34m|[m [32m|[m   
+[35m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m * [33mf688b04[m[33m ([m[1;31morigin/test-voyager[m[33m)[m test
+[35m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m *   [33me3d69f0[m[33m ([m[1;31morigin/lundiLoic[m[33m)[m update branch
+[35m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m [32m|[m[35m\[m  
+[35m|[m [1;34m|[m [34m|[m [34m|[m [32m|[m[32m/[m [35m/[m  
+[35m|[m [1;34m|[m[35m_[m[34m|[m[35m_[m[34m|[m[35m_[m[32m|[m [35m/[m   
+[35m|[m[35m/[m[1;34m|[m [34m|[m [34m|[m [32m|[m     
+* [1;34m|[m [34m|[m [34m|[m [32m|[m [33m96b09b7[m fix view article semaine
+* [1;34m|[m [34m|[m [34m|[m [32m|[m [33m73fc022[m fix view selection semaine
+* [1;34m|[m [34m|[m [34m|[m [32m|[m   [33mb0acdd0[m fix conflict
+[1;33m|[m[1;34m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m * [1;34m\[m [34m\[m [34m\[m [32m\[m   [33m4fb85eb[m Merge branch 'master' of github.com:cyrilBenningerHEIG/projet-articulation
+[1;33m|[m [1;35m|[m[1;34m\[m [1;34m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m [1;34m|[m[1;34m/[m [34m/[m [34m/[m [32m/[m  
+[1;33m|[m [1;35m|[m * [34m|[m [34m|[m [32m|[m   [33mb87883f[m Merge pull request #14 from cyrilBenningerHEIG/BE-MIGRATIONS_TEXTCOLOMNS-EVAN
+[1;33m|[m [1;35m|[m [31m|[m[32m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m [31m|[m * [34m\[m [34m\[m [32m\[m   [33mdb50bb9[m[33m ([m[1;31morigin/BE-MIGRATIONS_TEXTCOLOMNS-EVAN[m[33m)[m Merge branch 'master' into BE-MIGRATIONS_TEXTCOLOMNS-EVAN
+[1;33m|[m [1;35m|[m [31m|[m [33m|[m[31m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m [31m|[m [33m|[m[31m/[m [34m/[m [34m/[m [32m/[m  
+[1;33m|[m [1;35m|[m [31m|[m[31m/[m[33m|[m [34m|[m [34m|[m [32m|[m   
+[1;33m|[m [1;35m|[m * [33m|[m [34m|[m [34m|[m [32m|[m   [33m3bb6ba4[m update gitignore
+[1;33m|[m [1;35m|[m [35m|[m[36m\[m [33m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m [35m|[m * [33m|[m [34m|[m [34m|[m [32m|[m [33m327ca24[m Update .gitignore
+[1;33m|[m [1;35m|[m * [36m|[m [33m|[m [34m|[m [34m|[m [32m|[m   [33mfa68b79[m merge app.js
+[1;33m|[m [1;35m|[m [1;31m|[m[36m\[m [36m\[m [33m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m [1;31m|[m [36m|[m[36m/[m [33m/[m [34m/[m [34m/[m [32m/[m  
+[1;33m|[m [1;35m|[m * [36m|[m [33m|[m [34m|[m [34m|[m [32m|[m   [33m1dc890e[m Merge branch 'master' of https://github.com/cyrilBenningerHEIG/projet-articulation
+[1;33m|[m [1;35m|[m [1;33m|[m[1;34m\[m [36m\[m [33m\[m [34m\[m [34m\[m [32m\[m  
+[1;33m|[m [1;35m|[m * [1;34m|[m [36m|[m [33m|[m [34m|[m [34m|[m [32m|[m [33m818d580[m add app.js in gitignore
+[1;33m|[m [1;35m|[m [34m|[m [1;34m|[m[34m_[m[36m|[m[34m_[m[33m|[m[34m_[m[34m|[m[34m/[m [32m/[m  
+[1;33m|[m [1;35m|[m [34m|[m[34m/[m[1;34m|[m [36m|[m [33m|[m [34m|[m [32m|[m   
+[1;33m|[m [1;35m|[m [34m|[m [1;34m|[m [36m|[m * [34m|[m [32m|[m [33mafd16e1[m[33m ([m[1;32mBE-MIGRATIONS_TEXTCOLOMNS-EVAN[m[33m)[m Correcting syntax & motdepasse column in table clnts
+[1;33m|[m * [34m|[m [1;34m|[m [36m|[m [1;34m|[m [34m|[m [32m|[m [33m72b194c[m ajout selection semaine et count history bar
+* [1;34m|[m [34m|[m [1;34m|[m [36m|[m [1;34m|[m [34m|[m [32m|[m [33m5aa5af6[m build
+* [1;34m|[m [34m|[m [1;34m|[m [36m|[m [1;34m|[m [34m|[m [32m|[m   [33m2ad6ac1[m build
+[1;35m|[m[36m\[m [1;34m\[m [34m\[m [1;34m\[m [36m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [36m|[m [1;34m|[m[36m_[m[34m|[m[36m_[m[1;34m|[m[36m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [36m|[m[36m/[m[1;34m|[m [34m|[m [1;34m|[m [1;34m|[m [34m|[m [32m|[m   
+[1;35m|[m * [1;34m|[m [34m|[m [1;34m|[m [1;34m|[m [34m|[m [32m|[m   [33m13b88a0[m amélioration login
+[1;35m|[m [31m|[m[1;34m\[m [1;34m\[m [34m\[m [1;34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [31m|[m [1;34m|[m[1;34m/[m [34m/[m [1;34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [31m|[m * [34m|[m [1;34m|[m [1;34m|[m [34m|[m [32m|[m   [33m9f3fd50[m fix conflicts
+[1;35m|[m [31m|[m [33m|[m[1;34m\[m [34m\[m [1;34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [31m|[m [33m|[m [1;34m|[m [34m|[m[1;34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [31m|[m [33m|[m [1;34m|[m[1;34m/[m[34m|[m [1;34m|[m [34m|[m [32m|[m   
+[1;35m|[m [31m|[m * [1;34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m [33m4bec5ca[m insert selection semaine
+[1;35m|[m * [34m|[m [1;34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   [33meb321d4[m[33m ([m[1;31morigin/be-routeLogin-gaetan[m[33m)[m Merge branch 'master' of https://github.com/cyrilBenningerHEIG/projet-articulation
+[1;35m|[m [35m|[m[1;34m\[m [34m\[m [1;34m\[m [34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [35m|[m [1;34m|[m [34m|[m[1;34m/[m [34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [35m|[m [1;34m|[m[1;34m/[m[34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   
+[1;35m|[m [35m|[m * [34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   [33m0fd8891[m Merge pull request #13 from cyrilBenningerHEIG/BE-SEEDERS-EVAN
+[1;35m|[m [35m|[m [34m|[m[1;32m\[m [34m\[m [34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [35m|[m [34m|[m [1;32m|[m[34m_[m[34m|[m[34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [35m|[m [34m|[m[34m/[m[1;32m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   
+[1;35m|[m [35m|[m [34m|[m * [34m|[m [1;34m|[m [34m|[m [32m|[m [33m25c6c3f[m[33m ([m[1;31morigin/BE-SEEDERS-EVAN[m[33m, [m[1;32mBE-SEEDERS-EVAN[m[33m)[m Adding seeders with test data
+[1;35m|[m * [34m|[m [1;32m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   [33m99a6efe[m merge app.js
+[1;35m|[m [1;33m|[m[34m\[m [34m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [1;33m|[m [34m|[m[34m/[m [1;32m/[m [34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m * [34m|[m [1;32m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   [33md597a3c[m Merge branch 'be-routeLogin-gaetan'
+[1;35m|[m [1;32m|[m[1;36m\[m [34m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m [32m\[m  
+[1;35m|[m [1;32m|[m [1;36m|[m[1;32m_[m[34m|[m[1;32m/[m [34m/[m [1;34m/[m [34m/[m [32m/[m  
+[1;35m|[m [1;32m|[m[1;32m/[m[1;36m|[m [34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   
+[1;35m|[m [1;32m|[m * [34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m [33m0fe3cb5[m ajout vue-router, lien login et modif variable motdepasse en password
+[1;35m|[m [1;32m|[m[1;32m/[m [34m/[m [34m/[m [1;34m/[m [34m/[m [32m/[m  
+* [1;32m|[m [34m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m [33m6813cb6[m build
+[34m|[m [1;32m|[m[34m/[m [34m/[m [1;34m/[m [34m/[m [32m/[m  
+[34m|[m[34m/[m[1;32m|[m [34m|[m [1;34m|[m [34m|[m [32m|[m   
+[34m|[m [1;32m|[m [34m|[m [1;34m|[m [34m|[m * [33mdca11a2[m add img link produit
+[34m|[m [1;32m|[m [34m|[m [1;34m|[m [34m|[m * [33m7e312a4[m add produit page link
+[34m|[m [1;32m|[m[34m_[m[34m|[m[34m_[m[1;34m|[m[34m_[m[34m|[m[34m/[m  
+[34m|[m[34m/[m[1;32m|[m [34m|[m [1;34m|[m [34m|[m   
+* [1;32m|[m [34m|[m [1;34m|[m [34m|[m   [33m5d3e792[m front end add lundi
+[31m|[m[32m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m  
+[31m|[m * [1;32m|[m [34m|[m [1;34m|[m [34m|[m [33m2fa8c41[m changes front-end loic lundi
+[31m|[m * [1;32m|[m [34m|[m [1;34m|[m [34m|[m [33m278a02e[m add product card
+[31m|[m * [1;32m|[m [34m|[m [1;34m|[m [34m|[m [33m0281bd9[m fix things
+* [32m|[m [1;32m|[m [34m|[m [1;34m|[m [34m|[m   [33m39c7d5e[m front end changes
+[33m|[m[34m\[m [32m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m  
+[33m|[m * [32m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m   [33m7644aa7[m Merge branch 'master' of github.com:cyrilBenningerHEIG/projet-articulation
+[33m|[m [35m|[m[1;32m\[m [32m\[m [1;32m\[m [34m\[m [1;34m\[m [34m\[m  
+[33m|[m [35m|[m [1;32m|[m [32m|[m[1;32m/[m [34m/[m [1;34m/[m [34m/[m  
+[33m|[m [35m|[m [1;32m|[m[1;32m/[m[32m|[m [34m|[m [1;34m|[m [34m|[m   
+[33m|[m [35m|[m * [32m|[m [34m|[m [1;34m|[m [34m|[m   [33m25161ae[m Merge pull request #11 from cyrilBenningerHEIG/BE-MIGRATIONS_TEXTCOLOMNS-EVAN
+[33m|[m [35m|[m [1;31m|[m[1;34m\[m [32m\[m [34m\[m [1;34m\[m [34m\[m  
+[33m|[m [35m|[m [1;31m|[m [1;34m|[m [32m|[m[1;34m_[m[34m|[m[1;34m/[m [34m/[m  
+[33m|[m [35m|[m [1;31m|[m [1;34m|[m[1;34m/[m[32m|[m [34m|[m [34m|[m   
+[33m|[m [35m|[m [1;31m|[m * [32m|[m [34m|[m [34m|[m [33m4fd3209[m Changing description type on table produs and vins
+[33m|[m [35m|[m * [1;32m|[m [32m|[m [34m|[m [34m|[m   [33m17bc67a[m Merge pull request #10 from cyrilBenningerHEIG/be-login-gaetan
+[33m|[m [35m|[m [1;33m|[m[1;34m\[m [1;32m\[m [32m\[m [34m\[m [34m\[m  
+[33m|[m [35m|[m [1;33m|[m * [1;32m|[m [32m|[m [34m|[m [34m|[m [33mc6a6934[m[33m ([m[1;31morigin/be-login-gaetan[m[33m)[m login fonctionnel
+[33m|[m [35m|[m [1;33m|[m[1;33m/[m [1;32m/[m [32m/[m [34m/[m [34m/[m  
+[33m|[m * [1;33m|[m [1;32m|[m [32m|[m [34m|[m [34m|[m [33m75c44a6[m description et informations
+[33m|[m [1;33m|[m[1;33m/[m [1;32m/[m [32m/[m [34m/[m [34m/[m  
+* [1;33m|[m [1;32m|[m [32m|[m [34m|[m [34m|[m [33m6307387[m fix front-end
+[1;33m|[m[1;33m/[m [1;32m/[m [32m/[m [34m/[m [34m/[m  
+* [1;32m|[m [32m|[m [34m|[m [34m|[m   [33m856c300[m Merge branch 'master' of https://github.com/cyrilBenningerHEIG/projet-articulation
+[1;35m|[m[1;36m\[m [1;32m\[m [32m\[m [34m\[m [34m\[m  
+[1;35m|[m * [1;32m|[m [32m|[m [34m|[m [34m|[m [33m6cf21a3[m oops les routes hihi
+* [1;36m|[m [1;32m|[m [32m|[m [34m|[m [34m|[m   [33m43ee7fd[m fix front-end
+[34m|[m[1;36m\[m [1;36m\[m [1;32m\[m [32m\[m [34m\[m [34m\[m  
+[34m|[m [1;36m|[m[1;36m/[m [1;32m/[m [32m/[m [34m/[m [34m/[m  
+[34m|[m [1;36m|[m [1;32m|[m [32m|[m [34m|[m [34m/[m   
+[34m|[m [1;36m|[m[34m_[m[1;32m|[m[34m_[m[32m|[m[34m_[m[34m|[m[34m/[m    
+[34m|[m[34m/[m[1;36m|[m [1;32m|[m [32m|[m [34m|[m     
+[34m|[m * [1;32m|[m [32m|[m [34m|[m   [33mb83afc9[m Merge pull request #9 from cyrilBenningerHEIG/be-client-gaetan
+[34m|[m [34m|[m[34m\[m [1;32m\[m [32m\[m [34m\[m  
+[34m|[m [34m|[m [34m|[m[34m_[m[1;32m|[m[34m_[m[32m|[m[34m/[m  
+[34m|[m [34m|[m[34m/[m[34m|[m [1;32m|[m [32m|[m   
+[34m|[m [34m|[m * [1;32m|[m [32m|[m   [33m4353445[m Merge branch 'master' into be-client-gaetan
+[34m|[m [34m|[m [35m|[m[34m\[m [1;32m\[m [32m\[m  
+[34m|[m [34m|[m [35m|[m[34m/[m [1;32m/[m [32m/[m  
+[34m|[m [34m|[m[34m/[m[35m|[m [1;32m|[m [32m|[m   
+[34m|[m [34m|[m * [1;32m|[m [32m|[m [33mdc186fb[m implémentation du login
+* [34m|[m [36m|[m [1;32m|[m [32m|[m [33ma25b3a4[m modifications: boutons, bootstrap.js, counter.js, link
+[34m|[m[34m/[m [36m/[m [1;32m/[m [32m/[m  
+[34m|[m [36m|[m [1;32m|[m [32m|[m * [33mdc2f0aa[m[33m ([m[1;31morigin/BE-Seeder-Cyril[m[33m)[m Seeder
+[34m|[m [36m|[m[34m_[m[1;32m|[m[34m_[m[32m|[m[34m/[m  
+[34m|[m[34m/[m[36m|[m [1;32m|[m [32m|[m   
+* [36m|[m [1;32m|[m [32m|[m [33m0e5faef[m Update .gitignore
+[32m|[m [36m|[m[32m_[m[1;32m|[m[32m/[m  
+[32m|[m[32m/[m[36m|[m [1;32m|[m   
+* [36m|[m [1;32m|[m [33m359aa4a[m Update style.css
+* [36m|[m [1;32m|[m   [33m3542b00[m Merge pull request #8 from cyrilBenningerHEIG/front-end
+[1;32m|[m[1;33m\[m [36m\[m [1;32m\[m  
+[1;32m|[m [1;33m|[m[1;32m_[m[36m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;33m|[m [36m|[m   
+[1;32m|[m * [36m|[m   [33m7bf81f1[m[33m ([m[1;31morigin/front-end[m[33m)[m front-end
+[1;32m|[m [1;34m|[m[1;35m\[m [36m\[m  
+[1;32m|[m * [1;35m\[m [36m\[m   [33m18bfff6[m Ta mère
+[1;32m|[m [1;36m|[m[31m\[m [1;35m\[m [36m\[m  
+[1;32m|[m [1;36m|[m * [1;35m|[m [36m|[m [33m9dcc7a6[m app.js
+[1;32m|[m [1;36m|[m * [1;35m|[m [36m|[m [33me16b751[m ptn+
+[1;32m|[m * [31m|[m [1;35m|[m [36m|[m [33mb235198[m Lundi matin
+[1;32m|[m * [31m|[m [1;35m|[m [36m|[m   [33maae4baa[m audris
+[1;32m|[m [32m|[m[31m\[m [31m\[m [1;35m\[m [36m\[m  
+[1;32m|[m [32m|[m [31m|[m[31m/[m [1;35m/[m [36m/[m  
+[1;32m|[m [32m|[m * [1;35m|[m [36m|[m [33ma5e6155[m wtf
+[1;32m|[m [32m|[m * [1;35m|[m [36m|[m [33mc7eb982[m shit
+[1;32m|[m [32m|[m * [1;35m|[m [36m|[m [33m9e4c26a[m mergin
+[1;32m|[m [32m|[m * [1;35m|[m [36m|[m [33m3838913[m non
+[1;32m|[m * [33m|[m [1;35m|[m [36m|[m [33m2d5bdef[m Audris
+[1;32m|[m * [33m|[m [1;35m|[m [36m|[m [33m8747723[m modifs
+[1;32m|[m [33m|[m[33m/[m [1;35m/[m [36m/[m  
+* [33m|[m [1;35m|[m [36m|[m [33m7d607e5[m Default boolean values set to 0
+[1;35m|[m [33m|[m[1;35m/[m [36m/[m  
+[1;35m|[m[1;35m/[m[33m|[m [36m|[m   
+* [33m|[m [36m|[m   [33m668b8ea[m Merge pull request #6 from cyrilBenningerHEIG/be-client-gaetan
+[34m|[m[36m\[m [33m\[m [36m\[m  
+[34m|[m [36m|[m [33m|[m[36m/[m  
+[34m|[m [36m|[m[36m/[m[33m|[m   
+[34m|[m * [33m|[m [33me0380c8[m[33m ([m[1;31morigin/be-client-gaetan[m[33m)[m équilibre taille icone
+[34m|[m[34m/[m [33m/[m  
+* [33m|[m [33m715db44[m ajout jQuery et changement url images
+* [33m|[m [33m9cfb556[m modif vin model
+* [33m|[m   [33mf67df3d[m Merge pull request #5 from cyrilBenningerHEIG/be-models-gaetan
+[36m|[m[1;31m\[m [33m\[m  
+[36m|[m * [33m\[m   [33me272c74[m[33m ([m[1;31morigin/be-models-gaetan[m[33m)[m merge bd et models
+[36m|[m [1;32m|[m[36m\[m [33m\[m  
+[36m|[m [1;32m|[m[36m/[m [33m/[m  
+[36m|[m[36m/[m[1;32m|[m [33m|[m   
+* [1;32m|[m [33m|[m   [33mc52dd47[m Merge pull request #4 from cyrilBenningerHEIG/BE-MIGRATIONS-EVAN
+[1;34m|[m[1;35m\[m [1;32m\[m [33m\[m  
+[1;34m|[m * [1;32m|[m [33m|[m [33m208fddc[m[33m ([m[1;31morigin/BE-MIGRATIONS-EVAN[m[33m, [m[1;32mBE-MIGRATIONS-EVAN[m[33m)[m Migrations & models
+[1;34m|[m[1;34m/[m [1;32m/[m [33m/[m  
+[1;34m|[m * [33m|[m [33md8db966[m models et liasons 2
+[1;34m|[m * [33m|[m [33m641facd[m models et liasons
+[1;34m|[m[1;34m/[m [33m/[m  
+* [33m|[m   [33m39637fa[m Merge pull request #2 from cyrilBenningerHEIG/front-end
+[1;36m|[m[31m\[m [33m\[m  
+[1;36m|[m [31m|[m [33m|[m * [33m017c513[m[33m ([m[1;31morigin/front-end-loic[m[33m)[m add nav footer selection week selection week product selection week producer
+[1;36m|[m [31m|[m [33m|[m [32m|[m * [33me3a2832[m[33m ([m[1;31morigin/front-end-audris[m[33m)[m mercredi
+[1;36m|[m [31m|[m [33m|[m [32m|[m[33m/[m  
+[1;36m|[m [31m|[m [33m|[m[33m/[m[32m|[m   
+[1;36m|[m [31m|[m * [32m|[m [33m591b7e3[m fix nav
+[1;36m|[m [31m|[m * [32m|[m   [33me580ae6[m modif finale 1
+[1;36m|[m [31m|[m [34m|[m[32m\[m [32m\[m  
+[1;36m|[m [31m|[m [34m|[m [32m|[m[32m/[m  
+[1;36m|[m [31m|[m [34m|[m * [33mee0151d[m modif 2 loic
+[1;36m|[m [31m|[m [34m|[m * [33md62558d[m loic modif 2
+[1;36m|[m [31m|[m [34m|[m[31m/[m  
+[1;36m|[m [31m|[m[31m/[m[34m|[m   
+[1;36m|[m [31m|[m * [33mce9bf00[m Audris
+[1;36m|[m [31m|[m[31m/[m  
+[1;36m|[m * [33m3c48d7e[m front end base
+[1;36m|[m[1;36m/[m  
+* [33mcdca399[m ajout backbone et handlebars
+*   [33m4accf06[m Merge pull request #1 from cyrilBenningerHEIG/initialise
+[36m|[m[1;31m\[m  
+[36m|[m * [33m17152cd[m implémentation laravel collective et barrydvh
+[36m|[m * [33madb088e[m implémentation laravelCollective + barryvdh + correction appserviceprovider
+[36m|[m[36m/[m  
+* [33me2ba4d9[m initialize

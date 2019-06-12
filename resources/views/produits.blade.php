@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Gazzar</title>
 
@@ -23,12 +24,13 @@
                 
                 @endif
                 <menu-produit></menu-produit>
-                <product-filter></product-filter>
+                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}' :nbvins='{{ $nbvins }}'></product-filter>
                 <carte-produit :vins='{{ $vins }}'></carte-produit>
                 <footer-bar></footer-bar>
                 
             </div>
         </div>
             <script src="js/app.js"></script>
+           
     </body>
 </html>

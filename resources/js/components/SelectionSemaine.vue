@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <h2>Sélection de la semaine</h2>
+  <div class="mt-5">
+    <h4>Sélection de la semaine</h4>
     </div>
 </template>

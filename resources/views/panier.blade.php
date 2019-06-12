@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+       
 
         <title>Gazzar</title>
 
@@ -14,6 +16,14 @@
     <body>
         <div id="app">
             <div class="container">
+            @if(Auth::check())
+            <h2>Connecté</h2>
+                <nav-bar-login></nav-bar-login>
+                @else
+                <h2>Déconnecté</h2>
+                <nav-bar-logout></nav-bar-logout>
+                
+                @endif
                 <nav-bar></nav-bar>
                 <panier-produit></panier-produit>
                 <footer-bar></footer-bar>
@@ -21,5 +31,6 @@
             </div>
         </div>
             <script src="js/app.js"></script>
+            <script>var userIsLoggedIn = {{ Auth::check() }};</script>
     </body>
 </html>

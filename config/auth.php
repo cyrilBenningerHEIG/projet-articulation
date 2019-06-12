@@ -12,10 +12,10 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+    
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'clnts',
+        //'passwords' => 'users',
     ],
 
     /*
@@ -38,12 +38,18 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
+            'provider' => 'users',
+            'passwords' => 'users',
+        ],
+        'user' => [
+            'driver' => 'session',
             'provider' => 'clnts',
+            'passwords' => 'clnts',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'clnts',
+            'provider' => 'users',
             'hash' => false,
         ],
     ],
@@ -66,6 +72,10 @@ return [
     */
 
     'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
         'clnts' => [
             'driver' => 'eloquent',
             'model' => App\clnt::class,
@@ -93,6 +103,11 @@ return [
     */
 
     'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
         'clnts' => [
             'provider' => 'clnts',
             'table' => 'password_resets',
