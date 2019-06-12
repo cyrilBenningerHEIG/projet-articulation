@@ -7,47 +7,39 @@
         <table>
           <p class="mt-2 mb-2">Adresse de livraison</p>
           <tr>
-            <th>Nom</th>
-            <td>Audris Chen</td>
+            <th>Destinataire</th>
+            <td>{{adreslivr[0].destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>Route du Signal 50</td>
+            <td>{{adreslivr[0].rue}} {{adreslivr[0].numero}}</td>
           </tr>
           <tr>
-            <th>Canton</th>
-            <td>Vaud</td>
-          </tr>
-          <tr>
-            <th>Zip/Ville</th>
-            <td>1091 Grandvaux</td>
+            <th>Npa/Localité</th>
+            <td>{{adreslivr[0].npa}} {{adreslivr[0].localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>Suisse</td>
+            <td>{{adreslivr[0].pays}}</td>
           </tr>
         </table>
-        <table>
-          <p class="mt-4 mb-2">Adresse de paiement</p>
+         <table>
+          <p class="mt-2 mb-2">Adresse de facturation</p>
           <tr>
-            <th>Nom</th>
-            <td>Audris Chen</td>
+            <th>Destinataire</th>
+            <td>{{adresfact[0].destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>Route du Signal 50</td>
+            <td>{{adresfact[0].rue}} {{adresfact[0].numero}}</td>
           </tr>
           <tr>
-            <th>Canton</th>
-            <td>Vaud</td>
-          </tr>
-          <tr>
-            <th>Zip/Ville</th>
-            <td>1091 Grandvaux</td>
+            <th>Npa/Localité</th>
+            <td>{{adresfact[0].npa}} {{adresfact[0].localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>Suisse</td>
+            <td>{{adresfact[0].pays}}</td>
           </tr>
         </table>
       </div>
@@ -158,3 +150,13 @@
     </div>
   </div>
 </template>
+
+<script>
+
+export default{
+
+  props: ["adresfact", "adreslivr", "lastcmd"],
+  
+
+}
+</script>

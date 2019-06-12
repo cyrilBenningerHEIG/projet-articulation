@@ -34,7 +34,7 @@ class AdresseController extends Controller
         $adress = $adress_all->where('clnt_id', $clntId);
 
         return view('paiement2', [
-            'adress' => $adress_all,    
+            'adress' => $adress,    
         ]);
     }
 
