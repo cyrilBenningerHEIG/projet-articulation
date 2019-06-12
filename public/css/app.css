@@ -3935,7 +3935,27 @@ input[type=button].btn-block {
   height: calc(1rem - 4px);
   background-color: #adb5bd;
   border-radius: 0.5rem;
+<<<<<<< HEAD
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+=======
+<<<<<<< HEAD
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+=======
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3946,7 +3966,25 @@ input[type=button].btn-block {
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #fff;
+<<<<<<< HEAD
   transform: translateX(0.75rem);
+=======
+<<<<<<< HEAD
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transform: translateX(0.75rem);
+=======
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transform: translateX(0.75rem);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -5954,8 +5992,34 @@ a.close.disabled {
 }
 
 .modal.fade .modal-dialog {
+<<<<<<< HEAD
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
+=======
+<<<<<<< HEAD
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -50px);
+          transform: translate(0, -50px);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+=======
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -50px);
+          transform: translate(0, -50px);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5965,7 +6029,25 @@ a.close.disabled {
 }
 
 .modal.show .modal-dialog {
+<<<<<<< HEAD
   transform: none;
+=======
+<<<<<<< HEAD
+  -webkit-transform: none;
+          transform: none;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transform: none;
+=======
+  -webkit-transform: none;
+          transform: none;
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transform: none;
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 .modal-dialog-scrollable {
@@ -6466,7 +6548,27 @@ a.close.disabled {
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+<<<<<<< HEAD
   transition: transform 0.6s ease-in-out;
+=======
+<<<<<<< HEAD
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transition: transform 0.6s ease-in-out;
+=======
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transition: transform 0.6s ease-in-out;
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6483,18 +6585,72 @@ a.close.disabled {
 
 .carousel-item-next:not(.carousel-item-left),
 .active.carousel-item-right {
+<<<<<<< HEAD
   transform: translateX(100%);
+=======
+<<<<<<< HEAD
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transform: translateX(100%);
+=======
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transform: translateX(100%);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 .carousel-item-prev:not(.carousel-item-right),
 .active.carousel-item-left {
+<<<<<<< HEAD
   transform: translateX(-100%);
+=======
+<<<<<<< HEAD
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transform: translateX(-100%);
+=======
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transform: translateX(-100%);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 .carousel-fade .carousel-item {
   opacity: 0;
   transition-property: opacity;
+<<<<<<< HEAD
   transform: none;
+=======
+<<<<<<< HEAD
+  -webkit-transform: none;
+          transform: none;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  transform: none;
+=======
+  -webkit-transform: none;
+          transform: none;
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+  transform: none;
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
 }
 
 .carousel-fade .carousel-item.active,
@@ -6630,13 +6786,49 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-border {
   to {
+<<<<<<< HEAD
     transform: rotate(360deg);
+=======
+<<<<<<< HEAD
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    transform: rotate(360deg);
+=======
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+    transform: rotate(360deg);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
   }
 }
 
 @keyframes spinner-border {
   to {
+<<<<<<< HEAD
     transform: rotate(360deg);
+=======
+<<<<<<< HEAD
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    transform: rotate(360deg);
+=======
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+    transform: rotate(360deg);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
   }
 }
 
@@ -6660,7 +6852,25 @@ a.close.disabled {
 
 @-webkit-keyframes spinner-grow {
   0% {
+<<<<<<< HEAD
     transform: scale(0);
+=======
+<<<<<<< HEAD
+    -webkit-transform: scale(0);
+            transform: scale(0);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    transform: scale(0);
+=======
+    -webkit-transform: scale(0);
+            transform: scale(0);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+    transform: scale(0);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
   }
 
   50% {
@@ -6670,7 +6880,25 @@ a.close.disabled {
 
 @keyframes spinner-grow {
   0% {
+<<<<<<< HEAD
     transform: scale(0);
+=======
+<<<<<<< HEAD
+    -webkit-transform: scale(0);
+            transform: scale(0);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    transform: scale(0);
+=======
+    -webkit-transform: scale(0);
+            transform: scale(0);
+>>>>>>> a1d771620286386989c5f5196bd7da29a5036535
+=======
+    transform: scale(0);
+>>>>>>> 74fb5cb4de078ebf42cef6fdd678afc7b736f0ea
+>>>>>>> 5e94981adf1c2f12555844a8a21fc88a58882e89
+>>>>>>> f53d5491588068eeae4186b64384427664c9ebf3
   }
 
   50% {

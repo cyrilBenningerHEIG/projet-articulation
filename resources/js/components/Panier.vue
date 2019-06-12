@@ -60,19 +60,19 @@
                 </div>
               </form>
             </td>
-            <td>{{Math.round((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*10)) / 10 }} CHF</td>
+            <td>{{(Math.ceil((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }} CHF</td>
           </tr>
           <tr>
           <td ></td>
           <td></td>
           <td>Sous total</td>
-          <td>CHF {{Math.round(totalCart * 10) / 10 }}</td>
+          <td>{{(Math.ceil(totalCart * 20) / 20).toFixed(2) }}</td>
           </tr>
           <tr>
           <td></td>
           <td></td>
           <td>TVA & autres taxes</td>
-          <td>CHF {{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
+          <td>{{(Math.ceil((totalCart*0.077 * 20)) / 20).toFixed(2) }}</td>
           </tr>
            <tr>
           <td></td>
@@ -80,7 +80,7 @@
           <td><h4>Total de la commande</h4><br>(Hors frais de livraison)
           <br>
           <input style="margin-top : 25px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promotionel"></td>
-          <td><h4>CHF {{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4>
+          <td><h4>{{(Math.ceil(((totalCart*0.077)+totalCart) * 20) / 20).toFixed(2) }}</h4>
           </td>
           </tr>
         </tbody>

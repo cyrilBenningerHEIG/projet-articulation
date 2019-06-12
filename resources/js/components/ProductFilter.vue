@@ -223,11 +223,11 @@ export default {
           if(nbAttributs >= filters.length){
             $(this).addClass("visible").fadeIn();
           }
-      });
 
-      if(filters.length == 0){
+          if(filters.length == 0){
         $('.card-custom').addClass("visible").fadeIn();
       };
+      });
 
       var nbResults = $('.card-custom.visible').length;
       $('.number_results').text(nbResults + ' résultats');
