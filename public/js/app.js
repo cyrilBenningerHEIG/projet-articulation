@@ -2811,9 +2811,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['types', 'pays', 'regns', 'appels', 'produs', 'frmts', 'millesimes', 'nbvins'],
   data: function data() {
@@ -86056,19 +86053,10 @@ var render = function() {
         _c("div", { staticClass: "container pt-3" }, [
           _c("div", { staticClass: "row", attrs: { id: "tri-produit" } }, [
             _c("div", { staticClass: "col-sm" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-white btn-filter",
-                  on: { click: _vm.emptyFilters }
-                },
-                [_vm._v("Réinitialiser les filtres")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-sm text-center" }, [
-              _c("p", { staticClass: "number_results" }, [
-                _vm._v(_vm._s(_vm.nbvins) + " résultats")
+              _c("h5", { staticClass: "number_results" }, [
+                _vm._v("Nous avons trouvé "),
+                _c("b", [_vm._v(_vm._s(_vm.nbvins))]),
+                _vm._v(" vins qui vous correspondent")
               ])
             ]),
             _vm._v(" "),
@@ -86793,21 +86781,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "producer-logo" }, [
-      _c(
-        "a",
-        { staticClass: "blog-header-logo text-dark", attrs: { href: "#" } },
-        [
-          _c("img", {
-            staticClass: "logo_producer mg-responsive mx-auto",
-            staticStyle: { width: "200px" },
-            attrs: {
-              id: "img-logo-producer",
-              src: "images/illustrations/logo_producer.svg"
-            }
-          })
-        ]
-      )
+    return _c("div", { staticClass: "container producer-logo" }, [
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "h5",
+          {
+            staticClass: "number_results",
+            staticStyle: { "margin-top": "10px", color: "#CCBE9F" }
+          },
+          [_vm._v("Cette semaine nous mettons en avant :")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "a",
+          { staticClass: "blog-header-logo text-dark", attrs: { href: "#" } },
+          [
+            _c("img", {
+              staticClass: "logo_producer mg-responsive mx-auto",
+              staticStyle: { width: "200px" },
+              attrs: {
+                id: "img-logo-producer",
+                src: "images/illustrations/logo_producer.svg"
+              }
+            })
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -105336,8 +105337,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/audris/Desktop/Teamothé/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/loicpostec/Desktop/2e/Semestre2/projArt/projet-articulation/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

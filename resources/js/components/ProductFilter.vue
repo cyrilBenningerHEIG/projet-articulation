@@ -119,10 +119,7 @@
         <div class="container pt-3">
           <div id="tri-produit" class="row">
             <div class="col-sm">
-              <button  class="btn btn-white btn-filter" v-on:click="emptyFilters">Réinitialiser les filtres</button>
-            </div>
-            <div class="col-sm text-center">
-              <p class="number_results">{{nbvins}} résultats</p>
+              <h5 class="number_results">Nous avons trouvé <b>{{nbvins}}</b> vins qui vous correspondent</h5>
             </div>
             <div class="col-sm text-right">
               <div class="btn-group" role="group">
