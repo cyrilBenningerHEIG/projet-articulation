@@ -30,21 +30,23 @@ class CommandeController extends Controller
 
         public function show(){
             $clntId = Auth::guard("user")->user()->id;
-
+            
+            $cmd = cmd::latest()->first();
             $lastcmd = DB::table('cmds')->where('clnt_id', $clntId)->orderBy('created_at', 'desc')->first();
-            $factId = $lastcmd['adresFact_id'];
-            $livrId = $lastcmd['adresLivr_id'];
+            $factId = $cmd->adresFact_id;
+            $livrId = $cmd->adresLivr_id;
             
     
             $adress_all = adres::all();
             $adress = $adress_all->where('clnt_id', $clntId);
-            $adres_fact = $adress->where('adresFact_id', $factId);
-            $adres_livr = $adress->where('adresLivr_id', $livrId);
+            $adres_fact = $adress->where('id', $factId);
+            $adres_livr = $adress->where('id', $livrId);
     
             return view('paiement3', [
                 'adresfact' => $adres_fact,
-                'adreslivr'=> $adres_livr, 
-                'lastcmd' => $lastcmd,
+                'adreslivr'=> $adres_livr,
+                'cmd' => $cmd
+
             ]);
         }
 
