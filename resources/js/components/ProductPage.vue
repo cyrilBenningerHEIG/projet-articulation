@@ -301,8 +301,7 @@
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
-  
- 
+
 
 }
   
