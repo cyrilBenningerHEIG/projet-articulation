@@ -21,7 +21,7 @@ class CommandeController extends Controller
             'clnt_id' => $clntId,
            'adresLivr_id' => request('adresLivrId'),
             'adresFact_id' => request('adresFactId'),
-            'total' => 300.00,
+            'total' => request('total'),
             'modePmt' => 'poste',
             
     
@@ -31,7 +31,7 @@ class CommandeController extends Controller
         public function show(){
             $clntId = Auth::guard("user")->user()->id;
             
-            $cmd = cmd::latest()->first();
+            $cmd = cmd::where('clnt_id', $clntId)->latest()->first();
             $lastcmd = DB::table('cmds')->where('clnt_id', $clntId)->orderBy('created_at', 'desc')->first();
             $factId = $cmd->adresFact_id;
             $livrId = $cmd->adresLivr_id;

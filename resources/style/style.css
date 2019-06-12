@@ -860,7 +860,7 @@ a.produit-liens {
 /* LOADING */
 
 #loading-pic {
-    width: 300px;
+    width: 500px;
 }
 
 .loader {
@@ -874,6 +874,7 @@ a.produit-liens {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .loader>img {
@@ -899,3 +900,4 @@ a.produit-liens {
 }
 
 
+/* MOBILE */
