@@ -14,7 +14,7 @@ h6 {
 }
 
 .table td {
-    padding: 0.5rem;
+    padding: 12px;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
@@ -104,8 +104,9 @@ label {
     align-items: center;
     margin: 20px;
 }
-.nav p{
-    margin-top : 1rem;
+
+.nav p {
+    margin-top: 1rem;
 }
 
 
@@ -281,7 +282,8 @@ a.afooter {
 }
 
 .image-footer {
-    width: 20%;
+    width: 85%;
+    padding: 1em;
 }
 
 .footer-size {
@@ -293,8 +295,8 @@ a.afooter {
 }
 
 .adresse-size {
-    font-size: 11px;
-    line-height: 11px;
+    font-size: 12px;
+    line-height: 13px;
 }
 
 
@@ -322,14 +324,14 @@ P.blocktext {
 }
 
 .image-aboutus-banner {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url("/images/illustrations/histoire.png");
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url("/images/illustrations/histoire.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color: #fff;
     padding-top: 110px;
-    padding-bottom:110px;
- }
+    padding-bottom: 110px;
+}
 
 
 /* Product page */
@@ -376,6 +378,11 @@ a.produit-liens {
 .nav-pills .show>.nav-link {
     color: white;
     background-color: #CCBE9F;
+}
+
+.nav-item:hover {
+    background-color: #CCBE9F;
+    border-radius: 0.25rem;
 }
 
 .pills {
@@ -539,6 +546,10 @@ a.produit-liens {
     border-color: grey;
     border-style: solid;
     border-width: 1px;
+}
+
+.panier-quantite {
+    margin-top: 4em;
 }
 
 .action-btn {

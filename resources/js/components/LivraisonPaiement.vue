@@ -4,9 +4,10 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Adresse de livraison</h4>
         <hr>
-        <select   class="custom-select">
-  <option   v-for="adres in adress" v-bind:value="adres.id">
-    {{adres.rue}}
+        <select v-model="selected"  class="custom-select">
+          <option selected> sélectionner une adresse </option>
+  <option  v-for="adres in adress" :key="adres.id" v-bind:value="adres.id"  >
+    {{adres.rue}} {{adres.numero}}, {{adres.npa}} {{adres.localite}}
   </option>
   
 </select>
@@ -48,7 +49,7 @@
             <button type="submit" class="btn btn-outline-danger btn-outline-form  btn-block ">Modifier</button>
           </div>
           <div class="form-group mt-5 mb-5">
-           <a href="paiement-etape3" class="p"><button class="btn btn-danger btn-block">Continuer</button></a>
+           <a href="paiement-etape3"  class="p"> <button type="submit" @click="submitCmd" class="btn btn-danger btn-block">Continuer</button></a> 
           </div>
          
         </div>
@@ -68,12 +69,43 @@
    data() {
     return {
       adres : '',
-     
-      
+      destinataire: '',
+      rue: '',
+      numero: '',
+      npa: '',
+      localite: '',
+      pays: '',
+      selected: 0,
     };
   },
+
+  methods: {
+
+        submitAdress(){
+            axios.post('adresses',{
+              destinataire: this.destinataire,
+              rue: this.rue,
+              numero: this.numero,
+              npa: this.npa,
+              localite: this.localite,
+              pays: this.pays,
+            })
+              
+            $("input").val('')
+        },
+        submitCmd(){
+          axios.post('commandes',{
+            adresLivrId: this.selected,
+            adresFactId: this.selected,
+          })
+          console.log(this.selected)
+        },
+
+    }
  
   
  
 
 }
+
+</script>
