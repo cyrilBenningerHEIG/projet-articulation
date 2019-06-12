@@ -32,7 +32,7 @@
                         qualité au meilleur prix "</p>
                 </div>
                 <div class="col-md-6">
-                    <img :src="'./images/illustration01.png'" class="img-fluid" alt="Responsive image">
+                    <img :src="'./images/illustrations/illustration01.png'" class="img-fluid" alt="Responsive image">
                 </div>
             </div>
         </div>

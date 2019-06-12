@@ -24,10 +24,20 @@ Route::get('/primeurs', 'PrimeurController@index');
 Route::get('/nouveautes', 'NouveautesController@index');
 
 Route::get('/compte', function () {
-    return view('compte');
+    if(Auth::guard('user')->check()){
+        return view('compte');
+    };
+    return redirect('/login');
+    
 });
 
 Route::post('/adresses', 'AdresseController@store');
+Route::post('/client', 'ClientController@update');
+Route::get('/paiement-etape2', 'AdresseController@show');
+
+Route::post('/commandes', 'CommandeController@store');
+Route::get('/paiement-etape3', 'CommandeController@show');
+
 
 Route::get('/panier', function () {
     return view('panier');
@@ -41,13 +51,8 @@ Route::get('/paiement-etape1', function () {
     return view('paiement1');
 });
 
-Route::get('/paiement-etape2', function () {
-    return view('paiement2');
-});
 
-Route::get('/paiement-etape3', function () {
-    return view('paiement3');
-});
+
 
 Route::get('/paiement-etape4', function () {
     return view('paiement4');

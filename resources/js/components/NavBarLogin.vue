@@ -35,9 +35,12 @@
                       </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link icon" id="icon_cart"  href="/panier"><img src="/images/icons/panier.svg"/></a>
-                      <div class="dropdown-menu">
+                      <a  class="nav-link icon" id="icon_search"  href="/panier"><img src="/images/icons/panier.svg"/> 
+                      <div v-if=vinCarts>
+                      <span class='badge badge-warning' id='lblCartCount' v-show="vinCarts.length > 0" > {{vinCarts.length}} </span>
                       </div>
+                      </a>
+                     
                     </li>
                   </ul>
                 </div>
@@ -51,13 +54,18 @@
 <script>
 export default {
     props: ["user"],
-
+    
    data() {
     return {
       user: '',
-      
+      vinCarts: [],
       
     };
+  },
+  mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+    
   },
 }
 

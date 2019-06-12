@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class AdresseController extends Controller
 {
     public function store(){
-        $clntId = Auth::id();
+        $clntId = Auth::guard("user")->user()->id;
 
         adres::create([
             'destinataire' => request('destinataire'),
@@ -30,11 +30,11 @@ class AdresseController extends Controller
     public function show(){
         $clntId = Auth::id();
 
-        $adres_all = adres::with(['destinataire', 'rue', 'numero', 'npa', 'localite', 'pays', 'clnt_id']);
-        $adress = $adress->where('clnt_id', $clntId);
+        $adress_all = adres::all();
+        $adress = $adress_all->where('clnt_id', $clntId);
 
         return view('paiement2', [
-            'adress' => $adress,
+            'adress' => $adress,    
         ]);
     }
 

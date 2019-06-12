@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class cmd extends Model
 {
+
+    protected $fillable=['adresLivr_id', 'adresFact_id', 'total', 'modePmt', 'clnt_id'];
+
+
     public function clnt() {
         return $this->belongsTo('App\clnt');
     }
