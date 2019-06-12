@@ -26,8 +26,8 @@
                 <span></span>
                 </div>
                 <h5 v-if="vin.prix.prixPromo" class="mt-3 mb-3 price-font">   
-                  <b v-if="unchecked ==true">{{prixpromoeuro | formatNumber}}} €</b>
-                  <b v-else>CHF {{vin.prix.prixPromo | formatNumber}}}</b>
+                  <b v-if="unchecked ==true">{{prixpromoeuro | formatNumber}} €</b>
+                  <b v-else>CHF {{vin.prix.prixPromo | formatNumber}}</b>
                   <b style="font-size:80%; text-decoration: line-through; text-decoration-color:red" v-if="unchecked ==true">{{prixeurottc}} €</b>
                   <b style="font-size: 80%; text-decoration: line-through; text-decoration-color:red" v-else>CHF {{vin.prix.prixht}}</b><b style="color:red; padding-left:5px">-{{pourcentagepromo}}%</b> 
 
@@ -36,8 +36,8 @@
                   </i>
                 </h5>
                  <h5 v-else class="mt-3 mb-3 price-font">    
-                  <b v-if="unchecked ==true">{{prixeurottc | formatNumber}}} €</b>
-                  <b v-else>CHF {{prixttc| formatNumber}}}</b>
+                  <b v-if="unchecked ==true">{{prixeurottc | formatNumber}} €</b>
+                  <b v-else>CHF {{prixttc| formatNumber}}</b>
                   <i class="price-ht-font">
                     <span v-if="unchecked ==true">({{prixeuro  | formatNumber}} € hors TVA)</span>
                     <span v-else>({{vin.prix.prixht  | formatNumber}}  CHF hors TVA)</span> 
@@ -268,7 +268,7 @@ var numeral = require("numeral");
   Vue.filter("formatNumber", function (value) {
     return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
   });
-
+  
  export default {
   
   
