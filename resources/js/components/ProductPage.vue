@@ -20,8 +20,22 @@
               <div v-if="vin.millesime">
                 <h3> {{vin.nom}} <span>- {{vin.millesime}}</span></h3>
                 <span></span>
-                <h5 class="mt-3 mb-3 price-font">
-                  
+              </div>
+                 <div v-else>
+                <h3> {{vin.nom}} <span> </span></h3>
+                <span></span>
+                </div>
+                <h5 v-if="vin.prix.prixPromo" class="mt-3 mb-3 price-font">   
+                  <b v-if="unchecked ==true">{{prixpromoeuro}} €</b>
+                  <b v-else>CHF {{vin.prix.prixPromo}}</b>
+                  <b style="font-size:80%; text-decoration: line-through; text-decoration-color:red" v-if="unchecked ==true">{{prixeurottc}} €</b>
+                  <b style="font-size: 80%; text-decoration: line-through; text-decoration-color:red" v-else>CHF {{vin.prix.prixht}}</b><b style="color:red; padding-left:5px">-{{pourcentagepromo}}%</b> 
+
+                  <i class="price-ht-font">
+                    <span></span> 
+                  </i>
+                </h5>
+                 <h5 v-else class="mt-3 mb-3 price-font">    
                   <b v-if="unchecked ==true">{{prixeurottc}} €</b>
                   <b v-else>CHF {{prixttc}}</b>
                   <i class="price-ht-font">
@@ -29,6 +43,14 @@
                     <span v-else>({{vin.prix.prixht}}  CHF hors TVA)</span> 
                   </i>
                 </h5>
+                <!-- <h5 class="mt-3 mb-3 price-font">
+                  CHF 
+                  <b v-if="vin.prix.promops">{{vin.prix.prixPromo}}</b>
+                  <b v-else >{{prixttc}}</b>
+                  <i class="price-ht-font">
+                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
+                  </i>
+                </h5> -->
                 <div>
                     <b-form-checkbox v-model="unchecked" name="check-button" switch>
                       Prix euro <b></b>
@@ -38,25 +60,6 @@
                 <span></span>
                 <span></span>
                 <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
-              </div>
-
-              <div v-else>
-                <h3> {{vin.nom}} <span> </span></h3>
-                <span></span>
-                <h5 class="mt-3 mb-3 price-font">
-                  CHF
-                  <b>{{prixttc}}</b>
-                  <i class="price-ht-font">
-                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
-                  </i>
-                </h5>
-
-                <span></span>
-                <span></span>
-                <p class="font-weight-light mt-2 mb-2 article-font">Numéro d'article : {{vin.id}}</p>
-              </div>
-
-
 
               <div class="mt-4 mb-4">
                 <label>TAILLE : </label><span> {{vin.frmt.quantite}}</span>
@@ -264,7 +267,7 @@
  export default {
   
   
-  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid"],
+  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid", "prixpromoeuro", "pourcentagepromo"],
 
    data() {
     return {
