@@ -56,6 +56,10 @@ Route::get('/paiement-etape4', function () {
     return view('paiement4');
 });
 
+Route::get('/paiement-etape5', function () {
+    return view('paiement5');
+});
+
 
 
 

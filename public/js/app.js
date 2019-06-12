@@ -1748,11 +1748,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2170,6 +2165,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['nbregions', 'nbvins', 'nbprodu'],
   data: function data() {
@@ -2264,6 +2260,42 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NavBarLogin.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 //
 //
 //
@@ -2689,6 +2721,163 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      vinCarts: [],
+      vinTotal: 0
+    };
+  },
+  methods: {
+    removeCart: function removeCart(index) {
+      this.vinCarts.splice(index, 1);
+      localStorage.setItem('vinCarts', JSON.stringify(this.vinCarts));
+      console.log(index);
+    }
+  },
+  mounted: function mounted() {
+    console.log('App mounted!');
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+  },
+  computed: {
+    totalCart: function totalCart() {
+      var sum = 0;
+      this.vinCarts.forEach(function (vinCart) {
+        sum += parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+      });
+      return sum;
+    }
+  }
+  /* methods:{
+      addCart:function(){
+       
+       localStorage.setItem('vin'+this.vins[this.vinid-1].id, JSON.stringify(this.vins[this.vinid-1]))
+      
+     },
+    }, */
+
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductFilter.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2876,6 +3065,9 @@ __webpack_require__.r(__webpack_exports__);
       function sort(a, b) {
         return $(b).data('millesime') > $(a).data('millesime') ? 1 : -1;
       }
+    },
+    emptyFilters: function emptyFilters() {
+      location.reload();
     }
   }
 });
@@ -82325,7 +82517,7 @@ var render = function() {
             _c("a", { attrs: { href: "produit/" + vin.id } }, [
               _c("img", {
                 staticClass: "card-img-top center",
-                attrs: { src: vin.photoUrl, alt: "vin1" }
+                attrs: { src: vin.photoUrl, alt: "vin1" + vin.id }
               })
             ])
           ]),
@@ -82504,7 +82696,7 @@ var render = function() {
                 _c("a", { attrs: { href: "produit/" + vin.id } }, [
                   _c("img", {
                     staticClass: "card-img-top center",
-                    attrs: { src: vin.photoUrl, alt: "vin1" }
+                    attrs: { src: vin.photoUrl, alt: "vin1" + vin.id }
                   })
                 ])
               ]),
@@ -82665,7 +82857,7 @@ var render = function() {
             _c("a", { attrs: { href: "produit/" + vin.id } }, [
               _c("img", {
                 staticClass: "card-img-top center",
-                attrs: { src: vin.photoUrl, alt: "vin1" }
+                attrs: { src: vin.photoUrl, alt: "vin1" + vin.id }
               })
             ])
           ]),
@@ -83575,7 +83767,7 @@ var render = function() {
     _c("div", { staticClass: "container counter" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm" }, [
-          _c("span", { staticClass: "counter" }, [
+          _c("span", { staticClass: "counter h2" }, [
             _vm._v(_vm._s(_vm.nbregions))
           ]),
           _c("br"),
@@ -83584,13 +83776,17 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm" }, [
-          _c("span", { staticClass: "counter" }, [_vm._v(_vm._s(_vm.nbvins))]),
+          _c("span", { staticClass: "counter h2" }, [
+            _vm._v(_vm._s(_vm.nbvins))
+          ]),
           _vm._v(" "),
           _c("h6", [_vm._v("VINS")])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm" }, [
-          _c("span", { staticClass: "counter" }, [_vm._v(_vm._s(_vm.nbprodu))]),
+          _c("span", { staticClass: "counter h2" }, [
+            _vm._v(_vm._s(_vm.nbprodu))
+          ]),
           _vm._v(" "),
           _c("h6", [_vm._v("PRODUCTEURS")])
         ])
@@ -85281,32 +85477,30 @@ var staticRenderFns = [
         _vm._v("Nouveaux clients : paiement sur facture avant livraison")
       ]),
       _vm._v(" "),
-      _c("form", { staticClass: "mr-5 ml-5" }, [
-        _c("div", { staticClass: "form-group mt-4 mb-5" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-outline-danger btn-outline-form btn-block",
-              attrs: { type: "submit" }
-            },
-            [_vm._v("Envoie par la post")]
-          ),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-justify small-text" }, [
-            _vm._v("Envoie par poste une facture")
+      _c("div", { staticClass: "form-group mt-4 mb-5" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-danger btn-outline-form btn-block",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("Envoie par la post")]
+        ),
+        _vm._v(" "),
+        _c("p", { staticClass: "text-justify small-text" }, [
+          _vm._v("Envoie par poste une facture")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "form-group mt-5 mb-5" }, [
+        _c("a", { staticClass: "p", attrs: { href: "paiement-etape5" } }, [
+          _c("button", { staticClass: "btn btn-danger btn-block" }, [
+            _vm._v("Envoie par e-mail")
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group mt-5 mb-5" }, [
-          _c("a", { staticClass: "p", attrs: { href: "paiement-etape3" } }, [
-            _c("button", { staticClass: "btn btn-danger btn-block" }, [
-              _vm._v("Envoie par e-mail")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-justify small-text" }, [
-            _vm._v("SAVE THE PLANET: envoie facture par e-mail")
-          ])
+        _c("p", { staticClass: "text-justify small-text" }, [
+          _vm._v("SAVE THE PLANET: envoie facture par e-mail")
         ])
       ])
     ])
@@ -86299,32 +86493,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm" }, [
+    return _c("div", { staticClass: "btn-group", attrs: { role: "group" } }, [
       _c(
-        "a",
+        "button",
         {
-          staticClass: "icon_display",
-          attrs: { id: "icon_display2", href: "#" }
+          staticClass: "close p-3",
+          attrs: { type: "button", "aria-label": "Close" }
         },
-        [_c("img", { attrs: { src: "images/icons/display2.svg" } })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "icon_display",
-          attrs: { id: "icon_display3", href: "#" }
-        },
-        [_c("img", { attrs: { src: "images/icons/display3.svg" } })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "icon_display",
-          attrs: { id: "icon_display4", href: "#" }
-        },
-        [_c("img", { attrs: { src: "images/icons/display4.svg" } })]
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
       )
     ])
   }
@@ -87242,7 +87418,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", [
-        _c("a", { attrs: { href: "paiement-etape1" } }, [
+        _c("a", { attrs: { href: "paiement-etape4" } }, [
           _c(
             "button",
             { staticClass: "btn btn-danger btn-panier center mb-5 mt-5" },
@@ -102179,6 +102355,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _lib_JsonStorage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lib/JsonStorage */ "./resources/js/lib/JsonStorage.js");
+/* harmony import */ var _countUp_dist_countUp__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./countUp/dist/countUp */ "./resources/js/countUp/dist/countUp.js");
+/* harmony import */ var _countUp_dist_countUp__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_countUp_dist_countUp__WEBPACK_IMPORTED_MODULE_10__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -102214,7 +102392,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
- // import Counter from './countUp/dist/countUp'
+
 
 window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.JQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
@@ -102262,7 +102440,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-livraison', __web
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-etape3', __webpack_require__(/*! ./components/Paiement3.vue */ "./resources/js/components/Paiement3.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-page', __webpack_require__(/*! ./components/PagePaiement.vue */ "./resources/js/components/PagePaiement.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-etape4', __webpack_require__(/*! ./components/Paiement4.vue */ "./resources/js/components/Paiement4.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-resumer', __webpack_require__(/*! ./components/ResumePaiement.vue */ "./resources/js/components/ResumePaiement.vue")["default"]); //Compte
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-resumer', __webpack_require__(/*! ./components/ResumePaiement.vue */ "./resources/js/components/ResumePaiement.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paiement-validation', __webpack_require__(/*! ./components/ValidationPaiement.vue */ "./resources/js/components/ValidationPaiement.vue")["default"]); //Compte
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('adresse-form', __webpack_require__(/*! ./components/AdresseForm.vue */ "./resources/js/components/AdresseForm.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('compte-client', __webpack_require__(/*! ./components/Compte.vue */ "./resources/js/components/Compte.vue")["default"]); //LOADING
@@ -104440,6 +104619,359 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectionSemaine_vue_vue_type_template_id_1bf172f9___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/ValidationPaiement.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/ValidationPaiement.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ValidationPaiement.vue?vue&type=template&id=c1f5d622& */ "./resources/js/components/ValidationPaiement.vue?vue&type=template&id=c1f5d622&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ValidationPaiement.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ValidationPaiement.vue?vue&type=template&id=c1f5d622&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/ValidationPaiement.vue?vue&type=template&id=c1f5d622& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ValidationPaiement.vue?vue&type=template&id=c1f5d622& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ValidationPaiement.vue?vue&type=template&id=c1f5d622&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ValidationPaiement_vue_vue_type_template_id_c1f5d622___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/countUp/dist/countUp.js":
+/*!**********************************************!*\
+  !*** ./resources/js/countUp/dist/countUp.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+}); // playground: stackblitz.com/edit/countup-typescript
+
+var CountUp =
+/** @class */
+function () {
+  function CountUp(target, endVal, options) {
+    var _this = this;
+
+    this.target = target;
+    this.endVal = endVal;
+    this.options = options;
+    this.version = '2.0.3';
+    this.defaults = {
+      startVal: 0,
+      decimalPlaces: 0,
+      duration: 2,
+      useEasing: true,
+      useGrouping: true,
+      smartEasingThreshold: 999,
+      smartEasingAmount: 333,
+      separator: ',',
+      decimal: '.',
+      prefix: '',
+      suffix: ''
+    };
+    this.finalEndVal = null; // for smart easing
+
+    this.useEasing = true;
+    this.countDown = false;
+    this.error = '';
+    this.startVal = 0;
+    this.paused = true;
+
+    this.count = function (timestamp) {
+      if (!_this.startTime) {
+        _this.startTime = timestamp;
+      }
+
+      var progress = timestamp - _this.startTime;
+      _this.remaining = _this.duration - progress; // to ease or not to ease
+
+      if (_this.useEasing) {
+        if (_this.countDown) {
+          _this.frameVal = _this.startVal - _this.easingFn(progress, 0, _this.startVal - _this.endVal, _this.duration);
+        } else {
+          _this.frameVal = _this.easingFn(progress, _this.startVal, _this.endVal - _this.startVal, _this.duration);
+        }
+      } else {
+        if (_this.countDown) {
+          _this.frameVal = _this.startVal - (_this.startVal - _this.endVal) * (progress / _this.duration);
+        } else {
+          _this.frameVal = _this.startVal + (_this.endVal - _this.startVal) * (progress / _this.duration);
+        }
+      } // don't go past endVal since progress can exceed duration in the last frame
+
+
+      if (_this.countDown) {
+        _this.frameVal = _this.frameVal < _this.endVal ? _this.endVal : _this.frameVal;
+      } else {
+        _this.frameVal = _this.frameVal > _this.endVal ? _this.endVal : _this.frameVal;
+      } // decimal
+
+
+      _this.frameVal = Math.round(_this.frameVal * _this.decimalMult) / _this.decimalMult; // format and print value
+
+      _this.printValue(_this.frameVal); // whether to continue
+
+
+      if (progress < _this.duration) {
+        _this.rAF = requestAnimationFrame(_this.count);
+      } else if (_this.finalEndVal !== null) {
+        // smart easing
+        _this.update(_this.finalEndVal);
+      } else {
+        if (_this.callback) {
+          _this.callback();
+        }
+      }
+    }; // default format and easing functions
+
+
+    this.formatNumber = function (num) {
+      var neg = num < 0 ? '-' : '';
+      var result, x, x1, x2, x3;
+      result = Math.abs(num).toFixed(_this.options.decimalPlaces);
+      result += '';
+      x = result.split('.');
+      x1 = x[0];
+      x2 = x.length > 1 ? _this.options.decimal + x[1] : '';
+
+      if (_this.options.useGrouping) {
+        x3 = '';
+
+        for (var i = 0, len = x1.length; i < len; ++i) {
+          if (i !== 0 && i % 3 === 0) {
+            x3 = _this.options.separator + x3;
+          }
+
+          x3 = x1[len - i - 1] + x3;
+        }
+
+        x1 = x3;
+      } // optional numeral substitution
+
+
+      if (_this.options.numerals && _this.options.numerals.length) {
+        x1 = x1.replace(/[0-9]/g, function (w) {
+          return _this.options.numerals[+w];
+        });
+        x2 = x2.replace(/[0-9]/g, function (w) {
+          return _this.options.numerals[+w];
+        });
+      }
+
+      return neg + _this.options.prefix + x1 + x2 + _this.options.suffix;
+    };
+
+    this.easeOutExpo = function (t, b, c, d) {
+      return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
+    };
+
+    this.options = __assign({}, this.defaults, options);
+    this.formattingFn = this.options.formattingFn ? this.options.formattingFn : this.formatNumber;
+    this.easingFn = this.options.easingFn ? this.options.easingFn : this.easeOutExpo;
+    this.startVal = this.validateValue(this.options.startVal);
+    this.frameVal = this.startVal;
+    this.endVal = this.validateValue(endVal);
+    this.options.decimalPlaces = Math.max( false || this.options.decimalPlaces);
+    this.decimalMult = Math.pow(10, this.options.decimalPlaces);
+    this.resetDuration();
+    this.options.separator = String(this.options.separator);
+    this.useEasing = this.options.useEasing;
+
+    if (this.options.separator === '') {
+      this.options.useGrouping = false;
+    }
+
+    this.el = typeof target === 'string' ? document.getElementById(target) : target;
+
+    if (this.el) {
+      this.printValue(this.startVal);
+    } else {
+      this.error = '[CountUp] target is null or undefined';
+    }
+  } // determines where easing starts and whether to count down or up
+
+
+  CountUp.prototype.determineDirectionAndSmartEasing = function () {
+    var end = this.finalEndVal ? this.finalEndVal : this.endVal;
+    this.countDown = this.startVal > end;
+    var animateAmount = end - this.startVal;
+
+    if (Math.abs(animateAmount) > this.options.smartEasingThreshold) {
+      this.finalEndVal = end;
+      var up = this.countDown ? 1 : -1;
+      this.endVal = end + up * this.options.smartEasingAmount;
+      this.duration = this.duration / 2;
+    } else {
+      this.endVal = end;
+      this.finalEndVal = null;
+    }
+
+    if (this.finalEndVal) {
+      this.useEasing = false;
+    } else {
+      this.useEasing = this.options.useEasing;
+    }
+  }; // start animation
+
+
+  CountUp.prototype.start = function (callback) {
+    if (this.error) {
+      return;
+    }
+
+    this.callback = callback;
+
+    if (this.duration > 0) {
+      this.determineDirectionAndSmartEasing();
+      this.paused = false;
+      this.rAF = requestAnimationFrame(this.count);
+    } else {
+      this.printValue(this.endVal);
+    }
+  }; // pause/resume animation
+
+
+  CountUp.prototype.pauseResume = function () {
+    if (!this.paused) {
+      cancelAnimationFrame(this.rAF);
+    } else {
+      this.startTime = null;
+      this.duration = this.remaining;
+      this.startVal = this.frameVal;
+      this.determineDirectionAndSmartEasing();
+      this.rAF = requestAnimationFrame(this.count);
+    }
+
+    this.paused = !this.paused;
+  }; // reset to startVal so animation can be run again
+
+
+  CountUp.prototype.reset = function () {
+    cancelAnimationFrame(this.rAF);
+    this.paused = true;
+    this.resetDuration();
+    this.startVal = this.validateValue(this.options.startVal);
+    this.frameVal = this.startVal;
+    this.printValue(this.startVal);
+  }; // pass a new endVal and start animation
+
+
+  CountUp.prototype.update = function (newEndVal) {
+    cancelAnimationFrame(this.rAF);
+    this.startTime = null;
+    this.endVal = this.validateValue(newEndVal);
+
+    if (this.endVal === this.frameVal) {
+      return;
+    }
+
+    this.startVal = this.frameVal;
+
+    if (!this.finalEndVal) {
+      this.resetDuration();
+    }
+
+    this.determineDirectionAndSmartEasing();
+    this.rAF = requestAnimationFrame(this.count);
+  };
+
+  CountUp.prototype.printValue = function (val) {
+    var result = this.formattingFn(val);
+
+    if (this.el.tagName === 'INPUT') {
+      var input = this.el;
+      input.value = result;
+    } else if (this.el.tagName === 'text' || this.el.tagName === 'tspan') {
+      this.el.textContent = result;
+    } else {
+      this.el.innerHTML = result;
+    }
+  };
+
+  CountUp.prototype.ensureNumber = function (n) {
+    return typeof n === 'number' && !isNaN(n);
+  };
+
+  CountUp.prototype.validateValue = function (value) {
+    var newValue = Number(value);
+
+    if (!this.ensureNumber(newValue)) {
+      this.error = "[CountUp] invalid start or end value: " + value;
+      return null;
+    } else {
+      return newValue;
+    }
+  };
+
+  CountUp.prototype.resetDuration = function () {
+    this.startTime = null;
+    this.duration = Number(this.options.duration) * 1000;
+    this.remaining = this.duration;
+  };
+
+  return CountUp;
+}();
+
+exports.CountUp = CountUp;
 
 /***/ }),
 

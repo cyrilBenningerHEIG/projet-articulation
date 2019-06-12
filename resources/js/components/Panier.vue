@@ -19,12 +19,7 @@
           <tr v-for="(vinCart,index) in vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
-                <img
-                  v-bind:src="vinCart.vin.photoUrl"
-                   class="card-img-top center"
-                  alt="vin1"
-                  
-                >
+                <img class="card-img-top" v-bind:src="vinCart.vin.photoUrl"  v-bind:alt="'vin1'+vinCart.vin.id">
               </div>
             </th>
             <td>
@@ -93,9 +88,8 @@
       <div class="action-btn">
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
-      <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
+      <a href="/"><button class="btn btn-white btn-panier-2">Continuer mes achats</button></a>
         <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
-        
     </div>
 </div>
   </div>
