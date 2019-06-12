@@ -1,6 +1,6 @@
 <template>
   <div class="test text-center">
-    <h4 class="mt-5 pt-3">GAZZAR VOUS PROPOSE</h4>
+    <h4 class="mt-2 pt-3">GAZZAR VOUS PROPOSE</h4>
     <div class="container counter">
       <div class="row">
         <div class="col-sm">
@@ -13,7 +13,7 @@
           <h6>RÉGIONS</h6>
         </div>
         <div class="col-sm">
-          <span class="counter h2">{{ nbprodu }}</span>
+          <span class="counter">{{ nbprodu }}</span>
           <h6>PRODUCTEURS</h6>
         </div>
         <div class="col-sm">
