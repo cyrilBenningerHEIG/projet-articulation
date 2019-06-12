@@ -6,7 +6,7 @@
         <hr>
         <form class="needs-validation" novalidate >
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0">
                 <label for="validationCustom01">Prénom</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom01" placeholder="Bob"
                     required>
@@ -14,7 +14,7 @@
                     Looks good!
                 </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0 pl-1">
                 <label for="validationCustom02">Nom</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom02" placeholder="Alice"
                     required>
@@ -25,7 +25,7 @@
                 
             </div>
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0">
                 <label for="validationCustom03">Ville</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom03" placeholder="Lausanne" required>
                 <div class="invalid-feedback">

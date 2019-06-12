@@ -1,7 +1,7 @@
 <template>
 <div>
-  <div class="container">
-    <div class="row mt-5 justify-content-center" style="margin-left : 2rem">
+  <div class="container center">
+    <div class="row mt-5 justify-content-center">
       <div id="filters" class="filters mx-auto">
         <div class="btn-group" role="group">
           <button
@@ -107,9 +107,16 @@
           <div id="frmtList" class="container" v-for="value in frmts">
               <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</label>
             </div>
-            </div>
+            </div> 
         </div>
-        <div class="container">
+        <div class="btn-group" role="group">
+          <button type="button" class="close p-3" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+            
+        </div>
+        <div class="container pt-3">
           <div id="tri-produit" class="row">
             <div class="col-sm">
               <a class="icon_display" id="icon_display2" href="#">
@@ -122,10 +129,10 @@
                 <img src="images/icons/display4.svg">
               </a>
             </div>
-            <div class="col-sm">
+            <div class="col-sm text-center">
               <p class="number_results">{{nbvins}} résultats</p>
             </div>
-            <div class="col-sm">
+            <div class="col-sm text-right">
               <div class="btn-group" role="group">
                 <button
                   id="tri-btn"

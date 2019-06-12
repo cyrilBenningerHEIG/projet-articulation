@@ -45,7 +45,7 @@ import JsonStorage from "./lib/JsonStorage";
 
 
 
-// import Counter from './countUp/dist/countUp'
+import './countUp/dist/countUp';
 
 window.$ = require('jquery')
 window.JQuery = require('jquery')
@@ -115,11 +115,16 @@ Vue.component('paiement-page', require('./components/PagePaiement.vue').default)
 Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
 Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);
 
+Vue.component('paiement-validation', require('./components/ValidationPaiement.vue').default);
+
 //Compte
 Vue.component('adresse-form', require('./components/AdresseForm.vue').default);
 Vue.component('compte-client', require('./components/Compte.vue').default);
 //LOADING
 Vue.component('loading-screen', require('./components/LoadingScreen.vue').default);
+
+
+
 const app = new Vue({
     el: '#app',
     router: Router,
