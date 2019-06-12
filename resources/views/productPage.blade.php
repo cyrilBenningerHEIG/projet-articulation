@@ -27,7 +27,7 @@
                 
                 @endif
             <nav-product-bar></nav-product-bar>
-            <product-page class=" mb-5" :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :prixeurottc='{{$prixeurottc}}' :vinid='{{$vinid}}' :prixpromoeuro='{{$prixpromoeuro}}' :pourcentagePromo='{{$pourcentagePromo}}'></product-page>
+            <product-page class=" mb-5" :vins='{{ $vins }}' :prixttc='{{$prixttc}}' :prixeuro='{{$prixeuro}}' :prixeurottc='{{$prixeurottc}}' :vinid='{{$vinid}}' :prixpromoeuro='{{$prixpromoeuro}}' :pourcentagePromo='{{$pourcentagePromo}}' :lat='{{$lat}}' :long='{{$long}}'></product-page>
             <br>
             <selection-card class="mt-5 mb-5" :vins='{{ $vins_all }}' :prixttc='{{$prixttc}}'></selection-card> 
             <footer-bar></footer-bar>
