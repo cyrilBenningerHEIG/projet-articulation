@@ -2171,6 +2171,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['nbvins', 'nbprodu', 'nbregions'],
   data: function data() {
@@ -9997,11 +9998,19 @@ var components = {
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ "./node_modules/bootstrap-vue/es/components/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap-vue/es/components/index.js ***!
+  \***********************************************************/
+/*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, Alert, Badge, Breadcrumb, Button, ButtonGroup, ButtonToolbar, InputGroup, Card, Carousel, Layout, Collapse, Dropdown, Embed, Form, FormGroup, FormCheckbox, FormRadio, FormInput, FormTextarea, FormFile, FormSelect, Image, Jumbotron, Link, ListGroup, Media, Modal, Nav, Navbar, Pagination, PaginationNav, Popover, Progress, Spinner, Table, Tabs, Toast, Tooltip, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, default */
+=======
 /***/ "./node_modules/bootstrap-vue/esm/components/index.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/components/index.esm.js ***!
   \****************************************************************/
 /*! exports provided: BVModalPlugin, BVToastPlugin, AlertPlugin, BadgePlugin, BreadcrumbPlugin, ButtonPlugin, ButtonGroupPlugin, ButtonToolbarPlugin, InputGroupPlugin, CardPlugin, CarouselPlugin, LayoutPlugin, CollapsePlugin, DropdownPlugin, EmbedPlugin, FormPlugin, FormGroupPlugin, FormCheckboxPlugin, FormRadioPlugin, FormInputPlugin, FormTextareaPlugin, FormFilePlugin, FormSelectPlugin, ImagePlugin, JumbotronPlugin, LinkPlugin, ListGroupPlugin, MediaPlugin, ModalPlugin, NavPlugin, NavbarPlugin, PaginationPlugin, PaginationNavPlugin, PopoverPlugin, ProgressPlugin, SpinnerPlugin, TablePlugin, TabsPlugin, ToastPlugin, TooltipPlugin, BAlert, BBadge, BBreadcrumb, BBreadcrumbItem, BBreadcrumbLink, BButton, BButtonClose, BButtonGroup, BButtonToolbar, BInputGroup, BInputGroupAddon, BInputGroupPrepend, BInputGroupAppend, BInputGroupText, BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle, BCardFooter, BCardImg, BCardImgLazy, BCardText, BCardGroup, BCarousel, BCarouselSlide, BContainer, BRow, BCol, BFormRow, BCollapse, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownHeader, BDropdownDivider, BDropdownForm, BDropdownText, BDropdownGroup, BEmbed, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, BFormGroup, BFormCheckbox, BFormCheckboxGroup, BFormRadio, BFormRadioGroup, BFormInput, BFormTextarea, BFormFile, BFormSelect, BImg, BImgLazy, BJumbotron, BLink, BListGroup, BListGroupItem, BMedia, BMediaAside, BMediaBody, BModal, BNav, BNavItem, BNavText, BNavForm, BNavItemDropdown, BNavbar, BNavbarNav, BNavbarBrand, BNavbarToggle, BPagination, BPaginationNav, BPopover, BProgress, BProgressBar, BSpinner, BTable, BTabs, BTab, BToast, BToaster, BTooltip, componentsPlugin */
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20386,11 +20395,19 @@ var NAME = 'BTooltip'; // @vue/component
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ "./node_modules/bootstrap-vue/es/directives/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap-vue/es/directives/index.js ***!
+  \***********************************************************/
+/*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, BToggle, BModal, BScrollspy, BTooltip, BPopover, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, default */
+=======
 /***/ "./node_modules/bootstrap-vue/esm/directives/index.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/directives/index.esm.js ***!
   \****************************************************************/
 /*! exports provided: VBTogglePlugin, VBModalPlugin, VBScrollspyPlugin, VBTooltipPlugin, VBPopoverPlugin, VBToggle, VBModal, VBScrollspy, VBTooltip, VBPopover, directivesPlugin */
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35122,7 +35139,11 @@ exports.push([module.i, "@import url(http://fonts.googleapis.com/css?family=Mont
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:200);", ""]);
 
 // module
+<<<<<<< HEAD
+exports.push([module.i, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.table td {\n    padding: 0.5rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6;\n}\n\np {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\n.p {\n    font-family: 'Roboto', sans-serif;\n    padding: 0;\n    margin: 0;\n}\n\na {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.label-produits {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 14px;\n}\n\nlabel {\n    font-size: 14px;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-gap: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.icon:hover {\n    fill-opacity: 0;\n}\n\n.logo {\n    width: 80%;\n}\n\n#icon_search {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_account {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_cart {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_langue {\n    height: 45px;\n    width: 45px;\n    padding: 10px;\n}\n\n#icon_box {\n    height: 2em;\n    width: 2em;\n}\n\n.menu {\n    font-size: 20px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.image {\n    width: 80%;\n    margin: auto auto;\n}\n\n.producer-logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin: 20px;\n}\n\n.nav p {\n    margin-top: 1rem;\n}\n\n\n/* NAV BAH ANIM */\n\nnav>a,\nnav>a:after,\nnav>a:before {\n    transition: all .5s;\n}\n\nnav>a:hover {\n    color: #555;\n}\n\n\n/* stroke */\n\na {\n    text-decoration: none;\n}\n\nnav>a {\n    position: relative;\n}\n\nnav>a:after {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    margin: auto;\n    width: 0%;\n    content: '.';\n    color: transparent;\n    background: white;\n    height: 1px;\n}\n\nnav>a {\n    transition: all 1s;\n}\n\nnav>a.selected {\n    transition: all 0s;\n}\n\nnav>a:after {\n    text-align: left;\n    content: '.';\n    margin: 0;\n    opacity: 0;\n}\n\nnav>a:hover {\n    color: #fff;\n    z-index: 1;\n}\n\nnav>a:not(.selected):hover:after {\n    z-index: -10;\n    animation: fill 1s forwards;\n    -webkit-animation: fill 1s forwards;\n    -moz-animation: fill 1s forwards;\n    opacity: 1;\n}\n\n.selected {\n    font-weight: bold;\n}\n\n\n/* Keyframes */\n\n@-webkit-keyframes fill {\n    0% {\n        width: 100%;\n        height: 5px;\n    }\n    50% {\n        width: 100%;\n        height: 7px;\n    }\n    100% {\n        width: 100%;\n        height: 7px;\n        background: #a62b35;\n    }\n}\n\n\n/*Nav bar*/\n\nnav a {\n    position: relative;\n    display: inline-block;\n    margin: 15px 25px;\n    outline: none;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: #000;\n    font-size: 1.35em;\n    /* text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */\n}\n\n\n/* Histoire */\n\n.test {\n    background-color: #a62b35;\n    color: white;\n}\n\n.btn-history {\n    margin-top: 10px;\n    margin-bottom: 40px;\n    background-color: white;\n    color: #a62b35;\n    border: none;\n}\n\np.box {\n    margin: 50px;\n}\n\n.counter {\n    padding-top: 50px;\n    padding-right: 50px;\n    padding-left: 50px;\n}\n\n\n/* Footer */\n\n#img-logo {\n    margin-left: 25px;\n}\n\n.text-muted {\n    color: black !important;\n}\n\n.card {\n    border: none;\n}\n\n.card-group {\n    /* padding-top: 50px; */\n}\n\n#card-body {\n    padding: 0.5em;\n}\n\n.btn-danger {\n    background-color: #953640 !important;\n    border-color: #953640 !important;\n    color: aliceblue !important;\n}\n\n.page-footer {\n    background-color: #2B2B2B;\n    color: #CCBE9F;\n    font-family: 'Roboto', sans-serif;\n}\n\na.afooter {\n    color: #CCBE9F !important;\n}\n\n.cls-1 {\n    fill: #CCBE9F;\n}\n\n.image-footer {\n    width: 85%;\n    padding: 1em;\n}\n\n.footer-size {\n    font-size: 10px;\n}\n\n.footer-col {\n    margin-left: 5px;\n}\n\n.adresse-size {\n    font-size: 12px;\n    line-height: 13px;\n}\n\n\n/* History page */\n\n.paddingTB60 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\n.col-md-6 {\n    padding-top: 60px;\n    padding-bottom: 60px;\n}\n\nP.blocktext {\n    vertical-align: middle;\n    font-weight: bold;\n    font-style: italic;\n    font-size: 2rem;\n    text-transform: uppercase;\n    position: relative;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n\n\n/* Product page */\n\n.roadMap {\n    white-space: nowrap;\n}\n\na.produit-liens {\n    color: #CCBE9F;\n}\n\n.arrow {\n    width: 1.7%;\n}\n\n.bottleImg {\n    width: 90%;\n    height: auto;\n    margin: auto;\n}\n\n.price-font {\n    font-family: 'Montserrat', sans-serif;\n}\n\n.price-ht-font {\n    font-size: 10px;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.article-font {\n    font-size: 12px;\n    color: #6c757d;\n    font-family: 'Montserrat', sans-serif;\n}\n\n\n/* #btn-quantity {\n    padding-right: 325px;\n} */\n\n.nav-pills .nav-link.active,\n.nav-pills .show>.nav-link {\n    color: white;\n    background-color: #CCBE9F;\n}\n\n.nav-item:hover {\n    background-color: #CCBE9F;\n    border-radius: 0.25rem;\n}\n\n.pills {\n    color: #2B2B2B;\n    font-size: 16px;\n}\n\n#a-producteur:link {\n    color: #CCBE9F;\n}\n\n#a-producteur {\n    font-family: 'Roboto', sans-serif;\n    text-decoration: none;\n    color: #CCBE9F\n}\n\n.btn-basket {\n    padding: 1em 5em 1em 5em;\n    font-family: 'Montserrat', sans-serif;\n    border: 5px solid #2B2B2B;\n    background-color: #2B2B2B;\n    color: white;\n    /* Safari */\n    transition-duration: 0.4s;\n    cursor: pointer;\n}\n\n.btn-basket:hover {\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n    background-color: #a62b35;\n    border: 5px solid #a62b35;\n    color: white;\n}\n\n#mapid {\n    height: 400px;\n}\n\n\n/* CONTACT */\n\n#googleMap {\n    width: 555px;\n    height: 505px;\n}\n\n.img-contact {\n    max-width: 100%;\n    max-height: auto;\n}\n\n.contact-form {\n    background: #953640;\n    height: 505px;\n}\n\n.contact-form .form-control {\n    border-radius: 25;\n}\n\n.contact-image {\n    text-align: center;\n}\n\n.contact-image img {\n    border-radius: 25;\n    width: 11%;\n    margin-top: -3%;\n    -webkit-transform: rotate(29deg);\n            transform: rotate(29deg);\n}\n\n.contact-form form {\n    padding: 14%;\n}\n\n.contact-form form .row {\n    margin-bottom: -7%;\n}\n\n.contact-form h3 {\n    margin-bottom: 8%;\n    margin-top: -10%;\n    text-align: center;\n    color: white;\n}\n\n.contact-form .btnContact {\n    width: 50%;\n    border: none;\n    border-radius: 25px;\n    padding: 1.5%;\n    background: #2B2B2B;\n    font-weight: 600;\n    color: #fff;\n    cursor: pointer;\n}\n\n.btnContactSubmit {\n    width: 50%;\n    padding: 1.5%;\n    color: #fff;\n    border: none;\n    cursor: pointer;\n}\n\n.icon_display img {\n    width: 50px;\n}\n\n#tri-produit {\n    margin-top: 50px;\n}\n\n.number_results {\n    padding-top: 15px;\n}\n\n#weekproduct #carteproduit {\n    width: 10rem;\n}\n\n.card-img-top {\n    width: 10rem;\n}\n\n.card-title {\n    width: 15rem;\n    height: 60px;\n    position: relative;\n    margin-top: 1em;\n}\n\n#title-position {\n    position: absolute;\n    bottom: 0;\n}\n\n.btn-filter {\n    border-color: grey;\n    border-style: solid;\n    border-width: 0.5px;\n    border-radius: 25px;\n}\n\n.price-ht-font {\n    font-size: 10px;\n}\n\n.article-font {\n    font-size: 12px;\n}\n\n#cart-produit-img {\n    width: 68px;\n    height: 150px;\n}\n\n.btn-panier-2 {\n    border-color: grey;\n    border-style: solid;\n    border-width: 1px;\n}\n\n.action-btn {\n    margin-bottom: 25px;\n}\n\n.card-custom {\n    display: inline-flex;\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\n    margin-top: 15px;\n}\n\n#img-logo-header {\n    width: 50%;\n}\n\n#p-white {\n    color: white\n}\n\n.etapeImg {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    width: 70%;\n}\n\n.p-compte-paiement {\n    font-family: 'Roboto', sans-serif;\n    font-size: 14px;\n}\n\n ::-webkit-input-placeholder {\n    font-size: 10px;\n}\n\n ::-moz-placeholder {\n    font-size: 10px;\n}\n\n :-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::-ms-input-placeholder {\n    font-size: 10px;\n}\n\n ::placeholder {\n    font-size: 10px;\n}\n\n.btn-outline-form {\n    color: #953640;\n    border-color: #953640;\n}\n\n.btn-outline-form:hover,\n.btn-outline-form:focus,\n.btn-outline-form:active,\n.btn-outline-form.active,\n.open>.dropdown-toggle.btn-outline-form {\n    color: #fff;\n    background-color: #953640;\n    border-color: #953640;\n    /*set the color you want here*/\n}\n\n.small-text {\n    font-size: 10px;\n}\n\n.cartes-img {\n    padding: 2.5em;\n}\n\n.center {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n#produ-carte {\n    height: 20px;\n    font-size: 12px;\n}\n\n#millesime-carte {\n    font-size: 12px;\n}\n\n#prix-carte {\n    font-weight: bold;\n}\n\n#icon-truck {\n    max-width: 30%;\n    height: auto;\n}\n\n.text-validation {\n    font-size: 30px;\n}\n\n.text-validation-bis {\n    font-size: 20px;\n    color: #6c757d;\n}\n\n\n/* LOGIN & REGISTER FORM */\n\n#login-form {\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#register-form {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n#login-form #register-form {\n    margin: 0;\n    padding: 0;\n    font-family: 'Montserrat', sans-serif;\n    background: #a62b35;\n    display: inline-block;\n}\n\n.container-login100 {\n    width: 100%;\n    min-height: 60vh;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: center;\n    padding: 15px;\n    background-color: #a62b35;\n}\n\n#box,\n#box_register {\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#box label,\n#box_register label {\n    color: white;\n    font-weight: 400;\n    font-size: 2rem;\n    margin-top: 25px;\n    display: inline;\n}\n\n#box input,\n#box_register input {\n    border: 0;\n    background: #a62b35;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 10px;\n    width: 350px;\n    outline: none;\n    color: black;\n    border-radius: 15px;\n    transition: 0.25s;\n    margin-bottom: 25;\n    height: 50px;\n}\n\n#box_register label {\n    display: block;\n}\n\n#box_register input {\n    display: block;\n}\n\n#box input:focus,\n#box_register input:focus {\n    width: 350px;\n    border-color: black;\n    background: white;\n    color: black;\n}\n\n#box input::-webkit-input-placeholder,\n#box_register input::-webkit-input-placeholder {\n    color: black;\n}\n\n#box input::-moz-placeholder,\n#box_register input::-moz-placeholder {\n    color: black;\n}\n\n#box input:-ms-input-placeholder,\n#box_register input:-ms-input-placeholder {\n    color: black;\n}\n\n#box input::-ms-input-placeholder,\n#box_register input::-ms-input-placeholder {\n    color: black;\n}\n\n#box input::placeholder,\n#box_register input::placeholder {\n    color: black;\n}\n\n#submit {\n    border: 0;\n    background: none;\n    display: block;\n    margin: 20px auto;\n    text-align: center;\n    border: 2px solid black;\n    padding: 14px 40px;\n    outline: none;\n    color: white;\n    border-radius: 24px;\n    transition: 0.25s;\n    cursor: pointer;\n}\n\n#submit:hover {\n    background: black;\n}\n\n#remember {\n    font-size: 75%;\n}\n\n#box>a,\n#box_register>a {\n    padding-top: 25px;\n    display: block;\n    color: white;\n}\n\n#login-title,\n#register-title {\n    color: white;\n}\n\n#register-link,\n#home-link,\n#forgot-pass #login-link {\n    padding-top: 25px;\n    color: white;\n}\n\n#register #box {\n    width: 400px;\n    height: 1050px;\n    top: 100%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    background: #a62b35;\n    text-align: center;\n    border-radius: 25px;\n    opacity: 60%;\n}\n\n#register {\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\n    background-size: cover;\n}\n\n\n/* Style for dot color depending on wine type*/\n\n.type-circle-1 {\n    fill: #a62b35;\n}\n\n.type-circle-2 {\n    fill: #f2ebda;\n}\n\n.type-circle-3 {\n    fill: white;\n}\n\n.vin-titre {\n    font-size: 14px;\n    margin: auto;\n}\n\n.produit-titre {\n    font-size: 15px;\n    margin: auto;\n    font-size: bold;\n}\n\n.svg-center {\n    margin: 5px;\n}\n\n.badge {\n    padding-left: 9px;\n    padding-right: 9px;\n    border-radius: 9px;\n}\n\n.label-warning[href],\n.badge-warning[href] {\n    background-color: #c67605;\n}\n\n#lblCartCount {\n    font-size: 12px;\n    background: #a62b35;\n    color: #fff;\n    padding: 2px 5px;\n    vertical-align: top;\n    margin-left: 20px;\n    margin-top: -30px\n}\n\n\n/* LOADING */\n\n#loading-pic {\n    width: 300px;\n}\n\n.loader {\n    position: fixed;\n    z-index: 99;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: white;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.loader>img {\n    width: 100px;\n}\n\n.loader.hidden {\n    -webkit-animation: fadeOut 2s;\n            animation: fadeOut 2s;\n    -webkit-animation-fill-mode: forwards;\n            animation-fill-mode: forwards;\n}\n\n@-webkit-keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n@keyframes fadeOut {\n    100% {\n        opacity: 0;\n        visibility: hidden;\n    }\n}\n\n.thumb {\n    height: 100px;\n    border: 1px solid black;\n    margin: 10px;\n}\n\n\n/* MOBILE */", ""]);
+=======
 exports.push([module.i, "body {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.table td {\r\n    padding: 0.5rem;\r\n    vertical-align: top;\r\n    border-top: 1px solid #dee2e6;\r\n}\r\n\r\np {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\n.p {\r\n    font-family: 'Roboto', sans-serif;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n\r\na {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.label-produits {\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\nlabel {\r\n    font-size: 14px;\r\n}\r\n\r\n.wrapper {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-gap: 10px;\r\n    grid-auto-rows: minmax(100px, auto);\r\n}\r\n\r\n.icon:hover {\r\n    fill-opacity: 0;\r\n}\r\n\r\n.logo {\r\n    width: 80%;\r\n}\r\n\r\n#icon_search {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_account {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_cart {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_langue {\r\n    height: 45px;\r\n    width: 45px;\r\n    padding: 10px;\r\n}\r\n\r\n#icon_box {\r\n    height: 2em;\r\n    width: 2em;\r\n}\r\n\r\n.menu {\r\n    font-size: 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.image {\r\n    width: 80%;\r\n    margin: auto auto;\r\n}\r\n\r\n.producer-logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: 20px;\r\n}\r\n.nav p{\r\n    margin-top : 1rem;\r\n}\r\n\r\n\r\n/* NAV BAH ANIM */\r\n\r\nnav>a,\r\nnav>a:after,\r\nnav>a:before {\r\n    transition: all .5s;\r\n}\r\n\r\nnav>a:hover {\r\n    color: #555;\r\n}\r\n\r\n\r\n/* stroke */\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\nnav>a {\r\n    position: relative;\r\n}\r\n\r\nnav>a:after {\r\n    position: absolute;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    margin: auto;\r\n    width: 0%;\r\n    content: '.';\r\n    color: transparent;\r\n    background: white;\r\n    height: 1px;\r\n}\r\n\r\nnav>a {\r\n    transition: all 1s;\r\n}\r\n\r\nnav>a.selected {\r\n    transition: all 0s;\r\n}\r\n\r\nnav>a:after {\r\n    text-align: left;\r\n    content: '.';\r\n    margin: 0;\r\n    opacity: 0;\r\n}\r\n\r\nnav>a:hover {\r\n    color: #fff;\r\n    z-index: 1;\r\n}\r\n\r\nnav>a:not(.selected):hover:after {\r\n    z-index: -10;\r\n    animation: fill 1s forwards;\r\n    -webkit-animation: fill 1s forwards;\r\n    -moz-animation: fill 1s forwards;\r\n    opacity: 1;\r\n}\r\n\r\n.selected {\r\n    font-weight: bold;\r\n}\r\n\r\n\r\n/* Keyframes */\r\n\r\n@-webkit-keyframes fill {\r\n    0% {\r\n        width: 100%;\r\n        height: 5px;\r\n    }\r\n    50% {\r\n        width: 100%;\r\n        height: 7px;\r\n    }\r\n    100% {\r\n        width: 100%;\r\n        height: 7px;\r\n        background: #a62b35;\r\n    }\r\n}\r\n\r\n\r\n/*Nav bar*/\r\n\r\nnav a {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 15px 25px;\r\n    outline: none;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    color: #000;\r\n    font-size: 1.35em;\r\n    /* text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */\r\n}\r\n\r\n\r\n/* Histoire */\r\n\r\n.test {\r\n    background-color: #a62b35;\r\n    color: white;\r\n}\r\n\r\n.btn-history {\r\n    margin-top: 10px;\r\n    margin-bottom: 40px;\r\n    background-color: white;\r\n    color: #a62b35;\r\n    border: none;\r\n}\r\n\r\np.box {\r\n    margin: 50px;\r\n}\r\n\r\n.counter {\r\n    padding-top: 50px;\r\n    padding-right: 50px;\r\n    padding-left: 50px;\r\n}\r\n\r\n\r\n/* Footer */\r\n\r\n#img-logo {\r\n    margin-left: 25px;\r\n}\r\n\r\n.text-muted {\r\n    color: black !important;\r\n}\r\n\r\n.card {\r\n    border: none;\r\n}\r\n\r\n.card-group {\r\n    /* padding-top: 50px; */\r\n}\r\n\r\n#card-body {\r\n    padding: 0.5em;\r\n}\r\n\r\n.btn-danger {\r\n    background-color: #953640 !important;\r\n    border-color: #953640 !important;\r\n    color: aliceblue !important;\r\n}\r\n\r\n.page-footer {\r\n    background-color: #2B2B2B;\r\n    color: #CCBE9F;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\na.afooter {\r\n    color: #CCBE9F !important;\r\n}\r\n\r\n.cls-1 {\r\n    fill: #CCBE9F;\r\n}\r\n\r\n.image-footer {\r\n    width: 20%;\r\n}\r\n\r\n.footer-size {\r\n    font-size: 10px;\r\n}\r\n\r\n.footer-col {\r\n    margin-left: 5px;\r\n}\r\n\r\n.adresse-size {\r\n    font-size: 11px;\r\n    line-height: 11px;\r\n}\r\n\r\n\r\n/* History page */\r\n\r\n.paddingTB60 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\n.col-md-6 {\r\n    padding-top: 60px;\r\n    padding-bottom: 60px;\r\n}\r\n\r\nP.blocktext {\r\n    vertical-align: middle;\r\n    font-weight: bold;\r\n    font-style: italic;\r\n    font-size: 2rem;\r\n    text-transform: uppercase;\r\n    position: relative;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n}\r\n\r\n.image-aboutus-banner {\r\n    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url(\"/images/illustrations/histoire.png\");\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    background-position: center center;\r\n    color: #fff;\r\n    padding-top: 110px;\r\n    padding-bottom:110px;\r\n }\r\n\r\n\r\n/* Product page */\r\n\r\n.roadMap {\r\n    white-space: nowrap;\r\n}\r\n\r\na.produit-liens {\r\n    color: #CCBE9F;\r\n}\r\n\r\n.arrow {\r\n    width: 1.7%;\r\n}\r\n\r\n.bottleImg {\r\n    width: 90%;\r\n    height: auto;\r\n    margin: auto;\r\n}\r\n\r\n.price-font {\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n    color: #6c757d;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n\r\n\r\n/* #btn-quantity {\r\n    padding-right: 325px;\r\n} */\r\n\r\n.nav-pills .nav-link.active,\r\n.nav-pills .show>.nav-link {\r\n    color: white;\r\n    background-color: #CCBE9F;\r\n}\r\n\r\n.pills {\r\n    color: #2B2B2B;\r\n    font-size: 16px;\r\n}\r\n\r\n#a-producteur:link {\r\n    color: #CCBE9F;\r\n}\r\n\r\n#a-producteur {\r\n    font-family: 'Roboto', sans-serif;\r\n    text-decoration: none;\r\n    color: #CCBE9F\r\n}\r\n\r\n.btn-basket {\r\n    padding: 1em 5em 1em 5em;\r\n    font-family: 'Montserrat', sans-serif;\r\n    border: 5px solid #2B2B2B;\r\n    background-color: #2B2B2B;\r\n    color: white;\r\n    /* Safari */\r\n    transition-duration: 0.4s;\r\n    cursor: pointer;\r\n}\r\n\r\n.btn-basket:hover {\r\n    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);\r\n    background-color: #a62b35;\r\n    border: 5px solid #a62b35;\r\n    color: white;\r\n}\r\n\r\n#mapid {\r\n    height: 400px;\r\n}\r\n\r\n\r\n/* CONTACT */\r\n\r\n#googleMap {\r\n    width: 555px;\r\n    height: 505px;\r\n}\r\n\r\n.img-contact {\r\n    max-width: 100%;\r\n    max-height: auto;\r\n}\r\n\r\n.contact-form {\r\n    background: #953640;\r\n    height: 505px;\r\n}\r\n\r\n.contact-form .form-control {\r\n    border-radius: 25;\r\n}\r\n\r\n.contact-image {\r\n    text-align: center;\r\n}\r\n\r\n.contact-image img {\r\n    border-radius: 25;\r\n    width: 11%;\r\n    margin-top: -3%;\r\n    transform: rotate(29deg);\r\n}\r\n\r\n.contact-form form {\r\n    padding: 14%;\r\n}\r\n\r\n.contact-form form .row {\r\n    margin-bottom: -7%;\r\n}\r\n\r\n.contact-form h3 {\r\n    margin-bottom: 8%;\r\n    margin-top: -10%;\r\n    text-align: center;\r\n    color: white;\r\n}\r\n\r\n.contact-form .btnContact {\r\n    width: 50%;\r\n    border: none;\r\n    border-radius: 25px;\r\n    padding: 1.5%;\r\n    background: #2B2B2B;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n\r\n.btnContactSubmit {\r\n    width: 50%;\r\n    padding: 1.5%;\r\n    color: #fff;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.icon_display img {\r\n    width: 50px;\r\n}\r\n\r\n#tri-produit {\r\n    margin-top: 50px;\r\n}\r\n\r\n.number_results {\r\n    padding-top: 15px;\r\n}\r\n\r\n#weekproduct #carteproduit {\r\n    width: 10rem;\r\n}\r\n\r\n.card-img-top {\r\n    width: 10rem;\r\n}\r\n\r\n.card-title {\r\n    width: 15rem;\r\n    height: 60px;\r\n    position: relative;\r\n    margin-top: 1em;\r\n}\r\n\r\n#title-position {\r\n    position: absolute;\r\n    bottom: 0;\r\n}\r\n\r\n.btn-filter {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 0.5px;\r\n    border-radius: 25px;\r\n}\r\n\r\n.price-ht-font {\r\n    font-size: 10px;\r\n}\r\n\r\n.article-font {\r\n    font-size: 12px;\r\n}\r\n\r\n#cart-produit-img {\r\n    width: 68px;\r\n    height: 150px;\r\n}\r\n\r\n.btn-panier-2 {\r\n    border-color: grey;\r\n    border-style: solid;\r\n    border-width: 1px;\r\n}\r\n\r\n.action-btn {\r\n    margin-bottom: 25px;\r\n}\r\n\r\n.card-custom {\r\n    display: inline-flex;\r\n    padding: 1.5rem 0.8rem 1.5rem 0.8rem;\r\n    margin-top: 15px;\r\n}\r\n\r\n#img-logo-header {\r\n    width: 50%;\r\n}\r\n\r\n#p-white {\r\n    color: white\r\n}\r\n\r\n.etapeImg {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    width: 70%;\r\n}\r\n\r\n.p-compte-paiement {\r\n    font-family: 'Roboto', sans-serif;\r\n    font-size: 14px;\r\n}\r\n\r\n ::-webkit-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-moz-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n :-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::-ms-input-placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n ::placeholder {\r\n    font-size: 10px;\r\n}\r\n\r\n.btn-outline-form {\r\n    color: #953640;\r\n    border-color: #953640;\r\n}\r\n\r\n.btn-outline-form:hover,\r\n.btn-outline-form:focus,\r\n.btn-outline-form:active,\r\n.btn-outline-form.active,\r\n.open>.dropdown-toggle.btn-outline-form {\r\n    color: #fff;\r\n    background-color: #953640;\r\n    border-color: #953640;\r\n    /*set the color you want here*/\r\n}\r\n\r\n.small-text {\r\n    font-size: 10px;\r\n}\r\n\r\n.cartes-img {\r\n    padding: 2.5em;\r\n}\r\n\r\n.center {\r\n    display: block;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n#produ-carte {\r\n    height: 20px;\r\n    font-size: 12px;\r\n}\r\n\r\n#millesime-carte {\r\n    font-size: 12px;\r\n}\r\n\r\n#prix-carte {\r\n    font-weight: bold;\r\n}\r\n\r\n#icon-truck {\r\n    max-width: 30%;\r\n    height: auto;\r\n}\r\n\r\n.text-validation {\r\n    font-size: 30px;\r\n}\r\n\r\n.text-validation-bis {\r\n    font-size: 20px;\r\n    color: #6c757d;\r\n}\r\n\r\n\r\n/* LOGIN & REGISTER FORM */\r\n\r\n#login-form {\r\n    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#register-form {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n#login-form #register-form {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Montserrat', sans-serif;\r\n    background: #a62b35;\r\n    display: inline-block;\r\n}\r\n\r\n.container-login100 {\r\n    width: 100%;\r\n    min-height: 60vh;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 15px;\r\n    background-color: #a62b35;\r\n}\r\n\r\n#box,\r\n#box_register {\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#box label,\r\n#box_register label {\r\n    color: white;\r\n    font-weight: 400;\r\n    font-size: 2rem;\r\n    margin-top: 25px;\r\n    display: inline;\r\n}\r\n\r\n#box input,\r\n#box_register input {\r\n    border: 0;\r\n    background: #a62b35;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 10px;\r\n    width: 350px;\r\n    outline: none;\r\n    color: black;\r\n    border-radius: 15px;\r\n    transition: 0.25s;\r\n    margin-bottom: 25;\r\n    height: 50px;\r\n}\r\n\r\n#box_register label {\r\n    display: block;\r\n}\r\n\r\n#box_register input {\r\n    display: block;\r\n}\r\n\r\n#box input:focus,\r\n#box_register input:focus {\r\n    width: 350px;\r\n    border-color: black;\r\n    background: white;\r\n    color: black;\r\n}\r\n\r\n#box input::-webkit-input-placeholder,\r\n#box_register input::-webkit-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-moz-placeholder,\r\n#box_register input::-moz-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input:-ms-input-placeholder,\r\n#box_register input:-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::-ms-input-placeholder,\r\n#box_register input::-ms-input-placeholder {\r\n    color: black;\r\n}\r\n\r\n#box input::placeholder,\r\n#box_register input::placeholder {\r\n    color: black;\r\n}\r\n\r\n#submit {\r\n    border: 0;\r\n    background: none;\r\n    display: block;\r\n    margin: 20px auto;\r\n    text-align: center;\r\n    border: 2px solid black;\r\n    padding: 14px 40px;\r\n    outline: none;\r\n    color: white;\r\n    border-radius: 24px;\r\n    transition: 0.25s;\r\n    cursor: pointer;\r\n}\r\n\r\n#submit:hover {\r\n    background: black;\r\n}\r\n\r\n#remember {\r\n    font-size: 75%;\r\n}\r\n\r\n#box>a,\r\n#box_register>a {\r\n    padding-top: 25px;\r\n    display: block;\r\n    color: white;\r\n}\r\n\r\n#login-title,\r\n#register-title {\r\n    color: white;\r\n}\r\n\r\n#register-link,\r\n#home-link,\r\n#forgot-pass #login-link {\r\n    padding-top: 25px;\r\n    color: white;\r\n}\r\n\r\n#register #box {\r\n    width: 400px;\r\n    height: 1050px;\r\n    top: 100%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    background: #a62b35;\r\n    text-align: center;\r\n    border-radius: 25px;\r\n    opacity: 60%;\r\n}\r\n\r\n#register {\r\n    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;\r\n    background-size: cover;\r\n}\r\n\r\n\r\n/* Style for dot color depending on wine type*/\r\n\r\n.type-circle-1 {\r\n    fill: #a62b35;\r\n}\r\n\r\n.type-circle-2 {\r\n    fill: #f2ebda;\r\n}\r\n\r\n.type-circle-3 {\r\n    fill: white;\r\n}\r\n\r\n.vin-titre {\r\n    font-size: 14px;\r\n    margin: auto;\r\n}\r\n\r\n.produit-titre {\r\n    font-size: 15px;\r\n    margin: auto;\r\n    font-size: bold;\r\n}\r\n\r\n.svg-center {\r\n    margin: 5px;\r\n}\r\n\r\n.badge {\r\n    padding-left: 9px;\r\n    padding-right: 9px;\r\n    border-radius: 9px;\r\n}\r\n\r\n.label-warning[href],\r\n.badge-warning[href] {\r\n    background-color: #c67605;\r\n}\r\n\r\n#lblCartCount {\r\n    font-size: 12px;\r\n    background: #a62b35;\r\n    color: #fff;\r\n    padding: 2px 5px;\r\n    vertical-align: top;\r\n    margin-left: 20px;\r\n    margin-top: -30px\r\n}\r\n\r\n\r\n/* LOADING */\r\n\r\n#loading-pic {\r\n    width: 300px;\r\n}\r\n\r\n.loader {\r\n    position: fixed;\r\n    z-index: 99;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.loader>img {\r\n    width: 100px;\r\n}\r\n\r\n.loader.hidden {\r\n    -webkit-animation: fadeOut 2s;\r\n            animation: fadeOut 2s;\r\n    -webkit-animation-fill-mode: forwards;\r\n            animation-fill-mode: forwards;\r\n}\r\n\r\n@-webkit-keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n@keyframes fadeOut {\r\n    100% {\r\n        opacity: 0;\r\n        visibility: hidden;\r\n    }\r\n}\r\n\r\n.thumb {\r\n    height: 100px;\r\n    border: 1px solid black;\r\n    margin: 10px;\r\n}\r\n\r\n\r\n/* MOBILE */", ""]);
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
 
 // exports
 
@@ -84368,38 +84389,34 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("footer", { staticClass: "page-footer font-small indigo" }, [
-    _c("div", { staticClass: "dummy_page" }),
-    _vm._v(" "),
-    _c(
-      "footer",
-      { staticClass: "page-footer font-small stylish-color-dark pt-2" },
-      [
-        _c("div", { staticClass: "container text-center text-md-left" }, [
-          _c("img", {
-            staticClass: "image-footer",
-            attrs: { src: "/images/logo/logo_footer.svg" }
-          }),
-          _vm._v(" "),
-          _c(
-            "p",
-            { staticClass: "font-weight-bold text-uppercase mt-2 mb-0" },
-            [_vm._v("Adresse")]
-          ),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "media-container-row content text-white" }, [
+        _c("div", { staticClass: "row", staticStyle: { color: "#CCBE9F" } }, [
+          _c("div", { staticClass: "col-md-3" }, [
+            _c("img", {
+              staticClass: "image-footer center",
+              attrs: { src: "/images/logo/logo_footer.svg" }
+            })
+          ]),
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _c("hr", { staticClass: "clearfix w-100 d-md-none" })
-        ]),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _c("div", { staticClass: "footer-copyright text-center footer-size" }, [
-          _vm._v(
-            "© 2019 Copyright - Tous droits réservés | Powered by Teamothé"
-          )
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-1" }),
+          _vm._v(" "),
+          _vm._m(2)
         ])
-      ]
-    )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
+    _c("div", { staticClass: "footer-copyright footer-size m-2 text-right" }, [
+      _vm._v(
+        "\n    © 2019 Copyright - Tous droits réservés | Powered by Teamothé\n  "
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -84407,83 +84424,82 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col adresse-size" }, [
-        _c(
-          "a",
-          {
-            staticStyle: { color: "#CCBE9F" },
-            attrs: {
-              href:
-                "https://www.google.com/maps/place/Elie+Gazzar+S.A./@46.5326074,6.5557313,17z/data=!3m1!4b1!4m5!3m4!1s0x478c31173a0301e1:0x559c04025ad5e74c!8m2!3d46.5326037!4d6.55792"
-            }
-          },
-          [
-            _c("p", [
-              _vm._v("\n            Elie Gazzar S.A.\n            "),
-              _c("br"),
-              _vm._v("Chemin du Décent\n            "),
-              _c("br"),
-              _vm._v("1024 Ecublens\n            "),
-              _c("br")
-            ])
-          ]
-        )
+    return _c("div", { staticClass: "col-md-2 adresse-size p-3" }, [
+      _c("p", { staticClass: "font-weight-bold text-uppercase" }, [
+        _vm._v("Adresse")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col adresse-size" }, [
-        _c("p", [
-          _c("br"),
-          _c(
-            "a",
-            {
-              staticStyle: { color: "#CCBE9F" },
-              attrs: { href: "tel:+41216918671" }
-            },
-            [_vm._v("tel : +41 21 691 86 71")]
-          ),
-          _vm._v(" "),
-          _c("br"),
-          _c(
-            "a",
-            {
-              staticStyle: { color: "#CCBE9F" },
-              attrs: { href: "tel:+41216918672" }
-            },
-            [_vm._v("fax : +41 21 691 86 72")]
-          ),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticStyle: { color: "#CCBE9F" },
-              attrs: { href: "mailto:elie@gazzar.ch", target: "_top" }
-            },
-            [_vm._v("elie@gazzar.ch")]
-          ),
-          _vm._v(" "),
-          _c("br")
-        ])
+      _c("p", [
+        _vm._v("\n                  Elie Gazzar S.A.\n              "),
+        _c("br"),
+        _vm._v("Chemin du Décent\n              "),
+        _c("br"),
+        _vm._v("1024 Ecublens\n              "),
+        _c("br")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 adresse-size p-3" }, [
+      _c("p", { staticClass: "font-weight-bold text-uppercase" }, [
+        _vm._v("Téléphone")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col adresse-size" }, [
-        _c("ul", { staticClass: "list-unstyled adresse-size" }, [
-          _c("li", { staticClass: "font-weight-bold text-uppercase " }, [
-            _vm._v("\n              Pratique \n            ")
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { staticClass: "afooter", attrs: { href: "../contact" } }, [
-              _vm._v("Contact")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { staticClass: "afooter", attrs: { href: "../cgv" } }, [
-              _vm._v("CGV")
-            ])
+      _c(
+        "a",
+        {
+          staticStyle: { color: "#CCBE9F" },
+          attrs: { href: "tel:+41216918671" }
+        },
+        [_vm._v("+41 21 691 86 71")]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _c(
+        "a",
+        {
+          staticStyle: { color: "#CCBE9F" },
+          attrs: { href: "tel:+41216918672" }
+        },
+        [_vm._v("+41 21 691 86 72 (fax)")]
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticStyle: { color: "#CCBE9F" },
+          attrs: { href: "mailto:elie@gazzar.ch", target: "_top" }
+        },
+        [_vm._v("elie@gazzar.ch")]
+      ),
+      _vm._v(" "),
+      _c("br")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3" }, [
+      _c("ul", { staticClass: "list-unstyled adresse-size p-3" }, [
+        _c("li", { staticClass: "font-weight-bold text-uppercase " }, [
+          _vm._v("\n                  Pratique \n                ")
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "afooter", attrs: { href: "../contact" } }, [
+            _vm._v("Contact")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "afooter", attrs: { href: "../cgv" } }, [
+            _vm._v("CGV")
           ])
         ])
       ])
@@ -84493,22 +84509,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "list-unstyled list-inline text-center" }, [
-      _c("li", { staticClass: "list-inline-item" }, [
-        _c("p", { staticClass: "mb-1" }, [
-          _vm._v("Inscrivez-vous à la Newsletter")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "list-inline-item" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-danger btn-rounded btn-sm",
-            attrs: { type: "button", href: "#" }
-          },
-          [_vm._v("S'inscrire")]
-        )
+    return _c("div", { staticClass: "container pt-3" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-3" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-5" }, [
+          _c("ul", { staticClass: "list-unstyled list-inline" }, [
+            _c("li", { staticClass: "list-inline-item" }, [
+              _c("p", { staticClass: "mb-1" }, [
+                _vm._v("Inscrivez-vous à la Newsletter")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-inline-item" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger btn-rounded btn-sm",
+                  attrs: { type: "button", href: "#" }
+                },
+                [_vm._v("S'inscrire")]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-1" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-3" })
       ])
     ])
   }
@@ -84614,17 +84642,32 @@ var render = function() {
     _c("div", { staticClass: "container counter" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm" }, [
+<<<<<<< HEAD
+          _c("span", { staticClass: "counter h2" }, [
+            _vm._v(_vm._s(_vm.nbvins))
+          ]),
+=======
           _c("span", { staticClass: "counter" }, [_vm._v(_vm._s(_vm.nbvins))]),
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
           _vm._v(" "),
           _c("h6", [_vm._v("VINS")])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm" }, [
           _c("span", { staticClass: "counter h2" }, [
+<<<<<<< HEAD
+            _vm._v(_vm._s(_vm.nbregions))
+=======
             _vm._v(_vm._s(_vm.nbprodu))
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
           ]),
+          _c("br"),
           _vm._v(" "),
+<<<<<<< HEAD
+          _c("h6", [_vm._v("RÉGIONS")])
+=======
           _c("h6", [_vm._v("PRODUCTEURS")])
+>>>>>>> cd59b5316fbb22360bb53c1c79b8bef5c44ec498
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-sm" }, [
@@ -87533,7 +87576,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "mt-4 mb-4" }, [
                   _c("label", { staticClass: "mr-4 my-auto" }, [
-                    _vm._v("QUANTITÉS : ")
+                    _vm._v("Nombre de boîte : ")
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
@@ -87615,8 +87658,9 @@ var render = function() {
                           }),
                           _vm._v(
                             _vm._s(vin.condi.nombre) +
-                              " par boîte en " +
-                              _vm._s(vin.condi.type)
+                              " bouteille par boîte (" +
+                              _vm._s(vin.condi.type) +
+                              ")"
                           )
                         ])
                       ])

@@ -4,8 +4,13 @@
     <div class="container counter">
       <div class="row">
         <div class="col-sm">
-          <span class="counter">{{ nbvins }}</span>
+          <span class="counter h2">{{ nbvins }}</span>
           <h6>VINS</h6>
+          
+        </div>
+        <div class="col-sm">
+          <span class="counter h2">{{ nbregions }}</span><br>
+          <h6>RÉGIONS</h6>
         </div>
         <div class="col-sm">
           <span class="counter h2">{{ nbprodu }}</span>
