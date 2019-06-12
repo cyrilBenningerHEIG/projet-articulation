@@ -28,7 +28,7 @@ class AdresseController extends Controller
     }
 
     public function show(){
-        $clntId = Auth::id();
+        $clntId = Auth::guard("user")->user()->id;
 
         $adress_all = adres::all();
         $adress = $adress_all->where('clnt_id', $clntId);
