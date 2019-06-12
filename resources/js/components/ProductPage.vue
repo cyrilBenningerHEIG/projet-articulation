@@ -345,31 +345,6 @@ import { Icon } from 'leaflet';
 
 
 }
-  
-/*   data() {
-    return {
-      vin: '',
-      vinCarts: [],
-      
-    };
-  },
-methods: {
-    addCart() {
-      this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
-    },
-  },
-  mounted() {
-    if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
-  },
-  watch: {
-    vinCarts: {
-      handler() {
-        localStorage.setItem('vinCarts', JSON.stringify(this.vins[this.vinid-1]));
-      },
-      deep: true,
-    },
-  }
-}  */
 
 </script>
 

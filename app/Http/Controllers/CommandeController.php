@@ -21,7 +21,7 @@ class CommandeController extends Controller
             'clnt_id' => $clntId,
            'adresLivr_id' => request('adresLivrId'),
             'adresFact_id' => request('adresFactId'),
-            'total' => 300.00,
+            'total' => request('total'),
             'modePmt' => 'poste',
             
     

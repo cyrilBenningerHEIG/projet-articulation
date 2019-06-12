@@ -4,42 +4,42 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Vos informations</h4>
         <hr>
-        <table>
+        <table v-for="livr in adreslivr" :key="livr.id">
           <p class="mt-2 mb-2">Adresse de livraison</p>
           <tr>
             <th>Destinataire</th>
-            <td>{{adreslivr[0].destinataire}}</td>
+            <td>{{livr.destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>{{adreslivr[0].rue}} {{adreslivr[0].numero}}</td>
+            <td>{{livr.rue}} {{livr.numero}}</td>
           </tr>
           <tr>
             <th>Npa/Localité</th>
-            <td>{{adreslivr[0].npa}} {{adreslivr[0].localite}}</td>
+            <td>{{livr.npa}} {{livr.localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>{{adreslivr[0].pays}}</td>
+            <td>{{livr.pays}}</td>
           </tr>
         </table>
-         <table>
+         <table  v-for="fact in adresfact" :key="fact.id">
           <p class="mt-2 mb-2">Adresse de facturation</p>
           <tr>
             <th>Destinataire</th>
-            <td>{{adresfact[0].destinataire}}</td>
+            <td>{{fact.destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>{{adresfact[0].rue}} {{adresfact[0].numero}}</td>
+            <td>{{fact.rue}} {{fact.numero}}</td>
           </tr>
           <tr>
             <th>Npa/Localité</th>
-            <td>{{adresfact[0].npa}} {{adresfact[0].localite}}</td>
+            <td>{{fact.npa}} {{fact.localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>{{adresfact[0].pays}}</td>
+            <td>{{fact.pays}}</td>
           </tr>
         </table>
       </div>
@@ -168,7 +168,7 @@
         </div>
     </div>
     <div>
-      <a href="paiement-etape4" ><button class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
+      <a href="paiement-etape4" ><button @click="removeCart()" class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
     </div>
   </div>
 </template>
@@ -194,10 +194,10 @@ export default{
   },
   
    methods: {
-    removeCart(index) {
-      this.vinCarts.splice(index, 1);
-      localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
-      console.log(index);
+    removeCart() {
+      
+      localStorage.clear();
+      
     }
   },
 
