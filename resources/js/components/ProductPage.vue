@@ -22,11 +22,11 @@
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   
-                  <b v-if="unchecked ==true">{{prixeurottc}} €</b>
-                  <b v-else>CHF {{prixttc}}</b>
+                  <b v-if="unchecked ==true">{{prixeurottc | formatNumber}} €</b>
+                  <b v-else>CHF {{prixttc | formatNumber}}</b>
                   <i class="price-ht-font">
-                    <span v-if="unchecked ==true">({{prixeuro}} € hors TVA)</span>
-                    <span v-else>({{vin.prix.prixht}}  CHF hors TVA)</span> 
+                    <span v-if="unchecked ==true">({{prixeuro  | formatNumber}} € hors TVA)</span>
+                    <span v-else>({{vin.prix.prixht  | formatNumber}}  CHF hors TVA)</span> 
                   </i>
                 </h5>
                 <div>
@@ -45,9 +45,9 @@
                 <span></span>
                 <h5 class="mt-3 mb-3 price-font">
                   CHF
-                  <b>{{prixttc}}</b>
+                  <b>{{prixttc | formatNumber}}</b>
                   <i class="price-ht-font">
-                    (<span>{{vin.prix.prixht}}</span> CHF hors TVA)
+                    (<span>{{vin.prix.prixht | formatNumber}}</span> CHF hors TVA)
                   </i>
                 </h5>
 
@@ -161,7 +161,7 @@
                 role="tab"
                 aria-controls="v-pills-messages"
                 aria-selected="false"
-              >Régions</a>
+              >Région</a>
             </div>
           </div>
           <div class="col-8">
@@ -260,6 +260,11 @@
       </section>
 </template>
 <script>
+var numeral = require("numeral");
+
+  Vue.filter("formatNumber", function (value) {
+    return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
+  });
 
  export default {
   
