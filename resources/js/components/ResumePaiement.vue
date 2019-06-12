@@ -154,7 +154,7 @@
       </table>
     </div>
     <div>
-      <a href="paiement-etape1" ><button class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
+      <a href="paiement-etape4" ><button class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
     </div>
   </div>
 </template>

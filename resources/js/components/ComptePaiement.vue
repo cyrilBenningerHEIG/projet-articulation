@@ -31,9 +31,8 @@
             <a href="/register" class="p"> <button class="btn btn-outline-danger btn-outline-form  btn-block ">Créer un compte</button> </a>
           </div>
           <div class="form-group mt-5 mb-5">
-            <span><a href="/" class="p"><button class="btn btn-outline-danger btn-outline-form btn-block ">Commander en tant qu'invité</button></a></span>
+            <span><a href="paiement-etape2" class="p"><button class="btn btn-outline-danger btn-outline-form btn-block ">Commander en tant qu'invité</button></a></span>
           </div>
-        
       </div>
     </div>
   </div>

@@ -104,26 +104,35 @@ label {
     align-items: center;
     margin: 20px;
 }
+.nav p{
+    margin-top : 1rem;
+}
 
-/* NAV BAH ANIM */  
-  nav > a,
-  nav > a:after,
-  nav > a:before {
+
+/* NAV BAH ANIM */
+
+nav>a,
+nav>a:after,
+nav>a:before {
     transition: all .5s;
-  }
-  nav > a:hover {
+}
+
+nav>a:hover {
     color: #555;
-  }
-  
-  
-  /* stroke */
-  a{
+}
+
+
+/* stroke */
+
+a {
     text-decoration: none;
-  }
-  nav > a  {
+}
+
+nav>a {
     position: relative;
-  }
-  nav > a:after {
+}
+
+nav>a:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -132,55 +141,62 @@ label {
     width: 0%;
     content: '.';
     color: transparent;
-    background : white;
+    background: white;
     height: 1px;
-  }
-  
-  nav > a  {
+}
+
+nav>a {
     transition: all 1s;
-  }
-  nav > a.selected  {
+}
+
+nav>a.selected {
     transition: all 0s;
-  }
-  
-  nav > a:after {
+}
+
+nav>a:after {
     text-align: left;
     content: '.';
     margin: 0;
     opacity: 0;
-  }
-  nav > a:hover {
+}
+
+nav>a:hover {
     color: #fff;
     z-index: 1;
-  }
-  nav > a:not(.selected):hover:after {
+}
+
+nav>a:not(.selected):hover:after {
     z-index: -10;
     animation: fill 1s forwards;
     -webkit-animation: fill 1s forwards;
     -moz-animation: fill 1s forwards;
     opacity: 1;
-  }
-  .selected{
-      font-weight: bold;
-    }
+}
 
-  /* Keyframes */
-  @-webkit-keyframes fill {
+.selected {
+    font-weight: bold;
+}
+
+
+/* Keyframes */
+
+@-webkit-keyframes fill {
     0% {
-      width: 100%;
-      height: 5px;
-
+        width: 100%;
+        height: 5px;
     }
     50% {
-      width: 100%;
-      height: 7px;
+        width: 100%;
+        height: 7px;
     }
     100% {
-      width: 100%;
-      height: 7px;
-      background: #a62b35;
+        width: 100%;
+        height: 7px;
+        background: #a62b35;
     }
-  }
+}
+
+
 /*Nav bar*/
 
 nav a {
@@ -194,6 +210,7 @@ nav a {
     font-size: 1.35em;
     /* text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */
 }
+
 
 /* Histoire */
 
@@ -303,6 +320,16 @@ P.blocktext {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.image-aboutus-banner {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url("/images/illustrations/histoire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+ }
 
 
 /* Product page */
@@ -589,6 +616,20 @@ a.produit-liens {
 
 #prix-carte {
     font-weight: bold;
+}
+
+#icon-truck {
+    max-width: 30%;
+    height: auto;
+}
+
+.text-validation {
+    font-size: 30px;
+}
+
+.text-validation-bis {
+    font-size: 20px;
+    color: #6c757d;
 }
 
 
