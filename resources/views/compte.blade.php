@@ -26,7 +26,6 @@
                 @endif
                 <Compte-client></compte-client>
 
-                <adresse-form></adresse-form>
 
                 <footer-bar></footer-bar>
 

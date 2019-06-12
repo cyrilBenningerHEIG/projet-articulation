@@ -15,12 +15,11 @@
     <body>
         <div id="app">
             <div class="container">
-                <header-paiement class="mt-3"></header-paiement>
+                <header-paiement></header-paiement>
                 <header-retour class="mb-3 mt-3"></header-retour>
                 <paiement-etape2 class="mt-3 mb-3"></paiement-etape2>
-                <paiement-livraison></paiement-livraison>
+                <paiement-livraison :adress='{{ $adress }}'></paiement-livraison>
                 
-
                 <footer-bar></footer-bar>
 
             </div>

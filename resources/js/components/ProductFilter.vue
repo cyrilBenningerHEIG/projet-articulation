@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="container">
+  <div class="container center">
     <div class="row mt-5 justify-content-center">
       <div id="filters" class="filters mx-auto">
         <div class="btn-group" role="group">
@@ -14,7 +14,7 @@
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="typeList" class="container" v-for="t in types">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{t.type}}</label>
               </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.libelle}}</label>
             </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.millesime}}</label>
             </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.nom}}</label>
           </div>
             </div>
         </div>
@@ -105,27 +105,26 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-              <a class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</a>
+              <label class="dropdown-item" v-on:click="filter"><input type="checkbox"/>{{value.quantite}}</label>
             </div>
-            </div>
+            </div> 
         </div>
-        <div class="container">
+        <div class="btn-group" role="group">
+          <button type="button" class="close p-3" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+            
+        </div>
+        <div class="container pt-3">
           <div id="tri-produit" class="row">
             <div class="col-sm">
-              <a class="icon_display" id="icon_display2" href="#">
-                <img src="images/icons/display2.svg">
-              </a>
-              <a class="icon_display" id="icon_display3" href="#">
-                <img src="images/icons/display3.svg">
-              </a>
-              <a class="icon_display" id="icon_display4" href="#">
-                <img src="images/icons/display4.svg">
-              </a>
+              <button  class="btn btn-white btn-filter" v-on:click="emptyFilters">Réinitialiser les filtres</button>
             </div>
-            <div class="col-sm">
+            <div class="col-sm text-center">
               <p class="number_results">{{nbvins}} résultats</p>
             </div>
-            <div class="col-sm">
+            <div class="col-sm text-right">
               <div class="btn-group" role="group">
                 <button
                   id="tri-btn"
@@ -224,11 +223,11 @@ export default {
           if(nbAttributs >= filters.length){
             $(this).addClass("visible").fadeIn();
           }
-      });
 
-      if(filters.length == 0){
+          if(filters.length == 0){
         $('.card-custom').addClass("visible").fadeIn();
       };
+      });
 
       var nbResults = $('.card-custom.visible').length;
       $('.number_results').text(nbResults + ' résultats');
@@ -305,6 +304,9 @@ sortByAgeDesc:function(){
       return ($(b).data('millesime')) > ($(a).data('millesime')) ? 1 : -1;   
   } 
 },
+emptyFilters:function(){
+  location.reload();
+}
 }
 }
 </script>
