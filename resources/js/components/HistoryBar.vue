@@ -8,7 +8,7 @@
           <h6>VINS</h6>
         </div>
         <div class="col-sm">
-          <span class="counter">{{ nbprodu }}</span>
+          <span class="counter h2">{{ nbprodu }}</span>
           <h6>PRODUCTEURS</h6>
         </div>
         <div class="col-sm">
@@ -21,6 +21,7 @@
     <a href="histoire"><button class="btn btn-primary btn-history btn-outline-danger">À PROPOS DE GAZZAR</button></a>
   </div>
 </template>
+
 <script>
 export default {
   props: ['nbvins', 'nbprodu','nbregions'],
@@ -34,4 +35,6 @@ export default {
         }
      },
 }
+
+
 </script>

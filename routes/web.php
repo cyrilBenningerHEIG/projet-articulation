@@ -34,6 +34,10 @@ Route::get('/panier', function () {
 });
 
 Route::get('/paiement-etape1', function () {
+    if(Auth::guard('user')->check()){
+        return redirect('/paiement-etape2');
+        
+    };
     return view('paiement1');
 });
 
@@ -47,6 +51,10 @@ Route::get('/paiement-etape3', function () {
 
 Route::get('/paiement-etape4', function () {
     return view('paiement4');
+});
+
+Route::get('/paiement-etape5', function () {
+    return view('paiement5');
 });
 
 

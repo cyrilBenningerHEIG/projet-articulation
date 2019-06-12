@@ -9,15 +9,15 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-                </head>
+        
+        </head>
     <body>
         <div id="app">
             <div class="container">
+                    <loading-screen></loading-screen>
             @if(Auth::guard('user')->check())
                 <h6>Connecté</h6>
-                <nav-bar-login></nav-bar-login>
+                <nav-bar-login :user='{{$user}}'></nav-bar-login>
                 @else
                 <h6>Déconnecté</h6>
                 <nav-bar-logout></nav-bar-logout>
@@ -32,9 +32,14 @@
             </div>
         </div>
             <script src="js/app.js"></script>
-            <script> window.addEventListener("load", function () {
+            <script> 
+                window.addEventListener("load", function () {
                     const loader = document.querySelector(".loader");
                     loader.className += " hidden"; // class "loader hidden"
-                });</script>
+                });
+                
+            </script>
+           
+
     </body>
 </html>

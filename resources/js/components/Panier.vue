@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-    <div v-if=totalCart>
+    <div v-if=vinCarts.length > 
     <h2>Panier</h2>
 
     <div class="table-responsive-sm">
@@ -19,12 +19,7 @@
           <tr v-for="(vinCart,index) in vinCarts"> 
             <th scope="row">
               <div class="card card-custom mx-2 mb-3">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
-                  class="card-img-top"
-                  alt="vin1"
-                  id="cart-produit-img"
-                >
+                <img class="card-img-top" v-bind:src="vinCart.vin.photoUrl"  v-bind:alt="'vin1'+vinCart.vin.id">
               </div>
             </th>
             <td>
@@ -60,44 +55,41 @@
             <td>
               <form>
                 <div class="form-group">
-                {{vinCart.quantity}}
-                   <!-- <input
-                    type="number"
-                    class="form-control"
-                    id="formGroupExampleInput"
-                    placeholder="Quantité"
-                  > -->
+               {{vinCart.quantity}} cartons de {{vinCart.vin.condi.nombre}} bouteilles
+                  
                 </div>
               </form>
             </td>
-            <td>{{vinCart.vin.prix.prixht*vinCart.quantity}} CHF</td>
+            <td>{{Math.round((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*10)) / 10 }} CHF</td>
           </tr>
           <tr>
           <td ></td>
           <td></td>
           <td>Sous total</td>
-          <td>{{Math.round(totalCart * 10) / 10 }}</td>
+          <td>CHF {{Math.round(totalCart * 10) / 10 }}</td>
           </tr>
           <tr>
           <td></td>
           <td></td>
           <td>TVA & autres taxes</td>
-          <td>{{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
+          <td>CHF {{Math.round((totalCart*0.077 * 10)) / 10 }}</td>
           </tr>
            <tr>
           <td></td>
           <td></td>
-          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>{{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4></td>
+          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)
+          <br>
+          <input style="margin-top : 25px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code promotionel"></td>
+          <td><h4>CHF {{Math.round(((totalCart*0.077)+totalCart) * 10) / 10 }}</h4>
+          </td>
           </tr>
         </tbody>
       </table>
       <div class="action-btn">
     <div class="row mt-5 justify-content-center">
       <div class="filters mx-auto">
-      <button class="btn btn-white btn-panier-2">Continuer mes achats</button>
-        <a v-if="userIsLoggedIn == false" href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
-        <a v-else href="paiement-etape2"><button class="btn btn-danger btn-panier">Passer commande</button></a>
+      <a href="/"><button class="btn btn-white btn-panier-2">Continuer mes achats</button></a>
+        <a href="paiement-etape1"><button class="btn btn-danger btn-panier">Passer commande</button></a>
     </div>
 </div>
   </div>
@@ -125,6 +117,7 @@ export default {
     return {
       vinCarts: [],
       vinTotal:0,
+     
          
     };
   },
@@ -146,7 +139,7 @@ export default {
     totalCart: function(){
       let sum = 0;
       this.vinCarts.forEach(function(vinCart) {
-         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity));
+         sum += (parseFloat(vinCart.vin.prix.prixht) * parseFloat(vinCart.quantity*vinCart.vin.condi.nombre));
       });
 
      return sum;

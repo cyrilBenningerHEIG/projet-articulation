@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\vin;
+use Illuminate\Support\Facades\Auth;
 
 use DB;
 
@@ -16,7 +17,6 @@ class CatalogueController extends Controller
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix.promops', 'condi', 'cepags', 'types', 'regn.pays'])
             ->get();
             $nbvins = count($vins);
-            $filters = [];
             
             // ----------Prices---------//
 
@@ -37,6 +37,7 @@ class CatalogueController extends Controller
         $frmts = DB::table('frmts')->orderBy('quantite')->get();
         $millesimes = DB::table('vins')->select('millesime')->distinct('millesime')->orderBy('millesime')->where('millesime', '<>', '0')->get();
 
+        $user = Auth::guard('user')->user();
         return view('produits', [
             'vins'=> $vins,
             'types'=> $types,
@@ -47,6 +48,7 @@ class CatalogueController extends Controller
             'frmts'=> $frmts,
             'millesimes'=> $millesimes,
             'nbvins'=> $nbvins,
+            'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
         //     $prix = ($prix)*1.07;
@@ -56,25 +58,31 @@ class CatalogueController extends Controller
     }
 
     function show ($id) 
-    {   
+    {  
+        $user = Auth::guard('user')->user(); 
         $vins_all = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])->get();
         $vins = $vins_all->where('id', $id);
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
+        $prixeurottc = $prixeuro_round * 1.07;
+        $prixeuro_format = number_format($prixeurottc, 2, '.', '');
         $vinid = $id;
+
         for ($i=0; $i < sizeof($vins_all); $i++) { 
             $prixht = $vins_all[$i]['prix']['prixht'];
             $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
-        $prixttc_round = round($prixttc * 20, 0) /20;
-        $prixttc_format = number_format($prixttc_round, 2, '.', '');
-            $vins_all[$i]['prix']['prixht'] = $prixttc_format;
+         $prixttc_round = round($prixttc * 20, 0) /20;
+         $prixttc_format = number_format($prixttc_round, 2, '.', '');
         }
         return view('productPage', [
             'vins'=> $vins,
             'prixttc'=>$prixttc_format,
             'prixeuro'=>$prixeuro_round,
+            'prixeurottc'=>$prixeuro_format,
             'vinid'=>$vinid,
             'vins_all'=>$vins_all,
+            'user'=>$user,
             ]);
     }
 }
+

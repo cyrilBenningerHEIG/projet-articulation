@@ -6,7 +6,7 @@
         <hr>
         <form class="needs-validation" novalidate >
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0">
                 <label for="validationCustom01">Prénom</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom01" placeholder="Bob"
                     required>
@@ -14,7 +14,7 @@
                     Looks good!
                 </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0 pl-1">
                 <label for="validationCustom02">Nom</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom02" placeholder="Alice"
                     required>
@@ -25,7 +25,7 @@
                 
             </div>
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-3 p-0">
                 <label for="validationCustom03">Ville</label>
                 <input type="text" class="form-control form-control-sm" id="validationCustom03" placeholder="Lausanne" required>
                 <div class="invalid-feedback">
@@ -76,7 +76,7 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Adresse de facturation</h4>
         <hr>
-        <form  class="mr-5 ml-5">
+        <div class="mr-5 ml-5">
             <p>Identique à l'adresse de facturation</p>
           <div class="form-group mt-3 mb-5">
             <button type="submit" class="btn btn-outline-danger btn-outline-form  btn-block ">Modifier</button>
@@ -84,8 +84,29 @@
           <div class="form-group mt-5 mb-5">
            <a href="paiement-etape3" class="p"><button class="btn btn-danger btn-block">Continuer</button></a>
           </div>
-        </form>
+          
+        </div>
+        
       </div>
     </div>
   </div>
 </template>
+
+<script>
+
+ export default {
+  
+  
+  props: ["adress"],
+
+   data() {
+    return {
+      adres : '',
+      
+    };
+  },
+ 
+  
+ 
+
+}

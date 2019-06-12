@@ -20,8 +20,6 @@
         <hr>
           <p class="text-justify small-text">Clients existants et commandes primeurs : Vous recevez une facture payable à 30 jours</p>
           <p class="text-justify small-text">Nouveaux clients : paiement sur facture avant livraison</p>
-        <form class="mr-5 ml-5">
-        
           <div class="form-group mt-4 mb-5">
             <button
               type="submit"
@@ -30,12 +28,11 @@
             <p class="text-justify small-text">Envoie par poste une facture</p>
           </div>
           <div class="form-group mt-5 mb-5">
-            <a href="paiement-etape3" class="p">
+            <a href="paiement-etape5" class="p">
               <button class="btn btn-danger btn-block">Envoie par e-mail</button>
             </a>
             <p class="text-justify small-text">SAVE THE PLANET: envoie facture par e-mail</p>
           </div>
-        </form>
       </div>
     </div>
   </div>
