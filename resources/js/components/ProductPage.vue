@@ -26,8 +26,8 @@
                 <span></span>
                 </div>
                 <h5 v-if="vin.prix.prixPromo" class="mt-3 mb-3 price-font">   
-                  <b v-if="unchecked ==true">{{prixpromoeuro}} €</b>
-                  <b v-else>CHF {{vin.prix.prixPromo}}</b>
+                  <b v-if="unchecked ==true">{{prixpromoeuro | formatNumber}}} €</b>
+                  <b v-else>CHF {{vin.prix.prixPromo | formatNumber}}}</b>
                   <b style="font-size:80%; text-decoration: line-through; text-decoration-color:red" v-if="unchecked ==true">{{prixeurottc}} €</b>
                   <b style="font-size: 80%; text-decoration: line-through; text-decoration-color:red" v-else>CHF {{vin.prix.prixht}}</b><b style="color:red; padding-left:5px">-{{pourcentagepromo}}%</b> 
 
@@ -36,11 +36,11 @@
                   </i>
                 </h5>
                  <h5 v-else class="mt-3 mb-3 price-font">    
-                  <b v-if="unchecked ==true">{{prixeurottc}} €</b>
-                  <b v-else>CHF {{prixttc}}</b>
+                  <b v-if="unchecked ==true">{{prixeurottc | formatNumber}}} €</b>
+                  <b v-else>CHF {{prixttc| formatNumber}}}</b>
                   <i class="price-ht-font">
-                    <span v-if="unchecked ==true">({{prixeuro}} € hors TVA)</span>
-                    <span v-else>({{vin.prix.prixht}}  CHF hors TVA)</span> 
+                    <span v-if="unchecked ==true">({{prixeuro  | formatNumber}} € hors TVA)</span>
+                    <span v-else>({{vin.prix.prixht  | formatNumber}}  CHF hors TVA)</span> 
                   </i>
                 </h5>
                 <!-- <h5 class="mt-3 mb-3 price-font">
@@ -98,7 +98,7 @@
               </div>
 
               <div class="mt-4 mb-4">
-                <label class="mr-4 my-auto">QUANTITÉS : </label>
+                <label class="mr-4 my-auto">Nombre de boîte : </label>
                 <div class="container">
                   <div class="row">
                     <div class="col-3 pl-0">
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="col">
-                      <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} par boîte en {{vin.condi.type}}</span>
+                      <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} bouteille par boîte ({{vin.condi.type}})</span>
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@
                 role="tab"
                 aria-controls="v-pills-messages"
                 aria-selected="false"
-              >Régions</a>
+              >Région</a>
             </div>
           </div>
           <div class="col-8">
@@ -263,6 +263,11 @@
       </section>
 </template>
 <script>
+var numeral = require("numeral");
+
+  Vue.filter("formatNumber", function (value) {
+    return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
+  });
 
  export default {
   
@@ -304,8 +309,7 @@
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
-  
- 
+
 
 }
   

@@ -104,8 +104,9 @@ label {
     align-items: center;
     margin: 20px;
 }
-.nav p{
-    margin-top : 1rem;
+
+.nav p {
+    margin-top: 1rem;
 }
 
 
@@ -281,7 +282,8 @@ a.afooter {
 }
 
 .image-footer {
-    width: 20%;
+    width: 85%;
+    padding: 1em;
 }
 
 .footer-size {
@@ -293,8 +295,8 @@ a.afooter {
 }
 
 .adresse-size {
-    font-size: 11px;
-    line-height: 11px;
+    font-size: 12px;
+    line-height: 13px;
 }
 
 
@@ -376,6 +378,11 @@ a.produit-liens {
 .nav-pills .show>.nav-link {
     color: white;
     background-color: #CCBE9F;
+}
+
+.nav-item:hover {
+    background-color: #CCBE9F;
+    border-radius: 0.25rem;
 }
 
 .pills {
