@@ -292,28 +292,28 @@ import { Icon } from 'leaflet';
 
   methods: {
     generateMap() {
-      var map = L.map('mapid').setView([this.lat, this.long], 8.5);
+        var map = L.map('mapid').setView([this.lat, this.long], 8.5);
 
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-    maxZoom: 8
-}).addTo(map);
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+      maxZoom: 7
+      }).addTo(map);
 
-$("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
-    map.invalidateSize();
-});
+      $("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
+        map.invalidateSize();
+      });
 
-var blackIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-});
+      var blackIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+      });
 
-L.marker([this.lat, this.long], { icon: blackIcon }).addTo(map);
-      },
+      L.marker([this.lat, this.long], { icon: blackIcon }).addTo(map);
+    },
 
     addCart() {
       var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
@@ -336,7 +336,6 @@ L.marker([this.lat, this.long], { icon: blackIcon }).addTo(map);
 
   },
   mounted() {
-    console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
@@ -357,13 +356,11 @@ methods: {
     },
   },
   mounted() {
-    console.log('App mounted!');
     if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
   },
   watch: {
     vinCarts: {
       handler() {
-        console.log('Vins changed!');
         localStorage.setItem('vinCarts', JSON.stringify(this.vins[this.vinid-1]));
       },
       deep: true,

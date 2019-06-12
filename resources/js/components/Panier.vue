@@ -138,12 +138,10 @@ export default {
     removeCart(index) {
       this.vinCarts.splice(index, 1);
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
-      console.log(index);
     }
   },
 
   mounted() {
-    console.log("App mounted!");
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
   },
 

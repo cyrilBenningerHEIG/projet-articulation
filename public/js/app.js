@@ -3270,7 +3270,7 @@ Vue.filter("formatNumber", function (value) {
       var map = leaflet__WEBPACK_IMPORTED_MODULE_0___default.a.map('mapid').setView([this.lat, this["long"]], 8.5);
       leaflet__WEBPACK_IMPORTED_MODULE_0___default.a.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-        maxZoom: 8
+        maxZoom: 7
       }).addTo(map);
       $("a[href='#v-pills-messages']").on('shown.bs.tab', function (e) {
         map.invalidateSize();

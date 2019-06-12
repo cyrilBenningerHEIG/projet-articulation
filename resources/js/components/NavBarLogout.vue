@@ -65,7 +65,6 @@
   },
     
  mounted() {
-    console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     
   },

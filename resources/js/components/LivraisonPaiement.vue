@@ -98,7 +98,6 @@
             adresLivrId: this.selected,
             adresFactId: this.selected,
           })
-          console.log(this.selected)
         },
 
     }

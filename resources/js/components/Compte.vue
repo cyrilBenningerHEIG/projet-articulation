@@ -123,7 +123,6 @@ export default {
             
           
             })
-              console.log(this.destinataire)
             $("input").val('')
         },
         submitClient(){
@@ -136,7 +135,6 @@ export default {
             
           
             })
-             console.log(this.nom)
             $("input").val('')
         }
 
