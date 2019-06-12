@@ -77,12 +77,16 @@ class CatalogueController extends Controller
         $vinid = $id;
         $prixpromoeuro_format = 0;
         $pourcentagePromo = 0;
+        $lat = 0;
+        $long = 0;
 
         for ($i=0; $i < sizeof($vins_all); $i++) { 
             $prixht = $vins_all[$i]['prix']['prixht'];
             $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
          $prixttc_round = round($prixttc * 20, 0) /20;
          $prixttc_format = number_format($prixttc_round, 2, '.', '');
+         $lat = $vins[$id-1]['regn']['lat'];
+         $long = $vins[$id-1]['regn']['long'];
          if (!empty($vins[$i]['prix']['promops'][0])) {
             $pourcentagePromo = $vins[$i]['prix']['promops'][0]['pourcentage'];
             $prixpromo = $prixttc_format - ($prixttc_format * ($pourcentagePromo / 100));
@@ -104,6 +108,8 @@ class CatalogueController extends Controller
             'vinid'=>$vinid,
             'vins_all'=>$vins_all,
             'user'=>$user,
+            'lat'=>$lat,
+            'long'=>$long,
             ]);
     }
 }

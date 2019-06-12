@@ -131,7 +131,9 @@ export default {
   data() {
     return {
       vinCarts: [],
-      vinTotal: 0
+      vinTotal: 0,
+      visibleClass: "visible",
+        vin: ""
     };
   },
   methods: {
@@ -161,12 +163,7 @@ export default {
 
     props: ["vins", "prixttc", "prixeuro"],
 
-    data() {
-      return {
-        visibleClass: "visible",
-        vin: ""
-      };
-    }
+  
   }
 };
 /* methods:{

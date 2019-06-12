@@ -163,6 +163,7 @@
                 role="tab"
                 aria-controls="v-pills-messages"
                 aria-selected="false"
+                v-on:click="generateMap"
               >Région</a>
             </div>
           </div>
@@ -262,16 +263,21 @@
       </section>
 </template>
 <script>
+//Formating prices
 var numeral = require("numeral");
 
   Vue.filter("formatNumber", function (value) {
     return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
   });
-  
+
+
+// import {LMap, LTileLayer, LIcon, LMarker} from 'vue2-leaflet';
+import L from 'leaflet';
+import { Icon } from 'leaflet';
+
  export default {
   
-  
-  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid", "prixpromoeuro", "pourcentagepromo"],
+  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid", "prixpromoeuro", "pourcentagepromo", "lat", "long"],
 
    data() {
     return {
@@ -279,10 +285,35 @@ var numeral = require("numeral");
       vinCarts: [],
       quantite: 1,
       unchecked:false,
-      
+      lat: vin.regn.lat,
     };
   },
+
   methods: {
+    generateMap() {
+      var map = L.map('mapid').setView([this.lat, this.long], 8.5);
+
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+    maxZoom: 8
+}).addTo(map);
+
+$("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
+    map.invalidateSize();
+});
+
+var blackIcon = new L.Icon({
+    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+});
+
+L.marker([this.lat, this.long], { icon: blackIcon }).addTo(map);
+      },
+
     addCart() {
       $("#addcarttext").text("Ajouté au panier ✓");
       $('.btn-basket').css('border','5px solid green');

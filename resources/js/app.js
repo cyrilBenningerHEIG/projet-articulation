@@ -39,10 +39,20 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import '../style/style.css';
 import './counter.js';
-import L from 'leaflet';
 import JsonStorage from "./lib/JsonStorage";
 
+import { Icon }  from 'leaflet'
+import 'leaflet/dist/leaflet.css'
 
+
+// this part resolve an issue where the markers would not appear
+delete Icon.Default.prototype._getIconUrl;
+
+Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+});
 
 
 import './countUp/dist/countUp';
@@ -133,27 +143,27 @@ const app = new Vue({
 
 //////////////////////////////////////  Chargement du type de carte sur Leaflet
 
-var map = L.map('mapid').setView([47.02, 8.33], 8.5);
+// var map = L.map('mapid').setView([47.02, 8.33], 8.5);
 
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-    maxZoom: 5
-}).addTo(map);
+// L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+//     attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+//     maxZoom: 5
+// }).addTo(map);
 
-$("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
-    map.invalidateSize();
-});
+// $("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
+//     map.invalidateSize();
+// });
 
-var blackIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-});
+// var blackIcon = new L.Icon({
+//     iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+//     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+//     iconSize: [25, 41],
+//     iconAnchor: [12, 41],
+//     popupAnchor: [1, -34],
+//     shadowSize: [41, 41]
+// });
 
-L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
+// L.marker([44.8, -0.56], { icon: blackIcon }).addTo(map);
 
 
 ////////////////////////////////////// Formulaire adresse de paiement
@@ -181,3 +191,4 @@ $(document).ready(function() {
 $('.carousel').carousel({
     interval: 1
 })
+

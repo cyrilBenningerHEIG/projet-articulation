@@ -31,11 +31,13 @@
         "countup.js": "^2.0.4",
         "handlebars": "^4.1.2",
         "leaflet": "^1.5.1",
+        "moment": "^2.24.0",
         "numeral": "^2.0.6",
         "vform": "^1.0.1",
         "vue-countup": "^0.1.0",
         "vue-countup-v2": "^3.0.1",
         "vue-router": "^3.0.6",
+        "vue2-leaflet": "^2.1.1",
         "waypoints": "^4.0.1"
     }
 }
