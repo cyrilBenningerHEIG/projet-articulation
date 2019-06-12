@@ -5,7 +5,7 @@
         <div class="col-4 pt-1"></div>
         <div class="col-4">
           <a class="blog-header-logo text-dark" href="/">
-            <img class="logo" id="img-logo" src="/images/logo/logo.svg">
+            <img class="logo center" src="/images/logo/logo.svg">
           </a>
         </div>
                <div class="col-4 d-flex justify-content-end align-items-center">

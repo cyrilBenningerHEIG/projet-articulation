@@ -38,6 +38,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import '../style/style.css';
+import '../style/stylemobile.css';
 import './counter.js';
 import L from 'leaflet';
 import JsonStorage from "./lib/JsonStorage";
@@ -181,3 +182,16 @@ $(document).ready(function() {
 $('.carousel').carousel({
     interval: 1
 })
+
+////////////////////////////////////// Mobile
+$(window).on("resize", evt => {
+    if (window.matchMedia("screen and (max-width: 30rem)").matches) {
+        $(".nav > ul").hide();
+    } else {
+        $(".nav > ul").show();
+    }
+});
+$(".nav").on("click", evt => {
+    if (!window.matchMedia("screen and (max-width: 30rem)").matches) return;
+    $(".nav > ul").toggle();
+});
