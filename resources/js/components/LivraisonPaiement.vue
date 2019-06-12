@@ -44,10 +44,17 @@
         <h4 class="text-center mb-2">Adresse de facturation</h4>
         <hr>
         <div class="mr-5 ml-5">
-            <p>Identique à l'adresse de facturation</p>
-          <div class="form-group mt-3 mb-5">
-            <button type="submit" class="btn btn-outline-danger btn-outline-form  btn-block ">Modifier</button>
-          </div>
+                    <b-form-checkbox v-model="checked" name="check-button"  checked>
+                      Adresse identique à l'adresse de livraison <b></b>
+                    </b-form-checkbox>
+          <hr>
+        <select  v-show="checked==false" v-model="selected2"  class="custom-select">
+          <option selected> sélectionner une adresse </option>
+  <option  v-for="adres in adress" :key="adres.id" v-bind:value="adres.id"  >
+    {{adres.rue}} {{adres.numero}}, {{adres.npa}} {{adres.localite}}
+  </option>
+  
+</select>
           <div class="form-group mt-5 mb-5">
            <a href="paiement-etape3"  class="p"> <button type="submit" @click="submitCmd" class="btn btn-danger btn-block">Continuer</button></a> 
           </div>
@@ -75,7 +82,9 @@
       npa: '',
       localite: '',
       pays: '',
-      selected: 0,
+      selected: 'sélectionner une adresse',
+      selected2: 'sélectionner une adresse',
+      checked: 'true'
     };
   },
 
@@ -94,8 +103,14 @@
             $("input").val('')
         },
         submitCmd(){
+           if(this.checked == true){
+            var selectLivr = this.selected
+          } else{
+           var selectLivr = this.selected2
+          }
+          
           axios.post('commandes',{
-            adresLivrId: this.selected,
+            adresLivrId:this.selected,
             adresFactId: this.selected,
           })
         },
