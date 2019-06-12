@@ -28,6 +28,7 @@
       </div>
     <hr class="m-0">
     <div id="card-body">
+      <h6  class="card-text m-0" id="millesime-carte">{{vin.frmt.quantite}}</h6>
       <div class="check-full" v-if="vin.millesime > 1">
       <h6  class="card-text" id="millesime-carte">{{vin.millesime}}</h6>
       </div>
@@ -37,18 +38,19 @@
       <h6  class="card-text" id="produ-carte">{{vin.produ.nom}}</h6>
       <h6  v-if ="vin.prix.prixPromo==null" class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
       <div v-else>
-      <h6 class="card-text" id="prix-carte" style="text-decoration: line-through; text-decoration-color:red">CHF {{vin.prix.prixht}}</h6>
+      <h6 class="card-text" id="prix-carte" style="text-decoration: line-through; text-decoration-color:red">CHF {{vin.prix.prixht}}</h6> 
+      <div v-for="value in vin.prix.promops">
+      <h6 style ="color:red; m=0">-{{value.pourcentage}}%</h6></div>
       <h6 class="card-text" id="prix-carte" >CHF {{vin.prix.prixPromo}}</h6>
       </div>
       </div>
     </div>
     </div>
   </div>
-  </div>
 </template>
 <script>
 export default {
-  props: ['vins', 'prixttc', 'prixeuro'],
+  props: ['vins', 'prixttc', 'prixeuro', 'pourcentagePromo'],
 
     data(){
         return{
