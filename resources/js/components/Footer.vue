@@ -22,8 +22,8 @@
               <br>
               </div>
             <div class="col-md-1"></div>
-            <div class="col-md-3">
-                <ul class="list-unstyled adresse-size p-3">  
+            <div class="col-md-3 p-3">
+                <ul class="list-unstyled adresse-size">  
                   <li class="font-weight-bold text-uppercase ">
                     Pratique 
                   </li>

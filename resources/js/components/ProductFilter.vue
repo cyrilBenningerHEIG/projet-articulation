@@ -112,7 +112,7 @@
         <div class="btn-group" role="group">
           <button type="button" class="close p-3" aria-label="Close" v-on:click="reset">
               <span aria-hidden="true">&times;</span>
-            </button>
+          </button>
         </div>
             
         </div>

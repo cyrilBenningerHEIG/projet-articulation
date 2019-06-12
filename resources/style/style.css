@@ -14,7 +14,7 @@ h6 {
 }
 
 .table td {
-    padding: 0.5rem;
+    padding: 12px;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
@@ -324,14 +324,14 @@ P.blocktext {
 }
 
 .image-aboutus-banner {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url("/images/illustrations/histoire.png");
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)), url("/images/illustrations/histoire.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color: #fff;
     padding-top: 110px;
-    padding-bottom:110px;
- }
+    padding-bottom: 110px;
+}
 
 
 /* Product page */
@@ -546,6 +546,10 @@ a.produit-liens {
     border-color: grey;
     border-style: solid;
     border-width: 1px;
+}
+
+.panier-quantite {
+    margin-top: 4em;
 }
 
 .action-btn {
