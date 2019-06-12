@@ -6,18 +6,13 @@
         <div class="col-sm">
           <span class="counter h2">{{ nbvins }}</span>
           <h6>VINS</h6>
-          
         </div>
         <div class="col-sm">
-          <span class="counter h2">{{ nbregions }}</span><br>
-          <h6>RÉGIONS</h6>
-        </div>
-        <div class="col-sm">
-          <span class="counter">{{ nbprodu }}</span>
+          <span class="counter h2">{{ nbprodu }}</span>
           <h6>PRODUCTEURS</h6>
         </div>
         <div class="col-sm">
-          <span class="counter">{{ nbregions }}</span><br>
+          <span class="counter h2">{{ nbregions }}</span><br>
           <h6>RÉGIONS</h6>
         </div>
       </div>
