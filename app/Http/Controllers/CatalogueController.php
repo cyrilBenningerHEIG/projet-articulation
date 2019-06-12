@@ -26,6 +26,13 @@ class CatalogueController extends Controller
                 $prixttc_round = round($prixttc * 20, 0) /20;
                 $prixttc_format = number_format($prixttc_round, 2, '.', '');
                 $vins[$i]['prix']['prixht'] = $prixttc_format;
+                if (!empty($vins[$i]['prix']['promops'][0])) {
+                    $pourcentagePromo = $vins[$i]['prix']['promops'][0]['pourcentage'];
+                    $prixpromo = $prixttc_format - ($prixttc_format * ($pourcentagePromo / 100));
+                    $prixpromo_round = round($prixpromo * 20, 0) /20;
+                    $prixpromo_format = number_format($prixpromo_round, 2, '.', '');
+                    $vins[$i]['prix']['prixPromo'] = $prixpromo_format;
+                 }
             }
 
         //---------------------------------Show Filters---------------------------------//
@@ -48,6 +55,7 @@ class CatalogueController extends Controller
             'frmts'=> $frmts,
             'millesimes'=> $millesimes,
             'nbvins'=> $nbvins,
+            'pourcentagePromo'=>$pourcentagePromo,
             'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
@@ -60,25 +68,38 @@ class CatalogueController extends Controller
     function show ($id) 
     {  
         $user = Auth::guard('user')->user(); 
-        $vins_all = Vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])->get();
+        $vins_all = Vin::with(['produ', 'appel','prix.promops', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])->get();
         $vins = $vins_all->where('id', $id);
         $prixeuro = (($vins[$id-1]['prix']['prixht']))*0.89;
         $prixeuro_round = number_format($prixeuro, 2, '.', '');
         $prixeurottc = $prixeuro_round * 1.07;
         $prixeuro_format = number_format($prixeurottc, 2, '.', '');
         $vinid = $id;
+        $prixpromoeuro_format = 0;
 
         for ($i=0; $i < sizeof($vins_all); $i++) { 
             $prixht = $vins_all[$i]['prix']['prixht'];
             $prixttc = (($vins[$id-1]['prix']['prixht']))*1.07;
          $prixttc_round = round($prixttc * 20, 0) /20;
          $prixttc_format = number_format($prixttc_round, 2, '.', '');
+         if (!empty($vins[$i]['prix']['promops'][0])) {
+            $pourcentagePromo = $vins[$i]['prix']['promops'][0]['pourcentage'];
+            $prixpromo = $prixttc_format - ($prixttc_format * ($pourcentagePromo / 100));
+            $prixpromo_round = round($prixpromo * 20, 0) /20;
+            $prixpromo_format = number_format($prixpromo_round, 2, '.', '');
+            $prixpromoeuro = $prixeuro_format - ($prixeuro_format * ($pourcentagePromo / 100));
+            $prixpromoeuro_round = round($prixpromoeuro * 20, 0) /20;
+            $prixpromoeuro_format = number_format($prixpromoeuro_round, 2, '.', '');
+            $vins[$i]['prix']['prixPromo'] = $prixpromo_format;
+         }
         }
         return view('productPage', [
             'vins'=> $vins,
             'prixttc'=>$prixttc_format,
             'prixeuro'=>$prixeuro_round,
             'prixeurottc'=>$prixeuro_format,
+            'prixpromoeuro'=>$prixpromoeuro_format,
+            'pourcentagePromo'=>$pourcentagePromo,
             'vinid'=>$vinid,
             'vins_all'=>$vins_all,
             'user'=>$user,

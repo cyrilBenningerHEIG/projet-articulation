@@ -15,7 +15,7 @@ class PrimeurController extends Controller
     {
 
             // Display all products
-            $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
+            $vins = vin::with(['produ', 'appel','prix.promops', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
              ->where('estPrimeur', '=', 1)->get();
             
             // ----------Prices---------//
