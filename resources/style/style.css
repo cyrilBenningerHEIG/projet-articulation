@@ -323,6 +323,16 @@ P.blocktext {
     transform: translateY(-50%);
 }
 
+.image-aboutus-banner {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), url("/images/illustrations/histoire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+ }
+
 
 /* Product page */
 

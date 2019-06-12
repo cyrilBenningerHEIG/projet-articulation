@@ -4,74 +4,40 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Adresse de livraison</h4>
         <hr>
-        <form class="needs-validation" novalidate >
-            <div class="form-row">
-                <div class="col-md-6 mb-3 p-0">
-                <label for="validationCustom01">Prénom</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom01" placeholder="Bob"
-                    required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                </div>
-                <div class="col-md-6 mb-3 p-0 pl-1">
-                <label for="validationCustom02">Nom</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom02" placeholder="Alice"
-                    required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                </div>
-                
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3 p-0">
-                <label for="validationCustom03">Ville</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom03" placeholder="Lausanne" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
-                </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Canton</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom04" placeholder="Vaud" required>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
-                </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                <label for="validationCustom05">CP</label>
-                <input type="text" class="form-control form-control-sm" id="validationCustom05" placeholder="1006" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Pays</label>
-                    <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                    <option>Suisse</option>
-                    <option>France</option>
-                    <option>Italie</option>
-                    <option>Allemagne</option>
-                    <option>Autriche</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                    You must agree before submitting.
-                </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-danger btn-block ">Submit</button>
-        </form>
+        <select   class="custom-select">
+  <option   v-for="adres in adress" v-bind:value="adres.id">
+    {{adres.rue}}
+  </option>
+  
+</select>
+        <form @submit.prevent="submitAdress">
+                        <div class="form-group">
+                          <hr>
+                                        <label for="exampleInputNom1">Ajouter une nouvelle adresse</label>
+                            <input type="text" name="destinataire" class="form-control" v-model="destinataire" placeholder="Destinataire" value="" />
+                        </div>
+                       <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <input type="text" name="rue" class="form-control" v-model="rue" placeholder="Rue" value="" />
+                        </div>
+                        <div class="form-group col-md-2">
+                            <input type="text" name="numero" class="form-control" v-model="numero" placeholder="N°" value="" />
+                        </div>
+                        </div>
+                       
+                        <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <input type="text" name="npa" class="form-control" v-model="npa" placeholder="NPA" value="" />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <input type="text" name="localite" class="form-control" v-model="localite" placeholder="Localite" value="" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" name="pays" class="form-control" v-model="pays" placeholder="Pays" value="" />
+                        </div>
+                        </div>
+          <button type="submit" class="btn btn-danger btn-block ">Ajouter une adresse</button>
+            </form>
       </div>
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Adresse de facturation</h4>
@@ -84,7 +50,7 @@
           <div class="form-group mt-5 mb-5">
            <a href="paiement-etape3" class="p"><button class="btn btn-danger btn-block">Continuer</button></a>
           </div>
-          
+         
         </div>
         
       </div>
@@ -102,6 +68,7 @@
    data() {
     return {
       adres : '',
+     
       
     };
   },
