@@ -32,6 +32,7 @@ Route::get('/compte', function () {
 });
 
 Route::post('/adresses', 'AdresseController@store');
+Route::post('/client', 'ClientController@update');
 Route::get('/paiement-etape2', 'AdresseController@show');
 
 Route::post('/commandes', 'CommandeController@store');

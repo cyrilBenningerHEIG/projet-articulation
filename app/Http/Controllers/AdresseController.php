@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class AdresseController extends Controller
 {
     public function store(){
-        $clntId = Auth::id();
+        $clntId = Auth::guard("user")->user()->id;
 
         adres::create([
             'destinataire' => request('destinataire'),

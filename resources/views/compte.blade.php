@@ -24,7 +24,7 @@
                 <nav-bar-logout></nav-bar-logout>
                 
                 @endif
-                <Compte-client></compte-client>
+                <Compte-client :user='{{Auth::guard("user")->user()}}'></compte-client>
 
 
                 <footer-bar></footer-bar>
