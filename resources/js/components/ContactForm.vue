@@ -7,21 +7,21 @@
             </div>
             <div class="col pl-0 pr-0">
                 <div class="container contact-form ">
-                        <form method="post">
+                        <form @submit.prevent="submitContact">
                             <h3>Contacter nous</h3>
                         <div class="row">
                                 <div class="col">
                                     <div class="form-group">
-                                        <input type="text" name="txtName" class="form-control" placeholder="Nom et prénom" value="" />
+                                        <input type="text" v-model="Name" class="form-control" placeholder="Nom et prénom" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="txtEmail" class="form-control" placeholder="Email" value="" />
+                                        <input type="text" v-model="Email" class="form-control" placeholder="Email" value="" />
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="txtMsg" class="form-control" placeholder="Votre message" style="width: 100%; height: 150px;"></textarea>
+                                        <textarea v-model="Msg" class="form-control" placeholder="Votre message" style="width: 100%; height: 150px;"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" name="btnSubmit" class="btnContact rounded" value="Envoyer" />
+                                        <input type="submit" class="btnContact rounded" value="Envoyer" />
                                     </div>
                                     
                                 </div>
@@ -33,3 +33,29 @@
     </div>
 </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            Name: '',
+            Email: '',
+            Msg: '',
+            
+            }
+    },
+    methods: {
+
+        submitContact(){
+            axios.post('contact',{
+                Name: this.Name,
+                Email: this.Email,
+                Msg: this.Msg,
+            
+            
+          
+            })
+        }
+    }
+}
+</script>
