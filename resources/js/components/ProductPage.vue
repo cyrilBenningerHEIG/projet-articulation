@@ -305,8 +305,7 @@ var numeral = require("numeral");
     console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
-  }, 
- 
+  },
 
 
 }
