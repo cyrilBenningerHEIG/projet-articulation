@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div v-if="vinCarts.length">
-      <h2>Panier</h2>
 
       <div class="table-responsive-sm">
         <table class="table">
