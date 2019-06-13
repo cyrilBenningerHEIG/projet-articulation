@@ -186,6 +186,7 @@ export default{
     return {
       vinCarts: [],
       vinTotal: 0,
+      
     }
   },
   
@@ -207,6 +208,7 @@ export default{
       localStorage.removeItem('firstLoad');
   };
     }
+    
   },
 
   mounted() {
