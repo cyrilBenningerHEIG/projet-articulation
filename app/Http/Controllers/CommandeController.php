@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\cmd;
+use App\vin;
 
 use App\adres;
 
@@ -17,15 +18,25 @@ class CommandeController extends Controller
     public function store(){
         $clntId = Auth::guard("user")->user()->id;
 
-        cmd::create([
-            'clnt_id' => $clntId,
-           'adresLivr_id' => request('adresLivrId'),
-            'adresFact_id' => request('adresFactId'),
-            'total' => request('total'),
-            'modePmt' => 'poste',
-            
-    
-        ]);
+        $cmd = new cmd;
+        $cmd->clnt_id = $clntId;
+        $cmd->adresLivr_id = request('adresLivrId');
+        $cmd->adresFact_id = request('adresFactId');
+        $cmd->total = request('total');
+        $cmd->modePmt = 'poste';
+
+        $cmd->save();
+        $vins= request('vins');
+        foreach ($vins as $vin) {
+            $id_vin=$vin['vin']['id'];
+            $quantity=$vin['quantity'];
+            $cmd->vins()->attach($id_vin,['quantite'=>$quantity]);
+        }
+        
+        
+        
+        
+
     }
 
         public function show(){

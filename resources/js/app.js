@@ -110,6 +110,7 @@ Vue.component('cgv-texte', require('./components/CGV.vue').default);
 
 //Panier 
 Vue.component('panier-produit', require('./components/Panier.vue').default);
+Vue.component('titre-panier', require('./components/TitrePanier.vue').default);
 
 //Paiement
 Vue.component('header-paiement', require('./components/HeaderPaiement.vue').default);
@@ -122,6 +123,9 @@ Vue.component('paiement-livraison', require('./components/LivraisonPaiement.vue'
 
 Vue.component('paiement-etape3', require('./components/Paiement3.vue').default);
 Vue.component('paiement-page', require('./components/PagePaiement.vue').default);
+Vue.component('titre-resume', require('./components/TitreResume.vue').default);
+Vue.component('panier-resume', require('./components/PanierResume.vue').default);
+
 
 Vue.component('paiement-etape4', require('./components/Paiement4.vue').default);
 Vue.component('paiement-resumer', require('./components/ResumePaiement.vue').default);

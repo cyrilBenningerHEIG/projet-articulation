@@ -13,7 +13,7 @@
             <h6 class="card-title" id="nom-carte">
               <div class="container">
                 <div class="row mt-4 carte-row">
-                  <div class="col-1 pl-1 pr-1 carte-mob">
+                  <div class="col-1 pl-1 pr-1 carte-mob" >
                       <svg height="20" width="20">
                         <circle v-bind:class="'type-circle-'+ value.id" cx="10" cy="10" r="5" stroke="black" stroke-width="0.3"  />
                       </svg>
