@@ -25,7 +25,7 @@
                 <nav-bar-logout></nav-bar-logout>
                 
                 @endif
-               
+               <titre-panier></titre-panier>
                 <panier-produit></panier-produit>
                 <footer-bar></footer-bar>
 
