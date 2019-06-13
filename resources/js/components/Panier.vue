@@ -47,7 +47,11 @@
                         <h6 class="card-text" id="millesime-carte"></h6>
                       </div>
                       <h6 class="card-text mb-0" id="produ-carte">{{vinCart.vin.produ.nom}}</h6>
-                      <button type="button" class="btn btn-danger btn-rounded btn-sm" @click="removeCart(index)">X</button>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-rounded btn-sm"
+                        @click="removeCart(index)"
+                      >X</button>
                     </div>
                   </div>
                 </div>
@@ -55,34 +59,55 @@
               <td>
                 <form>
                   <div class="form-group panier-quantite">
-                    <h6><span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixht}}</span> x {{vinCart.vin.condi.nombre}} bouteilles </h6>
+                    <h6 v-if="vinCart.vin.prix.prixPromo">
+                      <span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixPromo}}</span>
+                      x {{vinCart.vin.condi.nombre}} bouteilles
+                    </h6>
+                    <h6 v-if="vinCart.prixeuro">
+                      <span class="card-text" id="prix-carte">{{vinCart.prixeuro}}</span>
+                      € x {{vinCart.vin.condi.nombre}} bouteilles
+                    </h6>
+                    <h6 v-if="!vinCart.vin.prix.prixPromo && !vinCart.prixeuro">
+                      <span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixht}}</span>
+                      x {{vinCart.vin.condi.nombre}} bouteilles
+                    </h6>
                   </div>
                 </form>
               </td>
               <td>
-                <div class="panier-quantite"><b>{{(Math.ceil((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }} CHF</b>
+                <div v-if="vinCart.vin.prix.prixPromo" class="panier-quantite">
+                  <b>CHF {{(Math.ceil((vinCart.vin.prix.prixPromo*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }}</b>
                 </div>
-                </td>
-              
+                <div v-if="vinCart.prixeuro" class="panier-quantite">
+                  <b>{{(Math.ceil((vinCart.prixeuro*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }} €</b>
+                </div>
+                <div
+                  v-if="!vinCart.vin.prix.prixPromo && !vinCart.prixeuro"
+                  class="panier-quantite">
+                  <b>CHF {{(Math.ceil((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }}</b>
+                </div>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td></td>
               <td>Sous total</td>
-              <td>{{(Math.ceil(totalCart * 20) / 20).toFixed(2) }}</td>
+              <td>CHF {{(Math.ceil(totalCart * 20) / 20).toFixed(2) }} / {{(Math.ceil((totalCart * 20) / 20)*0.89).toFixed(2) }} €</td>
             </tr>
             <tr>
               <td></td>
               <td></td>
               <td>TVA & autres taxes</td>
-              <td>{{(Math.ceil((totalCart*0.077 * 20)) / 20).toFixed(2) }}</td>
+              <td>CHF {{(Math.ceil((totalCart*0.077 * 20)) / 20).toFixed(2)}} / {{(Math.ceil((totalCart * 0.077) *20 / 20)*0.89).toFixed(2) }} €</td>
             </tr>
             <tr>
               <td></td>
               <td></td>
               <td>
                 <h4>Total de la commande</h4>
-                <p><i>(Hors frais de livraison)</i></p>
+                <p>
+                  <i>(Hors frais de livraison)</i>
+                </p>
                 <br>
                 <input
                   style="margin-top : 25px"
@@ -94,7 +119,7 @@
                 >
               </td>
               <td>
-                <h4><b vinTotal>{{totalttc }}</b></h4>
+                  <b vinTotal>CHF {{totalttc }} / {{(Math.ceil((totalttc * 20) / 20)*0.89).toFixed(2) }} €</b>
               </td>
             </tr>
           </tbody>
@@ -133,7 +158,7 @@ export default {
       vinCarts: [],
       vinTotal: 0,
       visibleClass: "visible",
-        vin: ""
+      vin: ""
     };
   },
   methods: {
@@ -151,26 +176,34 @@ export default {
     totalCart: function() {
       let sum = 0;
       this.vinCarts.forEach(function(vinCart) {
-        sum +=
-          parseFloat(vinCart.vin.prix.prixht) *
-          parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+        if (vinCart.vin.prix.prixPromo) {
+          sum += // hello
+            parseFloat(vinCart.vin.prix.prixPromo) *
+            parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+        // else if (vinCart.prixeuro) {
+        //   sum += // hello
+        //     parseFloat(vinCart.prixeuro) *
+        //     parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+        } else {
+          sum += // hello
+            parseFloat(vinCart.vin.prix.prixht) *
+            parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+        }
       });
-      
       return sum;
     },
-    totalttc: function(){
-      var sumttc = (Math.ceil(((this.totalCart*0.077)+this.totalCart) * 20) / 20).toFixed(2);
-      localStorage.setItem("total", sumttc)
-      return sumttc
 
-    },
-
+    totalttc: function() {
+      var sumttc = (
+        Math.ceil((this.totalCart * 0.077 + this.totalCart) * 20) / 20
+      ).toFixed(2);
+      localStorage.setItem("total", sumttc);
+      return sumttc;
+    }
   },
 
-    props: ["vins", "prixttc", "prixeuro"],
-
-  
-  }
+  props: ["vins", "prixttc", "prixeuro"]
+};
 /* methods:{
 
     addCart:function(){

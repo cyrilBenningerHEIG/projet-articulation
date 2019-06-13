@@ -285,7 +285,7 @@ import { Icon } from 'leaflet';
       vinCarts: [],
       quantite: 1,
       unchecked:false,
-      lat: vin.regn.lat,
+      //lat: 0,
     };
   },
 
@@ -295,7 +295,7 @@ import { Icon } from 'leaflet';
 
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-      maxZoom: 7
+      maxZoom: 5
       }).addTo(map);
 
       $("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
@@ -319,7 +319,14 @@ import { Icon } from 'leaflet';
       $('.btn-basket').css('border','5px solid green');
       $('.btn-basket').css('background-color','green');
       $('.btn-outline-danger:focus').css('box-shadow','0 0 0 0.2rem rgba(0, 153, 0, 0.2)');
-      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
+
+      if (this.unchecked==false) {
+        var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
+        }
+        else {
+          var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite, prixeuro:this.prixeuro}
+        }
+      
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));

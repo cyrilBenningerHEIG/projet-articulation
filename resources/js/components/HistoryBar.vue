@@ -3,17 +3,17 @@
     <h4 class="mt-2 pt-3">GAZZAR VOUS PROPOSE</h4>
     <div class="container counter">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm margin-mob">
           <span class="counter h2">{{ nbvins }}</span>
           <h6>VINS</h6>
         </div>
-        <div class="col-sm">
-          <span class="counter h2">{{ nbprodu }}</span>
-          <h6>PRODUCTEURS</h6>
-        </div>
-        <div class="col-sm">
+        <div class="col-sm margin-mob">
           <span class="counter h2">{{ nbregions }}</span><br>
           <h6>RÉGIONS</h6>
+        </div>
+        <div class="col-sm margin-mob">
+          <span class="counter h2">{{ nbprodu }}</span>
+          <h6>PRODUCTEURS</h6>
         </div>
       </div>
     </div>

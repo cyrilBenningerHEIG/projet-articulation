@@ -17,6 +17,7 @@ class PrimeurController extends Controller
             // Display all products
             $vins = vin::with(['produ', 'appel','prix.promops', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
              ->where('estPrimeur', '=', 1)->get();
+             $nbvins = count($vins);
             
             // ----------Prices---------//
 
@@ -46,6 +47,7 @@ class PrimeurController extends Controller
             'produs'=> $produs,
             'frmts'=> $frmts,
             'millesimes'=> $millesimes,
+            'nbvins'=> $nbvins,
             'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){
