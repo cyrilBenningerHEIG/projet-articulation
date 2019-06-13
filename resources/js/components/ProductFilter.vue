@@ -260,6 +260,23 @@ export default {
             $('#format-btn').css("font-weight","Bold");
           }
 
+          console.log(filtersType);
+          console.log(filtersPays);
+          console.log(filtersProdu);
+          console.log(filtersAppel);
+          console.log(filtersFormat);
+          console.log(filtersMille);
+          console.log(filtersRegn);
+          var filtersArray =
+            [filtersType,
+            filtersPays,
+            filtersRegn,
+            filtersAppel,
+            filtersMille,
+            filtersProdu,
+            filtersFormat];
+
+            console.log(filtersArray);
       
 
       //Ajout de tous les filtres dans un tableau
@@ -281,32 +298,56 @@ export default {
           var produ = this.dataset.produ;
           var format = this.dataset.format;
 
-          filters.forEach(function(filter) {
-
-            if(filter == type){
-              nbAttributs++;
-            }
-            if(filter == pays){
-              nbAttributs++;
-            }
-            if(filter == region){
-              nbAttributs++;
-            }
-            if(filter == appel){
-              nbAttributs++;
-            }
-            if(filter == millesime){
-              nbAttributs++;
-            }
-            if(filter == produ){
-              nbAttributs++;
-            }
-            if(filter == format){
-              nbAttributs++;
-            }
+            filtersType.forEach(function(filter){
+              if(filter == type){
+                nbAttributs++;
+              }
             });
-          
-          if(nbAttributs >= filters.length){
+            
+            filtersPays.forEach(function(filter){
+              if(filter == pays){
+                nbAttributs++;
+              }
+            });
+
+            filtersRegn.forEach(function(filter){
+              if(filter == region){
+                nbAttributs++;
+              }
+            });
+
+            filtersAppel.forEach(function(filter){
+              if(filter == appel){
+                nbAttributs++;
+              }
+            });
+
+            filtersMille.forEach(function(filter){
+              if(filter == millesime){
+                nbAttributs++;
+              }
+            });
+
+            filtersProdu.forEach(function(filter){
+              if(filter == produ){
+                nbAttributs++;
+              }
+            });
+
+            filtersFormat.forEach(function(filter){
+              if(filter == format){
+                nbAttributs++;
+              }
+            });
+
+            var countArrays = 0;
+            filtersArray.forEach(function(filter){
+              if(filter.length !== 0){
+                countArrays++;
+              }
+            });
+
+          if(nbAttributs == countArrays){
             $(this).addClass("visible").fadeIn();
           }
 
