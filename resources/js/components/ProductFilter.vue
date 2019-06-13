@@ -243,7 +243,6 @@ export default {
           }else{
       $('#result_text').text("vins qui vous correspondent")
           }
-      // $('.number_results').text(nbResults + ' résultats');
   },
 
   sortByNameAZ:function(){
