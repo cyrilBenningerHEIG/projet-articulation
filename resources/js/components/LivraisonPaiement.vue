@@ -96,7 +96,7 @@ autoRefresh(){
   var auto_refresh = setInterval(
     function(){
       location.reload();
-    },1000);
+    },2000);
 },
 
         submitAdress(){
