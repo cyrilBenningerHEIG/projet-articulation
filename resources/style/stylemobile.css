@@ -10,6 +10,21 @@ screen and (max-width: 30rem) {
         width: 100%;
         margin: 0 auto;
     }
+    hr {
+        margin-top: 0 !important;
+        margin-bottom: 1em !important;
+    }
+    .col-sm {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .margin-mob {
+        margin: 1em;
+    }
+    .text-sm {
+        font-size: 1em;
+    }
     /*Page index*/
     .logo {
         width: 170%;
@@ -31,5 +46,31 @@ screen and (max-width: 30rem) {
     }
     #promo-link {
         margin: 0.5em 0.5em 0.5em 0.5em;
+    }
+    #img-logo-producer {
+        padding-left: 0 !important;
+        width: 50% !important;
+    }
+    .div-mob {
+        margin-top: 0 !important;
+    }
+    .nav-scroller {
+        margin: 0 ! important;
+    }
+    .centre-mob {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .texte-centre {
+        text-align: center !important;
+    }
+    .carte-row {
+        display: inline-block !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+    .carte-mob {
+        margin: 0;
     }
 }
