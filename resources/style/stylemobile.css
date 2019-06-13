@@ -8,11 +8,12 @@ screen and (max-width: 30rem) {
     .row {
         display: block;
         width: 100%;
-        margin: 0 auto;
+        margin: 1em 0 1em 0 !important;
     }
     hr {
         margin-top: 0 !important;
         margin-bottom: 1em !important;
+        padding: 0 1em 0 1em !important;
     }
     .col-sm {
         display: block;
@@ -20,7 +21,7 @@ screen and (max-width: 30rem) {
         margin: 0 auto;
     }
     .margin-mob {
-        margin: 1em;
+        padding: 0;
     }
     .text-sm {
         font-size: 1em;
@@ -66,11 +67,95 @@ screen and (max-width: 30rem) {
         text-align: center !important;
     }
     .carte-row {
-        display: inline-block !important;
-        width: 100% !important;
-        margin: 0 auto !important;
+        display: inline-flex !important;
     }
     .carte-mob {
         margin: 0;
+    }
+    #title-position {
+        display: inline-flex !important;
+    }
+    .card-custom {
+        padding: 0!important;
+        display: flex;
+    }
+    .center-mob {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Page histoire*/
+    .espace-mob {
+        padding: 1em 2em 1em 2em;
+    }
+    .space-zero {
+        padding: 0 !important;
+    }
+    .blocktext {
+        margin-top: 5em;
+    }
+    .image-aboutus-banner {
+        margin: 0 !important;
+    }
+    /*Page contact*/
+    #map-desk {
+        display: none !important;
+    }
+    #map-mob {
+        display: unset !important;
+    }
+    /*CGV*/
+    #cgv-container {
+        padding: 1em 2em 1em 2em;
+    }
+    /*Nav Bar*/
+    .img-desk {
+        display: none !important;
+    }
+    .img-mob {
+        display: unset !important;
+    }
+    .filters {
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+    .resultat-mob {
+        font-size: 14px !important;
+    }
+    .text-right {
+        text-align: left !important;
+    }
+    .card-title {
+        width: 16rem;
+        margin: 0;
+    }
+    #title-position {
+        margin: 0 !important;
+    }
+    /*Page Produit*/
+    .roadMap {
+        padding-left: 1em;
+    }
+    .col-produit-mob {
+        max-width: 35% !important;
+    }
+    .col-box-mob {
+        margin-top: 1em;
+    }
+    .btn-link {
+        color: #CCBE9F;
+    }
+    .btn-link:hover {
+        color: #2B2B2B;
+        text-decoration: none;
+    }
+    #mapid {
+        height: 200px !important;
+    }
+    #carteContainer {
+        margin: 0;
+    }
+    .padding-mob {
+        padding-left: 0.5em;
     }
 }

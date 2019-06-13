@@ -110,16 +110,16 @@
             </div> 
         </div>
         <div class="btn-group" role="group">
-          <button type="button" class="close p-3" aria-label="Close" v-on:click="reset">
+          <button type="button" class="close p-2" aria-label="Close" v-on:click="reset">
               <span aria-hidden="true">&times;</span>
           </button>
         </div>
             
         </div>
         <div class="container pt-3">
-          <div id="tri-produit" class="row">
+          <div id="tri-produit" class="row carte-row">
             <div class="col-sm">
-              <h5 style="display:inline" class="number_results">Nous avons trouvé <b id="nbvins">{{nbvins}}</b> </h5> <h5 style="display:inline" id="result_text"> vins qui vous correspondent</h5>
+              <h5 style="display:inline" class="number_results resultat-mob">Nous avons trouvé <b id="nbvins" class="resultat-mob">{{nbvins}}</b> </h5> <h5 style="display:inline" id="result_text" class="resultat-mob"> vins qui vous correspondent</h5>
             </div>
             <div class="col-sm text-right">
               <div class="btn-group" role="group">

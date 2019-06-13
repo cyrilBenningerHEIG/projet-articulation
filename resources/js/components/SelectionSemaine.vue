@@ -5,7 +5,7 @@
     <div class="nav-item2" style="margin-bottom : 20px">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col text-vertical center-mob">
             <h5 class="text-sm text-center">Cette semaine nous mettons en avant</h5>
           </div>
           <div class="col">

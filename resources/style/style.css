@@ -212,6 +212,11 @@ nav a {
     /* text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */
 }
 
+.text-vertical {
+    display: flex;
+    align-items: center;
+}
+
 
 /* Histoire */
 
@@ -366,6 +371,13 @@ a.produit-liens {
 }
 
 
+/*NAVBAR MOB*/
+
+.img-mob {
+    display: none;
+}
+
+
 /* #btn-quantity {
     padding-right: 325px;
 } */
@@ -486,6 +498,13 @@ a.produit-liens {
     cursor: pointer;
 }
 
+#map-mob {
+    display: none !important;
+}
+
+
+/*Page filter*/
+
 .icon_display img {
     width: 50px;
 }
@@ -522,7 +541,6 @@ a.produit-liens {
     border-color: grey;
     border-style: solid;
     border-width: 0.5px;
-    border-radius: 25px;
 }
 
 .price-ht-font {
@@ -565,6 +583,13 @@ a.produit-liens {
 #p-white {
     color: white
 }
+
+#tri-btn {
+    border-color: transparent;
+}
+
+
+/*Paiement*/
 
 .etapeImg {
     display: block;
@@ -870,7 +895,6 @@ a.produit-liens {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .loader>img {
