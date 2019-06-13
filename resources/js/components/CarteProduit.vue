@@ -36,11 +36,11 @@
       <h6  class="card-text" id="millesime-carte"> - </h6>
       </div>
       <h6  class="card-text" id="produ-carte">{{vin.produ.nom}}</h6>
-      <h6  v-if ="vin.prix.prixPromo==null" class="card-text" id="prix-carte">CHF {{vin.prix.prixht}} </h6>
-      <div v-else>
-      <h6 class="card-text" id="prix-carte" style="text-decoration: line-through; text-decoration-color:red">CHF {{vin.prix.prixht}}</h6> 
-      <div v-for="value in vin.prix.promops">
-      <h6 style ="color:red; m=0">-{{value.pourcentage}}%</h6></div>
+      <h6  v-if ="vin.prix.prixPromo==null" class="card-text" id="prix-carte" style="display:inline-flex;">CHF {{vin.prix.prixht}} </h6>
+      <div style="display : inline" v-else>
+      <h6 class="card-text" id="prix-carte2" style="text-decoration: line-through; text-decoration-color:red; display : inline-flex">CHF {{vin.prix.prixht}}</h6> 
+      <div style="display : inline" v-for="value in vin.prix.promops">
+      <h6 style ="color:red;display : inline; m=0">-{{value.pourcentage}}%</h6></div>
       <h6 class="card-text" id="prix-carte" >CHF {{vin.prix.prixPromo}}</h6>
       </div>
       </div>
