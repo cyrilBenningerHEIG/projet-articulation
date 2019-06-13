@@ -94,7 +94,7 @@
                 >
               </td>
               <td>
-                <h4><b>{{(Math.ceil(((totalCart*0.077)+totalCart) * 20) / 20).toFixed(2) }}</b></h4>
+                <h4><b vinTotal>{{totalttc }}</b></h4>
               </td>
             </tr>
           </tbody>
@@ -131,19 +131,19 @@ export default {
   data() {
     return {
       vinCarts: [],
-      vinTotal: 0
+      vinTotal: 0,
+      visibleClass: "visible",
+        vin: ""
     };
   },
   methods: {
     removeCart(index) {
       this.vinCarts.splice(index, 1);
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
-      console.log(index);
     }
   },
 
   mounted() {
-    console.log("App mounted!");
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
   },
 
@@ -155,20 +155,22 @@ export default {
           parseFloat(vinCart.vin.prix.prixht) *
           parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
       });
-
+      
       return sum;
     },
+    totalttc: function(){
+      var sumttc = (Math.ceil(((this.totalCart*0.077)+this.totalCart) * 20) / 20).toFixed(2);
+      localStorage.setItem("total", sumttc)
+      return sumttc
+
+    },
+
+  },
 
     props: ["vins", "prixttc", "prixeuro"],
 
-    data() {
-      return {
-        visibleClass: "visible",
-        vin: ""
-      };
-    }
+  
   }
-};
 /* methods:{
 
     addCart:function(){

@@ -173,9 +173,7 @@ export default {
       var filters = [];
       $('#filters :input:checked').each(function(){
         var category= $(this).parent().text();
-        console.log(category);
         filters.push(category); 
-        console.log(filters);
       }); 
 
       //Sélection des vins correspondants
@@ -214,8 +212,6 @@ export default {
               nbAttributs++;
             }
             });
-
-          console.log(nbAttributs);
           
           if(nbAttributs >= filters.length){
             $(this).addClass("visible").fadeIn();
@@ -237,7 +233,6 @@ export default {
 
   reset:function(){
     $('#filters :input:checked').each(function(){
-      console.log("log")
       $(this).prop( "checked", false );
     });
     $('.card-custom').addClass("visible").fadeIn();

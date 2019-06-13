@@ -4,42 +4,42 @@
       <div class="col m-5 p-compte-paiement">
         <h4 class="text-center mb-2">Vos informations</h4>
         <hr>
-        <table>
+        <table v-for="livr in adreslivr" :key="livr.id">
           <p class="mt-2 mb-2">Adresse de livraison</p>
           <tr>
             <th>Destinataire</th>
-            <td>{{adreslivr[0].destinataire}}</td>
+            <td>{{livr.destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>{{adreslivr[0].rue}} {{adreslivr[0].numero}}</td>
+            <td>{{livr.rue}} {{livr.numero}}</td>
           </tr>
           <tr>
             <th>Npa/Localité</th>
-            <td>{{adreslivr[0].npa}} {{adreslivr[0].localite}}</td>
+            <td>{{livr.npa}} {{livr.localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>{{adreslivr[0].pays}}</td>
+            <td>{{livr.pays}}</td>
           </tr>
         </table>
-         <table>
+         <table  v-for="fact in adresfact" :key="fact.id">
           <p class="mt-2 mb-2">Adresse de facturation</p>
           <tr>
             <th>Destinataire</th>
-            <td>{{adresfact[0].destinataire}}</td>
+            <td>{{fact.destinataire}}</td>
           </tr>
           <tr>
             <th>Adresse</th>
-            <td>{{adresfact[0].rue}} {{adresfact[0].numero}}</td>
+            <td>{{fact.rue}} {{fact.numero}}</td>
           </tr>
           <tr>
             <th>Npa/Localité</th>
-            <td>{{adresfact[0].npa}} {{adresfact[0].localite}}</td>
+            <td>{{fact.npa}} {{fact.localite}}</td>
           </tr>
           <tr>
             <th>Pays</th>
-            <td>{{adresfact[0].pays}}</td>
+            <td>{{fact.pays}}</td>
           </tr>
         </table>
       </div>
@@ -50,113 +50,183 @@
           <p class="mt-2 mb-2">Adresse de livraison</p>
           <tr>
             <th>Date de commande</th>
-            <td>2 Juin 2019</td>
+            <td>{{cmd.created_at | formatDate}}</td>
           </tr>
           <tr>
             <th>Moyen de paiement</th>
-            <td>Facture</td>
+            <td>{{cmd.modePmt}}</td>
           </tr>
           <tr>
             <th>Numéro de commande</th>
-            <td>AJS23GH</td>
+            <td>{{cmd.id}}</td>
           </tr>
           <tr>
             <th>Date de réception</th>
-            <td>10.06-15.06</td>
+            <td>{{DateLivraison | formatDate}}</td>
           </tr>
         </table>
       </div>
     </div>
     <h4>Résumé de la commande</h4>
     <div class="table-responsive-sm">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Produit</th>
-            <th scope="col"></th>
-            <th scope="col">Quantité / Prix</th>
-            <th scope="col">Sous total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- <tr v-for="produit in produits"> -->
-          <tr>
-            <th scope="row">
-              <div class="card card-custom mx-2 mb-3">
-                <img
-                  src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
-                  class="card-img-top"
-                  alt="vin1"
-                  id="cart-produit-img"
-                >
-              </div>
-            </th>
-            <td>
-              <div class="card-body" id="weekproduct">
-                <div class="produit-descr">
-                  <p class="card-title">nom</p>
-                  <p class="card-title">domaine</p>
-                  <p class="card-text">millesime</p>
-                  <p class="card-text">region</p>
-                  <p class="card-text">pays</p>
-                  <p class="card-text">prix</p>
-                  <button type="button" href="#" class="btn btn-white btn-rounded btn-sm">Supprimer</button>
-                </div>
-              </div>
-            </td>
-            <td>
-              <form>
-                <div class="form-group">
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="formGroupExampleInput"
-                    placeholder="Quantité"
+    <div class="table-responsive-sm">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Produits</th>
+              <th scope="col"></th>
+              <th scope="col">Prix / Quantité</th>
+              <th scope="col">Sous total (HT)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(vinCart,index) in vinCarts">
+              <th scope="row">
+                <div class="card card-custom mx-2 mb-3">
+                  <img
+                    class="card-img-top"
+                    v-bind:src="vinCart.vin.photoUrl"
+                    v-bind:alt="'vin1'+vinCart.vin.id"
                   >
                 </div>
-              </form>
-            </td>
-            <td>40 chf</td>
-          </tr>
-          <tr>
-          <td></td>
-          <td></td>
-          <td>Sout total</td>
-          <td>X</td>
-          </tr>
-          <tr>
-          <td></td>
-          <td></td>
-          <td>TVA & autres taxes</td>
-          <td>X</td>
-          </tr>
-          <tr>
-          <td></td>
-          <td></td>
-          <td>Total HT</td>
-          <td>X</td>
-          </tr>
-           <tr>
-          <td></td>
-          <td></td>
-          <td><h4>Total de la commande</h4><br>(Hors frais de livraison)</td>
-          <td><h4>X</h4></td>
-          </tr>
-        </tbody>
-      </table>
+              </th>
+              <td>
+                <div class="container" id="carteproduit">
+                  <div class="card-body p-0" id="weekproduct">
+                    <div class="produit-descr">
+                      <h6 class="card-title m-0" id="nom-carte">
+                        <div class="container p-0">
+                          <div class="row" id="title-position">
+                            <div class="col-sm vin-titre">
+                              <h5>{{vinCart.vin.nom}}</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </h6>
+                    </div>
+                    <hr class="m-0">
+                    <div class="card-body p-1">
+                      <div class="check-full" v-if="vinCart.vin.millesime > 1">
+                        <h6 class="card-text" id="millesime-carte">{{vinCart.vin.millesime}}</h6>
+                      </div>
+                      <div class="check-full" v-else>
+                        <h6 class="card-text" id="millesime-carte"></h6>
+                      </div>
+                      <h6 class="card-text mb-0" id="produ-carte">{{vinCart.vin.produ.nom}}</h6>
+                      <button type="button" class="btn btn-danger btn-rounded btn-sm" @click="removeCart(index)">X</button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <form>
+                  <div class="form-group panier-quantite">
+                    <h6><span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixht}}</span> x {{vinCart.vin.condi.nombre}} bouteilles </h6>
+                  </div>
+                </form>
+              </td>
+              <td>
+                <div class="panier-quantite"><b>{{(Math.ceil((vinCart.vin.prix.prixht*(vinCart.quantity*vinCart.vin.condi.nombre)*20)) / 20).toFixed(2) }} CHF</b>
+                </div>
+                </td>
+              
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Sous total</td>
+              <td>{{(Math.ceil(totalCart * 20) / 20).toFixed(2) }}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>TVA & autres taxes</td>
+              <td>{{(Math.ceil((totalCart*0.077 * 20)) / 20).toFixed(2) }}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <h4>Total de la commande</h4>
+                <p><i>(Hors frais de livraison)</i></p>
+                <br>
+                <input
+                  style="margin-top : 25px"
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Code promotionel"
+                >
+              </td>
+              <td>
+                <h4><b>{{(Math.ceil(((totalCart*0.077)+totalCart) * 20) / 20).toFixed(2) }}</b></h4>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
     </div>
     <div>
-      <a href="paiement-etape4" ><button class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
+      <a href="paiement-etape4" ><button @click="removeCart()" class="btn btn-danger btn-panier center mb-5 mt-5">Passer commande</button></a>
     </div>
   </div>
 </template>
 
 <script>
+var moment = require('moment');
+
+Vue.filter('formatDate', function(value) {
+    if (value) {
+      return moment(String(value)).format('DD/MM/YYYY')
+    }
+  });
 
 export default{
 
-  props: ["adresfact", "adreslivr", "lastcmd"],
+  props: ["adresfact", "adreslivr", "cmd"],
+
+  data() {
+    return {
+      vinCarts: [],
+      vinTotal: 0,
+    }
+  },
   
+   methods: {
+    removeCart() {
+      
+      localStorage.clear();
+      
+    }
+  },
+
+  mounted() {
+    console.log("App mounted!");
+    this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
+  },
+  
+
+  computed: {
+    totalCart: function() {
+      let sum = 0;
+      this.vinCarts.forEach(function(vinCart) {
+        sum +=
+          parseFloat(vinCart.vin.prix.prixht) *
+          parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
+      });
+
+      return sum;
+    },
+
+    DateLivraison() {
+  var result = new Date(this.cmd.created_at);
+  result.setDate(result.getDate() + 10);
+  return result;
+  },
+
+
+  }
 
 }
 </script>

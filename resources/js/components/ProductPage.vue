@@ -1,8 +1,7 @@
 <template>
   <section>      
-  <div class="containe">
-    <div class="container" v-for="vin in vins" :key="vin.id">
-      
+  <div class="container">
+    <div class="container" v-for="vin in vins" >
         <div class="roadMap pt-2 pb-5">
           <span>
             <a href="../produits" class="produit-liens"><b>PRODUITS</b></a>
@@ -124,7 +123,7 @@
               </div>
               <button type="button" class="btn btn-outline-danger btn-xl btn-basket" @click="addCart">
                 <span class="icon"></span>
-                <span>Ajouter au panier</span>
+                <span id="addcarttext">Ajouter au panier</span>
               </button>
             </div>
           </div>
@@ -164,6 +163,7 @@
                 role="tab"
                 aria-controls="v-pills-messages"
                 aria-selected="false"
+                v-on:click="generateMap"
               >Région</a>
             </div>
           </div>
@@ -263,16 +263,21 @@
       </section>
 </template>
 <script>
+//Formating prices
 var numeral = require("numeral");
 
   Vue.filter("formatNumber", function (value) {
     return numeral(value).format("0.00"); // displaying other groupings/separators is possible, look at the docs
   });
-  
+
+
+// import {LMap, LTileLayer, LIcon, LMarker} from 'vue2-leaflet';
+import L from 'leaflet';
+import { Icon } from 'leaflet';
+
  export default {
   
-  
-  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid", "prixpromoeuro", "pourcentagepromo"],
+  props: ["vins","prixttc", "prixeuro", "prixeurottc", "vinid", "prixpromoeuro", "pourcentagepromo", "lat", "long"],
 
    data() {
     return {
@@ -280,11 +285,40 @@ var numeral = require("numeral");
       vinCarts: [],
       quantite: 1,
       unchecked:false,
-      
+      lat: vin.regn.lat,
     };
   },
+
   methods: {
+    generateMap() {
+        var map = L.map('mapid').setView([this.lat, this.long], 8.5);
+
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+      maxZoom: 7
+      }).addTo(map);
+
+      $("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {
+        map.invalidateSize();
+      });
+
+      var blackIcon = new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+      });
+
+      L.marker([this.lat, this.long], { icon: blackIcon }).addTo(map);
+    },
+
     addCart() {
+      $("#addcarttext").text("Ajouté au panier ✓");
+      $('.btn-basket').css('border','5px solid green');
+      $('.btn-basket').css('background-color','green');
+      $('.btn-outline-danger:focus').css('box-shadow','0 0 0 0.2rem rgba(0, 153, 0, 0.2)');
       var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
@@ -305,40 +339,12 @@ var numeral = require("numeral");
 
   },
   mounted() {
-    console.log('App mounted!');
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
     if( this.vinCarts == null)  this.vinCarts = [];
   },
 
 
 }
-  
-/*   data() {
-    return {
-      vin: '',
-      vinCarts: [],
-      
-    };
-  },
-methods: {
-    addCart() {
-      this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
-    },
-  },
-  mounted() {
-    console.log('App mounted!');
-    if (localStorage.getItem('vinCarts')) this.vinCarts.push(JSON.parse(localStorage.getItem('vinCarts')));
-  },
-  watch: {
-    vinCarts: {
-      handler() {
-        console.log('Vins changed!');
-        localStorage.setItem('vinCarts', JSON.stringify(this.vins[this.vinid-1]));
-      },
-      deep: true,
-    },
-  }
-}  */
 
 </script>
 
