@@ -13,3 +13,4 @@ yarn-error.log
 /public/js/app.js
 .DS_Store
 composer.lock
+public/js/app.js
