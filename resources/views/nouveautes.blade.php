@@ -24,7 +24,7 @@
                 
                 @endif
                 <menu-nouveaute></menu-nouveaute>
-                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}'></product-filter>
+                <product-filter :types='{{ $types }}' :pays='{{ $pays }}' :regns='{{ $regns }}' :appels='{{ $appels }}' :produs='{{ $produs }}' :frmts='{{ $frmts }}' :millesimes='{{ $millesimes }}':nbvins='{{ $nbvins }}'></product-filter>
                 <carte-produit :vins='{{ $vins }}'></carte-produit>
                 <footer-bar></footer-bar>
 

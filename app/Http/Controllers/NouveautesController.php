@@ -17,7 +17,8 @@ class NouveautesController extends Controller
             // Display all products
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix', 'condi', 'cepags', 'types', 'regn.pays'])
              ->whereNotNull('created_at')->get();
-            
+             $nbvins = count($vins);
+
             // ----------Prices---------//
 
             for ($i=0; $i < sizeof($vins); $i++) { 
@@ -45,6 +46,7 @@ class NouveautesController extends Controller
             'appels'=> $appels,
             'produs'=> $produs,
             'frmts'=> $frmts,
+            'nbvins'=> $nbvins,
             'millesimes'=> $millesimes,
             'user'=>$user
         ]);

@@ -93,6 +93,12 @@
   },
 
   methods: {
+autoRefresh(){
+  var auto_refresh = setInterval(
+    function(){
+      location.reload();
+    },1000);
+},
 
         submitAdress(){
             axios.post('adresses',{
@@ -103,8 +109,8 @@
               localite: this.localite,
               pays: this.pays,
             })
-              
-            $("input").val('')
+            this.autoRefresh();
+            $("input").val('');
         },
         submitCmd(){
            if(this.checked == true){
