@@ -54,8 +54,9 @@
               </td>
               <td>
                 <form>
-                  <div class="form-group panier-quantite">
-                    <h6><span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixht}}</span> x {{vinCart.vin.condi.nombre}} bouteilles </h6>
+                  <div class="form-group panier-quantite"> <-- hello -> 
+                  <h6 v-if="vinCart.vin.prix.prixPromo"><span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixPromo}}</span> x {{vinCart.vin.condi.nombre}} bouteilles </h6>
+                    <h6 v-else><span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixht}}</span> x {{vinCart.vin.condi.nombre}} bouteilles </h6>
                   </div>
                 </form>
               </td>
@@ -151,7 +152,7 @@ export default {
     totalCart: function() {
       let sum = 0;
       this.vinCarts.forEach(function(vinCart) {
-        sum +=
+        sum += // hello
           parseFloat(vinCart.vin.prix.prixht) *
           parseFloat(vinCart.quantity * vinCart.vin.condi.nombre);
       });
