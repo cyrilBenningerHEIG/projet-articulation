@@ -339,6 +339,13 @@ export default {
     $('#millesime-btn').css("font-weight","Normal");
     $('#produ-btn').css("font-weight","Normal");
     $('#format-btn').css("font-weight","Normal");
+    
+      $('#nbvins').text(nbResults);
+      if(nbResults< 2){
+      $('#result_text').text("vin qui vous correspondent")
+          }else{
+      $('#result_text').text("vins qui vous correspondent")
+          }
   },
 
   sortByNameAZ:function(){
@@ -414,7 +421,7 @@ sortByAgeDesc:function(){
 },
 emptyFilters:function(){
   location.reload();
-}
+},
 }
 }
 </script>

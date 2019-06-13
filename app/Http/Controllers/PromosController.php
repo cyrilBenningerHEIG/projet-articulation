@@ -18,6 +18,8 @@ class PromosController extends Controller
             $vins = vin::with(['produ', 'appel', 'frmt', 'prix.promops', 'condi', 'cepags', 'types', 'regn.pays'])
             ->join('prix_promop', 'vins.prix_id','=','prix_promop.prix_id')
             ->get();
+            $nbvins = count($vins);
+
             
             // ----------Prices---------//
 
@@ -53,6 +55,7 @@ class PromosController extends Controller
             'produs'=> $produs,
             'frmts'=> $frmts,
             'millesimes'=> $millesimes,
+            'nbvins'=> $nbvins,
             'user'=>$user
         ]);
         // foreach ($vins[1]['prix']['prixht'] as $prix){

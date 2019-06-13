@@ -56,7 +56,9 @@
   
 </select>
           <div class="form-group mt-5 mb-5">
-           <a href="paiement-etape3"  class="p"> <button type="submit" @click="submitCmd" class="btn btn-danger btn-block">Continuer</button></a> 
+            <a href="paiement-etape3"  class="p">   
+              <button type="submit" @click="submitCmd" class="btn btn-danger btn-block">Continuer</button>
+              </a>
           </div>
          
         </div>
@@ -84,11 +86,18 @@
       pays: '',
       selected: 'sélectionner une adresse',
       selected2: 'sélectionner une adresse',
-      checked: 'true'
+      checked: true,
+      totalCart: localStorage.getItem("total"),
     };
   },
 
   methods: {
+autoRefresh(){
+  var auto_refresh = setInterval(
+    function(){
+      location.reload();
+    },1000);
+},
 
         submitAdress(){
             axios.post('adresses',{
@@ -99,8 +108,8 @@
               localite: this.localite,
               pays: this.pays,
             })
-              
-            $("input").val('')
+            this.autoRefresh();
+            $("input").val('');
         },
         submitCmd(){
            if(this.checked == true){
@@ -111,9 +120,11 @@
           
           axios.post('commandes',{
             adresLivrId:this.selected,
-            adresFactId: this.selected,
+            adresFactId: selectLivr,
+            total:this.totalCart,
           })
         },
+
 
     }
  
