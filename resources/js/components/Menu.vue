@@ -14,16 +14,16 @@
             <img class="d-block w-100" src="/images/nav/home.jpg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/images/nav/02V2.png" alt="Second slide">
+            <img class="d-block w-100" src="/images/nav/02V2.jpg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/images/nav/03V2.png" alt="Third slide">
+            <img class="d-block w-100" src="/images/nav/03V2.jpg" alt="Third slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/images/nav/07V2.png" alt="Fouth slide">
+            <img class="d-block w-100" src="/images/nav/07V2.jpg" alt="Fouth slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/images/nav/04V2.png" alt="Fifth slide">
+            <img class="d-block w-100" src="/images/nav/04V2.jpg" alt="Fifth slide">
           </div>
     </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
