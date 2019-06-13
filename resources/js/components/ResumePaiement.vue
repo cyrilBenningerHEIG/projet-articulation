@@ -190,6 +190,7 @@ export default{
     return {
       vinCarts: [],
       vinTotal: 0,
+      
     }
   },
   
@@ -199,6 +200,7 @@ export default{
       localStorage.clear();
       
     }
+    
   },
 
   mounted() {

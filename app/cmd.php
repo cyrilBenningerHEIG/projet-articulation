@@ -27,6 +27,6 @@ class cmd extends Model
     }
 
     public function vins() {
-        return $this->belongsToMany('App\vin')->withPivot('quantite');
+        return $this->belongsToMany('App\vin')->withPivot('quantite')->withTimestamps();
     }    
 }

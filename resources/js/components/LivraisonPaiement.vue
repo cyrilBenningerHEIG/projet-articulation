@@ -88,6 +88,7 @@
       selected2: 'sélectionner une adresse',
       checked: true,
       totalCart: localStorage.getItem("total"),
+      vins:JSON.parse(localStorage.getItem("vinCarts")),
     };
   },
 
@@ -116,6 +117,7 @@
             adresLivrId:this.selected,
             adresFactId: selectLivr,
             total:this.totalCart,
+            vins:this.vins,
           })
         },
 
