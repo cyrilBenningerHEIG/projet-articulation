@@ -319,7 +319,14 @@ import { Icon } from 'leaflet';
       $('.btn-basket').css('border','5px solid green');
       $('.btn-basket').css('background-color','green');
       $('.btn-outline-danger:focus').css('box-shadow','0 0 0 0.2rem rgba(0, 153, 0, 0.2)');
-      var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
+
+      if (this.unchecked==false) {
+        var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite}
+        }
+        else {
+          var entry = {vin:this.vins[this.vinid-1], quantity:this.quantite, prixeuro:this.prixeuro}
+        }
+      
       localStorage.setItem("entry", JSON.stringify(entry))
       this.vinCarts.push(entry)
       localStorage.setItem("vinCarts", JSON.stringify(this.vinCarts));
