@@ -667,21 +667,7 @@ a.produit-liens {
 
 /* LOGIN & REGISTER FORM */
 
-#login-form {
-    background: url(http://localhost:8888/images/illustrations/login-pic.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-#register-form {
-    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 #login-form #register-form {
     margin: 0;
@@ -814,14 +800,6 @@ a.produit-liens {
     text-align: center;
     border-radius: 25px;
     opacity: 60%;
-}
-
-#register {
-    background: url(http://localhost:8888/public/images/login-pic.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 

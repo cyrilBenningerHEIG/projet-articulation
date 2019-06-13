@@ -64,7 +64,7 @@
                 <label>TAILLE : </label><span> {{vin.frmt.quantite}}</span>
                 <div>
                   <a
-                    href="#"
+                    href=""
                     class="btn btn-outline-secondary btn-sm active "
                     role="button"
                     aria-disabled="true"
@@ -76,7 +76,7 @@
                 <label>VARIANTES : </label><span> {{vin.millesime}}</span>
                 <div>
                   <a
-                    href="#"
+                    href=""
                     class="btn btn-outline-secondary btn-sm active"
                     role="button"
                     aria-disabled="true"
