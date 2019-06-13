@@ -12,11 +12,11 @@
         </div>
         <div class="container paddingTB60">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 espace-mob">
                     <h1 class="strong">Notre identité</h1>
                     <p class="lead">Apprenez à nous connaitre</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 espace-mob">
                     <p class="text-justify">Depuis 1973, l’entreprise familiale travaille dans l’exigence renouvelée du détail qui fait l’art
                         d’un grand vin. Soucieuse de qualité et leader en termes de prix, la maison de vins Gazzar met à
                         votre disposition un savoir-faire acquis sur plusieurs générations. Parmi l’étendue considérable
@@ -27,22 +27,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center espace-mob ">
                     <p class="blocktext">"Depuis 1973, Elie Gazzar S.A. est le spécialiste de la vente de vins de haute
                         qualité au meilleur prix "</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 space-zero">
                     <img :src="'./images/illustrations/illustration01.png'" class="img-fluid" alt="Responsive image">
                 </div>
             </div>
         </div>
         <div class="container paddingTB60">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 espace-mob">
                     <h1 class="strong">Nos valeurs</h1>
                     <p class="lead">Faites-nous confiance</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 espace-mob">
                     <p class="text-justify">Nous favorisons ainsi des producteurs artisanaux, respectueux de la nature et des écosystèmes et
                         partageons avec eux cette passion des grands vins. Nous prenons le soin de déguster tous les
                         vins que nous vous proposons, garantissant ainsi l’excellence et un conseil personnel.</p>

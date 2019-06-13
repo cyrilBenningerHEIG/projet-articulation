@@ -13,7 +13,7 @@
         <div class="container p-4">
           <div class="row">
             <div class="col">
-              <img class="bottleImg" id="produit" v-bind:src="vin.photoUrl">
+              <img class="bottleImg center-mob" id="produit" v-bind:src="vin.photoUrl">
             </div>
           <div class="col mt-4 mb-4">
               <div v-if="vin.millesime">
@@ -100,7 +100,7 @@
                 <label class="mr-4 my-auto">Nombre de boîte : </label>
                 <div class="container">
                   <div class="row">
-                    <div class="col-3 pl-0">
+                    <div class="col-3 pl-0 col-produit-mob">
                         <div class="input-group" id="btn-quantity">
                           <span class="input-group-btn">
                             <button type="button" @click="decrement()" class="quantity-left-minus btn btn-outline-secondary btn-sm" >
@@ -115,7 +115,7 @@
                           </span>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col col-box-mob">
                       <span><img class="icon mr-3" id="icon_box" src="/images/icons/box.svg">{{vin.condi.nombre}} bouteille par boîte ({{vin.condi.type}})</span>
                     </div>
                   </div>
@@ -129,60 +129,23 @@
           </div>
         </div>
         <br>
-        <div class="row mb-5" >
+        <div class="row mb-5" id="map-desk" >
           <div class="col-4">
-            <div
-              class="nav flex-column nav-pills text-info"
-              id="v-pills-tab"
-              role="tablist"
-              aria-orientation="vertical"
-            >
-              <a
-                class="nav-link text-right pills active"
-                id="v-pills-home-tab"
-                data-toggle="pill"
-                href="#v-pills-home"
-                role="tab"
-                aria-controls="v-pills-home"
-                aria-selected="true"
+            <div class="nav flex-column nav-pills text-info" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link text-right pills active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"
               >Description</a>
-              <a
-                class="nav-link text-right pills"
-                id="v-pills-profile-tab"
-                data-toggle="pill"
-                href="#v-pills-profile"
-                role="tab"
-                aria-controls="v-pills-profile"
-                aria-selected="false"
+              <a class="nav-link text-right pills" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"
               >Informations</a>
-              <a
-                class="nav-link text-right pills"
-                id="v-pills-messages-tab"
-                data-toggle="pill"
-                href="#v-pills-messages"
-                role="tab"
-                aria-controls="v-pills-messages"
-                aria-selected="false"
-                v-on:click="generateMap"
+              <a class="nav-link text-right pills" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" v-on:click="generateMap"
               >Région</a>
             </div>
           </div>
           <div class="col-8">
             <div class="tab-content" id="v-pills-tabContent">
-              <div
-                class="tab-pane fade show active text-justify"
-                id="v-pills-home"
-                role="tabpanel"
-                aria-labelledby="v-pills-home-tab"
-              >
+              <div class="tab-pane fade show active text-justify" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <p>{{vin.description}}</p>
               </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-profile"
-                role="tabpanel"
-                aria-labelledby="v-pills-profile-tab"
-              >
+              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <table class="p table">
                 <tr>
                     <td>Appellation</td>
@@ -247,12 +210,7 @@
                   </tr>
                 </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="v-pills-messages"
-                role="tabpanel"
-                aria-labelledby="v-pills-messages-tab"
-              >
+              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 <div id="mapid"></div>
               </div>
             </div>
@@ -260,6 +218,116 @@
         </div>
         </div>
         </div>
+        <div class="accordion" id="accordionExample">
+          <!-- Version Mobile -->
+        <div class="container" id="map-mob" v-for="vin in vins" >
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <b>Description</b> 
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                  <p class="text-justify">{{vin.description}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <b>Informations</b> 
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <table class="p table">
+                <tr>
+                    <td>Appellation</td>
+                    <td>{{vin.appel.libelle}}</td>
+                  </tr>
+                  <tr>
+                    <td>Teneur en alcool</td>
+                    <td>{{vin.alcool}}</td>
+                  </tr>
+                  <tr>
+                    <td>Cotation</td>
+                    <div v-if="vin.cotation">
+                    <td>{{vin.cotation}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
+                  </tr>
+                  <tr>
+                    <td>Classement</td>
+                    <div v-if="vin.classement">
+                    <td>{{vin.classement}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
+                  </tr>
+                  <tr>
+                    <td>Apogée</td>
+                    <div v-if="vin.apogee">
+                    <td>{{vin.apogee}}</td>
+                    </div>
+                    <div v-else>
+                    <td>-</td>
+                    </div>
+                  </tr>
+                  <tr>
+                    <td>Producteur</td>
+                    <a v-bind:href="vin.produ.url" target="_blank"> 
+                    <td id="a-producteur" >{{vin.produ.nom}}</td>
+                    </a> 
+                  </tr>
+                  <tr>
+                    <td>Cépage(s)</td>
+                    <div v-for="value in vin.cepags">
+                      <td>{{value.pivot.pourcentage}}% {{value.nom}}</td>
+                    </div>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <div v-for="value in vin.types">
+                      <td>{{value.type}}</td>
+                    </div>
+                  </tr>
+                  <tr>
+                    <td>Pays</td>
+                    <td>{{vin.regn.pays.nom}}</td>
+                  </tr>
+                  <tr>
+                    <td>Région</td>
+                    <td>{{vin.regn.nom}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <b>Région</b> 
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <div id="mapid"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
       </section>
 </template>
 <script>

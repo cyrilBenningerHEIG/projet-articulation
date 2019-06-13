@@ -15,7 +15,7 @@
     <body>
         <div id="app">
             <div class="container">
-                <nav-bar-login></nav-bar-login>
+                <nav-bar-logout></nav-bar-logout>
                 <login-form>
                     <div class="container-login100">
                     <form method="POST" id="box" class="" action="{{ route('login') }}">
