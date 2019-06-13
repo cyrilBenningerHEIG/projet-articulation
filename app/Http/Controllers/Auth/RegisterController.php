@@ -75,7 +75,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // Validate the form data
-       $this.validate($data);
+       
         return clnt::create([
             'nom' => $data['nom'],
             'prenom' => $data['prenom'],
