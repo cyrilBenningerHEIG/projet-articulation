@@ -195,19 +195,17 @@ export default{
       localStorage.clear();
       
     },
-    autoRefresh(){
-  var auto_refresh = setInterval(
-    function(){
-      location.reload();
-    },1000);
-},
-
   },
 
   mounted() {
     console.log("App mounted!");
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
-    this.autoRefresh();
+    window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
   },
   
 
