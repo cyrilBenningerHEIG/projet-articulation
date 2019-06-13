@@ -1,6 +1,6 @@
 <template>  
 <div id="carteContainer" class="container carteContainer">
-  <h3>Nos suggestions</h3>
+  <h3 class="padding-mob">Nos suggestions</h3>
   <hr>
 <div v-for="vin in vins.slice(9,13)" :key="vin.id" class="card card-custom" v-bind:class="[visibleClass]" v-bind:data-nom='vin.nom' v-bind:data-type='vin.types[0].type' v-bind:data-pays='vin.regn.pays.nom' v-bind:data-region='vin.regn.nom' v-bind:data-appel='vin.appel.libelle' v-bind:data-millesime='vin.millesime' v-bind:data-produ='vin.produ.nom' v-bind:data-format='vin.frmt.quantite' v-bind:data-prix='vin.prix.prixht'> 
        <div class="container">
@@ -42,7 +42,6 @@
       </div>
     </div>
     </div>
-  </div>
 </template>
 <script>
 var numeral = require("numeral");
