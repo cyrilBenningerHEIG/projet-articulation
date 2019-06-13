@@ -195,17 +195,24 @@ export default{
       localStorage.clear();
       
     },
+    refresh(){
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  };
+    }
   },
 
   mounted() {
     console.log("App mounted!");
     this.vinCarts = JSON.parse(localStorage.getItem("vinCarts"));
-    window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
+    this.refresh();
   },
   
 
