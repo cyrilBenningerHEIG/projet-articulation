@@ -15,13 +15,11 @@
     <body>
         <div id="app">
             <div class="container">
-            @if(Auth::guard('user')->check())
-                <h6>Connecté</h6>
-                <nav-bar-login :user='{{$user}}'></nav-bar-login>
-                @else
-                <h6>Déconnecté</h6>
-                <nav-bar-logout></nav-bar-logout>
-                @endif
+                    @if(Auth::guard('user')->check())
+                    <nav-bar-login :user='{{Auth::guard("user")->user()}}'></nav-bar-login>
+                    @else
+                    <nav-bar-logout></nav-bar-logout>
+                    @endif
                 <div class="container">
                     <hr>
                     <h4 class="center" style="padding-top 25px"> C'est une erreur 404, vous ne trouverez pas de vin par ici</h4>
