@@ -23,7 +23,16 @@ class AdresseController extends Controller
             'clnt_id' => $clntId,
     
         ]);
+        $request->validate([
+            'destinataire' => 'required',
+            'rue' => 'required',
+            'numero' => 'required',
+            'npa' => 'required',
+            'localite' => 'required',
+            'pays' => 'required',
+        ]);
 
+        return response()->json(['status'=>'true']);
 
     }
 

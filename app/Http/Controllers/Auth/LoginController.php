@@ -51,16 +51,20 @@ class LoginController extends Controller
     {
       // Validate the form data
       $this->validate($request, [
-        'email'   => 'required|email',
-        'password' => 'required|min:8'
-      ]);
+        'email'   => 'required|email|exists:clnts,email',
+        'password' => 'required',
+      ],
+      [
+        'email' => "le mot de passe et l'email ne correspondent pas"
+      ]
+    );
       // Attempt to log the user in
       if (Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
         // if successful, then redirect to their intended location
         return redirect('/');
       }
       // if unsuccessful, then redirect back to the login with the form data
-      return redirect()->back()->withInput($request->only('email', 'remember'));
+      return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors(['password' => 'Le mot de passe et l\'email ne correspondent pas']);
     }
     public function logout()
     {

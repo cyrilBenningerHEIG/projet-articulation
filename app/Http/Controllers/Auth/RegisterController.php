@@ -55,14 +55,17 @@ class RegisterController extends Controller
             'nom' => ['required', 'string', 'max:255'],
             'prenom' => ['required', 'string', 'max:255'],
             'dateNaissance' => ['required', 'date'],
-            'telephone' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'telephone' => ['max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:clnts',],
             'password' => ['required', 'string', 'min:8', 'confirmed']
             ],
             [
                 'password'    => 'Le mot de passe doit contenir 8 caractères au minimum',
+                'email.unique' => 'L\'email est déjà utilisé'
                 
             ]
+           
+            
         );
     }
 
