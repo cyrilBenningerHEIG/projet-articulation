@@ -15,6 +15,8 @@
     <body>
         <div id="app">
             <div class="container">
+                    <loading-screen></loading-screen>
+
                 <header-paiement></header-paiement>
                 <paiement-validation class="pb-5 pt-5"></paiement-validation>
 
@@ -25,5 +27,12 @@
             </div>
         </div>
             <script src="js/app.js"></script>
+            <script> 
+                    window.addEventListener("load", function () {
+                        const loader = document.querySelector(".loader");
+                        loader.className += " hidden"; // class "loader hidden"
+                    });
+                    
+                </script>
     </body>
 </html>
