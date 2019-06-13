@@ -29,7 +29,7 @@
             </span>
             @enderror
 
-         <input id="telephone" type="phone" name="telephone" placeholder="Téléphone" value="{{ old('telephone') }}" class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
+         <input id="telephone" type="phone" name="telephone" placeholder="Téléphone" value="{{ old('telephone') }}" class="form-control @error('telephone') is-invalid @enderror">
             @error('telephone')
             <span class="invalid-feedback" role="alert">
 
@@ -41,7 +41,7 @@
             <input type="hidden" id="dateNaissance" name="dateNaissance" value="1998-05-21">
 
             <hr style="line-height : 2px">
-                <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" required>
+                <input id="email" type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" required>
             @error('email')
             <span class="invalid-feedback" role="alert">
 
