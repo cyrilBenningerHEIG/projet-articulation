@@ -295,7 +295,7 @@ import { Icon } from 'leaflet';
 
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-      maxZoom: 7
+      maxZoom: 5
       }).addTo(map);
 
       $("a[href='#v-pills-messages']").on('shown.bs.tab', function(e) {

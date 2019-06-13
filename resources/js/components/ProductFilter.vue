@@ -13,8 +13,8 @@
             aria-expanded="true"
           >Type</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <div id="typeList" class="container" v-for="t in types">
-              <label class="dropdown-item" ><input type="checkbox" v-on:click="filter"/>{{t.type}}</label>
+          <div  class="container" v-for="t in types">
+              <label class="dropdown-item" ><input class="typeList" type="checkbox" v-on:click="filter"/>{{t.type}}</label>
               </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
           >Pays</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="paysList" class="container" v-for="value in pays">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input class="paysList" type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
           >Régions</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="rgnList" class="container" v-for="value in regns">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input class="regnList" type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
             </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
           >Appellation</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="appelList" class="container" v-for="value in appels">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.libelle}}</label>
+              <label class="dropdown-item"><input class="appelList" type="checkbox" v-on:click="filter"/>{{value.libelle}}</label>
             </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
           >Millésime</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="milleList" class="container" v-for="value in millesimes">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.millesime}}</label>
+              <label class="dropdown-item"><input class="milleList" type="checkbox" v-on:click="filter"/>{{value.millesime}}</label>
             </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
           >Producteur</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="produList" class="container" v-for="value in produs">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
+              <label class="dropdown-item"><input class="produList" type="checkbox" v-on:click="filter"/>{{value.nom}}</label>
           </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
           >Format</button>
           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <div id="frmtList" class="container" v-for="value in frmts">
-              <label class="dropdown-item"><input type="checkbox" v-on:click="filter"/>{{value.quantite}}</label>
+              <label class="dropdown-item"><input class="formatList" type="checkbox" v-on:click="filter"/>{{value.quantite}}</label>
             </div>
             </div> 
         </div>
@@ -168,6 +168,100 @@ export default {
   methods:{
 
     filter:function(){
+      //Retour visuel quand un filtre d'une catégorie est sélectionné
+        //Types
+          var filtersType = [];
+          $('.typeList:input:checked').each(function(){
+            var type= $(this).parent().text();
+            filtersType.push(type); 
+          }); 
+
+          if (filtersType.length == 0){
+            $('#type-btn').css("font-weight","Normal");
+          }else{
+            $('#type-btn').css("font-weight","Bold");
+          }
+
+        //Pays
+          var filtersPays = [];
+          $('.paysList:input:checked').each(function(){
+            var pays = $(this).parent().text();
+            filtersPays.push(pays); 
+          }); 
+
+          if (filtersPays.length == 0){
+            $('#pays-btn').css("font-weight","Normal");
+          }else{
+            $('#pays-btn').css("font-weight","Bold");
+          }
+
+        //Region
+          var filtersRegn = [];
+          $('.regnList:input:checked').each(function(){
+            var regn= $(this).parent().text();
+            filtersRegn.push(regn); 
+          }); 
+
+          if (filtersRegn.length == 0){
+            $('#region-btn').css("font-weight","Normal");
+          }else{
+            $('#region-btn').css("font-weight","Bold");
+          }
+
+        //Appel
+          var filtersAppel = [];
+          $('.appelList:input:checked').each(function(){
+            var appel= $(this).parent().text();
+            filtersAppel.push(appel); 
+          }); 
+
+          if (filtersAppel.length == 0){
+            $('#appel-btn').css("font-weight","Normal");
+          }else{
+            $('#appel-btn').css("font-weight","Bold");
+          }
+
+        //Millésime
+          var filtersMille = [];
+          $('.milleList:input:checked').each(function(){
+            var mille= $(this).parent().text();
+            filtersMille.push(mille); 
+          }); 
+
+          if (filtersMille.length == 0){
+            $('#millesime-btn').css("font-weight","Normal");
+          }else{
+            $('#millesime-btn').css("font-weight","Bold");
+          }
+
+        //Produ 
+          var filtersProdu = [];
+          $('.produList:input:checked').each(function(){
+            var produ= $(this).parent().text();
+            filtersProdu.push(produ); 
+          }); 
+
+          if (filtersProdu.length == 0){
+            $('#produ-btn').css("font-weight","Normal");
+          }else{
+            $('#produ-btn').css("font-weight","Bold");
+          }
+
+        //Format
+          var filtersFormat = [];
+          $('.formatList:input:checked').each(function(){
+            var format= $(this).parent().text();
+            filtersFormat.push(format); 
+          }); 
+
+          if (filtersFormat.length == 0){
+            $('#format-btn').css("font-weight","Normal");
+          }else{
+            $('#format-btn').css("font-weight","Bold");
+          }
+
+      
+
       //Ajout de tous les filtres dans un tableau
       $('.card-custom').removeClass("visible").fadeOut();
       var filters = [];
@@ -177,7 +271,6 @@ export default {
       }); 
 
       //Sélection des vins correspondants
-      
         $('.card-custom').each(function(){
           var nbAttributs = 0;
           var type = this.dataset.type;
@@ -237,6 +330,16 @@ export default {
     });
     $('.card-custom').addClass("visible").fadeIn();
     var nbResults = $('.card-custom.visible').length;
+      $('.number_results').text(nbResults + ' résultats');
+
+    $('#type-btn').css("font-weight","Normal");
+    $('#pays-btn').css("font-weight","Normal");
+    $('#region-btn').css("font-weight","Normal");
+    $('#appel-btn').css("font-weight","Normal");
+    $('#millesime-btn').css("font-weight","Normal");
+    $('#produ-btn').css("font-weight","Normal");
+    $('#format-btn').css("font-weight","Normal");
+    
       $('#nbvins').text(nbResults);
       if(nbResults< 2){
       $('#result_text').text("vin qui vous correspondent")
