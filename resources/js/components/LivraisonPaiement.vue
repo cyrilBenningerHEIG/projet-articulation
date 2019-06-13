@@ -96,7 +96,7 @@ autoRefresh(){
   var auto_refresh = setInterval(
     function(){
       location.reload();
-    },2000);
+    },1000);
 },
 
         submitAdress(){
@@ -123,6 +123,7 @@ autoRefresh(){
             adresFactId: selectLivr,
             total:this.totalCart,
           })
+          this.autoRefresh();
         },
 
 
