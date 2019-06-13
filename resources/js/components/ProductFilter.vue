@@ -374,8 +374,11 @@ export default {
     $('#format-btn').css("font-weight","Normal");
     
       $('#nbvins').text(nbResults);
-      if(nbResults< 2){
-      $('#result_text').text("vin qui vous correspondent")
+      if(nbResults=1){
+      $('#result_text').text("vin qui vous correspond")
+          }
+       if(nbResults=0){
+       $('#result_text').text("vin qui vous correspondent")
           }else{
       $('#result_text').text("vins qui vous correspondent")
           }

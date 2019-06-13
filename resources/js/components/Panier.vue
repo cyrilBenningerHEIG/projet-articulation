@@ -61,7 +61,7 @@
                     <h6 v-if="vinCart.vin.prix.prixPromo">
                       <span class="card-text" id="prix-carte">CHF {{vinCart.vin.prix.prixPromo}}</span>
                       x {{vinCart.vin.condi.nombre}} bouteilles
-                    </h6>
+                    </h6><br>
                     <h6 v-if="vinCart.prixeuro">
                       <span class="card-text" id="prix-carte">{{vinCart.prixeuro}}</span>
                       € x {{vinCart.vin.condi.nombre}} bouteilles
@@ -72,6 +72,10 @@
                     </h6>
                   </div>
                 </form>
+                                    <h6>
+                      <span class="card-text" id="quantite-carte">Nombre de carton : {{vinCart.quantity}}</span>
+                    </h6>
+
               </td>
               <td>
                 <div v-if="vinCart.vin.prix.prixPromo" class="panier-quantite">
