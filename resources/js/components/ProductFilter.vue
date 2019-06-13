@@ -237,7 +237,13 @@ export default {
     });
     $('.card-custom').addClass("visible").fadeIn();
     var nbResults = $('.card-custom.visible').length;
-      $('.number_results').text(nbResults + ' résultats');
+      $('#nbvins').text(nbResults);
+      if(nbResults< 2){
+      $('#result_text').text("vin qui vous correspondent")
+          }else{
+      $('#result_text').text("vins qui vous correspondent")
+          }
+      // $('.number_results').text(nbResults + ' résultats');
   },
 
   sortByNameAZ:function(){
@@ -313,7 +319,7 @@ sortByAgeDesc:function(){
 },
 emptyFilters:function(){
   location.reload();
-}
+},
 }
 }
 </script>
