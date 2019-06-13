@@ -24,12 +24,13 @@
             <button
               type="submit"
               class="btn btn-outline-danger btn-outline-form btn-block"
+              @click="removeCart()" 
             >Envoi par la Poste</button>
             <p class="text-justify small-text">Envoi par poste une facture</p>
           </div>
           <div class="form-group mt-5 mb-5">
             <a href="paiement-etape5" class="p">
-              <button class="btn btn-danger btn-block">Envoi par E-mail</button>
+              <button class="btn btn-danger btn-block" @click="removeCart()" >Envoi par E-mail</button>
             </a>
             <p class="text-justify small-text">SAVE THE PLANET: envoi facture par e-mail</p>
           </div>
@@ -37,3 +38,18 @@
     </div>
   </div>
 </template>
+
+<script>
+
+export default{
+  
+   methods: {
+    removeCart() {
+      
+      localStorage.clear();
+      
+    }
+  },
+
+}
+</script>
