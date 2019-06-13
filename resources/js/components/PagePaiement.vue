@@ -24,14 +24,14 @@
             <button
               type="submit"
               class="btn btn-outline-danger btn-outline-form btn-block"
-            >Envoie par la post</button>
-            <p class="text-justify small-text">Envoie par poste une facture</p>
+            >Envoi par la Poste</button>
+            <p class="text-justify small-text">Envoi par poste une facture</p>
           </div>
           <div class="form-group mt-5 mb-5">
             <a href="paiement-etape5" class="p">
-              <button class="btn btn-danger btn-block">Envoie par e-mail</button>
+              <button class="btn btn-danger btn-block">Envoi par E-mail</button>
             </a>
-            <p class="text-justify small-text">SAVE THE PLANET: envoie facture par e-mail</p>
+            <p class="text-justify small-text">SAVE THE PLANET: envoi facture par e-mail</p>
           </div>
       </div>
     </div>

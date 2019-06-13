@@ -47,14 +47,10 @@
         <h4 class="text-center mb-2">Informations de commande</h4>
         <hr>
         <table>
-          <p class="mt-2 mb-2">Adresse de livraison</p>
+          <p class="mt-2 mb-2">Informations de commande</p>
           <tr>
             <th>Date de commande</th>
             <td>{{cmd.created_at | formatDate}}</td>
-          </tr>
-          <tr>
-            <th>Moyen de paiement</th>
-            <td>{{cmd.modePmt}}</td>
           </tr>
           <tr>
             <th>Numéro de commande</th>
@@ -113,7 +109,7 @@
                         <h6 class="card-text" id="millesime-carte"></h6>
                       </div>
                       <h6 class="card-text mb-0" id="produ-carte">{{vinCart.vin.produ.nom}}</h6>
-                      <button type="button" class="btn btn-danger btn-rounded btn-sm" @click="removeCart(index)">X</button>
+                      
                     </div>
                   </div>
                 </div>
