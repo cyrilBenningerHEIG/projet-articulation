@@ -65,12 +65,6 @@
                 <div>
                   <a
                     href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >37.5 cl</a>
-                  <a
-                    href="#"
                     class="btn btn-outline-secondary btn-sm active "
                     role="button"
                     aria-disabled="true"
@@ -81,12 +75,6 @@
               <div class="mt-4 mb-4">
                 <label>VARIANTES : </label><span> {{vin.millesime}}</span>
                 <div>
-                  <a
-                    href="#"
-                    class="btn btn-outline-secondary btn-sm"
-                    role="button"
-                    aria-disabled="true"
-                  >2012</a>
                   <a
                     href="#"
                     class="btn btn-outline-secondary btn-sm active"

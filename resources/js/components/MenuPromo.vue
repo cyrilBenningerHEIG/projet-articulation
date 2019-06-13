@@ -1,7 +1,7 @@
  <template>
   <div class="container">
     <div class="homepageImg img-desk">
-      <img class="img-fluid" :src="'images/nav/promo.png'">
+      <img class="img-fluid" :src="'images/nav/promo.jpg'">
     </div>
     <div class="homepageImg img-mob">
       <img class="img-fluid" :src="'images/navMob/promo.jpeg'">
