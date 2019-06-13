@@ -101,7 +101,7 @@
               npa: this.npa,
               localite: this.localite,
               pays: this.pays,
-            })
+            }).then((response)) 
               
             $("input").val('')
         },
