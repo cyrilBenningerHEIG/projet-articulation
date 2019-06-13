@@ -285,7 +285,7 @@ import { Icon } from 'leaflet';
       vinCarts: [],
       quantite: 1,
       unchecked:false,
-      lat: vin.regn.lat,
+      lat: 0,
     };
   },
 
