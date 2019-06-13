@@ -123,7 +123,6 @@ autoRefresh(){
             adresFactId: selectLivr,
             total:this.totalCart,
           })
-          this.autoRefresh();
         },
 
 
