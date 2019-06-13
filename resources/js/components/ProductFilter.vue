@@ -168,6 +168,8 @@ export default {
   methods:{
 
     filter:function(){
+      $('.card-custom').removeClass("visible").fadeOut();
+
       //Retour visuel quand un filtre d'une catégorie est sélectionné
         //Types
           var filtersType = [];
@@ -260,13 +262,6 @@ export default {
             $('#format-btn').css("font-weight","Bold");
           }
 
-          console.log(filtersType);
-          console.log(filtersPays);
-          console.log(filtersProdu);
-          console.log(filtersAppel);
-          console.log(filtersFormat);
-          console.log(filtersMille);
-          console.log(filtersRegn);
           var filtersArray =
             [filtersType,
             filtersPays,
@@ -276,11 +271,7 @@ export default {
             filtersProdu,
             filtersFormat];
 
-            console.log(filtersArray);
-      
-
       //Ajout de tous les filtres dans un tableau
-      $('.card-custom').removeClass("visible").fadeOut();
       var filters = [];
       $('#filters :input:checked').each(function(){
         var category= $(this).parent().text();
@@ -356,6 +347,7 @@ export default {
       };
       });
 
+      //Calcul du nombre de résultats et affichage conditionnel
       var nbResults = $('.card-custom.visible').length;
       $('#nbvins').text(nbResults);
       if(nbResults< 2){
@@ -369,9 +361,9 @@ export default {
     $('#filters :input:checked').each(function(){
       $(this).prop( "checked", false );
     });
+    $('.card-custom').removeClass("visible").fadeOut();
     $('.card-custom').addClass("visible").fadeIn();
     var nbResults = $('.card-custom.visible').length;
-      $('.number_results').text(nbResults + ' résultats');
 
     $('#type-btn').css("font-weight","Normal");
     $('#pays-btn').css("font-weight","Normal");
