@@ -5,3 +5,38 @@
 </div>
 </div>
 </template>
+<script>
+
+ export default {
+  
+   data() {
+    return {
+    };
+  },
+
+  methods: {
+    refresh(){
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoader') )
+    {
+      localStorage['firstLoader'] = true;
+    }  
+    else
+      $(".loader").hide();
+  };
+    }
+    
+  },
+ mounted() {
+
+    this.refresh();
+  },
+
+
+}
+
+</script>
+    </script>
+
+    

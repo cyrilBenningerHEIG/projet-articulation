@@ -12,8 +12,8 @@
                 <div class="container contact-form ">
                         <form @submit.prevent="submitContact">
                             <h3>Contacter nous</h3>
-                        <div class="row">
-                                <div class="col">
+                        <div class="row" >
+                                <div class="col" id="form">
                                     <div class="form-group">
                                         <input type="text" v-model="Name" class="form-control" placeholder="Nom et prénom" value="" />
                                     </div>
@@ -23,12 +23,14 @@
                                     <div class="form-group">
                                         <textarea v-model="Msg" class="form-control" placeholder="Votre message" style="width: 100%; height: 150px;"></textarea>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" @click="sucess">
                                         <input type="submit" class="btnContact rounded" value="Envoyer" />
                                     </div>
-                                    
                                 </div>
                             </div>
+                             <h4 style="display:none; padding-top : 50px;color:white" class="sucesstxt">Nous vous remercions de votre message, vous avez reçu une confirmation de contact par mail.</h4>
+                             <h4 style="display:none; padding-top : 50px;color:white" class="sucesstxt">Nous vous répondrons au plus vite</h4>
+                             <h4 style="display:none; padding-top : 50px;color:white" class="sucesstxt">Cordialement, Elie Gazzar</h4>
                         </form>
                     </div>
             </div>
@@ -48,8 +50,14 @@ export default {
             }
     },
     methods: {
+        sucess(){
+            $("#input").val('');
+            $("#form").hide();
+            $(".sucesstxt").show();
+        },
 
         submitContact(){
+
             axios.post('contact',{
                 Name: this.Name,
                 Email: this.Email,
